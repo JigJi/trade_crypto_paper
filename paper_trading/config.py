@@ -28,7 +28,9 @@ BINANCE_TESTNET_SECRET = os.getenv("BINANCE_TESTNET_SECRET", "")
 # ---- Trading constants ----
 INIT_EQUITY = 5_000.0  # Testnet wallet balance
 # Epoch after which trades count (reset on DB wipe to ignore old Binance history)
-PAPER_TRADING_START_MS = 1773760000000  # 2026-03-17 15:06 UTC (reset #2)
+# 2026-04-18 reset #3: DB wiped, wallet reset to $5k, v5/v6 amputated, 8 bugs fixed.
+# Dashboard + paper_trader count trades only from this point to avoid biased stats.
+PAPER_TRADING_START_MS = 1776499200000  # 2026-04-18 08:00 UTC (reset #3 — clean start)
 LEVERAGE = 2.0  # v3: 2x leverage (matching backtest)
 BUDGET_PER_COIN = 100.0  # $100 per coin -> $200 notional w/ 2x lev
 FEE_BPS = 2.0
