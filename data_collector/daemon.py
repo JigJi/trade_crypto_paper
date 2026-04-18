@@ -234,8 +234,9 @@ def run_all_once():
             conn.close()
 
     # Daily collectors
+    # option_instruments DISABLED 2026-04-18: Binance eapi.binance.com returns HTTP 418
+    # (region block) for all requests. Collector never succeeds. See data_collector/collectors.py
     for name, func in [
-        ("option_instruments", collect_option_instruments),
         ("option_greeks", collect_option_greeks),
         ("etf_flows", collect_etf_flows),
     ]:
@@ -314,8 +315,8 @@ def run_daemon():
         )
 
     # ---- Daily collectors (run at 00:30 UTC) ----
+    # option_instruments DISABLED 2026-04-18: Binance eapi 418 region block
     for name, func in [
-        ("option_instruments", job_option_instruments),
         ("etf_flows", job_etf_flows),
     ]:
         scheduler.add_job(
@@ -368,7 +369,7 @@ def run_daemon():
     logger.info("         taker_ratio_alt, ls_ratio_alt, top_trader_ls_alt, mark_klines_alt")
     logger.info("  1h:    funding_rate(:00), funding_rate_alt(:01), liq_1h_agg(:05),")
     logger.info("         whale+news(:10), macro+f&g(:15)")
-    logger.info("  Daily: option_instruments, etf_flows (00:30 UTC)")
+    logger.info("  Daily: etf_flows (00:30 UTC)   [option_instruments disabled — region block]")
     logger.info("  WS:    tick_liquidation, CVD, CVD_alt (continuous)")
     logger.info("  Health: */5min")
     logger.info("=" * 60)

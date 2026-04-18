@@ -123,7 +123,7 @@ STALENESS_THRESHOLDS = {
     "macro": 1440,          # 24h (daily data)
     "btc_dominance": 60,
     "deribit_options": 60,
-    "option_instruments": 1440,  # daily
+    # "option_instruments": 1440,  # DISABLED 2026-04-18 — Binance eapi 418 region block
     "option_greeks": 60,
     "fear_greed": 1440,     # daily
     "news": 240,            # 4h

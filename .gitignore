@@ -25,8 +25,11 @@ data_cache/
 backtest_details/
 research/reports/
 research/state/
+data_collector/state/
 *.log
 *.pid
+*.session
+*.session-journal
 
 # OS / editor
 nul

@@ -162,9 +162,10 @@ def run_cycle():
     logger.info(f"{'='*50}")
     logger.info(f"CYCLE START: {cycle_start.strftime('%Y-%m-%d %H:%M:%S BKK')}")
 
-    # Increment bar count
+    # Bug #4 fix 2026-04-18: peek bar count for logging, but increment ONLY on
+    # successful completion (see end of function). Prevents bar_count drift
+    # when cycle crashes mid-way.
     bar_count = int(db.get_meta("bar_count", "0")) + 1
-    db.set_meta("bar_count", str(bar_count))
     logger.info(f"Bar #{bar_count}")
 
     # ---- Step 1: Fetch BTC OHLCV ----
@@ -272,22 +273,25 @@ def run_cycle():
                 except Exception as e:
                     logger.error(f"[GHOST] Failed to close {sym}: {e}")
 
-    # ---- Stale algo order cleanup: cancel algo orders for coins WITHOUT position ----
-    # Prevents orphan LONGs from stale SL/TP orders firing after position closed
-    for coin in COINS:
-        config = COIN_CONFIGS[coin]
-        sym = config["symbol"]
-        if sym not in open_symbols:
-            try:
-                algo_orders = exchange.get_open_algo_orders(sym)
-                if algo_orders:
-                    logger.warning(
-                        f"[{coin}] STALE ALGO CLEANUP: {len(algo_orders)} orphan algo orders "
-                        f"(no position) — cancelling"
-                    )
+    # ---- Global stale algo sweep (Bug #1 fix 2026-04-18) ----
+    # Root cause of orphan LONG_DISABLED trades: stale SL/TP algo orders from
+    # REMOVED coins kept firing on price movements. Previous cleanup only looped
+    # over COINS — missing ex-v5/v6 coins. Now: sweep ALL open algo symbols.
+    try:
+        algo_symbols = exchange.list_all_open_algo_symbols()
+        for sym in algo_symbols:
+            # Cancel if: (a) symbol not in active COINS, OR (b) in COINS but no position
+            if sym not in valid_symbols or sym not in open_symbols:
+                reason = "removed coin" if sym not in valid_symbols else "no position"
+                logger.warning(
+                    f"[ALGO SWEEP] Cancelling stale algo orders for {sym} ({reason})"
+                )
+                try:
                     exchange.cancel_all_orders(sym)
-            except Exception as e:
-                logger.debug(f"[{coin}] algo cleanup check failed: {e}")
+                except Exception as e:
+                    logger.error(f"[ALGO SWEEP] Failed to cancel {sym}: {e}")
+    except Exception as e:
+        logger.error(f"[ALGO SWEEP] Global sweep failed: {e}")
 
     # Refresh after ghost cleanup
     open_positions = exchange.get_open_positions()
@@ -451,6 +455,9 @@ def run_cycle():
         open_positions=open_coins if open_coins else None,
     )
 
+    # Bug #4 fix 2026-04-18: commit bar_count + last_run_time ONLY after
+    # successful cycle completion. If we reached here, cycle ran end-to-end.
+    db.set_meta("bar_count", str(bar_count))
     db.set_meta("last_run_time", datetime.utcnow().isoformat())
 
     elapsed = (datetime.now() - cycle_start).total_seconds()

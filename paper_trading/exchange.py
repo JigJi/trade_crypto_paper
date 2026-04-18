@@ -384,6 +384,40 @@ class TestnetExchange:
             logger.debug(f"get_open_algo_orders({symbol}) failed: {e}")
         return []
 
+    def list_all_open_algo_symbols(self) -> set[str]:
+        """Return set of symbols that currently have open algo orders.
+
+        Uses the algoOrder/openOrders endpoint without symbol filter → returns
+        every open algo order on the account. Caller uses this to detect
+        stale orders on removed/non-active symbols.
+        """
+        import hmac
+        import hashlib
+        from urllib.parse import urlencode
+        import requests
+
+        base_url = self.client.FUTURES_TESTNET_URL
+        headers = {"X-MBX-APIKEY": self.client.API_KEY}
+        params = [("timestamp", str(self._synced_timestamp())),
+                  ("recvWindow", "10000")]
+        qs = urlencode(params)
+        sig = hmac.new(
+            self.client.API_SECRET.encode("utf-8"), qs.encode("utf-8"),
+            hashlib.sha256,
+        ).hexdigest()
+
+        try:
+            resp = requests.get(
+                f"{base_url}/v1/algoOrder/openOrders?{qs}&signature={sig}",
+                headers=headers, timeout=10,
+            )
+            if resp.status_code == 200:
+                orders = resp.json().get("orders", [])
+                return {o["symbol"] for o in orders if o.get("symbol")}
+        except Exception as e:
+            logger.debug(f"list_all_open_algo_symbols failed: {e}")
+        return set()
+
     def get_open_algo_order_count(self) -> int:
         """Get total number of open algo orders across all symbols.
 

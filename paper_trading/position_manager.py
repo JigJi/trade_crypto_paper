@@ -63,7 +63,7 @@ class PositionManager:
             # Sync: if exchange has position but state_meta is missing, populate it
             entry_time = db.get_meta(f"entry_time_{self.coin}")
             if not entry_time:
-                self._sync_state_from_exchange(pos, btc_score)
+                self._sync_state_from_exchange(pos, btc_score, candle)
 
             # Force-close LONG positions when LONG_ENABLED=False
             # (catches orphan positions from stale algo orders or pre-disable opens)
@@ -747,37 +747,52 @@ class PositionManager:
         current = self._get_bars_held()
         db.set_meta(f"bars_held_{self.coin}", str(current + 1))
 
-    def _sync_state_from_exchange(self, pos: dict, btc_score: float):
+    def _sync_state_from_exchange(self, pos: dict, btc_score: float, candle: dict = None):
         """Populate missing state_meta from live exchange position.
 
-        This handles the case where _open_position succeeded on exchange
-        but failed to write state (e.g., SL/TP order failed before fix).
-        Without this sync, _detect_sl_tp_close would skip recording the trade
-        when the position is eventually closed.
+        Bug #7 fix 2026-04-18: also compute SL/TP software-fallback from
+        current ATR so orphan-adopted positions get proper stop protection.
+        Previously sl_price/tp_price=0 disabled software SL/TP entirely,
+        leaving synced positions exposed to runaway losses if algo orders
+        also failed.
         """
         pos_amt = float(pos["positionAmt"])
         direction = 1 if pos_amt > 0 else -1
         entry_price = float(pos["entryPrice"])
         qty = abs(pos_amt)
+        atr = float(candle.get("atr", 0)) if candle else 0
 
         now_str = datetime.utcnow().isoformat()
         db.set_meta(f"entry_time_{self.coin}", now_str)
         db.set_meta(f"entry_btc_score_{self.coin}", str(btc_score))
-        db.set_meta(f"entry_atr_{self.coin}", "0")
+        db.set_meta(f"entry_atr_{self.coin}", str(atr))
         db.set_meta(f"entry_direction_{self.coin}", str(direction))
         db.set_meta(f"entry_price_{self.coin}", str(entry_price))
         db.set_meta(f"entry_qty_{self.coin}", str(qty))
-        # No ATR available → can't calculate SL/TP → skip software SL/TP
-        db.set_meta(f"sl_price_{self.coin}", "0")
-        db.set_meta(f"tp_price_{self.coin}", "0")
-        db.set_meta(f"sl_exchange_{self.coin}", "1")
-        db.set_meta(f"tp_exchange_{self.coin}", "1")
+
+        # Software SL/TP fallback using current ATR
+        if atr > 0:
+            if direction == 1:
+                sl_price = entry_price - self.sl_atr_mult * atr
+                tp_price = entry_price + self.tp_atr_mult * atr
+            else:
+                sl_price = entry_price + self.sl_atr_mult * atr
+                tp_price = entry_price - self.tp_atr_mult * atr
+        else:
+            sl_price = 0
+            tp_price = 0
+
+        db.set_meta(f"sl_price_{self.coin}", str(sl_price))
+        db.set_meta(f"tp_price_{self.coin}", str(tp_price))
+        db.set_meta(f"sl_exchange_{self.coin}", "0")   # no exchange algo for synced pos
+        db.set_meta(f"tp_exchange_{self.coin}", "0")   # → software-only
         db.set_meta(f"bars_held_{self.coin}", "0")
 
+        sl_tp_msg = (f"SL={sl_price:.4f} TP={tp_price:.4f}" if atr > 0
+                     else "no ATR → timeout/signal-only exit")
         logger.warning(
             f"[{self.coin}] Synced state from exchange: "
-            f"dir={direction} price={entry_price:.4f} qty={qty} "
-            f"(no ATR, SL/TP managed by timeout/signal only)"
+            f"dir={direction} price={entry_price:.4f} qty={qty} {sl_tp_msg}"
         )
 
     def _clear_entry_meta(self):
