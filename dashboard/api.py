@@ -23,7 +23,6 @@ from paper_trading.exchange import TestnetExchange
 from paper_trading.config import (
     BINANCE_TESTNET_KEY, BINANCE_TESTNET_SECRET, COIN_CONFIGS, COINS_V3,
     PAPER_TRADING_START_MS, LEVERAGE,
-    COINS_ALL_EVER, COINS_REMOVED,
 )
 
 log = logging.getLogger(__name__)
@@ -132,8 +131,8 @@ def _fetch_binance_trades():
         return []
 
     try:
-        # Step 1: get all symbols ever traded (active + removed)
-        symbols = set(f"{c}USDT" for c in COINS_ALL_EVER)
+        # Step 1: only fetch trades for currently active coins (v5/v6/removed purged 2026-04-18)
+        symbols = set(f"{c}USDT" for c in COINS_V3)
 
         # Step 2: get ALL trades per symbol (paginated, no limit)
         all_fills = []
@@ -399,42 +398,31 @@ def trading_stats():
     # ALL income from Binance (REALIZED_PNL + COMMISSION + FUNDING_FEE)
     ex2 = _ex()
     _active_coins = set(COINS_V3)
-    _removed_set = set(COINS_REMOVED)
-    model_income = defaultdict(float)  # keyed by: v3, v5, old
-    coin_income = defaultdict(float)   # keyed by coin (active coins only)
+    model_income = defaultdict(float)  # v3 only now
+    coin_income = defaultdict(float)
     if ex2:
         try:
             all_income = ex2.get_all_income(start_time=PAPER_TRADING_START_MS)
             for r in all_income:
                 sym = r.get("symbol", "")
                 coin = sym.replace("USDT", "") if sym else ""
-                if not coin:
-                    continue
+                if not coin or coin not in _active_coins:
+                    continue  # ignore income from removed coins entirely
                 inc = float(r.get("income", 0))
-                # Removed/old coins → all into "old"
-                if coin in _removed_set:
-                    model_income["old"] += inc
-                elif coin in _active_coins:
-                    cur_m = _current_model(coin)
-                    model_income[cur_m] += inc
-                    coin_income[coin] += inc
-                else:
-                    model_income["old"] += inc  # unknown coins → old
+                model_income[_current_model(coin)] += inc
+                coin_income[coin] += inc
         except Exception as e:
             log.error(f"get_all_income failed: {e}")
 
-    # Trade counts — active coins tracked individually, rest → _old
+    # Trade counts — active coins only (ignore historical removed coins)
     coin_trades = defaultdict(lambda: {"trades": 0, "wins": 0})
     for t in trades:
         c = t["coin"]
-        if c in _active_coins:
-            coin_trades[c]["trades"] += 1
-            if t["pnl_net"] > 0:
-                coin_trades[c]["wins"] += 1
-        else:
-            coin_trades["_old"]["trades"] += 1
-            if t["pnl_net"] > 0:
-                coin_trades["_old"]["wins"] += 1
+        if c not in _active_coins:
+            continue
+        coin_trades[c]["trades"] += 1
+        if t["pnl_net"] > 0:
+            coin_trades[c]["wins"] += 1
 
     # Per coin: active coins only
     per_coin = []
@@ -455,14 +443,12 @@ def trading_stats():
         })
     per_coin.sort(key=lambda x: x["total_pnl"], reverse=True)
 
-    # Model stats — v3 + old (v5/v6 amputated 2026-04-18)
+    # Model stats — v3 only (v5/v6/old removed 2026-04-18 dashboard clean)
     model_trades_agg = defaultdict(lambda: {"trades": 0, "wins": 0})
     for coin in _active_coins:
         cur_m = _current_model(coin)
         model_trades_agg[cur_m]["trades"] += coin_trades.get(coin, {}).get("trades", 0)
         model_trades_agg[cur_m]["wins"] += coin_trades.get(coin, {}).get("wins", 0)
-    # Old = removed coins trade counts
-    _old_td = coin_trades.get("_old", {"trades": 0, "wins": 0})
 
     def _fmt_agg(pnl, td):
         return {
@@ -475,7 +461,6 @@ def trading_stats():
     _zt = {"trades": 0, "wins": 0}
     model_stats = {
         "v3": _fmt_agg(model_income.get("v3", 0), model_trades_agg.get("v3", _zt)),
-        "old": _fmt_agg(model_income.get("old", 0), _old_td),
     }
 
     # Latest equity + BTC score (still from SQLite -- used for gauge)
@@ -720,42 +705,34 @@ def _get_snapshot():
     binance_trades = _fetch_binance_trades()
     snapshot["recent_trades"] = binance_trades[:50]
 
-    # Income split: active coins → v3/v5, removed coins → old
+    # Income — active coins only (v5/v6/old removed 2026-04-18)
     snap_model_income = defaultdict(float)
     snap_coin_income = defaultdict(float)
     snap_ex2 = _ex()
     _snap_active = set(COINS_V3)
-    _snap_removed = set(COINS_REMOVED)
     if snap_ex2:
         try:
             all_income = snap_ex2.get_all_income(start_time=PAPER_TRADING_START_MS)
             for r in all_income:
                 sym = r.get("symbol", "")
                 coin = sym.replace("USDT", "") if sym else ""
-                if not coin:
+                if not coin or coin not in _snap_active:
                     continue
                 inc = float(r.get("income", 0))
-                if coin in _snap_removed or coin not in _snap_active:
-                    snap_model_income["old"] += inc
-                else:
-                    cur_m = _current_model(coin)
-                    snap_model_income[cur_m] += inc
-                    snap_coin_income[coin] += inc
+                snap_model_income[_current_model(coin)] += inc
+                snap_coin_income[coin] += inc
         except Exception:
             pass
 
-    # Trade counts — active vs removed
+    # Trade counts — active coins only
     coin_trades = defaultdict(lambda: {"trades": 0, "wins": 0})
     for t in binance_trades:
         c = t["coin"]
-        if c in _snap_removed or c not in _snap_active:
-            coin_trades["_old"]["trades"] += 1
-            if t["pnl_net"] > 0:
-                coin_trades["_old"]["wins"] += 1
-        else:
-            coin_trades[c]["trades"] += 1
-            if t["pnl_net"] > 0:
-                coin_trades[c]["wins"] += 1
+        if c not in _snap_active:
+            continue
+        coin_trades[c]["trades"] += 1
+        if t["pnl_net"] > 0:
+            coin_trades[c]["wins"] += 1
 
     snapshot["coin_stats"] = []
     for coin in sorted(_snap_active, key=lambda c: snap_coin_income.get(c, 0), reverse=True):
@@ -770,13 +747,12 @@ def _get_snapshot():
             "avg_pnl": round(pnl / ct, 2) if ct > 0 else 0,
         })
 
-    # Model stats — v3, v5, old
+    # Model stats — v3 only (v5/v6/old removed 2026-04-18)
     model_trades_agg = defaultdict(lambda: {"trades": 0, "wins": 0})
     for coin in _snap_active:
         cur_m = _current_model(coin)
         model_trades_agg[cur_m]["trades"] += coin_trades.get(coin, {}).get("trades", 0)
         model_trades_agg[cur_m]["wins"] += coin_trades.get(coin, {}).get("wins", 0)
-    _old_td = coin_trades.get("_old", {"trades": 0, "wins": 0})
 
     def _snap_fmt(pnl, td):
         return {
@@ -788,7 +764,6 @@ def _get_snapshot():
     _zt = {"trades": 0, "wins": 0}
     snapshot["model_stats"] = {
         "v3": _snap_fmt(snap_model_income.get("v3", 0), model_trades_agg.get("v3", _zt)),
-        "old": _snap_fmt(snap_model_income.get("old", 0), _old_td),
     }
 
     # Equity curve (still from SQLite -- for BTC score gauge)

@@ -144,9 +144,8 @@ function renderHeader(data) {
     eqEl.innerHTML = '$' + fmtNum(equity) + ` <span class="header-stat-pct" style="color:${profitPct >= 0 ? 'var(--green)' : 'var(--red)'}">${(profitPct >= 0 ? '+' : '') + profitPct.toFixed(1)}%</span>`;
     eqEl.style.color = equity >= INIT_EQUITY ? 'var(--green)' : 'var(--red)';
 
-    // v3 + old (v5/v6 amputated)
+    // v3 only (v5/v6/old removed 2026-04-18)
     _renderModelStat('v3', ms.v3 || {});
-    _renderModelStat('old', ms.old || {});
 
     document.getElementById('trade-count').textContent = (s.total_trades || 0) + ' trades';
 }
@@ -1349,7 +1348,6 @@ function applySnapshot(snap) {
     if (snap.model_stats) {
         _modelStats = snap.model_stats;
         _renderModelStat('v3', snap.model_stats.v3 || {});
-        _renderModelStat('old', snap.model_stats.old || {});
     }
     if (snap.positions) renderActiveBattles(snap.positions, snap.coin_list || _coinList);
     if (snap.recent_trades) renderBattleLog(snap.recent_trades);
