@@ -1,0 +1,578 @@
+{
+  "experiment_id": "coin_filter_20260318_1735",
+  "date": "2026-03-18 17:35",
+  "description": "Per-coin momentum gate + ATR sizing backtest",
+  "median_atr_pct": 0.00587,
+  "section_a": {
+    "baseline": {
+      "total_pnl": 16342.56,
+      "total_trades": 617,
+      "avg_wr": 73.58,
+      "per_coin": {
+        "BTC": {
+          "pnl": 2027.59,
+          "trades": 126,
+          "wr": 70.63,
+          "sharpe": 6.071
+        },
+        "XRP": {
+          "pnl": 2081.46,
+          "trades": 87,
+          "wr": 77.01,
+          "sharpe": 5.013
+        },
+        "ADA": {
+          "pnl": 2771.51,
+          "trades": 86,
+          "wr": 76.74,
+          "sharpe": 6.736
+        },
+        "DOT": {
+          "pnl": 3254.27,
+          "trades": 101,
+          "wr": 71.29,
+          "sharpe": 6.927
+        },
+        "SUI": {
+          "pnl": 3258.85,
+          "trades": 112,
+          "wr": 70.54,
+          "sharpe": 6.07
+        },
+        "FIL": {
+          "pnl": 2948.88,
+          "trades": 105,
+          "wr": 75.24,
+          "sharpe": 5.044
+        }
+      }
+    },
+    "pa_ema": {
+      "total_pnl": 10351.31,
+      "total_trades": 370,
+      "avg_wr": 73.46,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1457.32,
+          "trades": 68,
+          "wr": 80.88,
+          "sharpe": 5.138
+        },
+        "XRP": {
+          "pnl": 954.26,
+          "trades": 54,
+          "wr": 70.37,
+          "sharpe": 2.209
+        },
+        "ADA": {
+          "pnl": 1508.01,
+          "trades": 51,
+          "wr": 76.47,
+          "sharpe": 4.016
+        },
+        "DOT": {
+          "pnl": 2104.02,
+          "trades": 64,
+          "wr": 67.19,
+          "sharpe": 4.914
+        },
+        "SUI": {
+          "pnl": 2302.29,
+          "trades": 67,
+          "wr": 76.12,
+          "sharpe": 5.041
+        },
+        "FIL": {
+          "pnl": 2025.41,
+          "trades": 66,
+          "wr": 69.7,
+          "sharpe": 3.927
+        }
+      }
+    },
+    "momentum_5bar": {
+      "total_pnl": 13611.46,
+      "total_trades": 529,
+      "avg_wr": 73.06,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1922.09,
+          "trades": 106,
+          "wr": 74.53,
+          "sharpe": 6.173
+        },
+        "XRP": {
+          "pnl": 1211.53,
+          "trades": 73,
+          "wr": 71.23,
+          "sharpe": 1.957
+        },
+        "ADA": {
+          "pnl": 2632.51,
+          "trades": 76,
+          "wr": 81.58,
+          "sharpe": 6.605
+        },
+        "DOT": {
+          "pnl": 2649.51,
+          "trades": 84,
+          "wr": 72.62,
+          "sharpe": 5.877
+        },
+        "SUI": {
+          "pnl": 2542.81,
+          "trades": 101,
+          "wr": 65.35,
+          "sharpe": 4.603
+        },
+        "FIL": {
+          "pnl": 2653.01,
+          "trades": 89,
+          "wr": 73.03,
+          "sharpe": 4.872
+        }
+      }
+    },
+    "momentum_rsi": {
+      "total_pnl": 12211.82,
+      "total_trades": 476,
+      "avg_wr": 69.56,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1630.31,
+          "trades": 91,
+          "wr": 71.43,
+          "sharpe": 5.156
+        },
+        "XRP": {
+          "pnl": 1661.63,
+          "trades": 71,
+          "wr": 71.83,
+          "sharpe": 4.144
+        },
+        "ADA": {
+          "pnl": 2071.72,
+          "trades": 66,
+          "wr": 75.76,
+          "sharpe": 5.178
+        },
+        "DOT": {
+          "pnl": 2564.24,
+          "trades": 81,
+          "wr": 69.14,
+          "sharpe": 5.71
+        },
+        "SUI": {
+          "pnl": 2189.53,
+          "trades": 88,
+          "wr": 65.91,
+          "sharpe": 4.154
+        },
+        "FIL": {
+          "pnl": 2094.39,
+          "trades": 79,
+          "wr": 63.29,
+          "sharpe": 3.854
+        }
+      }
+    },
+    "atr_sizing": {
+      "total_pnl": 15509.06,
+      "total_trades": 617,
+      "avg_wr": 73.58,
+      "per_coin": {
+        "BTC": {
+          "pnl": 2725.47,
+          "trades": 126,
+          "wr": 70.63,
+          "sharpe": 7.227
+        },
+        "XRP": {
+          "pnl": 2394.67,
+          "trades": 87,
+          "wr": 77.01,
+          "sharpe": 6.477
+        },
+        "ADA": {
+          "pnl": 2708.51,
+          "trades": 86,
+          "wr": 76.74,
+          "sharpe": 8.157
+        },
+        "DOT": {
+          "pnl": 2740.1,
+          "trades": 101,
+          "wr": 71.29,
+          "sharpe": 7.833
+        },
+        "SUI": {
+          "pnl": 2648.18,
+          "trades": 112,
+          "wr": 70.54,
+          "sharpe": 6.368
+        },
+        "FIL": {
+          "pnl": 2292.13,
+          "trades": 105,
+          "wr": 75.24,
+          "sharpe": 5.293
+        }
+      }
+    },
+    "mom5_atr": {
+      "total_pnl": 13129.56,
+      "total_trades": 529,
+      "avg_wr": 73.06,
+      "per_coin": {
+        "BTC": {
+          "pnl": 2570.81,
+          "trades": 106,
+          "wr": 74.53,
+          "sharpe": 7.094
+        },
+        "XRP": {
+          "pnl": 1554.99,
+          "trades": 73,
+          "wr": 71.23,
+          "sharpe": 3.382
+        },
+        "ADA": {
+          "pnl": 2622.1,
+          "trades": 76,
+          "wr": 81.58,
+          "sharpe": 7.991
+        },
+        "DOT": {
+          "pnl": 2205.55,
+          "trades": 84,
+          "wr": 72.62,
+          "sharpe": 6.643
+        },
+        "SUI": {
+          "pnl": 2116.55,
+          "trades": 101,
+          "wr": 65.35,
+          "sharpe": 4.904
+        },
+        "FIL": {
+          "pnl": 2059.56,
+          "trades": 89,
+          "wr": 73.03,
+          "sharpe": 5.013
+        }
+      }
+    }
+  },
+  "section_b": {
+    "n_coins": 20,
+    "total_pnl": 23.7,
+    "pnl_ema": 2.59,
+    "pnl_mom5": 32.41,
+    "pnl_rsi": 40.89,
+    "pnl_atr_sizing": 15.52,
+    "pnl_mom5_atr": 20.17,
+    "coins_cut_by_mom5": 9,
+    "per_coin": [
+      {
+        "coin": "RENDER",
+        "direction": "LONG",
+        "entry_time": "2026-03-17 16:46:22",
+        "paper_pnl": 0.46,
+        "n_trades": 1,
+        "mom5": 0.06,
+        "rsi": 26.7,
+        "ema_aligned": "SHORT",
+        "vol_ratio": 0.41,
+        "atr_pct": 0.813,
+        "pass_ema": "False",
+        "pass_mom5": "True",
+        "pass_rsi": "False"
+      },
+      {
+        "coin": "BEAT",
+        "direction": "LONG",
+        "entry_time": "2026-03-17 16:46:26",
+        "paper_pnl": 23.34,
+        "n_trades": 1,
+        "mom5": -2.22,
+        "rsi": 42.7,
+        "ema_aligned": "SHORT",
+        "vol_ratio": 0.93,
+        "atr_pct": 2.73,
+        "pass_ema": "False",
+        "pass_mom5": "False",
+        "pass_rsi": "False"
+      },
+      {
+        "coin": "PIXEL",
+        "direction": "LONG",
+        "entry_time": "2026-03-17 16:46:31",
+        "paper_pnl": -19.75,
+        "n_trades": 1,
+        "mom5": -0.07,
+        "rsi": 33.6,
+        "ema_aligned": "SHORT",
+        "vol_ratio": 0.98,
+        "atr_pct": 1.309,
+        "pass_ema": "False",
+        "pass_mom5": "False",
+        "pass_rsi": "False"
+      },
+      {
+        "coin": "AXS",
+        "direction": "LONG",
+        "entry_time": "2026-03-17 16:46:39",
+        "paper_pnl": 2.33,
+        "n_trades": 1,
+        "mom5": 0.0,
+        "rsi": 55.9,
+        "ema_aligned": "LONG",
+        "vol_ratio": 0.5,
+        "atr_pct": 0.736,
+        "pass_ema": "False",
+        "pass_mom5": "False",
+        "pass_rsi": "True"
+      },
+      {
+        "coin": "1000BONK",
+        "direction": "SHORT",
+        "entry_time": "2026-03-17 16:46:52",
+        "paper_pnl": -4.58,
+        "n_trades": 2,
+        "mom5": 0.23,
+        "rsi": 52.8,
+        "ema_aligned": "LONG",
+        "vol_ratio": 0.79,
+        "atr_pct": 0.684,
+        "pass_ema": "False",
+        "pass_mom5": "False",
+        "pass_rsi": "False"
+      },
+      {
+        "coin": "ARIA",
+        "direction": "LONG",
+        "entry_time": "2026-03-17 16:47:00",
+        "paper_pnl": 23.31,
+        "n_trades": 3,
+        "mom5": -0.6,
+        "rsi": 50.0,
+        "ema_aligned": "FLAT",
+        "vol_ratio": 0.61,
+        "atr_pct": 1.152,
+        "pass_ema": "False",
+        "pass_mom5": "False",
+        "pass_rsi": "True"
+      },
+      {
+        "coin": "BARD",
+        "direction": "LONG",
+        "entry_time": "2026-03-17 16:47:04",
+        "paper_pnl": -0.82,
+        "n_trades": 1,
+        "mom5": -0.23,
+        "rsi": 37.9,
+        "ema_aligned": "SHORT",
+        "vol_ratio": 1.84,
+        "atr_pct": 0.324,
+        "pass_ema": "False",
+        "pass_mom5": "False",
+        "pass_rsi": "False"
+      },
+      {
+        "coin": "BANANAS31",
+        "direction": "LONG",
+        "entry_time": "2026-03-17 16:47:08",
+        "paper_pnl": 4.86,
+        "n_trades": 1,
+        "mom5": 0.69,
+        "rsi": 52.0,
+        "ema_aligned": "LONG",
+        "vol_ratio": 0.53,
+        "atr_pct": 1.238,
+        "pass_ema": "False",
+        "pass_mom5": "True",
+        "pass_rsi": "True"
+      },
+      {
+        "coin": "PIPPIN",
+        "direction": "LONG",
+        "entry_time": "2026-03-17 16:47:12",
+        "paper_pnl": -38.83,
+        "n_trades": 1,
+        "mom5": -19.97,
+        "rsi": 33.6,
+        "ema_aligned": "SHORT",
+        "vol_ratio": 2.53,
+        "atr_pct": 7.559,
+        "pass_ema": "False",
+        "pass_mom5": "False",
+        "pass_rsi": "False"
+      },
+      {
+        "coin": "OGN",
+        "direction": "LONG",
+        "entry_time": "2026-03-17 16:47:16",
+        "paper_pnl": 1.59,
+        "n_trades": 1,
+        "mom5": 0.42,
+        "rsi": 28.9,
+        "ema_aligned": "FLAT",
+        "vol_ratio": 0.88,
+        "atr_pct": 0.969,
+        "pass_ema": "False",
+        "pass_mom5": "True",
+        "pass_rsi": "False"
+      },
+      {
+        "coin": "SAHARA",
+        "direction": "LONG",
+        "entry_time": "2026-03-17 16:47:21",
+        "paper_pnl": 1.26,
+        "n_trades": 1,
+        "mom5": -0.51,
+        "rsi": 40.1,
+        "ema_aligned": "SHORT",
+        "vol_ratio": 1.32,
+        "atr_pct": 0.593,
+        "pass_ema": "False",
+        "pass_mom5": "False",
+        "pass_rsi": "False"
+      },
+      {
+        "coin": "ASTER",
+        "direction": "LONG",
+        "entry_time": "2026-03-17 16:47:25",
+        "paper_pnl": -5.99,
+        "n_trades": 1,
+        "mom5": 0.64,
+        "rsi": 55.7,
+        "ema_aligned": "LONG",
+        "vol_ratio": 0.45,
+        "atr_pct": 1.496,
+        "pass_ema": "False",
+        "pass_mom5": "True",
+        "pass_rsi": "True"
+      },
+      {
+        "coin": "LTC",
+        "direction": "LONG",
+        "entry_time": "2026-03-17 16:47:29",
+        "paper_pnl": -1.56,
+        "n_trades": 1,
+        "mom5": 0.16,
+        "rsi": 57.9,
+        "ema_aligned": "LONG",
+        "vol_ratio": 0.94,
+        "atr_pct": 0.439,
+        "pass_ema": "True",
+        "pass_mom5": "True",
+        "pass_rsi": "True"
+      },
+      {
+        "coin": "ZRO",
+        "direction": "LONG",
+        "entry_time": "2026-03-17 16:47:33",
+        "paper_pnl": 4.15,
+        "n_trades": 2,
+        "mom5": 0.46,
+        "rsi": 68.8,
+        "ema_aligned": "LONG",
+        "vol_ratio": 0.8,
+        "atr_pct": 0.821,
+        "pass_ema": "True",
+        "pass_mom5": "True",
+        "pass_rsi": "True"
+      },
+      {
+        "coin": "NAORIS",
+        "direction": "LONG",
+        "entry_time": "2026-03-17 16:47:37",
+        "paper_pnl": 10.43,
+        "n_trades": 2,
+        "mom5": 1.41,
+        "rsi": 48.3,
+        "ema_aligned": "FLAT",
+        "vol_ratio": 0.58,
+        "atr_pct": 1.638,
+        "pass_ema": "False",
+        "pass_mom5": "True",
+        "pass_rsi": "False"
+      },
+      {
+        "coin": "1000PEPE",
+        "direction": "LONG",
+        "entry_time": "2026-03-17 16:47:41",
+        "paper_pnl": 5.03,
+        "n_trades": 1,
+        "mom5": -0.44,
+        "rsi": 32.9,
+        "ema_aligned": "SHORT",
+        "vol_ratio": 0.46,
+        "atr_pct": 0.871,
+        "pass_ema": "False",
+        "pass_mom5": "False",
+        "pass_rsi": "False"
+      },
+      {
+        "coin": "JCT",
+        "direction": "LONG",
+        "entry_time": "2026-03-17 16:47:45",
+        "paper_pnl": 13.79,
+        "n_trades": 1,
+        "mom5": 2.09,
+        "rsi": 64.9,
+        "ema_aligned": "LONG",
+        "vol_ratio": 0.59,
+        "atr_pct": 3.905,
+        "pass_ema": "False",
+        "pass_mom5": "True",
+        "pass_rsi": "True"
+      },
+      {
+        "coin": "DEGO",
+        "direction": "LONG",
+        "entry_time": "2026-03-17 16:47:49",
+        "paper_pnl": -12.81,
+        "n_trades": 1,
+        "mom5": 1.46,
+        "rsi": 40.4,
+        "ema_aligned": "SHORT",
+        "vol_ratio": 0.66,
+        "atr_pct": 3.425,
+        "pass_ema": "False",
+        "pass_mom5": "True",
+        "pass_rsi": "False"
+      },
+      {
+        "coin": "HYPE",
+        "direction": "LONG",
+        "entry_time": "2026-03-17 16:47:54",
+        "paper_pnl": 7.83,
+        "n_trades": 1,
+        "mom5": 0.08,
+        "rsi": 38.4,
+        "ema_aligned": "SHORT",
+        "vol_ratio": 0.56,
+        "atr_pct": 0.868,
+        "pass_ema": "False",
+        "pass_mom5": "True",
+        "pass_rsi": "False"
+      },
+      {
+        "coin": "PENGU",
+        "direction": "LONG",
+        "entry_time": "2026-03-17 16:47:58",
+        "paper_pnl": 9.66,
+        "n_trades": 1,
+        "mom5": 0.53,
+        "rsi": 49.0,
+        "ema_aligned": "FLAT",
+        "vol_ratio": 0.84,
+        "atr_pct": 0.751,
+        "pass_ema": "False",
+        "pass_mom5": "True",
+        "pass_rsi": "False"
+      }
+    ]
+  }
+}

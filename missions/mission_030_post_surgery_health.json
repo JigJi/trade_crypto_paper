@@ -1,0 +1,478 @@
+{
+  "exp1": {
+    "pre_all": {
+      "label": "PRE (03-17 to 04-03)",
+      "trades": 1995,
+      "pnl": 348.49,
+      "wr": 42.0,
+      "avg_pnl": 0.17,
+      "avg_win": 5.1,
+      "avg_loss": -3.39,
+      "profit_factor": 1.09
+    },
+    "pre_surviving": {
+      "label": "PRE (surviving coins only)",
+      "trades": 602,
+      "pnl": 904.03,
+      "wr": 48.2,
+      "avg_pnl": 1.5,
+      "avg_win": 6.79,
+      "avg_loss": -3.41,
+      "profit_factor": 1.85
+    },
+    "pre_removed": {
+      "label": "PRE (removed coins)",
+      "trades": 1386,
+      "pnl": -556.08,
+      "wr": 39.3,
+      "avg_pnl": -0.4,
+      "avg_win": 4.21,
+      "avg_loss": -3.39,
+      "profit_factor": 0.81
+    },
+    "pre_surviving_short": {
+      "label": "PRE surviving SHORT-only",
+      "trades": 360,
+      "pnl": 922.72,
+      "wr": 59.2,
+      "avg_pnl": 2.56,
+      "avg_win": 7.22,
+      "avg_loss": -4.18,
+      "profit_factor": 2.5
+    },
+    "post_all": {
+      "label": "POST (04-04 to now)",
+      "trades": 97,
+      "pnl": 3.26,
+      "wr": 42.3,
+      "avg_pnl": 0.03,
+      "avg_win": 2.71,
+      "avg_loss": -1.92,
+      "profit_factor": 1.03
+    },
+    "post_short": {
+      "label": "POST SHORT",
+      "trades": 77,
+      "pnl": -8.44,
+      "wr": 48.1,
+      "avg_pnl": -0.11,
+      "avg_win": 2.19,
+      "avg_loss": -2.23,
+      "profit_factor": 0.91
+    },
+    "post_long": {
+      "label": "POST LONG",
+      "trades": 20,
+      "pnl": 11.69,
+      "wr": 20.0,
+      "avg_pnl": 0.58,
+      "avg_win": 7.53,
+      "avg_loss": -1.15,
+      "profit_factor": 1.63
+    },
+    "pre_days": 17,
+    "post_days": 4,
+    "pre_pnl_per_day": 53.18,
+    "post_pnl_per_day": 0.82
+  },
+  "exp2": {
+    "daily": [
+      {
+        "entry_date": "2026-03-17",
+        "trades": 33,
+        "pnl": -8.292300000000001,
+        "wr": 42.42424242424242,
+        "cum_pnl": -8.292300000000001,
+        "period": "PRE"
+      },
+      {
+        "entry_date": "2026-03-18",
+        "trades": 77,
+        "pnl": 693.5918,
+        "wr": 75.32467532467533,
+        "cum_pnl": 685.2995000000001,
+        "period": "PRE"
+      },
+      {
+        "entry_date": "2026-03-19",
+        "trades": 99,
+        "pnl": 73.10660000000001,
+        "wr": 49.494949494949495,
+        "cum_pnl": 758.4061000000002,
+        "period": "PRE"
+      },
+      {
+        "entry_date": "2026-03-20",
+        "trades": 95,
+        "pnl": -19.222199999999994,
+        "wr": 30.526315789473685,
+        "cum_pnl": 739.1839000000001,
+        "period": "PRE"
+      },
+      {
+        "entry_date": "2026-03-21",
+        "trades": 88,
+        "pnl": 108.0703,
+        "wr": 53.40909090909091,
+        "cum_pnl": 847.2542000000001,
+        "period": "PRE"
+      },
+      {
+        "entry_date": "2026-03-22",
+        "trades": 79,
+        "pnl": -50.4914,
+        "wr": 53.164556962025316,
+        "cum_pnl": 796.7628000000001,
+        "period": "PRE"
+      },
+      {
+        "entry_date": "2026-03-23",
+        "trades": 218,
+        "pnl": -338.9159,
+        "wr": 26.146788990825687,
+        "cum_pnl": 457.84690000000006,
+        "period": "PRE"
+      },
+      {
+        "entry_date": "2026-03-24",
+        "trades": 77,
+        "pnl": 70.82730000000001,
+        "wr": 33.76623376623377,
+        "cum_pnl": 528.6742,
+        "period": "PRE"
+      },
+      {
+        "entry_date": "2026-03-25",
+        "trades": 45,
+        "pnl": 185.4077,
+        "wr": 73.33333333333333,
+        "cum_pnl": 714.0819,
+        "period": "PRE"
+      },
+      {
+        "entry_date": "2026-03-26",
+        "trades": 49,
+        "pnl": 65.7159,
+        "wr": 65.3061224489796,
+        "cum_pnl": 779.7978,
+        "period": "PRE"
+      },
+      {
+        "entry_date": "2026-03-27",
+        "trades": 78,
+        "pnl": 106.5243,
+        "wr": 51.282051282051285,
+        "cum_pnl": 886.3221000000001,
+        "period": "PRE"
+      },
+      {
+        "entry_date": "2026-03-28",
+        "trades": 212,
+        "pnl": -276.1659,
+        "wr": 25.471698113207548,
+        "cum_pnl": 610.1562000000001,
+        "period": "PRE"
+      },
+      {
+        "entry_date": "2026-03-29",
+        "trades": 83,
+        "pnl": -10.490400000000001,
+        "wr": 37.34939759036145,
+        "cum_pnl": 599.6658000000001,
+        "period": "PRE"
+      },
+      {
+        "entry_date": "2026-03-30",
+        "trades": 121,
+        "pnl": -97.4818,
+        "wr": 42.97520661157025,
+        "cum_pnl": 502.1840000000001,
+        "period": "PRE"
+      },
+      {
+        "entry_date": "2026-03-31",
+        "trades": 70,
+        "pnl": 97.6099,
+        "wr": 60.0,
+        "cum_pnl": 599.7939000000001,
+        "period": "PRE"
+      },
+      {
+        "entry_date": "2026-04-01",
+        "trades": 165,
+        "pnl": -171.0438,
+        "wr": 35.75757575757576,
+        "cum_pnl": 428.7501000000001,
+        "period": "PRE"
+      },
+      {
+        "entry_date": "2026-04-02",
+        "trades": 277,
+        "pnl": -15.2834,
+        "wr": 46.57039711191336,
+        "cum_pnl": 413.46670000000006,
+        "period": "PRE"
+      },
+      {
+        "entry_date": "2026-04-03",
+        "trades": 129,
+        "pnl": -64.9816,
+        "wr": 34.10852713178294,
+        "cum_pnl": 348.48510000000005,
+        "period": "PRE"
+      },
+      {
+        "entry_date": "2026-04-04",
+        "trades": 40,
+        "pnl": -13.435799999999999,
+        "wr": 27.5,
+        "cum_pnl": 335.0493000000001,
+        "period": "POST"
+      },
+      {
+        "entry_date": "2026-04-05",
+        "trades": 10,
+        "pnl": 15.9252,
+        "wr": 50.0,
+        "cum_pnl": 350.9745000000001,
+        "period": "POST"
+      },
+      {
+        "entry_date": "2026-04-06",
+        "trades": 35,
+        "pnl": -5.8615,
+        "wr": 45.714285714285715,
+        "cum_pnl": 345.1130000000001,
+        "period": "POST"
+      },
+      {
+        "entry_date": "2026-04-07",
+        "trades": 12,
+        "pnl": 6.6282,
+        "wr": 75.0,
+        "cum_pnl": 351.7412000000001,
+        "period": "POST"
+      }
+    ],
+    "post_win_days": 2,
+    "post_lose_days": 2
+  },
+  "exp3": {
+    "total_skips": 611,
+    "skips_since_deploy": 611,
+    "daily_skips": [
+      {
+        "date": "2026-04-03",
+        "skips": 309
+      },
+      {
+        "date": "2026-04-04",
+        "skips": 71
+      },
+      {
+        "date": "2026-04-05",
+        "skips": 34
+      },
+      {
+        "date": "2026-04-06",
+        "skips": 95
+      },
+      {
+        "date": "2026-04-07",
+        "skips": 102
+      }
+    ],
+    "top_blocked_coins": {
+      "AAVE": 70,
+      "ETH": 51,
+      "LTC": 49,
+      "BTC": 41,
+      "SUI": 34,
+      "AXS": 30,
+      "1000BONK": 28,
+      "PIXEL": 26,
+      "DOGE": 26,
+      "LINK": 23
+    },
+    "entries_opened_post": 174,
+    "block_rate_pct": 77.8
+  },
+  "exp4": {
+    "long_skips": 258,
+    "pre_long_surviving_stats": {
+      "label": "PRE LONG (surviving coins)",
+      "trades": 242,
+      "pnl": -18.69,
+      "wr": 31.8,
+      "avg_pnl": -0.08,
+      "avg_win": 5.6,
+      "avg_loss": -2.73,
+      "profit_factor": 0.96
+    },
+    "estimated_savings": 19.92
+  },
+  "exp5": {
+    "coin_stats": [
+      {
+        "coin": "PIXEL",
+        "model": "v3",
+        "trades": 8,
+        "pnl": 32.21,
+        "wr": 62.5,
+        "avg_pnl": 4.03,
+        "avg_bars": 13.5
+      },
+      {
+        "coin": "BEAT",
+        "model": "v3",
+        "trades": 7,
+        "pnl": 17.87,
+        "wr": 71.4,
+        "avg_pnl": 2.55,
+        "avg_bars": 10.0
+      },
+      {
+        "coin": "ETH",
+        "model": "v3",
+        "trades": 5,
+        "pnl": 2.29,
+        "wr": 40.0,
+        "avg_pnl": 0.46,
+        "avg_bars": 7.0
+      },
+      {
+        "coin": "SUI",
+        "model": "v3",
+        "trades": 3,
+        "pnl": 1.46,
+        "wr": 66.7,
+        "avg_pnl": 0.49,
+        "avg_bars": 9.0
+      },
+      {
+        "coin": "RENDER",
+        "model": "v3",
+        "trades": 8,
+        "pnl": 1.19,
+        "wr": 50.0,
+        "avg_pnl": 0.15,
+        "avg_bars": 9.2
+      },
+      {
+        "coin": "1000BONK",
+        "model": "v3",
+        "trades": 6,
+        "pnl": 1.07,
+        "wr": 50.0,
+        "avg_pnl": 0.18,
+        "avg_bars": 12.8
+      },
+      {
+        "coin": "ADA",
+        "model": "v3",
+        "trades": 4,
+        "pnl": 0.38,
+        "wr": 75.0,
+        "avg_pnl": 0.09,
+        "avg_bars": 8.5
+      },
+      {
+        "coin": "XRP",
+        "model": "v3",
+        "trades": 4,
+        "pnl": -0.17,
+        "wr": 50.0,
+        "avg_pnl": -0.04,
+        "avg_bars": 12.5
+      },
+      {
+        "coin": "BTC",
+        "model": "v3",
+        "trades": 9,
+        "pnl": -1.49,
+        "wr": 22.2,
+        "avg_pnl": -0.17,
+        "avg_bars": 10.4
+      },
+      {
+        "coin": "SOL",
+        "model": "v3",
+        "trades": 7,
+        "pnl": -2.37,
+        "wr": 28.6,
+        "avg_pnl": -0.34,
+        "avg_bars": 9.3
+      },
+      {
+        "coin": "AAVE",
+        "model": "v5",
+        "trades": 6,
+        "pnl": -2.62,
+        "wr": 16.7,
+        "avg_pnl": -0.44,
+        "avg_bars": 7.7
+      },
+      {
+        "coin": "AXS",
+        "model": "v3",
+        "trades": 7,
+        "pnl": -7.64,
+        "wr": 14.3,
+        "avg_pnl": -1.09,
+        "avg_bars": 8.9
+      },
+      {
+        "coin": "ARIA",
+        "model": "v5",
+        "trades": 11,
+        "pnl": -32.56,
+        "wr": 54.5,
+        "avg_pnl": -2.96,
+        "avg_bars": 6.3
+      }
+    ],
+    "profitable_coins": 7,
+    "unprofitable_coins": 6,
+    "profitable_pnl": 56.47,
+    "unprofitable_pnl": -46.85
+  },
+  "exp6": {
+    "post_exit_stats": [
+      {
+        "exit_reason": "SIGNAL_FLIP",
+        "trades": 30,
+        "pnl": -41.4298,
+        "wr": 26.666666666666668,
+        "pct": 30.927835051546392
+      },
+      {
+        "exit_reason": "SL",
+        "trades": 1,
+        "pnl": -0.0482,
+        "wr": 0.0,
+        "pct": 1.0309278350515463
+      },
+      {
+        "exit_reason": "SL/TP",
+        "trades": 2,
+        "pnl": -3.4845,
+        "wr": 0.0,
+        "pct": 2.0618556701030926
+      },
+      {
+        "exit_reason": "TP",
+        "trades": 10,
+        "pnl": 54.6582,
+        "wr": 100.0,
+        "pct": 10.309278350515465
+      },
+      {
+        "exit_reason": "TRAIL",
+        "trades": 54,
+        "pnl": -6.439600000000006,
+        "wr": 42.592592592592595,
+        "pct": 55.670103092783506
+      }
+    ]
+  }
+}

@@ -1,0 +1,356 @@
+{
+  "mission_id": "mission_003_signal_strength",
+  "date": "2026-03-14",
+  "oos_period": "2025-01-01 to 2026-03-31",
+  "total_trades": 2201,
+  "coins": [
+    "BTC",
+    "XRP",
+    "ADA",
+    "DOT",
+    "SUI",
+    "FIL"
+  ],
+  "results": {
+    "score_distribution": {
+      "mean": 1.350522489777374,
+      "median": 3.0,
+      "std": 3.1796813661932712,
+      "min": -6.0,
+      "max": 7.0,
+      "abs_mean": 3.3939118582462515,
+      "abs_median": 3.5
+    },
+    "score_buckets": {
+      "Q1_low": {
+        "trades": 815,
+        "wr_pct": 63.7,
+        "avg_pnl": 0.22,
+        "total_pnl": 175.49,
+        "sharpe": 0.54,
+        "score_range": "[2.5, 3.0]",
+        "avg_holding_bars": 3.9,
+        "avg_bars_win": 3.1,
+        "avg_bars_loss": 5.5
+      },
+      "Q2": {
+        "trades": 841,
+        "wr_pct": 71.5,
+        "avg_pnl": 0.42,
+        "total_pnl": 355.53,
+        "sharpe": 0.81,
+        "score_range": "[3.2, 3.5]",
+        "avg_holding_bars": 4.4,
+        "avg_bars_win": 3.6,
+        "avg_bars_loss": 6.7
+      },
+      "Q3": {
+        "trades": 490,
+        "wr_pct": 76.7,
+        "avg_pnl": 3.07,
+        "total_pnl": 1502.43,
+        "sharpe": 5.27,
+        "score_range": "[3.8, 4.5]",
+        "avg_holding_bars": 4.7,
+        "avg_bars_win": 3.8,
+        "avg_bars_loss": 7.7
+      },
+      "Q4_high": {
+        "trades": 55,
+        "wr_pct": 78.2,
+        "avg_pnl": 4.65,
+        "total_pnl": 255.58,
+        "sharpe": 10.74,
+        "score_range": "[4.8, 7.0]",
+        "avg_holding_bars": 3.3,
+        "avg_bars_win": 3.2,
+        "avg_bars_loss": 3.8
+      }
+    },
+    "long_short_L": {
+      "low": {
+        "trades": 1116,
+        "wr_pct": 67.7,
+        "avg_pnl": 0.17,
+        "total_pnl": 184.2
+      },
+      "high": {
+        "trades": 402,
+        "wr_pct": 74.6,
+        "avg_pnl": 1.31,
+        "total_pnl": 526.93
+      }
+    },
+    "long_short_S": {
+      "low": {
+        "trades": 348,
+        "wr_pct": 64.9,
+        "avg_pnl": 0.8,
+        "total_pnl": 278.06
+      },
+      "high": {
+        "trades": 335,
+        "wr_pct": 77.0,
+        "avg_pnl": 3.88,
+        "total_pnl": 1299.83
+      }
+    },
+    "threshold_sweep": {
+      "2.5": {
+        "trades": 2201,
+        "wr_pct": 69.9,
+        "avg_pnl": 1.04,
+        "total_pnl": 2289.03,
+        "sharpe": 2.1
+      },
+      "3.0": {
+        "trades": 1788,
+        "wr_pct": 72.4,
+        "avg_pnl": 1.49,
+        "total_pnl": 2663.89,
+        "sharpe": 2.81
+      },
+      "3.5": {
+        "trades": 1270,
+        "wr_pct": 73.8,
+        "avg_pnl": 1.62,
+        "total_pnl": 2060.2,
+        "sharpe": 3.08
+      },
+      "4.0": {
+        "trades": 379,
+        "wr_pct": 78.1,
+        "avg_pnl": 4.37,
+        "total_pnl": 1654.46,
+        "sharpe": 7.86
+      },
+      "4.5": {
+        "trades": 217,
+        "wr_pct": 74.7,
+        "avg_pnl": 2.27,
+        "total_pnl": 491.98,
+        "sharpe": 4.2
+      },
+      "5.0": {
+        "trades": 37,
+        "wr_pct": 81.1,
+        "avg_pnl": 2.5,
+        "total_pnl": 92.32,
+        "sharpe": 5.68
+      },
+      "5.5": {
+        "trades": 20,
+        "wr_pct": 80.0,
+        "avg_pnl": 2.46,
+        "total_pnl": 49.2,
+        "sharpe": 6.01
+      }
+    },
+    "per_coin": {
+      "BTC": {
+        "median_score": 2.5,
+        "low_half": {
+          "trades": 364,
+          "wr_pct": 56.3,
+          "avg_pnl": -1.06
+        },
+        "high_half": {
+          "trades": 318,
+          "wr_pct": 66.0,
+          "avg_pnl": 0.61
+        },
+        "wr_delta": 9.7
+      },
+      "XRP": {
+        "median_score": 3.5,
+        "low_half": {
+          "trades": 137,
+          "wr_pct": 67.9,
+          "avg_pnl": -0.67
+        },
+        "high_half": {
+          "trades": 111,
+          "wr_pct": 74.8,
+          "avg_pnl": 2.38
+        },
+        "wr_delta": 6.9
+      },
+      "ADA": {
+        "median_score": 3.5,
+        "low_half": {
+          "trades": 136,
+          "wr_pct": 69.9,
+          "avg_pnl": 0.32
+        },
+        "high_half": {
+          "trades": 110,
+          "wr_pct": 76.4,
+          "avg_pnl": 4.01
+        },
+        "wr_delta": 6.5
+      },
+      "DOT": {
+        "median_score": 3.5,
+        "low_half": {
+          "trades": 221,
+          "wr_pct": 73.3,
+          "avg_pnl": -0.13
+        },
+        "high_half": {
+          "trades": 75,
+          "wr_pct": 80.0,
+          "avg_pnl": 4.74
+        },
+        "wr_delta": 6.7
+      },
+      "SUI": {
+        "median_score": 3.5,
+        "low_half": {
+          "trades": 270,
+          "wr_pct": 74.1,
+          "avg_pnl": 1.98
+        },
+        "high_half": {
+          "trades": 97,
+          "wr_pct": 74.2,
+          "avg_pnl": 0.94
+        },
+        "wr_delta": 0.2
+      },
+      "FIL": {
+        "median_score": 3.5,
+        "low_half": {
+          "trades": 266,
+          "wr_pct": 73.3,
+          "avg_pnl": 1.43
+        },
+        "high_half": {
+          "trades": 96,
+          "wr_pct": 83.3,
+          "avg_pnl": 5.13
+        },
+        "wr_delta": 10.0
+      }
+    },
+    "streak_analysis": {
+      "BTC": {
+        "avg_win_streak": 2.9,
+        "max_win_streak": 17,
+        "avg_loss_streak": 1.9,
+        "max_loss_streak": 11,
+        "after_loss_wr": 53.6,
+        "after_win_wr": 65.7,
+        "after_loss_avg_score": 2.8,
+        "after_win_avg_score": 2.9
+      },
+      "XRP": {
+        "avg_win_streak": 3.1,
+        "max_win_streak": 14,
+        "avg_loss_streak": 1.3,
+        "max_loss_streak": 4,
+        "after_loss_wr": 76.4,
+        "after_win_wr": 68.6,
+        "after_loss_avg_score": 3.8,
+        "after_win_avg_score": 3.8
+      },
+      "ADA": {
+        "avg_win_streak": 3.3,
+        "max_win_streak": 14,
+        "avg_loss_streak": 1.2,
+        "max_loss_streak": 4,
+        "after_loss_wr": 80.6,
+        "after_win_wr": 69.7,
+        "after_loss_avg_score": 3.8,
+        "after_win_avg_score": 3.8
+      },
+      "DOT": {
+        "avg_win_streak": 4.0,
+        "max_win_streak": 12,
+        "avg_loss_streak": 1.3,
+        "max_loss_streak": 5,
+        "after_loss_wr": 74.3,
+        "after_win_wr": 75.1,
+        "after_loss_avg_score": 3.4,
+        "after_win_avg_score": 3.5
+      },
+      "SUI": {
+        "avg_win_streak": 3.9,
+        "max_win_streak": 11,
+        "avg_loss_streak": 1.4,
+        "max_loss_streak": 3,
+        "after_loss_wr": 71.6,
+        "after_win_wr": 74.9,
+        "after_loss_avg_score": 3.6,
+        "after_win_avg_score": 3.5
+      },
+      "FIL": {
+        "avg_win_streak": 4.5,
+        "max_win_streak": 21,
+        "avg_loss_streak": 1.4,
+        "max_loss_streak": 3,
+        "after_loss_wr": 69.8,
+        "after_win_wr": 77.8,
+        "after_loss_avg_score": 3.5,
+        "after_win_avg_score": 3.6
+      },
+      "aggregate": {
+        "after_loss_wr": 65.8,
+        "after_win_wr": 71.6,
+        "after_loss_n": 661,
+        "after_win_n": 1534
+      }
+    },
+    "signed_score_bins": {
+      "[-6, -4)": {
+        "direction": "SHORT",
+        "trades": 50,
+        "wr_pct": 82.0,
+        "avg_pnl": 5.78,
+        "total_pnl": 289.2
+      },
+      "[-4, -2.5)": {
+        "direction": "SHORT",
+        "trades": 518,
+        "wr_pct": 72.6,
+        "avg_pnl": 2.51,
+        "total_pnl": 1300.34
+      },
+      "[2.5, 4)": {
+        "direction": "LONG",
+        "trades": 1264,
+        "wr_pct": 68.3,
+        "avg_pnl": 0.15,
+        "total_pnl": 187.88
+      },
+      "[4, 6)": {
+        "direction": "LONG",
+        "trades": 249,
+        "wr_pct": 75.5,
+        "avg_pnl": 2.14,
+        "total_pnl": 532.29
+      }
+    },
+    "exit_reason_by_score": {
+      "Q1_low": {
+        "TRAIL": 80.9,
+        "SL": 17.1,
+        "SIGNAL_FLIP": 2.1
+      },
+      "Q2": {
+        "TRAIL": 83.5,
+        "SL": 16.5
+      },
+      "Q3": {
+        "TRAIL": 89.6,
+        "SL": 10.2,
+        "SIGNAL_FLIP": 0.2
+      },
+      "Q4_high": {
+        "TRAIL": 92.7,
+        "SL": 7.3
+      }
+    },
+    "verdict": "strong_signal",
+    "insight_en": "Strong: Q4 WR 78.2% vs Q1 63.7% (+14.5pp). High scores = better trades."
+  }
+}

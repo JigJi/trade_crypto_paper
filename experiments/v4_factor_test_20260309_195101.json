@@ -1,0 +1,418 @@
+{
+  "timestamp": "20260309_195101",
+  "oos_period": "2026-01-01 00:00:00 to 2026-03-10 00:00:00",
+  "v3_baseline": {
+    "pnl": 14120.910455286672,
+    "trades": 828,
+    "per_coin": {
+      "BTC": {
+        "pnl": 1545.45740789926,
+        "trades": 173,
+        "wr": 60.115606936416185
+      },
+      "XRP": {
+        "pnl": 1734.232814495152,
+        "trades": 116,
+        "wr": 65.51724137931035
+      },
+      "ADA": {
+        "pnl": 2439.8796235952923,
+        "trades": 115,
+        "wr": 67.82608695652173
+      },
+      "DOT": {
+        "pnl": 2724.6072167178554,
+        "trades": 130,
+        "wr": 65.38461538461539
+      },
+      "SUI": {
+        "pnl": 2828.8333411598182,
+        "trades": 153,
+        "wr": 62.091503267973856
+      },
+      "FIL": {
+        "pnl": 2847.9000514192935,
+        "trades": 141,
+        "wr": 64.53900709219859
+      }
+    }
+  },
+  "phase_a_individual_tests": [
+    {
+      "factor": "dvol_level",
+      "weight": 0.5,
+      "pnl": 14464.389634911302,
+      "delta": 343.47917962463,
+      "trades": 836
+    },
+    {
+      "factor": "dvol_level",
+      "weight": 1.0,
+      "pnl": 14389.333269750317,
+      "delta": 268.4228144636454,
+      "trades": 847
+    },
+    {
+      "factor": "dvol_level",
+      "weight": 1.5,
+      "pnl": 14234.604131825676,
+      "delta": 113.69367653900372,
+      "trades": 847
+    },
+    {
+      "factor": "dvol_level",
+      "weight": 2.0,
+      "pnl": 14323.140609329443,
+      "delta": 202.23015404277066,
+      "trades": 848
+    },
+    {
+      "factor": "dvol_change",
+      "weight": 0.5,
+      "pnl": 14418.3859157657,
+      "delta": 297.4754604790287,
+      "trades": 831
+    },
+    {
+      "factor": "dvol_change",
+      "weight": 1.0,
+      "pnl": 13833.783439646819,
+      "delta": -287.1270156398532,
+      "trades": 825
+    },
+    {
+      "factor": "dvol_change",
+      "weight": 1.5,
+      "pnl": 13804.945984329039,
+      "delta": -315.96447095763324,
+      "trades": 831
+    },
+    {
+      "factor": "dvol_change",
+      "weight": 2.0,
+      "pnl": 12928.964736511452,
+      "delta": -1191.9457187752196,
+      "trades": 841
+    },
+    {
+      "factor": "stable_supply",
+      "weight": 0.5,
+      "pnl": 14781.896255359274,
+      "delta": 660.9858000726017,
+      "trades": 841
+    },
+    {
+      "factor": "stable_supply",
+      "weight": 1.0,
+      "pnl": 15458.302256679332,
+      "delta": 1337.3918013926595,
+      "trades": 846
+    },
+    {
+      "factor": "stable_supply",
+      "weight": 1.5,
+      "pnl": 14765.86815239403,
+      "delta": 644.9576971073584,
+      "trades": 848
+    },
+    {
+      "factor": "stable_supply",
+      "weight": 2.0,
+      "pnl": 14268.801536187808,
+      "delta": 147.89108090113587,
+      "trades": 863
+    },
+    {
+      "factor": "hashrate",
+      "weight": 0.5,
+      "pnl": 13170.344371868225,
+      "delta": -950.5660834184473,
+      "trades": 834
+    },
+    {
+      "factor": "hashrate",
+      "weight": 1.0,
+      "pnl": 14465.632873160746,
+      "delta": 344.7224178740744,
+      "trades": 870
+    },
+    {
+      "factor": "hashrate",
+      "weight": 1.5,
+      "pnl": 12306.162129543432,
+      "delta": -1814.7483257432395,
+      "trades": 876
+    },
+    {
+      "factor": "hashrate",
+      "weight": 2.0,
+      "pnl": 11642.655505120596,
+      "delta": -2478.254950166076,
+      "trades": 910
+    },
+    {
+      "factor": "active_addr",
+      "weight": 0.5,
+      "pnl": 13367.083400167481,
+      "delta": -753.8270551191908,
+      "trades": 817
+    },
+    {
+      "factor": "active_addr",
+      "weight": 1.0,
+      "pnl": 12850.396231419345,
+      "delta": -1270.514223867327,
+      "trades": 824
+    },
+    {
+      "factor": "active_addr",
+      "weight": 1.5,
+      "pnl": 12888.94022637118,
+      "delta": -1231.970228915492,
+      "trades": 831
+    },
+    {
+      "factor": "active_addr",
+      "weight": 2.0,
+      "pnl": 12900.78468778664,
+      "delta": -1220.1257675000325,
+      "trades": 834
+    },
+    {
+      "factor": "dex_ratio",
+      "weight": 0.5,
+      "pnl": 14067.733646429073,
+      "delta": -53.1768088575991,
+      "trades": 830
+    },
+    {
+      "factor": "dex_ratio",
+      "weight": 1.0,
+      "pnl": 14034.43208850678,
+      "delta": -86.4783667798929,
+      "trades": 833
+    },
+    {
+      "factor": "dex_ratio",
+      "weight": 1.5,
+      "pnl": 13934.835007837228,
+      "delta": -186.07544744944425,
+      "trades": 836
+    },
+    {
+      "factor": "dex_ratio",
+      "weight": 2.0,
+      "pnl": 13423.36601232319,
+      "delta": -697.5444429634827,
+      "trades": 844
+    },
+    {
+      "factor": "cvd_contrarian",
+      "weight": 0.5,
+      "pnl": 14202.754111250215,
+      "delta": 81.84365596354291,
+      "trades": 837
+    },
+    {
+      "factor": "cvd_contrarian",
+      "weight": 1.0,
+      "pnl": 14775.92863169053,
+      "delta": 655.0181764038589,
+      "trades": 864
+    },
+    {
+      "factor": "cvd_contrarian",
+      "weight": 1.5,
+      "pnl": 14788.286786644125,
+      "delta": 667.3763313574527,
+      "trades": 888
+    },
+    {
+      "factor": "cvd_contrarian",
+      "weight": 2.0,
+      "pnl": 14461.29125371294,
+      "delta": 340.3807984262676,
+      "trades": 914
+    },
+    {
+      "factor": "macro_risk_off",
+      "weight": 0.5,
+      "pnl": 14905.680576271014,
+      "delta": 784.7701209843417,
+      "trades": 847
+    },
+    {
+      "factor": "macro_risk_off",
+      "weight": 1.0,
+      "pnl": 14352.558954711252,
+      "delta": 231.64849942458022,
+      "trades": 867
+    },
+    {
+      "factor": "macro_risk_off",
+      "weight": 1.5,
+      "pnl": 13219.538295387252,
+      "delta": -901.3721598994198,
+      "trades": 873
+    },
+    {
+      "factor": "macro_risk_off",
+      "weight": 2.0,
+      "pnl": 11830.394797698005,
+      "delta": -2290.5156575886667,
+      "trades": 870
+    }
+  ],
+  "phase_a_best_per_factor": {
+    "dvol_level": {
+      "factor": "dvol_level",
+      "weight": 0.5,
+      "pnl": 14464.389634911302,
+      "delta": 343.47917962463,
+      "trades": 836
+    },
+    "dvol_change": {
+      "factor": "dvol_change",
+      "weight": 0.5,
+      "pnl": 14418.3859157657,
+      "delta": 297.4754604790287,
+      "trades": 831
+    },
+    "stable_supply": {
+      "factor": "stable_supply",
+      "weight": 1.0,
+      "pnl": 15458.302256679332,
+      "delta": 1337.3918013926595,
+      "trades": 846
+    },
+    "hashrate": {
+      "factor": "hashrate",
+      "weight": 1.0,
+      "pnl": 14465.632873160746,
+      "delta": 344.7224178740744,
+      "trades": 870
+    },
+    "active_addr": {
+      "factor": "active_addr",
+      "weight": 0.5,
+      "pnl": 13367.083400167481,
+      "delta": -753.8270551191908,
+      "trades": 817
+    },
+    "dex_ratio": {
+      "factor": "dex_ratio",
+      "weight": 0.5,
+      "pnl": 14067.733646429073,
+      "delta": -53.1768088575991,
+      "trades": 830
+    },
+    "cvd_contrarian": {
+      "factor": "cvd_contrarian",
+      "weight": 1.5,
+      "pnl": 14788.286786644125,
+      "delta": 667.3763313574527,
+      "trades": 888
+    },
+    "macro_risk_off": {
+      "factor": "macro_risk_off",
+      "weight": 0.5,
+      "pnl": 14905.680576271014,
+      "delta": 784.7701209843417,
+      "trades": 847
+    }
+  },
+  "phase_b_stepwise_log": [
+    {
+      "step": 1,
+      "factor": "stable_supply",
+      "weight": 1.0,
+      "pnl": 15458.302256679332,
+      "delta": 1337.3918013926595,
+      "kept": "True"
+    },
+    {
+      "step": 2,
+      "factor": "macro_risk_off",
+      "weight": 0.5,
+      "pnl": 15021.49048158729,
+      "delta": -436.811775092041,
+      "kept": "False"
+    },
+    {
+      "step": 3,
+      "factor": "cvd_contrarian",
+      "weight": 1.5,
+      "pnl": 15428.428362737608,
+      "delta": -29.87389394172351,
+      "kept": "False"
+    },
+    {
+      "step": 4,
+      "factor": "hashrate",
+      "weight": 1.0,
+      "pnl": 14809.228139975683,
+      "delta": -649.0741167036485,
+      "kept": "False"
+    },
+    {
+      "step": 5,
+      "factor": "dvol_level",
+      "weight": 0.5,
+      "pnl": 15321.575561551228,
+      "delta": -136.72669512810353,
+      "kept": "False"
+    },
+    {
+      "step": 6,
+      "factor": "dvol_change",
+      "weight": 0.5,
+      "pnl": 14819.12472831968,
+      "delta": -639.1775283596508,
+      "kept": "False"
+    }
+  ],
+  "phase_b_selected_factors": [
+    {
+      "name": "stable_supply",
+      "weight": 1.0
+    }
+  ],
+  "v4_final": {
+    "pnl": 15458.302256679332,
+    "trades": 846,
+    "per_coin": {
+      "BTC": {
+        "pnl": 1500.7965315320043,
+        "trades": 169,
+        "wr": 59.76331360946746
+      },
+      "XRP": {
+        "pnl": 2161.6965087813855,
+        "trades": 125,
+        "wr": 66.4
+      },
+      "ADA": {
+        "pnl": 2759.1489456136405,
+        "trades": 127,
+        "wr": 66.92913385826772
+      },
+      "DOT": {
+        "pnl": 2553.0607077208697,
+        "trades": 131,
+        "wr": 62.59541984732825
+      },
+      "SUI": {
+        "pnl": 3391.7180846956217,
+        "trades": 155,
+        "wr": 63.87096774193548
+      },
+      "FIL": {
+        "pnl": 3091.88147833581,
+        "trades": 139,
+        "wr": 64.74820143884892
+      }
+    },
+    "delta_vs_v3": 1337.3918013926595,
+    "delta_pct": 9.471002635612342
+  }
+}

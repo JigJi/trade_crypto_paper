@@ -1,0 +1,141 @@
+{
+  "experiment_id": "short_bias_v3_20260310_222656",
+  "description": "Short bias (offset=0.5) on v3 baseline",
+  "oos_period": "2026-01-01 00:00:00 to 2026-03-10 00:00:00",
+  "baseline": {
+    "pnl": 14120.91,
+    "trades": 828,
+    "per_coin": {
+      "BTC": {
+        "pnl": 1545.46,
+        "trades": 173,
+        "wr": 60.1,
+        "sharpe": 4.29,
+        "wr_long": 56.6,
+        "wr_short": 62.9,
+        "n_long": 76,
+        "n_short": 97
+      },
+      "XRP": {
+        "pnl": 1734.23,
+        "trades": 116,
+        "wr": 65.5,
+        "sharpe": 4.33,
+        "wr_long": 68.0,
+        "wr_short": 63.6,
+        "n_long": 50,
+        "n_short": 66
+      },
+      "ADA": {
+        "pnl": 2439.88,
+        "trades": 115,
+        "wr": 67.8,
+        "sharpe": 5.88,
+        "wr_long": 70.8,
+        "wr_short": 65.7,
+        "n_long": 48,
+        "n_short": 67
+      },
+      "DOT": {
+        "pnl": 2724.61,
+        "trades": 130,
+        "wr": 65.4,
+        "sharpe": 5.58,
+        "wr_long": 55.9,
+        "wr_short": 73.2,
+        "n_long": 59,
+        "n_short": 71
+      },
+      "SUI": {
+        "pnl": 2828.83,
+        "trades": 153,
+        "wr": 62.1,
+        "sharpe": 5.1,
+        "wr_long": 54.3,
+        "wr_short": 68.7,
+        "n_long": 70,
+        "n_short": 83
+      },
+      "FIL": {
+        "pnl": 2847.9,
+        "trades": 141,
+        "wr": 64.5,
+        "sharpe": 5.28,
+        "wr_long": 57.4,
+        "wr_short": 70.0,
+        "n_long": 61,
+        "n_short": 80
+      }
+    }
+  },
+  "short_bias": {
+    "pnl": 15975.95,
+    "trades": 909,
+    "per_coin": {
+      "BTC": {
+        "pnl": 1601.9,
+        "trades": 202,
+        "wr": 60.9,
+        "sharpe": 4.28,
+        "wr_long": 60.9,
+        "wr_short": 60.9,
+        "n_long": 69,
+        "n_short": 133
+      },
+      "XRP": {
+        "pnl": 2587.77,
+        "trades": 137,
+        "wr": 67.9,
+        "sharpe": 5.7,
+        "wr_long": 69.6,
+        "wr_short": 67.0,
+        "n_long": 46,
+        "n_short": 91
+      },
+      "ADA": {
+        "pnl": 2811.97,
+        "trades": 135,
+        "wr": 67.4,
+        "sharpe": 5.92,
+        "wr_long": 71.1,
+        "wr_short": 65.6,
+        "n_long": 45,
+        "n_short": 90
+      },
+      "DOT": {
+        "pnl": 2838.96,
+        "trades": 135,
+        "wr": 65.2,
+        "sharpe": 5.71,
+        "wr_long": 56.9,
+        "wr_short": 71.4,
+        "n_long": 58,
+        "n_short": 77
+      },
+      "SUI": {
+        "pnl": 3085.84,
+        "trades": 155,
+        "wr": 63.9,
+        "sharpe": 5.46,
+        "wr_long": 53.5,
+        "wr_short": 72.6,
+        "n_long": 71,
+        "n_short": 84
+      },
+      "FIL": {
+        "pnl": 3049.51,
+        "trades": 145,
+        "wr": 64.1,
+        "sharpe": 5.57,
+        "wr_long": 55.7,
+        "wr_short": 70.2,
+        "n_long": 61,
+        "n_short": 84
+      }
+    },
+    "short_offset": 0.5
+  },
+  "delta": 1855.04,
+  "delta_pct": 13.1,
+  "verdict": "KEEP"
+}

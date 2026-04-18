@@ -1,0 +1,401 @@
+{
+  "experiment": "liq_scoring_improvements_p2_p4",
+  "timestamp": "20260319_134000",
+  "config": {
+    "v5_liq": 5.0,
+    "v5_ob": 2.0,
+    "v5_tick": 3.0,
+    "v5_sl": 15.0,
+    "v5_tp": 12.0,
+    "v5_threshold": 3.0,
+    "oos": "2025-01-01 to 2026-03-18",
+    "coins": [
+      "FARTCOIN",
+      "AAVE",
+      "DOGE",
+      "SEI",
+      "CRV"
+    ]
+  },
+  "results": [
+    {
+      "exp": 1,
+      "name": "Baseline",
+      "total_trades": 1587,
+      "total_wr": 67.7,
+      "total_pnl": 57241.37,
+      "vs_baseline_pnl": 0.0,
+      "vs_baseline_pct": 0.0,
+      "coins": [
+        {
+          "coin": "FARTCOIN",
+          "trades": 318,
+          "wr": 69.2,
+          "pnl": 17821.55,
+          "sharpe": 9.55
+        },
+        {
+          "coin": "AAVE",
+          "trades": 316,
+          "wr": 67.4,
+          "pnl": 9919.91,
+          "sharpe": 10.09
+        },
+        {
+          "coin": "DOGE",
+          "trades": 325,
+          "wr": 67.1,
+          "pnl": 9296.04,
+          "sharpe": 9.39
+        },
+        {
+          "coin": "SEI",
+          "trades": 317,
+          "wr": 69.4,
+          "pnl": 10105.45,
+          "sharpe": 9.28
+        },
+        {
+          "coin": "CRV",
+          "trades": 311,
+          "wr": 65.6,
+          "pnl": 10098.42,
+          "sharpe": 8.51
+        }
+      ]
+    },
+    {
+      "exp": 2,
+      "name": "P2: Mag cascade",
+      "total_trades": 1384,
+      "total_wr": 69.6,
+      "total_pnl": 52751.56,
+      "vs_baseline_pnl": -4489.81,
+      "vs_baseline_pct": -7.8,
+      "coins": [
+        {
+          "coin": "FARTCOIN",
+          "trades": 275,
+          "wr": 72.4,
+          "pnl": 16403.01,
+          "sharpe": 9.4
+        },
+        {
+          "coin": "AAVE",
+          "trades": 276,
+          "wr": 68.1,
+          "pnl": 9223.84,
+          "sharpe": 9.65
+        },
+        {
+          "coin": "DOGE",
+          "trades": 284,
+          "wr": 69.4,
+          "pnl": 8804.67,
+          "sharpe": 9.44
+        },
+        {
+          "coin": "SEI",
+          "trades": 278,
+          "wr": 70.1,
+          "pnl": 8906.44,
+          "sharpe": 9.12
+        },
+        {
+          "coin": "CRV",
+          "trades": 271,
+          "wr": 67.9,
+          "pnl": 9413.6,
+          "sharpe": 8.4
+        }
+      ]
+    },
+    {
+      "exp": 3,
+      "name": "P2: Mag tick_liq",
+      "total_trades": 1536,
+      "total_wr": 68.3,
+      "total_pnl": 57263.48,
+      "vs_baseline_pnl": 22.11,
+      "vs_baseline_pct": 0.0,
+      "coins": [
+        {
+          "coin": "FARTCOIN",
+          "trades": 308,
+          "wr": 69.8,
+          "pnl": 17965.04,
+          "sharpe": 9.64
+        },
+        {
+          "coin": "AAVE",
+          "trades": 308,
+          "wr": 67.5,
+          "pnl": 9699.98,
+          "sharpe": 9.87
+        },
+        {
+          "coin": "DOGE",
+          "trades": 312,
+          "wr": 67.0,
+          "pnl": 9281.89,
+          "sharpe": 9.57
+        },
+        {
+          "coin": "SEI",
+          "trades": 308,
+          "wr": 70.5,
+          "pnl": 10009.46,
+          "sharpe": 9.24
+        },
+        {
+          "coin": "CRV",
+          "trades": 300,
+          "wr": 66.7,
+          "pnl": 10307.12,
+          "sharpe": 8.62
+        }
+      ]
+    },
+    {
+      "exp": 4,
+      "name": "P2: Both mag",
+      "total_trades": 1335,
+      "total_wr": 70.1,
+      "total_pnl": 52381.98,
+      "vs_baseline_pnl": -4859.39,
+      "vs_baseline_pct": -8.5,
+      "coins": [
+        {
+          "coin": "FARTCOIN",
+          "trades": 266,
+          "wr": 72.9,
+          "pnl": 16533.58,
+          "sharpe": 9.4
+        },
+        {
+          "coin": "AAVE",
+          "trades": 269,
+          "wr": 68.0,
+          "pnl": 8948.3,
+          "sharpe": 9.3
+        },
+        {
+          "coin": "DOGE",
+          "trades": 272,
+          "wr": 69.9,
+          "pnl": 8653.21,
+          "sharpe": 9.42
+        },
+        {
+          "coin": "SEI",
+          "trades": 268,
+          "wr": 70.9,
+          "pnl": 8730.75,
+          "sharpe": 8.96
+        },
+        {
+          "coin": "CRV",
+          "trades": 260,
+          "wr": 68.8,
+          "pnl": 9516.14,
+          "sharpe": 8.41
+        }
+      ]
+    },
+    {
+      "exp": 5,
+      "name": "P4: 8-bar (2h)",
+      "total_trades": 1758,
+      "total_wr": 65.0,
+      "total_pnl": 55643.03,
+      "vs_baseline_pnl": -1598.34,
+      "vs_baseline_pct": -2.8,
+      "coins": [
+        {
+          "coin": "FARTCOIN",
+          "trades": 353,
+          "wr": 67.1,
+          "pnl": 17269.14,
+          "sharpe": 9.35
+        },
+        {
+          "coin": "AAVE",
+          "trades": 351,
+          "wr": 65.2,
+          "pnl": 10015.01,
+          "sharpe": 10.03
+        },
+        {
+          "coin": "DOGE",
+          "trades": 358,
+          "wr": 64.2,
+          "pnl": 9073.09,
+          "sharpe": 9.13
+        },
+        {
+          "coin": "SEI",
+          "trades": 351,
+          "wr": 66.7,
+          "pnl": 9906.1,
+          "sharpe": 8.96
+        },
+        {
+          "coin": "CRV",
+          "trades": 345,
+          "wr": 61.7,
+          "pnl": 9379.68,
+          "sharpe": 7.75
+        }
+      ]
+    },
+    {
+      "exp": 6,
+      "name": "P4: 4-bar (1h)",
+      "total_trades": 1830,
+      "total_wr": 63.8,
+      "total_pnl": 53561.32,
+      "vs_baseline_pnl": -3680.05,
+      "vs_baseline_pct": -6.4,
+      "coins": [
+        {
+          "coin": "FARTCOIN",
+          "trades": 368,
+          "wr": 65.8,
+          "pnl": 16635.58,
+          "sharpe": 8.79
+        },
+        {
+          "coin": "AAVE",
+          "trades": 365,
+          "wr": 64.4,
+          "pnl": 9432.52,
+          "sharpe": 9.25
+        },
+        {
+          "coin": "DOGE",
+          "trades": 372,
+          "wr": 64.0,
+          "pnl": 8744.82,
+          "sharpe": 8.71
+        },
+        {
+          "coin": "SEI",
+          "trades": 366,
+          "wr": 64.2,
+          "pnl": 9756.86,
+          "sharpe": 8.63
+        },
+        {
+          "coin": "CRV",
+          "trades": 359,
+          "wr": 60.4,
+          "pnl": 8991.53,
+          "sharpe": 7.37
+        }
+      ]
+    },
+    {
+      "exp": 7,
+      "name": "P4: Dual (4+16)",
+      "total_trades": 1574,
+      "total_wr": 67.7,
+      "total_pnl": 56742.38,
+      "vs_baseline_pnl": -498.99,
+      "vs_baseline_pct": -0.9,
+      "coins": [
+        {
+          "coin": "FARTCOIN",
+          "trades": 316,
+          "wr": 69.3,
+          "pnl": 17631.49,
+          "sharpe": 9.54
+        },
+        {
+          "coin": "AAVE",
+          "trades": 314,
+          "wr": 67.5,
+          "pnl": 10072.84,
+          "sharpe": 10.31
+        },
+        {
+          "coin": "DOGE",
+          "trades": 320,
+          "wr": 66.9,
+          "pnl": 9265.26,
+          "sharpe": 9.55
+        },
+        {
+          "coin": "SEI",
+          "trades": 315,
+          "wr": 70.2,
+          "pnl": 9989.72,
+          "sharpe": 9.11
+        },
+        {
+          "coin": "CRV",
+          "trades": 309,
+          "wr": 64.7,
+          "pnl": 9783.07,
+          "sharpe": 8.2
+        }
+      ]
+    },
+    {
+      "exp": 8,
+      "name": "Best: P2: Mag tick_liq + P4: Dual (4+16)",
+      "total_trades": 1536,
+      "total_wr": 68.3,
+      "total_pnl": 57263.48,
+      "vs_baseline_pnl": 22.11,
+      "vs_baseline_pct": 0.0,
+      "coins": [
+        {
+          "coin": "FARTCOIN",
+          "trades": 308,
+          "wr": 69.8,
+          "pnl": 17965.04,
+          "sharpe": 9.64
+        },
+        {
+          "coin": "AAVE",
+          "trades": 308,
+          "wr": 67.5,
+          "pnl": 9699.98,
+          "sharpe": 9.87
+        },
+        {
+          "coin": "DOGE",
+          "trades": 312,
+          "wr": 67.0,
+          "pnl": 9281.89,
+          "sharpe": 9.57
+        },
+        {
+          "coin": "SEI",
+          "trades": 308,
+          "wr": 70.5,
+          "pnl": 10009.46,
+          "sharpe": 9.24
+        },
+        {
+          "coin": "CRV",
+          "trades": 300,
+          "wr": 66.7,
+          "pnl": 10307.12,
+          "sharpe": 8.62
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "best_p2": "P2: Mag tick_liq",
+    "best_p2_pnl": 57263.48,
+    "best_p4": "P4: Dual (4+16)",
+    "best_p4_pnl": 56742.38,
+    "best_overall": "P2: Mag tick_liq",
+    "best_overall_pnl": 57263.48,
+    "baseline_pnl": 57241.37,
+    "improvement": "True"
+  },
+  "elapsed_seconds": 5.4
+}

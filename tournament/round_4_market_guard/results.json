@@ -1,0 +1,625 @@
+{
+  "tournament": "round_4_market_guard",
+  "run_date": "2026-03-24T14:54:42.974270",
+  "baseline_pnl": 83767.84,
+  "verdict": "MONITOR",
+  "champion": {
+    "name": "P2_all_winners",
+    "guard_config": {
+      "atr_spike_mult": "3.0",
+      "double_liq": "{'mode': 'balance', 'balance_thr': 0.3, 'total_mult': 2.0}",
+      "score_osc": "{'window': 24, 'max_flips': 4}"
+    },
+    "dd_threshold": null,
+    "total_pnl": 84409.39,
+    "win_rate": 72.0,
+    "sharpe": 26.34,
+    "max_dd_pct": -1.34,
+    "guard_stats": {
+      "signals_blocked": 243,
+      "pct_blocked": 8.4,
+      "blocked_would_pnl": 14046.83,
+      "blocked_would_trades": 243,
+      "blocked_would_wr": 0.0,
+      "guard_savings": -14046.83,
+      "dd_blocked": 0,
+      "per_guard": {
+        "atr_spike": 224,
+        "double_liq": 1122,
+        "score_osc": 78
+      }
+    },
+    "exit_breakdown": {
+      "SL": {
+        "count": 0,
+        "pnl": 0,
+        "wr": 0,
+        "avg_pnl": 0,
+        "avg_bars": 0
+      },
+      "TP": {
+        "count": 96,
+        "pnl": 16810.51,
+        "wr": 100.0,
+        "avg_pnl": 175.11,
+        "avg_bars": 52.0
+      },
+      "TIMEOUT": {
+        "count": 502,
+        "pnl": 27119.63,
+        "wr": 87.3,
+        "avg_pnl": 54.02,
+        "avg_bars": 96.0
+      },
+      "SIGNAL_FLIP": {
+        "count": 2038,
+        "pnl": 40479.26,
+        "wr": 66.9,
+        "avg_pnl": 19.86,
+        "avg_bars": 32.3
+      }
+    },
+    "regime_results": {
+      "BULL": {
+        "trades": 0,
+        "pnl": 0,
+        "wr": 0
+      },
+      "BEAR": {
+        "trades": 0,
+        "pnl": 0,
+        "wr": 0
+      },
+      "FLAT": {
+        "trades": 40,
+        "pnl": 882.08,
+        "wr": 60.0
+      },
+      "MIXED": {
+        "trades": 882,
+        "pnl": 26261.51,
+        "wr": 75.9
+      },
+      "RECENT": {
+        "trades": 1714,
+        "pnl": 57265.8,
+        "wr": 70.2
+      }
+    },
+    "coin_results": {
+      "BTC": {
+        "pnl": 8739.77,
+        "wr": 74.2,
+        "trades": 481,
+        "sharpe": 13.77
+      },
+      "XRP": {
+        "pnl": 10483.67,
+        "wr": 71.8,
+        "trades": 365,
+        "sharpe": 11.18
+      },
+      "ADA": {
+        "pnl": 14002.69,
+        "wr": 73.5,
+        "trades": 363,
+        "sharpe": 12.3
+      },
+      "DOT": {
+        "pnl": 15106.24,
+        "wr": 68.8,
+        "trades": 475,
+        "sharpe": 12.22
+      },
+      "SUI": {
+        "pnl": 17718.89,
+        "wr": 74.0,
+        "trades": 474,
+        "sharpe": 13.92
+      },
+      "FIL": {
+        "pnl": 18358.13,
+        "wr": 69.7,
+        "trades": 478,
+        "sharpe": 8.73
+      }
+    }
+  },
+  "phase1_winners": {
+    "weekend": null,
+    "atr_spike": "3.0",
+    "double_liq": "{'mode': 'balance', 'balance_thr': 0.3, 'total_mult': 2.0}",
+    "score_osc": "{'window': 24, 'max_flips': 4}",
+    "dd_breaker": null
+  },
+  "phase3_cross_model": [
+    {
+      "name": "V3_with_guard",
+      "pnl": 38183.43,
+      "trades": 1573,
+      "wr": 68.5
+    },
+    {
+      "name": "V6_baseline",
+      "pnl": 83767.84,
+      "trades": 2643,
+      "wr": 71.7
+    },
+    {
+      "name": "V6_with_guard",
+      "pnl": 84409.39,
+      "trades": 2636,
+      "wr": 72.0
+    }
+  ],
+  "all_experiments": [
+    {
+      "name": "BASELINE_no_guard",
+      "guard_config": {},
+      "dd_threshold": null,
+      "total_pnl": 83767.84,
+      "total_trades": 2643,
+      "win_rate": 71.7,
+      "sharpe": 26.12,
+      "max_dd_pct": -1.34,
+      "guard_stats": {
+        "signals_blocked": 0,
+        "pct_blocked": 0.0,
+        "blocked_would_pnl": 0.0,
+        "blocked_would_trades": 0,
+        "blocked_would_wr": 0.0,
+        "guard_savings": -0.0,
+        "dd_blocked": 0,
+        "per_guard": {}
+      }
+    },
+    {
+      "name": "A_weekend_block_all",
+      "guard_config": {
+        "weekend": "block_all"
+      },
+      "dd_threshold": null,
+      "total_pnl": 69565.43,
+      "total_trades": 1996,
+      "win_rate": 73.9,
+      "sharpe": 23.25,
+      "max_dd_pct": -1.44,
+      "guard_stats": {
+        "signals_blocked": 24493,
+        "pct_blocked": 92.5,
+        "blocked_would_pnl": 430565.28,
+        "blocked_would_trades": 24493,
+        "blocked_would_wr": 0.0,
+        "guard_savings": -430565.28,
+        "dd_blocked": 0,
+        "per_guard": {
+          "weekend": 72726
+        }
+      }
+    },
+    {
+      "name": "A_weekend_size_50",
+      "guard_config": {
+        "weekend": "size_50"
+      },
+      "dd_threshold": null,
+      "total_pnl": 73595.69,
+      "total_trades": 2643,
+      "win_rate": 71.7,
+      "sharpe": 24.43,
+      "max_dd_pct": -1.42,
+      "guard_stats": {
+        "signals_blocked": 0,
+        "pct_blocked": 0.0,
+        "blocked_would_pnl": 0.0,
+        "blocked_would_trades": 0,
+        "blocked_would_wr": 0.0,
+        "guard_savings": -0.0,
+        "dd_blocked": 0,
+        "per_guard": {
+          "weekend": 0
+        }
+      }
+    },
+    {
+      "name": "B_atr_spike_1.5x",
+      "guard_config": {
+        "atr_spike_mult": "1.5"
+      },
+      "dd_threshold": null,
+      "total_pnl": 82399.7,
+      "total_trades": 2600,
+      "win_rate": 72.0,
+      "sharpe": 26.5,
+      "max_dd_pct": -1.35,
+      "guard_stats": {
+        "signals_blocked": 1962,
+        "pct_blocked": 43.0,
+        "blocked_would_pnl": 90283.3,
+        "blocked_would_trades": 1962,
+        "blocked_would_wr": 0.0,
+        "guard_savings": -90283.3,
+        "dd_blocked": 0,
+        "per_guard": {
+          "atr_spike": 14370
+        }
+      }
+    },
+    {
+      "name": "B_atr_spike_2.0x",
+      "guard_config": {
+        "atr_spike_mult": "2.0"
+      },
+      "dd_threshold": null,
+      "total_pnl": 83926.72,
+      "total_trades": 2637,
+      "win_rate": 71.6,
+      "sharpe": 26.34,
+      "max_dd_pct": -1.34,
+      "guard_stats": {
+        "signals_blocked": 337,
+        "pct_blocked": 11.3,
+        "blocked_would_pnl": 53913.86,
+        "blocked_would_trades": 337,
+        "blocked_would_wr": 0.0,
+        "guard_savings": -53913.86,
+        "dd_blocked": 0,
+        "per_guard": {
+          "atr_spike": 2068
+        }
+      }
+    },
+    {
+      "name": "B_atr_spike_2.5x",
+      "guard_config": {
+        "atr_spike_mult": "2.5"
+      },
+      "dd_threshold": null,
+      "total_pnl": 83772.37,
+      "total_trades": 2642,
+      "win_rate": 71.8,
+      "sharpe": 26.31,
+      "max_dd_pct": -1.34,
+      "guard_stats": {
+        "signals_blocked": 106,
+        "pct_blocked": 3.9,
+        "blocked_would_pnl": 35810.84,
+        "blocked_would_trades": 106,
+        "blocked_would_wr": 0.0,
+        "guard_savings": -35810.84,
+        "dd_blocked": 0,
+        "per_guard": {
+          "atr_spike": 524
+        }
+      }
+    },
+    {
+      "name": "B_atr_spike_3.0x",
+      "guard_config": {
+        "atr_spike_mult": "3.0"
+      },
+      "dd_threshold": null,
+      "total_pnl": 84154.46,
+      "total_trades": 2642,
+      "win_rate": 71.7,
+      "sharpe": 26.25,
+      "max_dd_pct": -1.34,
+      "guard_stats": {
+        "signals_blocked": 53,
+        "pct_blocked": 2.0,
+        "blocked_would_pnl": 6358.92,
+        "blocked_would_trades": 53,
+        "blocked_would_wr": 0.0,
+        "guard_savings": -6358.92,
+        "dd_blocked": 0,
+        "per_guard": {
+          "atr_spike": 224
+        }
+      }
+    },
+    {
+      "name": "C_dliq_balance_30_2x",
+      "guard_config": {
+        "double_liq": "{'mode': 'balance', 'balance_thr': 0.3, 'total_mult': 2.0}"
+      },
+      "dd_threshold": null,
+      "total_pnl": 83893.86,
+      "total_trades": 2643,
+      "win_rate": 71.7,
+      "sharpe": 26.15,
+      "max_dd_pct": -1.34,
+      "guard_stats": {
+        "signals_blocked": 120,
+        "pct_blocked": 4.3,
+        "blocked_would_pnl": 4038.37,
+        "blocked_would_trades": 120,
+        "blocked_would_wr": 0.0,
+        "guard_savings": -4038.37,
+        "dd_blocked": 0,
+        "per_guard": {
+          "double_liq": 1122
+        }
+      }
+    },
+    {
+      "name": "C_dliq_balance_40_3x",
+      "guard_config": {
+        "double_liq": "{'mode': 'balance', 'balance_thr': 0.4, 'total_mult': 3.0}"
+      },
+      "dd_threshold": null,
+      "total_pnl": 83740.39,
+      "total_trades": 2643,
+      "win_rate": 71.7,
+      "sharpe": 26.12,
+      "max_dd_pct": -1.34,
+      "guard_stats": {
+        "signals_blocked": 16,
+        "pct_blocked": 0.6,
+        "blocked_would_pnl": 2620.93,
+        "blocked_would_trades": 16,
+        "blocked_would_wr": 0.0,
+        "guard_savings": -2620.93,
+        "dd_blocked": 0,
+        "per_guard": {
+          "double_liq": 186
+        }
+      }
+    },
+    {
+      "name": "C_dliq_both_spike_2x",
+      "guard_config": {
+        "double_liq": "{'mode': 'both_spike', 'ma_mult': 2.0}"
+      },
+      "dd_threshold": null,
+      "total_pnl": 82996.37,
+      "total_trades": 2640,
+      "win_rate": 72.2,
+      "sharpe": 26.15,
+      "max_dd_pct": -1.25,
+      "guard_stats": {
+        "signals_blocked": 706,
+        "pct_blocked": 21.1,
+        "blocked_would_pnl": 26992.14,
+        "blocked_would_trades": 706,
+        "blocked_would_wr": 0.0,
+        "guard_savings": -26992.14,
+        "dd_blocked": 0,
+        "per_guard": {
+          "double_liq": 9204
+        }
+      }
+    },
+    {
+      "name": "C_dliq_both_spike_3x",
+      "guard_config": {
+        "double_liq": "{'mode': 'both_spike', 'ma_mult': 3.0}"
+      },
+      "dd_threshold": null,
+      "total_pnl": 83588.78,
+      "total_trades": 2643,
+      "win_rate": 71.8,
+      "sharpe": 26.11,
+      "max_dd_pct": -1.26,
+      "guard_stats": {
+        "signals_blocked": 322,
+        "pct_blocked": 10.9,
+        "blocked_would_pnl": 8486.28,
+        "blocked_would_trades": 322,
+        "blocked_would_wr": 0.0,
+        "guard_savings": -8486.28,
+        "dd_blocked": 0,
+        "per_guard": {
+          "double_liq": 5082
+        }
+      }
+    },
+    {
+      "name": "D_osc_8bars_3flips",
+      "guard_config": {
+        "score_osc": "{'window': 8, 'max_flips': 3}"
+      },
+      "dd_threshold": null,
+      "total_pnl": 83767.84,
+      "total_trades": 2643,
+      "win_rate": 71.7,
+      "sharpe": 26.12,
+      "max_dd_pct": -1.34,
+      "guard_stats": {
+        "signals_blocked": 0,
+        "pct_blocked": 0.0,
+        "blocked_would_pnl": 0.0,
+        "blocked_would_trades": 0,
+        "blocked_would_wr": 0.0,
+        "guard_savings": -0.0,
+        "dd_blocked": 0,
+        "per_guard": {
+          "score_osc": 6
+        }
+      }
+    },
+    {
+      "name": "D_osc_16bars_3flips",
+      "guard_config": {
+        "score_osc": "{'window': 16, 'max_flips': 3}"
+      },
+      "dd_threshold": null,
+      "total_pnl": 83834.54,
+      "total_trades": 2637,
+      "win_rate": 71.9,
+      "sharpe": 26.16,
+      "max_dd_pct": -1.34,
+      "guard_stats": {
+        "signals_blocked": 52,
+        "pct_blocked": 1.9,
+        "blocked_would_pnl": 1564.43,
+        "blocked_would_trades": 52,
+        "blocked_would_wr": 0.0,
+        "guard_savings": -1564.43,
+        "dd_blocked": 0,
+        "per_guard": {
+          "score_osc": 72
+        }
+      }
+    },
+    {
+      "name": "D_osc_16bars_4flips",
+      "guard_config": {
+        "score_osc": "{'window': 16, 'max_flips': 4}"
+      },
+      "dd_threshold": null,
+      "total_pnl": 83767.84,
+      "total_trades": 2643,
+      "win_rate": 71.7,
+      "sharpe": 26.12,
+      "max_dd_pct": -1.34,
+      "guard_stats": {
+        "signals_blocked": 0,
+        "pct_blocked": 0.0,
+        "blocked_would_pnl": 0.0,
+        "blocked_would_trades": 0,
+        "blocked_would_wr": 0.0,
+        "guard_savings": -0.0,
+        "dd_blocked": 0,
+        "per_guard": {
+          "score_osc": 30
+        }
+      }
+    },
+    {
+      "name": "D_osc_24bars_4flips",
+      "guard_config": {
+        "score_osc": "{'window': 24, 'max_flips': 4}"
+      },
+      "dd_threshold": null,
+      "total_pnl": 83847.82,
+      "total_trades": 2643,
+      "win_rate": 71.8,
+      "sharpe": 26.16,
+      "max_dd_pct": -1.34,
+      "guard_stats": {
+        "signals_blocked": 14,
+        "pct_blocked": 0.5,
+        "blocked_would_pnl": 1019.68,
+        "blocked_would_trades": 14,
+        "blocked_would_wr": 0.0,
+        "guard_savings": -1019.68,
+        "dd_blocked": 0,
+        "per_guard": {
+          "score_osc": 78
+        }
+      }
+    },
+    {
+      "name": "D_osc_24bars_5flips",
+      "guard_config": {
+        "score_osc": "{'window': 24, 'max_flips': 5}"
+      },
+      "dd_threshold": null,
+      "total_pnl": 83767.84,
+      "total_trades": 2643,
+      "win_rate": 71.7,
+      "sharpe": 26.12,
+      "max_dd_pct": -1.34,
+      "guard_stats": {
+        "signals_blocked": 0,
+        "pct_blocked": 0.0,
+        "blocked_would_pnl": 0.0,
+        "blocked_would_trades": 0,
+        "blocked_would_wr": 0.0,
+        "guard_savings": -0.0,
+        "dd_blocked": 0,
+        "per_guard": {
+          "score_osc": 0
+        }
+      }
+    },
+    {
+      "name": "E_dd_breaker_2pct",
+      "guard_config": {},
+      "dd_threshold": -0.02,
+      "total_pnl": 83763.93,
+      "total_trades": 2641,
+      "win_rate": 71.7,
+      "sharpe": 26.13,
+      "max_dd_pct": -1.26,
+      "guard_stats": {
+        "signals_blocked": 0,
+        "pct_blocked": 0.0,
+        "blocked_would_pnl": 0.0,
+        "blocked_would_trades": 0,
+        "blocked_would_wr": 0.0,
+        "guard_savings": -0.0,
+        "dd_blocked": 16,
+        "per_guard": {}
+      }
+    },
+    {
+      "name": "E_dd_breaker_3pct",
+      "guard_config": {},
+      "dd_threshold": -0.03,
+      "total_pnl": 83767.84,
+      "total_trades": 2643,
+      "win_rate": 71.7,
+      "sharpe": 26.12,
+      "max_dd_pct": -1.34,
+      "guard_stats": {
+        "signals_blocked": 0,
+        "pct_blocked": 0.0,
+        "blocked_would_pnl": 0.0,
+        "blocked_would_trades": 0,
+        "blocked_would_wr": 0.0,
+        "guard_savings": -0.0,
+        "dd_blocked": 0,
+        "per_guard": {}
+      }
+    },
+    {
+      "name": "E_dd_breaker_5pct",
+      "guard_config": {},
+      "dd_threshold": -0.05,
+      "total_pnl": 83767.84,
+      "total_trades": 2643,
+      "win_rate": 71.7,
+      "sharpe": 26.12,
+      "max_dd_pct": -1.34,
+      "guard_stats": {
+        "signals_blocked": 0,
+        "pct_blocked": 0.0,
+        "blocked_would_pnl": 0.0,
+        "blocked_would_trades": 0,
+        "blocked_would_wr": 0.0,
+        "guard_savings": -0.0,
+        "dd_blocked": 0,
+        "per_guard": {}
+      }
+    },
+    {
+      "name": "P2_all_winners",
+      "guard_config": {
+        "atr_spike_mult": "3.0",
+        "double_liq": "{'mode': 'balance', 'balance_thr': 0.3, 'total_mult': 2.0}",
+        "score_osc": "{'window': 24, 'max_flips': 4}"
+      },
+      "dd_threshold": null,
+      "total_pnl": 84409.39,
+      "total_trades": 2636,
+      "win_rate": 72.0,
+      "sharpe": 26.34,
+      "max_dd_pct": -1.34,
+      "guard_stats": {
+        "signals_blocked": 243,
+        "pct_blocked": 8.4,
+        "blocked_would_pnl": 14046.83,
+        "blocked_would_trades": 243,
+        "blocked_would_wr": 0.0,
+        "guard_savings": -14046.83,
+        "dd_blocked": 0,
+        "per_guard": {
+          "atr_spike": 224,
+          "double_liq": 1122,
+          "score_osc": 78
+        }
+      }
+    }
+  ]
+}

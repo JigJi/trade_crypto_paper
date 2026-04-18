@@ -1,0 +1,424 @@
+{
+  "mission_id": "mission_040_regime_death_predictor",
+  "date": "2026-04-17",
+  "type": "signal_quality / exit_timing / regime_analysis",
+  "title": "Regime Death Predictor — ทำนายสัญญาณใกล้ตายได้ไหม?",
+  "hypothesis": "ใช้ decay_ratio + slope + margin ที่ mature regime ทำนาย death ภายใน 2 bars",
+  "coins": [
+    "BTC",
+    "XRP",
+    "ADA",
+    "DOT",
+    "SUI",
+    "FIL"
+  ],
+  "oos_period": "2025-01-01 to 2026-03-31",
+  "total_trades": 7409,
+  "baseline_pnl": 7665.69,
+  "baseline_wr": 68.7,
+  "threshold": 3.0,
+  "mature_age": 3,
+  "results": {
+    "exp1_regime_catalog": {
+      "total_regimes": 1897,
+      "mean_duration": 5.68,
+      "median_duration": 2,
+      "mean_peak_at_age": 2.68,
+      "median_peak_at_age": 1,
+      "mean_peak_score_abs": 5.273
+    },
+    "exp2_mature_death_base_rates": {
+      "mature_bars": 7750,
+      "p_dies_within_1_pct": 21.43,
+      "p_dies_within_2_pct": 29.57,
+      "p_dies_within_3_pct": 36.93
+    },
+    "exp3_imminent_vs_healthy_profile": {
+      "score_abs": {
+        "imminent_mean": 4.614,
+        "healthy_mean": 6.0367,
+        "delta": -1.4227,
+        "cohen_d": -0.734
+      },
+      "decay_ratio": {
+        "imminent_mean": 0.7658,
+        "healthy_mean": 0.8327,
+        "delta": -0.0669,
+        "cohen_d": -0.302
+      },
+      "slope_signed_3bar": {
+        "imminent_mean": -0.3658,
+        "healthy_mean": 0.1815,
+        "delta": -0.5474,
+        "cohen_d": -0.287
+      },
+      "margin_to_thr": {
+        "imminent_mean": 1.614,
+        "healthy_mean": 3.0367,
+        "delta": -1.4227,
+        "cohen_d": -0.734
+      },
+      "range_z": {
+        "imminent_mean": 0.06,
+        "healthy_mean": 0.0292,
+        "delta": 0.0308,
+        "cohen_d": 0.028
+      },
+      "atr": {
+        "imminent_mean": 301.8809,
+        "healthy_mean": 289.5666,
+        "delta": 12.3144,
+        "cohen_d": 0.084
+      },
+      "vol_ratio": {
+        "imminent_mean": 1.0432,
+        "healthy_mean": 1.0767,
+        "delta": -0.0335,
+        "cohen_d": -0.036
+      },
+      "rsi": {
+        "imminent_mean": 49.8603,
+        "healthy_mean": 49.0843,
+        "delta": 0.776,
+        "cohen_d": 0.071
+      }
+    },
+    "exp4_univariate_death_filters": {
+      "base_rate_p_dies_within_2": 29.57,
+      "filters": {
+        "decay_ratio < 0.6 (score < 60% of peak)": {
+          "n": 1650,
+          "p_dies_within_2": 41.64,
+          "lift_pct": 40.8,
+          "lift_pp": 12.06
+        },
+        "decay_ratio < 0.5": {
+          "n": 884,
+          "p_dies_within_2": 43.78,
+          "lift_pct": 48.0,
+          "lift_pp": 14.2
+        },
+        "decay_ratio < 0.4": {
+          "n": 370,
+          "p_dies_within_2": 47.3,
+          "lift_pct": 59.9,
+          "lift_pp": 17.72
+        },
+        "margin_to_thr < 0.5 (close to flip)": {
+          "n": 659,
+          "p_dies_within_2": 53.41,
+          "lift_pct": 80.6,
+          "lift_pp": 23.84
+        },
+        "margin_to_thr < 0.3": {
+          "n": 659,
+          "p_dies_within_2": 53.41,
+          "lift_pct": 80.6,
+          "lift_pp": 23.84
+        },
+        "margin_to_thr < 0.1": {
+          "n": 602,
+          "p_dies_within_2": 52.33,
+          "lift_pct": 76.9,
+          "lift_pp": 22.75
+        },
+        "slope<0 (decelerating)": {
+          "n": 1895,
+          "p_dies_within_2": 34.04,
+          "lift_pct": 15.1,
+          "lift_pp": 4.46
+        },
+        "slope<-0.5 (strong decel)": {
+          "n": 1385,
+          "p_dies_within_2": 34.87,
+          "lift_pct": 17.9,
+          "lift_pp": 5.3
+        },
+        "slope<-1.0": {
+          "n": 1309,
+          "p_dies_within_2": 35.29,
+          "lift_pct": 19.3,
+          "lift_pp": 5.72
+        },
+        "range_z>=1.0 (vol spike)": {
+          "n": 1107,
+          "p_dies_within_2": 31.89,
+          "lift_pct": 7.8,
+          "lift_pp": 2.31
+        },
+        "range_z>=2.0 (huge spike)": {
+          "n": 477,
+          "p_dies_within_2": 29.77,
+          "lift_pct": 0.7,
+          "lift_pp": 0.2
+        },
+        "combined: decay<0.5 AND margin<0.5": {
+          "n": 156,
+          "p_dies_within_2": 51.28,
+          "lift_pct": 73.4,
+          "lift_pp": 21.71
+        },
+        "combined: decay<0.6 AND slope<0": {
+          "n": 882,
+          "p_dies_within_2": 41.04,
+          "lift_pct": 38.8,
+          "lift_pp": 11.47
+        },
+        "combined: decay<0.5 AND slope<-0.5": {
+          "n": 518,
+          "p_dies_within_2": 40.54,
+          "lift_pct": 37.1,
+          "lift_pp": 10.97
+        },
+        "combined: margin<0.3 AND slope<0": {
+          "n": 179,
+          "p_dies_within_2": 48.6,
+          "lift_pct": 64.3,
+          "lift_pp": 19.03
+        }
+      }
+    },
+    "exp5_trade_pnl_by_remaining_life": {
+      "imminent (dies within 2)": {
+        "n": 3250,
+        "wr": 64.6,
+        "pnl": 960.88,
+        "avg": 0.296,
+        "signal_flip_pct": 13.6
+      },
+      "short (3-5 bars left)": {
+        "n": 1288,
+        "wr": 70.3,
+        "pnl": 1739.0,
+        "avg": 1.35,
+        "signal_flip_pct": 5.8
+      },
+      "healthy (6-15 bars)": {
+        "n": 1962,
+        "wr": 71.9,
+        "pnl": 2730.55,
+        "avg": 1.392,
+        "signal_flip_pct": 4.8
+      },
+      "long (16+ bars)": {
+        "n": 909,
+        "wr": 74.0,
+        "pnl": 2235.27,
+        "avg": 2.459,
+        "signal_flip_pct": 1.1
+      }
+    },
+    "exp6_hindsight_ceiling_skip_dying": {
+      "baseline": {
+        "n": 7409,
+        "wr": 68.7,
+        "pnl": 7665.69,
+        "delta_vs_baseline": 0.0
+      },
+      "skip if bars_until_death<=0 (dies NOW)": {
+        "n": 5548,
+        "wr": 70.4,
+        "pnl": 6985.93,
+        "delta_vs_baseline": -679.76
+      },
+      "skip if bars_until_death<=1": {
+        "n": 4721,
+        "wr": 71.3,
+        "pnl": 7291.48,
+        "delta_vs_baseline": -374.21
+      },
+      "skip if bars_until_death<=2": {
+        "n": 4159,
+        "wr": 71.8,
+        "pnl": 6704.81,
+        "delta_vs_baseline": -960.88
+      },
+      "skip if bars_until_death<=3": {
+        "n": 3634,
+        "wr": 72.1,
+        "pnl": 5957.37,
+        "delta_vs_baseline": -1708.33
+      },
+      "skip if bars_until_death<=5": {
+        "n": 2871,
+        "wr": 72.6,
+        "pnl": 4965.82,
+        "delta_vs_baseline": -2699.88
+      }
+    },
+    "exp7_realistic_entry_filters": {
+      "skip entry_decay<0.5 (faded to <50% peak)": {
+        "n_kept": 6918,
+        "n_skipped": 491,
+        "wr": 68.3,
+        "pnl": 6460.8,
+        "delta_vs_baseline": -1204.89
+      },
+      "skip entry_decay<0.6": {
+        "n_kept": 6571,
+        "n_skipped": 838,
+        "wr": 68.2,
+        "pnl": 5659.37,
+        "delta_vs_baseline": -2006.33
+      },
+      "skip entry_slope<0": {
+        "n_kept": 6446,
+        "n_skipped": 963,
+        "wr": 68.1,
+        "pnl": 5589.3,
+        "delta_vs_baseline": -2076.39
+      },
+      "skip entry_slope<-1.0": {
+        "n_kept": 6755,
+        "n_skipped": 654,
+        "wr": 68.2,
+        "pnl": 5579.27,
+        "delta_vs_baseline": -2086.43
+      },
+      "skip entry_margin<0.3": {
+        "n_kept": 6364,
+        "n_skipped": 1045,
+        "wr": 69.8,
+        "pnl": 6989.65,
+        "delta_vs_baseline": -676.04
+      },
+      "skip decay<0.5 AND slope<0": {
+        "n_kept": 7083,
+        "n_skipped": 326,
+        "wr": 68.5,
+        "pnl": 7050.95,
+        "delta_vs_baseline": -614.74
+      },
+      "skip decay<0.6 AND margin<0.5": {
+        "n_kept": 7328,
+        "n_skipped": 81,
+        "wr": 68.7,
+        "pnl": 7322.28,
+        "delta_vs_baseline": -343.41
+      },
+      "skip margin<0.3 AND slope<0": {
+        "n_kept": 7358,
+        "n_skipped": 51,
+        "wr": 68.7,
+        "pnl": 7378.6,
+        "delta_vs_baseline": -287.09
+      },
+      "skip margin<0.5 AND slope<-1.0": {
+        "n_kept": 7366,
+        "n_skipped": 43,
+        "wr": 68.7,
+        "pnl": 7350.76,
+        "delta_vs_baseline": -314.93
+      }
+    },
+    "exp8_skipped_subset_analysis": {
+      "decay<0.5 subset": {
+        "n": 491,
+        "wr": 74.1,
+        "pnl": 1204.89,
+        "avg": 2.454
+      },
+      "decay<0.6 subset": {
+        "n": 838,
+        "wr": 72.7,
+        "pnl": 2006.33,
+        "avg": 2.394
+      },
+      "slope<0 subset": {
+        "n": 963,
+        "wr": 72.5,
+        "pnl": 2076.39,
+        "avg": 2.156
+      },
+      "slope<-1 subset": {
+        "n": 654,
+        "wr": 74.0,
+        "pnl": 2086.43,
+        "avg": 3.19
+      },
+      "margin<0.3 subset": {
+        "n": 1045,
+        "wr": 62.0,
+        "pnl": 676.04,
+        "avg": 0.647
+      },
+      "margin<0.3 AND slope<0": {
+        "n": 51,
+        "wr": 68.6,
+        "pnl": 287.09,
+        "avg": 5.629
+      },
+      "decay<0.5 AND slope<0": {
+        "n": 326,
+        "wr": 72.4,
+        "pnl": 614.74,
+        "avg": 1.886
+      }
+    },
+    "exp9_flip_vs_nonflip_profile": {
+      "flip_count": 623,
+      "flip_pnl": -9338.97,
+      "nonflip_count": 6786,
+      "nonflip_pnl": 17004.66,
+      "profile": {
+        "entry_age": {
+          "flip_mean": 4.5955,
+          "nonflip_mean": 6.6089,
+          "delta": -2.0134
+        },
+        "entry_decay_ratio": {
+          "flip_mean": 0.9291,
+          "nonflip_mean": 0.895,
+          "delta": 0.0341
+        },
+        "entry_slope_3bar": {
+          "flip_mean": 0.0437,
+          "nonflip_mean": -0.0273,
+          "delta": 0.0711
+        },
+        "entry_margin": {
+          "flip_mean": 1.5754,
+          "nonflip_mean": 2.0366,
+          "delta": -0.4612
+        },
+        "regime_duration": {
+          "flip_mean": 7.0738,
+          "nonflip_mean": 13.4981,
+          "delta": -6.4242
+        },
+        "bars_until_regime_death": {
+          "flip_mean": 2.4783,
+          "nonflip_mean": 6.8892,
+          "delta": -4.4109
+        }
+      }
+    },
+    "exp10_combined_with_m038": {
+      "m038_pnl": 6432.85,
+      "m038_delta_vs_baseline": -1232.85,
+      "combos": {
+        "M038 + skip margin<0.3 AND slope<0": {
+          "n": 3862,
+          "wr": 71.6,
+          "pnl": 6145.75,
+          "delta_vs_baseline": -1519.94,
+          "delta_vs_m038": -287.09
+        },
+        "M038 + skip decay<0.5 AND slope<0": {
+          "n": 3587,
+          "wr": 71.5,
+          "pnl": 5818.1,
+          "delta_vs_baseline": -1847.59,
+          "delta_vs_m038": -614.74
+        },
+        "M038 + skip bars_until_death<=2 (hindsight)": {
+          "n": 2687,
+          "wr": 73.1,
+          "pnl": 4913.6,
+          "delta_vs_baseline": -2752.1,
+          "delta_vs_m038": -1519.25
+        }
+      }
+    }
+  }
+}

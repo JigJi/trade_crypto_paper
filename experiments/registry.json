@@ -1,0 +1,729 @@
+[
+  {
+    "experiment_id": "v12_test_20260308_2306",
+    "date": "2026-03-08 23:06",
+    "description": "v1.2 improvement test: 5 targeted filters + combined",
+    "params": {
+      "base_configs": "v1.1 paper trading params",
+      "test_period": "2026-01-01 to present",
+      "improvements_tested": [
+        "baseline",
+        "drop_dot",
+        "tighter_hold",
+        "short_bias",
+        "hour_filter",
+        "stale_exit",
+        "combined",
+        "combined_2x"
+      ],
+      "improvements_that_helped": [
+        "short_bias"
+      ],
+      "combined_includes": [
+        "short_bias"
+      ]
+    },
+    "scenarios": {
+      "baseline": {
+        "total_pnl": 2852.45,
+        "n_coins": 6
+      },
+      "drop_dot": {
+        "total_pnl": 2225.25,
+        "n_coins": 5
+      },
+      "tighter_hold": {
+        "total_pnl": 2744.22,
+        "n_coins": 6
+      },
+      "short_bias": {
+        "total_pnl": 3742.77,
+        "n_coins": 6
+      },
+      "hour_filter": {
+        "total_pnl": 2571.51,
+        "n_coins": 6
+      },
+      "stale_exit": {
+        "total_pnl": 2781.97,
+        "n_coins": 6
+      },
+      "combined": {
+        "total_pnl": 3742.77,
+        "n_coins": 6
+      },
+      "combined_2x": {
+        "total_pnl": 7485.57,
+        "n_coins": 6
+      }
+    }
+  },
+  {
+    "experiment_id": "new_factors_20260308_2348",
+    "date": "2026-03-08 23:48",
+    "description": "Test 6 unused DB tables as new BTC composite factors",
+    "params": {
+      "test_period": "2026-01-01 to 2026-03-08",
+      "factors_tested": [
+        "basis_contrarian",
+        "basis_momentum",
+        "tick_liq",
+        "news_directional",
+        "news_contrarian",
+        "displacement",
+        "fvg",
+        "sweep"
+      ]
+    },
+    "scenarios": {
+      "baseline": 5704.889999999999,
+      "basis_contrarian": {
+        "best_weight": 0.5,
+        "best_pnl": 6697.15,
+        "delta": 992.26
+      },
+      "basis_momentum": {
+        "best_weight": 1.0,
+        "best_pnl": 7506.48,
+        "delta": 1801.59
+      },
+      "tick_liq": {
+        "best_weight": 2.0,
+        "best_pnl": 6636.56,
+        "delta": 931.67
+      },
+      "news_directional": {
+        "best_weight": 1.0,
+        "best_pnl": 5867.98,
+        "delta": 163.09
+      },
+      "news_contrarian": {
+        "best_weight": 1.5,
+        "best_pnl": 5826.52,
+        "delta": 121.63
+      },
+      "displacement": {
+        "best_weight": 1.5,
+        "best_pnl": 7011.97,
+        "delta": 1307.08
+      },
+      "fvg": {
+        "best_weight": 1.5,
+        "best_pnl": 6245.44,
+        "delta": 540.55
+      },
+      "sweep": {
+        "best_weight": 0.5,
+        "best_pnl": 5215.37,
+        "delta": -489.52
+      }
+    }
+  },
+  {
+    "experiment_id": "v12_vs_v12plus3_20260309_0007",
+    "date": "2026-03-09 00:07",
+    "description": "v1.2 (8F+short_bias) vs v1.2 + 3 new factors (basis_mom, tick_liq, displacement)",
+    "params": {
+      "test_period": "2026-01-01 to 2026-03-08",
+      "new_factors": {
+        "basis_momentum": 1.0,
+        "tick_liq": 2.0,
+        "displacement": 1.5
+      },
+      "short_offset": 0.5
+    },
+    "results": {
+      "A_v12_pnl": 7485.57,
+      "B_v12plus3_pnl": 9583.1,
+      "delta": 2097.53,
+      "pct_improvement": 28.0,
+      "A_coins": {
+        "BTC": {
+          "pnl": 647.42,
+          "trades": 143,
+          "wr": 47.5
+        },
+        "XRP": {
+          "pnl": 1431.19,
+          "trades": 111,
+          "wr": 52.2
+        },
+        "ADA": {
+          "pnl": 843.64,
+          "trades": 112,
+          "wr": 46.4
+        },
+        "DOT": {
+          "pnl": 1624.85,
+          "trades": 106,
+          "wr": 53.8
+        },
+        "SUI": {
+          "pnl": 1699.95,
+          "trades": 129,
+          "wr": 50.4
+        },
+        "FIL": {
+          "pnl": 1238.52,
+          "trades": 115,
+          "wr": 49.6
+        }
+      },
+      "B_coins": {
+        "BTC": {
+          "pnl": 1014.64,
+          "trades": 208,
+          "wr": 48.6
+        },
+        "XRP": {
+          "pnl": 1443.53,
+          "trades": 163,
+          "wr": 54.0
+        },
+        "ADA": {
+          "pnl": 1229.77,
+          "trades": 161,
+          "wr": 49.7
+        },
+        "DOT": {
+          "pnl": 1515.03,
+          "trades": 150,
+          "wr": 54.7
+        },
+        "SUI": {
+          "pnl": 2279.43,
+          "trades": 182,
+          "wr": 53.9
+        },
+        "FIL": {
+          "pnl": 2100.7,
+          "trades": 167,
+          "wr": 54.5
+        }
+      }
+    }
+  },
+  {
+    "experiment_id": "orderbook_factor_20260309_0016",
+    "date": "2026-03-09 00:16",
+    "description": "Test order_book_raw (imbalance/depth) as factor on top of v1.2+3F",
+    "params": {
+      "test_period": "2026-01-01 to 2026-03-08"
+    },
+    "results": {
+      "A_baseline_pnl": 9583.1,
+      "ob_contrarian(w=0.5)": {
+        "pnl": 9575.3,
+        "delta": -7.8,
+        "trades": 1015,
+        "wr": 52.6
+      },
+      "ob_contrarian(w=1.0)": {
+        "pnl": 9406.99,
+        "delta": -176.11,
+        "trades": 1051,
+        "wr": 52.0
+      },
+      "ob_contrarian(w=1.5)": {
+        "pnl": 9467.2,
+        "delta": -115.9,
+        "trades": 1098,
+        "wr": 52.1
+      },
+      "ob_contrarian(w=2.0)": {
+        "pnl": 8937.1,
+        "delta": -646.0,
+        "trades": 1180,
+        "wr": 51.1
+      },
+      "ob_vol_contrarian(w=0.5)": {
+        "pnl": 9852.49,
+        "delta": 269.39,
+        "trades": 1033,
+        "wr": 52.7
+      },
+      "ob_vol_contrarian(w=1.0)": {
+        "pnl": 9313.93,
+        "delta": -269.17,
+        "trades": 1099,
+        "wr": 52.9
+      },
+      "ob_vol_contrarian(w=1.5)": {
+        "pnl": 10228.86,
+        "delta": 645.76,
+        "trades": 1169,
+        "wr": 54.3
+      },
+      "ob_vol_contrarian(w=2.0)": {
+        "pnl": 10520.24,
+        "delta": 937.14,
+        "trades": 1264,
+        "wr": 54.4
+      },
+      "ob_combined(w=0.5)": {
+        "pnl": 9782.96,
+        "delta": 199.86,
+        "trades": 1031,
+        "wr": 52.6
+      },
+      "ob_combined(w=1.0)": {
+        "pnl": 9629.57,
+        "delta": 46.47,
+        "trades": 1094,
+        "wr": 53.6
+      },
+      "ob_combined(w=1.5)": {
+        "pnl": 10400.25,
+        "delta": 817.15,
+        "trades": 1164,
+        "wr": 54.9
+      },
+      "ob_combined(w=2.0)": {
+        "pnl": 11036.86,
+        "delta": 1453.76,
+        "trades": 1265,
+        "wr": 55.6
+      }
+    }
+  },
+  {
+    "experiment_id": "mega_discovery_20260309_0952",
+    "date": "2026-03-09 09:52",
+    "description": "Mega factor discovery: ablation + stepwise + from-scratch + 5m test",
+    "params": {
+      "test_period": "2026-01-01 to 2026-03-08",
+      "leverage": 2.0,
+      "phases": [
+        "ablation",
+        "stepwise_add",
+        "from_scratch",
+        "5m_test"
+      ]
+    },
+    "results": {
+      "baseline_pnl": 7485.57,
+      "phase2_pnl": 13256.43,
+      "phase3_pnl": 18055.84,
+      "recommended": "B",
+      "recommended_pnl": 18055.84
+    }
+  },
+  {
+    "experiment_id": "defi_liq_factor_20260320_2307",
+    "date": "2026-03-20 23:07",
+    "description": "Test Aave V3 DeFi liquidation as BTC composite factor (3 variants x 4 weights)",
+    "params": {
+      "test_period": "2026-01-01 to 2026-03-08",
+      "shift_hours": 1,
+      "variants": [
+        "contrarian",
+        "momentum",
+        "combined"
+      ],
+      "weights": [
+        0.5,
+        1.0,
+        1.5,
+        2.0
+      ],
+      "data_source": "public_rpc_eth_getLogs"
+    },
+    "results": {
+      "baseline_pnl": 15975.95,
+      "data_coverage_pct": 100.0,
+      "data_events": 21414,
+      "data_range": "2024-01-03 to 2026-03-10",
+      "defi_liq_contrarian(w=0.5)": {
+        "pnl": 15852.55,
+        "delta": -123.4,
+        "trades": 917,
+        "wr": 64.4
+      },
+      "defi_liq_contrarian(w=1.0)": {
+        "pnl": 15744.54,
+        "delta": -231.41,
+        "trades": 944,
+        "wr": 64.2
+      },
+      "defi_liq_contrarian(w=1.5)": {
+        "pnl": 15989.14,
+        "delta": 13.19,
+        "trades": 955,
+        "wr": 64.3
+      },
+      "defi_liq_contrarian(w=2.0)": {
+        "pnl": 16118.75,
+        "delta": 142.8,
+        "trades": 983,
+        "wr": 64.4
+      },
+      "defi_liq_momentum(w=0.5)": {
+        "pnl": 16012.25,
+        "delta": 36.3,
+        "trades": 919,
+        "wr": 64.4
+      },
+      "defi_liq_momentum(w=1.0)": {
+        "pnl": 16082.66,
+        "delta": 106.71,
+        "trades": 927,
+        "wr": 64.5
+      },
+      "defi_liq_momentum(w=1.5)": {
+        "pnl": 15699.48,
+        "delta": -276.47,
+        "trades": 937,
+        "wr": 64.0
+      },
+      "defi_liq_momentum(w=2.0)": {
+        "pnl": 14798.28,
+        "delta": -1177.67,
+        "trades": 963,
+        "wr": 62.5
+      },
+      "defi_liq_combined(w=0.5)": {
+        "pnl": 15861.43,
+        "delta": -114.52,
+        "trades": 918,
+        "wr": 64.3
+      },
+      "defi_liq_combined(w=1.0)": {
+        "pnl": 15573.64,
+        "delta": -402.31,
+        "trades": 930,
+        "wr": 63.8
+      },
+      "defi_liq_combined(w=1.5)": {
+        "pnl": 15333.31,
+        "delta": -642.64,
+        "trades": 941,
+        "wr": 63.2
+      },
+      "defi_liq_combined(w=2.0)": {
+        "pnl": 15192.56,
+        "delta": -783.39,
+        "trades": 952,
+        "wr": 62.8
+      }
+    },
+    "best": "defi_liq_contrarian(w=2.0)"
+  },
+  {
+    "experiment_id": "percoin_liq_factor_20260321_1257",
+    "date": "2026-03-21 12:57",
+    "description": "Per-coin liquidation factor test: altcoin-specific liq as per-coin score boost (3 variants x 4 weights)",
+    "params": {
+      "test_period": "2026-01-01 to OOS end",
+      "variants": [
+        "contrarian",
+        "momentum",
+        "zscore"
+      ],
+      "weights": [
+        0.5,
+        1.0,
+        1.5,
+        2.0
+      ],
+      "eligible_coins": [
+        "BTC"
+      ],
+      "min_oos_events": 20,
+      "data_source": "market_data.liquidation (tick-level)"
+    },
+    "results": {
+      "baseline_pnl": 15975.95,
+      "eligible_coins": [
+        "BTC"
+      ],
+      "data_quality": {
+        "BTC": {
+          "oos_events": 1070,
+          "oos_bars_active": 1070,
+          "events_per_day": 26.35,
+          "n_spikes": 171,
+          "corr_1h": -0.0479,
+          "corr_4h": 0.0217
+        },
+        "XRP": {
+          "oos_events": 0,
+          "oos_bars_active": 0,
+          "events_per_day": 0.6,
+          "n_spikes": 0,
+          "corr_1h": 0,
+          "corr_4h": 0
+        },
+        "ADA": {
+          "oos_events": 0,
+          "oos_bars_active": 0,
+          "events_per_day": 0.36,
+          "n_spikes": 0,
+          "corr_1h": 0,
+          "corr_4h": 0
+        },
+        "DOT": {
+          "oos_events": 0,
+          "oos_bars_active": 0,
+          "events_per_day": 58.0,
+          "n_spikes": 0,
+          "corr_1h": 0,
+          "corr_4h": 0
+        },
+        "SUI": {
+          "oos_events": 0,
+          "oos_bars_active": 0,
+          "events_per_day": 0.45,
+          "n_spikes": 0,
+          "corr_1h": 0,
+          "corr_4h": 0
+        },
+        "FIL": {
+          "oos_events": 0,
+          "oos_bars_active": 0,
+          "events_per_day": 47.0,
+          "n_spikes": 0,
+          "corr_1h": 0,
+          "corr_4h": 0
+        }
+      },
+      "contrarian_w0.5": {
+        "pnl": 15947.04,
+        "delta": -28.91,
+        "trades": 911,
+        "wr": 64.3
+      },
+      "contrarian_w1.0": {
+        "pnl": 15882.18,
+        "delta": -93.77,
+        "trades": 913,
+        "wr": 64.1
+      },
+      "contrarian_w1.5": {
+        "pnl": 15842.93,
+        "delta": -133.02,
+        "trades": 915,
+        "wr": 64.0
+      },
+      "contrarian_w2.0": {
+        "pnl": 15844.33,
+        "delta": -131.62,
+        "trades": 919,
+        "wr": 63.8
+      },
+      "momentum_w0.5": {
+        "pnl": 15906.02,
+        "delta": -69.93,
+        "trades": 909,
+        "wr": 64.5
+      },
+      "momentum_w1.0": {
+        "pnl": 15827.75,
+        "delta": -148.2,
+        "trades": 913,
+        "wr": 64.5
+      },
+      "momentum_w1.5": {
+        "pnl": 15846.99,
+        "delta": -128.96,
+        "trades": 912,
+        "wr": 64.3
+      },
+      "momentum_w2.0": {
+        "pnl": 15835.1,
+        "delta": -140.85,
+        "trades": 911,
+        "wr": 64.2
+      },
+      "zscore_w0.5": {
+        "pnl": 15959.11,
+        "delta": -16.84,
+        "trades": 908,
+        "wr": 64.6
+      },
+      "zscore_w1.0": {
+        "pnl": 15982.87,
+        "delta": 6.92,
+        "trades": 906,
+        "wr": 64.8
+      },
+      "zscore_w1.5": {
+        "pnl": 15943.99,
+        "delta": -31.96,
+        "trades": 906,
+        "wr": 64.8
+      },
+      "zscore_w2.0": {
+        "pnl": 16092.56,
+        "delta": 116.61,
+        "trades": 912,
+        "wr": 64.8
+      }
+    },
+    "best": "zscore_w2.0",
+    "verdict": "neutral"
+  },
+  {
+    "experiment_id": "percoin_liq_factor_20260321_1307",
+    "date": "2026-03-21 13:07",
+    "description": "Per-coin liquidation factor test: altcoin-specific liq as per-coin score boost (3 variants x 4 weights)",
+    "params": {
+      "test_period": "2026-01-01 to OOS end",
+      "variants": [
+        "contrarian",
+        "momentum",
+        "zscore"
+      ],
+      "weights": [
+        0.5,
+        1.0,
+        1.5,
+        2.0
+      ],
+      "eligible_coins": [
+        "BTC",
+        "XRP",
+        "ADA",
+        "DOT",
+        "SUI",
+        "FIL"
+      ],
+      "min_oos_events": 20,
+      "data_source": "market_data.liquidation (tick-level)"
+    },
+    "results": {
+      "baseline_pnl": 17452.86,
+      "eligible_coins": [
+        "BTC",
+        "XRP",
+        "ADA",
+        "DOT",
+        "SUI",
+        "FIL"
+      ],
+      "data_quality": {
+        "BTC": {
+          "oos_events": 2161,
+          "oos_bars_active": 2161,
+          "events_per_day": 26.35,
+          "n_spikes": 300,
+          "corr_1h": 0.0029,
+          "corr_4h": -0.0081
+        },
+        "XRP": {
+          "oos_events": 111,
+          "oos_bars_active": 111,
+          "events_per_day": 0.61,
+          "n_spikes": 27,
+          "corr_1h": 0.223,
+          "corr_4h": 0.0592
+        },
+        "ADA": {
+          "oos_events": 66,
+          "oos_bars_active": 66,
+          "events_per_day": 0.36,
+          "n_spikes": 21,
+          "corr_1h": 0.2172,
+          "corr_4h": 0.0914
+        },
+        "DOT": {
+          "oos_events": 58,
+          "oos_bars_active": 58,
+          "events_per_day": 58.0,
+          "n_spikes": 14,
+          "corr_1h": 0.0076,
+          "corr_4h": 0.161
+        },
+        "SUI": {
+          "oos_events": 81,
+          "oos_bars_active": 81,
+          "events_per_day": 0.45,
+          "n_spikes": 20,
+          "corr_1h": 0.2118,
+          "corr_4h": -0.0455
+        },
+        "FIL": {
+          "oos_events": 47,
+          "oos_bars_active": 47,
+          "events_per_day": 47.0,
+          "n_spikes": 12,
+          "corr_1h": 0.1546,
+          "corr_4h": -0.1871
+        }
+      },
+      "contrarian_w0.5": {
+        "pnl": 17292.76,
+        "delta": -160.1,
+        "trades": 1145,
+        "wr": 62.1
+      },
+      "contrarian_w1.0": {
+        "pnl": 17089.72,
+        "delta": -363.14,
+        "trades": 1152,
+        "wr": 61.8
+      },
+      "contrarian_w1.5": {
+        "pnl": 17017.82,
+        "delta": -435.04,
+        "trades": 1154,
+        "wr": 61.6
+      },
+      "contrarian_w2.0": {
+        "pnl": 17033.4,
+        "delta": -419.46,
+        "trades": 1156,
+        "wr": 61.6
+      },
+      "momentum_w0.5": {
+        "pnl": 17245.01,
+        "delta": -207.85,
+        "trades": 1145,
+        "wr": 62.3
+      },
+      "momentum_w1.0": {
+        "pnl": 17147.65,
+        "delta": -305.21,
+        "trades": 1148,
+        "wr": 62.2
+      },
+      "momentum_w1.5": {
+        "pnl": 17161.12,
+        "delta": -291.74,
+        "trades": 1145,
+        "wr": 61.9
+      },
+      "momentum_w2.0": {
+        "pnl": 17074.1,
+        "delta": -378.76,
+        "trades": 1145,
+        "wr": 61.7
+      },
+      "zscore_w0.5": {
+        "pnl": 17404.77,
+        "delta": -48.09,
+        "trades": 1134,
+        "wr": 62.4
+      },
+      "zscore_w1.0": {
+        "pnl": 17419.89,
+        "delta": -32.97,
+        "trades": 1137,
+        "wr": 62.5
+      },
+      "zscore_w1.5": {
+        "pnl": 17389.15,
+        "delta": -63.71,
+        "trades": 1137,
+        "wr": 62.5
+      },
+      "zscore_w2.0": {
+        "pnl": 17490.6,
+        "delta": 37.74,
+        "trades": 1145,
+        "wr": 62.6
+      }
+    },
+    "best": "zscore_w2.0",
+    "verdict": "neutral"
+  }
+]

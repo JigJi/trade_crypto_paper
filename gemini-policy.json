@@ -1,0 +1,11 @@
+{
+  "rules": {
+    "trading_simulation": {
+      "include_fees": "0.075%",
+      "include_slippage": "0.02%",
+      "min_trade_duration": "1m"
+    },
+    "data_source_verification": "STRICT",
+    "anti_lookback_bias": "ENABLED"
+  }
+}

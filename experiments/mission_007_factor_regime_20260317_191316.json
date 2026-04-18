@@ -1,0 +1,560 @@
+{
+  "exp1_baseline_by_regime": {
+    "BULL": {
+      "trades": 897,
+      "wr": 75.5,
+      "pnl": 2677.6,
+      "avg_pnl": 2.99
+    },
+    "BEAR": {
+      "trades": 1697,
+      "wr": 79.5,
+      "pnl": 6479.09,
+      "avg_pnl": 3.82
+    },
+    "FLAT": {
+      "trades": 653,
+      "wr": 73.2,
+      "pnl": 1639.46,
+      "avg_pnl": 2.51
+    },
+    "ALL": {
+      "trades": 3235,
+      "wr": 77.1,
+      "pnl": 10754.8,
+      "avg_pnl": 3.32
+    }
+  },
+  "exp2_ablation_by_regime": {
+    "oi_divergence": {
+      "BULL": {
+        "trades": 904,
+        "wr": 75.3,
+        "pnl": 2412.42,
+        "delta": 265.18
+      },
+      "BEAR": {
+        "trades": 1715,
+        "wr": 79.2,
+        "pnl": 6327.45,
+        "delta": 151.64
+      },
+      "FLAT": {
+        "trades": 650,
+        "wr": 73.8,
+        "pnl": 1639.52,
+        "delta": -0.06
+      },
+      "ALL": {
+        "trades": 3257,
+        "wr": 77.1,
+        "pnl": 9851.36,
+        "delta": 903.44
+      }
+    },
+    "funding_rate": {
+      "BULL": {
+        "trades": 897,
+        "wr": 75.5,
+        "pnl": 2677.6,
+        "delta": 0.0
+      },
+      "BEAR": {
+        "trades": 1686,
+        "wr": 79.5,
+        "pnl": 6391.23,
+        "delta": 87.86
+      },
+      "FLAT": {
+        "trades": 649,
+        "wr": 72.9,
+        "pnl": 1562.35,
+        "delta": 77.11
+      },
+      "ALL": {
+        "trades": 3220,
+        "wr": 77.0,
+        "pnl": 10589.82,
+        "delta": 164.98
+      }
+    },
+    "whale_alerts": {
+      "BULL": {
+        "trades": 892,
+        "wr": 75.4,
+        "pnl": 2501.27,
+        "delta": 176.33
+      },
+      "BEAR": {
+        "trades": 1670,
+        "wr": 79.0,
+        "pnl": 6171.76,
+        "delta": 307.33
+      },
+      "FLAT": {
+        "trades": 664,
+        "wr": 73.8,
+        "pnl": 1717.44,
+        "delta": -77.98
+      },
+      "ALL": {
+        "trades": 3217,
+        "wr": 77.0,
+        "pnl": 10571.53,
+        "delta": 183.27
+      }
+    },
+    "liquidation": {
+      "BULL": {
+        "trades": 772,
+        "wr": 73.4,
+        "pnl": 1713.51,
+        "delta": 964.09
+      },
+      "BEAR": {
+        "trades": 1412,
+        "wr": 79.1,
+        "pnl": 3846.14,
+        "delta": 2632.95
+      },
+      "FLAT": {
+        "trades": 534,
+        "wr": 72.7,
+        "pnl": 1005.64,
+        "delta": 633.82
+      },
+      "ALL": {
+        "trades": 2707,
+        "wr": 76.3,
+        "pnl": 6443.67,
+        "delta": 4311.13
+      }
+    },
+    "etf_flows": {
+      "BULL": {
+        "trades": 833,
+        "wr": 75.8,
+        "pnl": 2720.97,
+        "delta": -43.37
+      },
+      "BEAR": {
+        "trades": 1594,
+        "wr": 79.1,
+        "pnl": 5966.01,
+        "delta": 513.08
+      },
+      "FLAT": {
+        "trades": 532,
+        "wr": 75.0,
+        "pnl": 1329.82,
+        "delta": 309.64
+      },
+      "ALL": {
+        "trades": 2951,
+        "wr": 77.5,
+        "pnl": 10032.97,
+        "delta": 721.83
+      }
+    },
+    "basis_contrarian": {
+      "BULL": {
+        "trades": 784,
+        "wr": 74.9,
+        "pnl": 2455.35,
+        "delta": 222.25
+      },
+      "BEAR": {
+        "trades": 1249,
+        "wr": 80.5,
+        "pnl": 5455.28,
+        "delta": 1023.81
+      },
+      "FLAT": {
+        "trades": 561,
+        "wr": 74.0,
+        "pnl": 1735.09,
+        "delta": -95.63
+      },
+      "ALL": {
+        "trades": 2591,
+        "wr": 77.5,
+        "pnl": 9685.18,
+        "delta": 1069.62
+      }
+    },
+    "tick_liq": {
+      "BULL": {
+        "trades": 764,
+        "wr": 75.7,
+        "pnl": 2381.01,
+        "delta": 296.59
+      },
+      "BEAR": {
+        "trades": 1606,
+        "wr": 78.8,
+        "pnl": 5659.1,
+        "delta": 819.99
+      },
+      "FLAT": {
+        "trades": 576,
+        "wr": 72.9,
+        "pnl": 1198.88,
+        "delta": 440.58
+      },
+      "ALL": {
+        "trades": 2932,
+        "wr": 76.8,
+        "pnl": 9185.6,
+        "delta": 1569.2
+      }
+    },
+    "ob_combined": {
+      "BULL": {
+        "trades": 437,
+        "wr": 78.3,
+        "pnl": 1827.9,
+        "delta": 849.7
+      },
+      "BEAR": {
+        "trades": 682,
+        "wr": 80.8,
+        "pnl": 3599.0,
+        "delta": 2880.09
+      },
+      "FLAT": {
+        "trades": 298,
+        "wr": 76.5,
+        "pnl": 1569.8,
+        "delta": 69.66
+      },
+      "ALL": {
+        "trades": 1417,
+        "wr": 79.3,
+        "pnl": 7014.1,
+        "delta": 3740.7
+      }
+    }
+  },
+  "exp3_firing_frequency": {
+    "oi_divergence": {
+      "BULL": 3.5,
+      "BEAR": 12.0,
+      "FLAT": 4.8,
+      "ALL": 7.8,
+      "bullish_pct": 3.9,
+      "bearish_pct": 3.9
+    },
+    "funding_rate": {
+      "BULL": 0.0,
+      "BEAR": 0.5,
+      "FLAT": 0.3,
+      "ALL": 0.3,
+      "bullish_pct": 0.3,
+      "bearish_pct": 0.0
+    },
+    "whale_alerts": {
+      "BULL": 1.3,
+      "BEAR": 0.9,
+      "FLAT": 0.8,
+      "ALL": 1.0,
+      "bullish_pct": 0.8,
+      "bearish_pct": 0.2
+    },
+    "liquidation": {
+      "BULL": 4.9,
+      "BEAR": 6.3,
+      "FLAT": 6.6,
+      "ALL": 5.9,
+      "bullish_pct": 2.5,
+      "bearish_pct": 3.5
+    },
+    "etf_flows": {
+      "BULL": 24.4,
+      "BEAR": 17.5,
+      "FLAT": 31.4,
+      "ALL": 22.7,
+      "bullish_pct": 9.7,
+      "bearish_pct": 13.0
+    },
+    "basis_contrarian": {
+      "BULL": 3.8,
+      "BEAR": 5.6,
+      "FLAT": 3.1,
+      "ALL": 4.5,
+      "bullish_pct": 2.2,
+      "bearish_pct": 2.2
+    },
+    "tick_liq": {
+      "BULL": 8.5,
+      "BEAR": 5.0,
+      "FLAT": 5.1,
+      "ALL": 6.1,
+      "bullish_pct": 2.0,
+      "bearish_pct": 4.1
+    },
+    "ob_combined": {
+      "BULL": 16.8,
+      "BEAR": 25.0,
+      "FLAT": 15.5,
+      "ALL": 20.4,
+      "bullish_pct": 9.2,
+      "bearish_pct": 11.2
+    }
+  },
+  "exp4_rolling_stability": {
+    "oi_divergence": {
+      "Q1_2025": {
+        "base_pnl": 0,
+        "ablated_pnl": 0,
+        "delta": 0
+      },
+      "Q2_2025": {
+        "base_pnl": 0,
+        "ablated_pnl": 0,
+        "delta": 0
+      },
+      "Q3_2025": {
+        "base_pnl": 1389.89,
+        "ablated_pnl": 1389.89,
+        "delta": 0.0
+      },
+      "Q4_2025": {
+        "base_pnl": 3454.58,
+        "ablated_pnl": 2638.13,
+        "delta": 816.45
+      },
+      "Q1_2026": {
+        "base_pnl": 5865.53,
+        "ablated_pnl": 5778.54,
+        "delta": 86.99
+      },
+      "stability_cv": 1.77,
+      "sign_consistency": 0.6
+    },
+    "funding_rate": {
+      "Q1_2025": {
+        "base_pnl": 0,
+        "ablated_pnl": 0,
+        "delta": 0
+      },
+      "Q2_2025": {
+        "base_pnl": 0,
+        "ablated_pnl": 0,
+        "delta": 0
+      },
+      "Q3_2025": {
+        "base_pnl": 1389.89,
+        "ablated_pnl": 1389.89,
+        "delta": 0.0
+      },
+      "Q4_2025": {
+        "base_pnl": 3454.58,
+        "ablated_pnl": 3377.46,
+        "delta": 77.12
+      },
+      "Q1_2026": {
+        "base_pnl": 5865.53,
+        "ablated_pnl": 5777.67,
+        "delta": 87.86
+      },
+      "stability_cv": 1.23,
+      "sign_consistency": 0.6
+    },
+    "whale_alerts": {
+      "Q1_2025": {
+        "base_pnl": 0,
+        "ablated_pnl": 0,
+        "delta": 0
+      },
+      "Q2_2025": {
+        "base_pnl": 0,
+        "ablated_pnl": 0,
+        "delta": 0
+      },
+      "Q3_2025": {
+        "base_pnl": 1389.89,
+        "ablated_pnl": 1434.42,
+        "delta": -44.54
+      },
+      "Q4_2025": {
+        "base_pnl": 3454.58,
+        "ablated_pnl": 3343.24,
+        "delta": 111.34
+      },
+      "Q1_2026": {
+        "base_pnl": 5865.53,
+        "ablated_pnl": 5773.44,
+        "delta": 92.08
+      },
+      "stability_cv": 1.2,
+      "sign_consistency": 0.6
+    },
+    "liquidation": {
+      "Q1_2025": {
+        "base_pnl": 0,
+        "ablated_pnl": 0,
+        "delta": 0
+      },
+      "Q2_2025": {
+        "base_pnl": 0,
+        "ablated_pnl": 0,
+        "delta": 0
+      },
+      "Q3_2025": {
+        "base_pnl": 1389.89,
+        "ablated_pnl": 551.62,
+        "delta": 838.27
+      },
+      "Q4_2025": {
+        "base_pnl": 3454.58,
+        "ablated_pnl": 1065.14,
+        "delta": 2389.44
+      },
+      "Q1_2026": {
+        "base_pnl": 5865.53,
+        "ablated_pnl": 4775.39,
+        "delta": 1090.14
+      },
+      "stability_cv": 1.02,
+      "sign_consistency": 0.4
+    },
+    "etf_flows": {
+      "Q1_2025": {
+        "base_pnl": 0,
+        "ablated_pnl": 0,
+        "delta": 0
+      },
+      "Q2_2025": {
+        "base_pnl": 0,
+        "ablated_pnl": 0,
+        "delta": 0
+      },
+      "Q3_2025": {
+        "base_pnl": 1389.89,
+        "ablated_pnl": 838.03,
+        "delta": 551.86
+      },
+      "Q4_2025": {
+        "base_pnl": 3454.58,
+        "ablated_pnl": 3765.25,
+        "delta": -310.67
+      },
+      "Q1_2026": {
+        "base_pnl": 5865.53,
+        "ablated_pnl": 5384.89,
+        "delta": 480.64
+      },
+      "stability_cv": 1.21,
+      "sign_consistency": 0.6
+    },
+    "basis_contrarian": {
+      "Q1_2025": {
+        "base_pnl": 0,
+        "ablated_pnl": 0,
+        "delta": 0
+      },
+      "Q2_2025": {
+        "base_pnl": 0,
+        "ablated_pnl": 0,
+        "delta": 0
+      },
+      "Q3_2025": {
+        "base_pnl": 1389.89,
+        "ablated_pnl": 1444.67,
+        "delta": -54.78
+      },
+      "Q4_2025": {
+        "base_pnl": 3454.58,
+        "ablated_pnl": 4216.68,
+        "delta": -762.11
+      },
+      "Q1_2026": {
+        "base_pnl": 5865.53,
+        "ablated_pnl": 4083.94,
+        "delta": 1781.58
+      },
+      "stability_cv": 1.63,
+      "sign_consistency": 0.8
+    },
+    "tick_liq": {
+      "Q1_2025": {
+        "base_pnl": 0,
+        "ablated_pnl": 0,
+        "delta": 0
+      },
+      "Q2_2025": {
+        "base_pnl": 0,
+        "ablated_pnl": 0,
+        "delta": 0
+      },
+      "Q3_2025": {
+        "base_pnl": 1389.89,
+        "ablated_pnl": 1243.99,
+        "delta": 145.89
+      },
+      "Q4_2025": {
+        "base_pnl": 3454.58,
+        "ablated_pnl": 2628.3,
+        "delta": 826.27
+      },
+      "Q1_2026": {
+        "base_pnl": 5865.53,
+        "ablated_pnl": 5268.5,
+        "delta": 597.03
+      },
+      "stability_cv": 1.07,
+      "sign_consistency": 0.4
+    },
+    "ob_combined": {
+      "Q1_2025": {
+        "base_pnl": 0,
+        "ablated_pnl": 0,
+        "delta": 0
+      },
+      "Q2_2025": {
+        "base_pnl": 0,
+        "ablated_pnl": 0,
+        "delta": 0
+      },
+      "Q3_2025": {
+        "base_pnl": 1389.89,
+        "ablated_pnl": 1138.56,
+        "delta": 251.32
+      },
+      "Q4_2025": {
+        "base_pnl": 3454.58,
+        "ablated_pnl": 2703.66,
+        "delta": 750.91
+      },
+      "Q1_2026": {
+        "base_pnl": 5865.53,
+        "ablated_pnl": 3157.42,
+        "delta": 2708.1
+      },
+      "stability_cv": 1.38,
+      "sign_consistency": 0.4
+    }
+  },
+  "verdicts": {
+    "oi_divergence": "TRENDING (bull+bear)",
+    "funding_rate": "BEAR-SPECIALIST",
+    "whale_alerts": "TRENDING (bull+bear)",
+    "liquidation": "UNIVERSAL (all regimes)",
+    "etf_flows": "BEAR-SPECIALIST",
+    "basis_contrarian": "TRENDING (bull+bear)",
+    "tick_liq": "UNIVERSAL (all regimes)",
+    "ob_combined": "UNIVERSAL (all regimes)"
+  },
+  "summary": {
+    "baseline_all_pnl": 10754.8,
+    "baseline_all_trades": 3235,
+    "baseline_all_wr": 77.1,
+    "regime_distribution": {
+      "BULL": "12384",
+      "BEAR": "19488",
+      "FLAT": "9505"
+    },
+    "total_oos_bars": 41377,
+    "experiments_run": 4
+  }
+}

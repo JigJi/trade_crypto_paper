@@ -1,0 +1,442 @@
+{
+  "experiment_id": "short_bias_full_monthly_20260310_223718",
+  "description": "Short bias full period (Jun 2025 - Mar 2026) with monthly breakdown",
+  "period": "2025-06-01 00:00:00 to 2026-03-10 00:00:00",
+  "results": {
+    "0.0": {
+      "pnl": 30183.89,
+      "trades": 2399,
+      "n_long": 1012,
+      "n_short": 1387,
+      "per_coin": {
+        "BTC": {
+          "pnl": 3027.67,
+          "trades": 491,
+          "wr": 57.0,
+          "sharpe": 6.18,
+          "n_long": 205,
+          "n_short": 286
+        },
+        "XRP": {
+          "pnl": 3579.02,
+          "trades": 326,
+          "wr": 59.5,
+          "sharpe": 6.03,
+          "n_long": 135,
+          "n_short": 191
+        },
+        "ADA": {
+          "pnl": 5632.2,
+          "trades": 327,
+          "wr": 63.6,
+          "sharpe": 8.4,
+          "n_long": 133,
+          "n_short": 194
+        },
+        "DOT": {
+          "pnl": 5543.92,
+          "trades": 382,
+          "wr": 61.0,
+          "sharpe": 7.2,
+          "n_long": 170,
+          "n_short": 212
+        },
+        "SUI": {
+          "pnl": 6617.16,
+          "trades": 445,
+          "wr": 60.5,
+          "sharpe": 7.47,
+          "n_long": 187,
+          "n_short": 258
+        },
+        "FIL": {
+          "pnl": 5783.92,
+          "trades": 428,
+          "wr": 60.8,
+          "sharpe": 5.86,
+          "n_long": 182,
+          "n_short": 246
+        }
+      },
+      "monthly": {
+        "2025-07": {
+          "pnl": 1021.51,
+          "trades": 57,
+          "wr": 63.2,
+          "n_long": 42,
+          "n_short": 15,
+          "pnl_long": 434.48,
+          "pnl_short": 587.03
+        },
+        "2025-08": {
+          "pnl": 1009.31,
+          "trades": 65,
+          "wr": 61.5,
+          "n_long": 5,
+          "n_short": 60,
+          "pnl_long": 133.55,
+          "pnl_short": 875.76
+        },
+        "2025-09": {
+          "pnl": 3234.6,
+          "trades": 324,
+          "wr": 60.8,
+          "n_long": 143,
+          "n_short": 181,
+          "pnl_long": 1552.11,
+          "pnl_short": 1682.49
+        },
+        "2025-10": {
+          "pnl": 3450.17,
+          "trades": 452,
+          "wr": 53.3,
+          "n_long": 213,
+          "n_short": 239,
+          "pnl_long": 1065.31,
+          "pnl_short": 2384.86
+        },
+        "2025-11": {
+          "pnl": 2931.3,
+          "trades": 331,
+          "wr": 55.6,
+          "n_long": 101,
+          "n_short": 230,
+          "pnl_long": -71.31,
+          "pnl_short": 3002.61
+        },
+        "2025-12": {
+          "pnl": 4427.86,
+          "trades": 339,
+          "wr": 63.7,
+          "n_long": 141,
+          "n_short": 198,
+          "pnl_long": 2241.25,
+          "pnl_short": 2186.62
+        },
+        "2026-01": {
+          "pnl": 5729.49,
+          "trades": 404,
+          "wr": 64.1,
+          "n_long": 154,
+          "n_short": 250,
+          "pnl_long": 1890.44,
+          "pnl_short": 3839.06
+        },
+        "2026-02": {
+          "pnl": 7225.34,
+          "trades": 326,
+          "wr": 66.3,
+          "n_long": 153,
+          "n_short": 173,
+          "pnl_long": 2536.54,
+          "pnl_short": 4688.81
+        },
+        "2026-03": {
+          "pnl": 1154.3,
+          "trades": 101,
+          "wr": 54.5,
+          "n_long": 60,
+          "n_short": 41,
+          "pnl_long": 514.65,
+          "pnl_short": 639.65
+        }
+      }
+    },
+    "0.5": {
+      "pnl": 32026.78,
+      "trades": 2658,
+      "n_long": 984,
+      "n_short": 1674,
+      "per_coin": {
+        "BTC": {
+          "pnl": 3455.53,
+          "trades": 601,
+          "wr": 56.7,
+          "sharpe": 6.57,
+          "n_long": 199,
+          "n_short": 402
+        },
+        "XRP": {
+          "pnl": 4531.51,
+          "trades": 388,
+          "wr": 59.0,
+          "sharpe": 6.74,
+          "n_long": 125,
+          "n_short": 263
+        },
+        "ADA": {
+          "pnl": 6138.68,
+          "trades": 381,
+          "wr": 61.9,
+          "sharpe": 8.13,
+          "n_long": 128,
+          "n_short": 253
+        },
+        "DOT": {
+          "pnl": 5258.78,
+          "trades": 394,
+          "wr": 59.9,
+          "sharpe": 6.38,
+          "n_long": 164,
+          "n_short": 230
+        },
+        "SUI": {
+          "pnl": 6763.16,
+          "trades": 452,
+          "wr": 60.2,
+          "sharpe": 7.36,
+          "n_long": 186,
+          "n_short": 266
+        },
+        "FIL": {
+          "pnl": 5879.12,
+          "trades": 442,
+          "wr": 60.6,
+          "sharpe": 5.75,
+          "n_long": 182,
+          "n_short": 260
+        }
+      },
+      "monthly": {
+        "2025-06": {
+          "pnl": 18.65,
+          "trades": 6,
+          "wr": 50.0,
+          "n_long": 0,
+          "n_short": 6,
+          "pnl_long": 0.0,
+          "pnl_short": 18.65
+        },
+        "2025-07": {
+          "pnl": 1289.15,
+          "trades": 75,
+          "wr": 64.0,
+          "n_long": 42,
+          "n_short": 33,
+          "pnl_long": 434.48,
+          "pnl_short": 854.67
+        },
+        "2025-08": {
+          "pnl": 1684.47,
+          "trades": 101,
+          "wr": 64.4,
+          "n_long": 4,
+          "n_short": 97,
+          "pnl_long": 109.24,
+          "pnl_short": 1575.23
+        },
+        "2025-09": {
+          "pnl": 3370.55,
+          "trades": 357,
+          "wr": 59.7,
+          "n_long": 141,
+          "n_short": 216,
+          "pnl_long": 1518.45,
+          "pnl_short": 1852.11
+        },
+        "2025-10": {
+          "pnl": 2308.91,
+          "trades": 479,
+          "wr": 50.3,
+          "n_long": 211,
+          "n_short": 268,
+          "pnl_long": 691.39,
+          "pnl_short": 1617.53
+        },
+        "2025-11": {
+          "pnl": 3123.2,
+          "trades": 355,
+          "wr": 56.3,
+          "n_long": 95,
+          "n_short": 260,
+          "pnl_long": 174.62,
+          "pnl_short": 2948.58
+        },
+        "2025-12": {
+          "pnl": 4258.53,
+          "trades": 374,
+          "wr": 59.9,
+          "n_long": 138,
+          "n_short": 236,
+          "pnl_long": 1997.26,
+          "pnl_short": 2261.27
+        },
+        "2026-01": {
+          "pnl": 6763.49,
+          "trades": 450,
+          "wr": 64.9,
+          "n_long": 152,
+          "n_short": 298,
+          "pnl_long": 1722.98,
+          "pnl_short": 5040.52
+        },
+        "2026-02": {
+          "pnl": 7949.79,
+          "trades": 354,
+          "wr": 66.7,
+          "n_long": 147,
+          "n_short": 207,
+          "pnl_long": 2493.12,
+          "pnl_short": 5456.68
+        },
+        "2026-03": {
+          "pnl": 1260.03,
+          "trades": 107,
+          "wr": 56.1,
+          "n_long": 54,
+          "n_short": 53,
+          "pnl_long": 343.23,
+          "pnl_short": 916.8
+        }
+      }
+    },
+    "1.0": {
+      "pnl": 33221.98,
+      "trades": 3029,
+      "n_long": 959,
+      "n_short": 2070,
+      "per_coin": {
+        "BTC": {
+          "pnl": 3122.68,
+          "trades": 631,
+          "wr": 54.8,
+          "sharpe": 5.82,
+          "n_long": 197,
+          "n_short": 434
+        },
+        "XRP": {
+          "pnl": 4229.42,
+          "trades": 392,
+          "wr": 60.0,
+          "sharpe": 6.26,
+          "n_long": 124,
+          "n_short": 268
+        },
+        "ADA": {
+          "pnl": 6046.06,
+          "trades": 391,
+          "wr": 61.1,
+          "sharpe": 7.59,
+          "n_long": 131,
+          "n_short": 260
+        },
+        "DOT": {
+          "pnl": 6549.39,
+          "trades": 495,
+          "wr": 58.8,
+          "sharpe": 7.17,
+          "n_long": 148,
+          "n_short": 347
+        },
+        "SUI": {
+          "pnl": 8024.1,
+          "trades": 578,
+          "wr": 58.8,
+          "sharpe": 7.72,
+          "n_long": 181,
+          "n_short": 397
+        },
+        "FIL": {
+          "pnl": 5250.33,
+          "trades": 542,
+          "wr": 57.8,
+          "sharpe": 4.6,
+          "n_long": 178,
+          "n_short": 364
+        }
+      },
+      "monthly": {
+        "2025-06": {
+          "pnl": 229.67,
+          "trades": 18,
+          "wr": 55.6,
+          "n_long": 0,
+          "n_short": 18,
+          "pnl_long": 0.0,
+          "pnl_short": 229.67
+        },
+        "2025-07": {
+          "pnl": 1897.81,
+          "trades": 105,
+          "wr": 64.8,
+          "n_long": 42,
+          "n_short": 63,
+          "pnl_long": 434.48,
+          "pnl_short": 1463.33
+        },
+        "2025-08": {
+          "pnl": 2469.09,
+          "trades": 120,
+          "wr": 69.2,
+          "n_long": 1,
+          "n_short": 119,
+          "pnl_long": -20.42,
+          "pnl_short": 2489.51
+        },
+        "2025-09": {
+          "pnl": 3804.24,
+          "trades": 391,
+          "wr": 60.6,
+          "n_long": 140,
+          "n_short": 251,
+          "pnl_long": 1433.52,
+          "pnl_short": 2370.72
+        },
+        "2025-10": {
+          "pnl": 2237.15,
+          "trades": 521,
+          "wr": 49.3,
+          "n_long": 219,
+          "n_short": 302,
+          "pnl_long": 977.21,
+          "pnl_short": 1259.94
+        },
+        "2025-11": {
+          "pnl": 2496.25,
+          "trades": 418,
+          "wr": 51.7,
+          "n_long": 94,
+          "n_short": 324,
+          "pnl_long": 102.91,
+          "pnl_short": 2393.34
+        },
+        "2025-12": {
+          "pnl": 3719.88,
+          "trades": 445,
+          "wr": 55.1,
+          "n_long": 125,
+          "n_short": 320,
+          "pnl_long": 1483.04,
+          "pnl_short": 2236.84
+        },
+        "2026-01": {
+          "pnl": 7178.07,
+          "trades": 498,
+          "wr": 64.9,
+          "n_long": 145,
+          "n_short": 353,
+          "pnl_long": 1635.45,
+          "pnl_short": 5542.62
+        },
+        "2026-02": {
+          "pnl": 7932.4,
+          "trades": 400,
+          "wr": 65.2,
+          "n_long": 139,
+          "n_short": 261,
+          "pnl_long": 2578.59,
+          "pnl_short": 5353.81
+        },
+        "2026-03": {
+          "pnl": 1257.43,
+          "trades": 113,
+          "wr": 56.6,
+          "n_long": 54,
+          "n_short": 59,
+          "pnl_long": 347.0,
+          "pnl_short": 910.44
+        }
+      }
+    }
+  }
+}

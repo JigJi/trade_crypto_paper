@@ -1,0 +1,208 @@
+{
+  "experiment_id": "short_bias_v4_20260310_222656",
+  "description": "Short bias (offset=0.5) on v4 (v3 + stable_supply w=1.0)",
+  "oos_period": "2026-01-01 00:00:00 to 2026-03-10 00:00:00",
+  "v3_baseline": {
+    "pnl": 14120.91,
+    "trades": 828,
+    "per_coin": {
+      "BTC": {
+        "pnl": 1545.46,
+        "trades": 173,
+        "wr": 60.1,
+        "sharpe": 4.29,
+        "wr_long": 56.6,
+        "wr_short": 62.9,
+        "n_long": 76,
+        "n_short": 97
+      },
+      "XRP": {
+        "pnl": 1734.23,
+        "trades": 116,
+        "wr": 65.5,
+        "sharpe": 4.33,
+        "wr_long": 68.0,
+        "wr_short": 63.6,
+        "n_long": 50,
+        "n_short": 66
+      },
+      "ADA": {
+        "pnl": 2439.88,
+        "trades": 115,
+        "wr": 67.8,
+        "sharpe": 5.88,
+        "wr_long": 70.8,
+        "wr_short": 65.7,
+        "n_long": 48,
+        "n_short": 67
+      },
+      "DOT": {
+        "pnl": 2724.61,
+        "trades": 130,
+        "wr": 65.4,
+        "sharpe": 5.58,
+        "wr_long": 55.9,
+        "wr_short": 73.2,
+        "n_long": 59,
+        "n_short": 71
+      },
+      "SUI": {
+        "pnl": 2828.83,
+        "trades": 153,
+        "wr": 62.1,
+        "sharpe": 5.1,
+        "wr_long": 54.3,
+        "wr_short": 68.7,
+        "n_long": 70,
+        "n_short": 83
+      },
+      "FIL": {
+        "pnl": 2847.9,
+        "trades": 141,
+        "wr": 64.5,
+        "sharpe": 5.28,
+        "wr_long": 57.4,
+        "wr_short": 70.0,
+        "n_long": 61,
+        "n_short": 80
+      }
+    }
+  },
+  "v4_baseline": {
+    "pnl": 15458.31,
+    "trades": 846,
+    "per_coin": {
+      "BTC": {
+        "pnl": 1500.8,
+        "trades": 169,
+        "wr": 59.8,
+        "sharpe": 4.11,
+        "wr_long": 57.1,
+        "wr_short": 61.6,
+        "n_long": 70,
+        "n_short": 99
+      },
+      "XRP": {
+        "pnl": 2161.7,
+        "trades": 125,
+        "wr": 66.4,
+        "sharpe": 4.87,
+        "wr_long": 68.1,
+        "wr_short": 65.4,
+        "n_long": 47,
+        "n_short": 78
+      },
+      "ADA": {
+        "pnl": 2759.15,
+        "trades": 127,
+        "wr": 66.9,
+        "sharpe": 5.97,
+        "wr_long": 72.3,
+        "wr_short": 63.7,
+        "n_long": 47,
+        "n_short": 80
+      },
+      "DOT": {
+        "pnl": 2553.06,
+        "trades": 131,
+        "wr": 62.6,
+        "sharpe": 5.0,
+        "wr_long": 53.6,
+        "wr_short": 69.3,
+        "n_long": 56,
+        "n_short": 75
+      },
+      "SUI": {
+        "pnl": 3391.72,
+        "trades": 155,
+        "wr": 63.9,
+        "sharpe": 5.83,
+        "wr_long": 54.5,
+        "wr_short": 70.8,
+        "n_long": 66,
+        "n_short": 89
+      },
+      "FIL": {
+        "pnl": 3091.88,
+        "trades": 139,
+        "wr": 64.8,
+        "sharpe": 5.52,
+        "wr_long": 58.9,
+        "wr_short": 68.7,
+        "n_long": 56,
+        "n_short": 83
+      }
+    }
+  },
+  "v4_short_bias": {
+    "pnl": 15841.33,
+    "trades": 906,
+    "per_coin": {
+      "BTC": {
+        "pnl": 1297.82,
+        "trades": 196,
+        "wr": 59.7,
+        "sharpe": 3.62,
+        "wr_long": 61.3,
+        "wr_short": 59.0,
+        "n_long": 62,
+        "n_short": 134
+      },
+      "XRP": {
+        "pnl": 2570.79,
+        "trades": 139,
+        "wr": 66.9,
+        "sharpe": 5.59,
+        "wr_long": 68.9,
+        "wr_short": 66.0,
+        "n_long": 45,
+        "n_short": 94
+      },
+      "ADA": {
+        "pnl": 3113.26,
+        "trades": 138,
+        "wr": 68.1,
+        "sharpe": 6.4,
+        "wr_long": 72.7,
+        "wr_short": 66.0,
+        "n_long": 44,
+        "n_short": 94
+      },
+      "DOT": {
+        "pnl": 2661.41,
+        "trades": 136,
+        "wr": 62.5,
+        "sharpe": 5.14,
+        "wr_long": 54.5,
+        "wr_short": 67.9,
+        "n_long": 55,
+        "n_short": 81
+      },
+      "SUI": {
+        "pnl": 3177.23,
+        "trades": 156,
+        "wr": 63.5,
+        "sharpe": 5.34,
+        "wr_long": 53.7,
+        "wr_short": 70.8,
+        "n_long": 67,
+        "n_short": 89
+      },
+      "FIL": {
+        "pnl": 3020.82,
+        "trades": 141,
+        "wr": 63.8,
+        "sharpe": 5.36,
+        "wr_long": 57.1,
+        "wr_short": 68.2,
+        "n_long": 56,
+        "n_short": 85
+      }
+    },
+    "short_offset": 0.5,
+    "stable_weight": 1.0
+  },
+  "delta_vs_v4": 383.02,
+  "delta_vs_v3": 1720.42,
+  "verdict": "KEEP"
+}

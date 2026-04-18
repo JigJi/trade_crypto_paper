@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission #{{ mission_id }} Report</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: #f5f5f5;
+            color: #1e293b;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.8;
+            font-size: 16px;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 48px 60px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+        }
+
+        /* Back link */
+        .back-link {
+            display: inline-block;
+            margin-bottom: 28px;
+            color: #0284c7;
+            text-decoration: none;
+            font-size: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .back-link:hover { color: #0369a1; }
+
+        /* Headings */
+        h1 {
+            font-size: 28px;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #7c3aed;
+            padding-bottom: 14px;
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #0369a1;
+            margin-top: 36px;
+            margin-bottom: 14px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #6d28d9;
+            margin-top: 28px;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #475569;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin-bottom: 14px;
+            color: #334155;
+            font-size: 16px;
+        }
+
+        strong { color: #0f172a; }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e2e8f0;
+            margin: 24px 0;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 15px;
+        }
+
+        th {
+            background: #f8fafc;
+            color: #0369a1;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 2px solid #cbd5e1;
+        }
+
+        td {
+            padding: 10px 16px;
+            border-bottom: 1px solid #e2e8f0;
+            color: #334155;
+        }
+
+        tr:hover td {
+            background: #f0f9ff;
+        }
+
+        /* Code */
+        code {
+            background: #f1f5f9;
+            color: #7c3aed;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 15px;
+            font-family: 'Consolas', 'Monaco', monospace;
+        }
+
+        pre {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            overflow-x: auto;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 10px 0 20px 28px;
+            font-size: 16px;
+            color: #334155;
+        }
+
+        li {
+            margin-bottom: 6px;
+            line-height: 1.7;
+        }
+
+        /* Blockquote */
+        blockquote {
+            border-left: 3px solid #7c3aed;
+            padding: 12px 20px;
+            margin: 20px 0;
+            background: #f5f3ff;
+            border-radius: 0 8px 8px 0;
+            color: #5b21b6;
+            font-size: 16px;
+        }
+
+        /* Emoji sizing */
+        h1 img.emoji, h2 img.emoji { height: 24px; }
+
+        /* Footer */
+        .container > :last-child em {
+            color: #64748b;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a class="back-link" href="/" onclick="window.close(); return false;">&larr; Back to Dashboard</a>
+        {{ body | safe }}
+    </div>
+</body>
+</html>

@@ -1,0 +1,361 @@
+{
+  "mission": "017_streak_dynamics",
+  "date": "2026-03-25",
+  "baseline": {
+    "trades": 5293,
+    "wr": 75.5,
+    "pnl": 22882.0,
+    "avg_pnl": 4.32
+  },
+  "exp1_streak_stats": {
+    "total_streaks": 1631,
+    "win_streaks": 816,
+    "loss_streaks": 815,
+    "max_win_streak": 62,
+    "max_loss_streak": 11,
+    "avg_win_streak": 4.9,
+    "avg_loss_streak": 1.59,
+    "median_win_streak": 3,
+    "median_loss_streak": 1,
+    "expected_win_streak_random": 4.08,
+    "expected_loss_streak_random": 1.32,
+    "win_streak_dist": {
+      "1": 222,
+      "2": 142,
+      "3": 87,
+      "4": 78,
+      "5": 52,
+      "6": 40,
+      "7": 26,
+      "8": 39,
+      "9": 16,
+      "10": 20,
+      "11": 18,
+      "12": 12,
+      "13": 8,
+      "14": 6,
+      "15": 11,
+      "16": 5,
+      "17": 6,
+      "18": 3,
+      "19": 3,
+      "20": 2,
+      "21": 3,
+      "22": 4,
+      "23": 3,
+      "24": 3,
+      "26": 1,
+      "31": 1,
+      "34": 3,
+      "38": 1,
+      "62": 1
+    },
+    "loss_streak_dist": {
+      "1": 557,
+      "2": 154,
+      "3": 49,
+      "4": 25,
+      "5": 10,
+      "6": 13,
+      "7": 4,
+      "9": 2,
+      "11": 1
+    }
+  },
+  "exp2_autocorrelation": {
+    "runs_test": {
+      "n_runs": 1631,
+      "expected_runs": 1959.4,
+      "z_stat": -12.201,
+      "p_value": 0.0,
+      "interpretation": "positive_correlation"
+    },
+    "lag1_outcome_autocorr": {
+      "autocorrelation": 0.1676,
+      "z_stat": 12.195,
+      "p_value": 0.0,
+      "significant": "True"
+    },
+    "lag1_pnl_autocorr": {
+      "autocorrelation": 0.3426,
+      "z_stat": 24.926,
+      "p_value": 0.0,
+      "significant": "True"
+    },
+    "multi_lag_autocorr": {
+      "1": 0.1676,
+      "2": 0.1308,
+      "3": 0.1078,
+      "4": 0.0876,
+      "5": 0.0643,
+      "6": 0.0335,
+      "7": 0.0263,
+      "8": 0.0061,
+      "9": 0.04,
+      "10": 0.0146
+    }
+  },
+  "exp3_post_streak": {
+    "after_3+_wins": {
+      "trades": 2586,
+      "wr": 82.5,
+      "avg_pnl": 6.89,
+      "total_pnl": 17825.0
+    },
+    "after_2_wins": {
+      "trades": 593,
+      "wr": 76.2,
+      "avg_pnl": 4.77,
+      "total_pnl": 2826.0
+    },
+    "after_1_win": {
+      "trades": 816,
+      "wr": 72.8,
+      "avg_pnl": 2.95,
+      "total_pnl": 2411.0
+    },
+    "after_1_loss": {
+      "trades": 815,
+      "wr": 68.3,
+      "avg_pnl": 0.96,
+      "total_pnl": 780.0
+    },
+    "after_2_losses": {
+      "trades": 258,
+      "wr": 59.7,
+      "avg_pnl": 0.14,
+      "total_pnl": 35.0
+    },
+    "after_3+_losses": {
+      "trades": 224,
+      "wr": 46.4,
+      "avg_pnl": -4.45,
+      "total_pnl": -996.0
+    },
+    "win_vs_loss_streak_test": {
+      "t_stat": 9.76,
+      "p_value": 0.0,
+      "significant": "True"
+    }
+  },
+  "exp4_per_coin": {
+    "FIL": {
+      "trades": 883,
+      "wr": 81.2,
+      "max_win_streak": 27,
+      "max_loss_streak": 4,
+      "runs_z": -0.396,
+      "runs_p": 0.6923,
+      "lag1_ac": 0.013
+    },
+    "SUI": {
+      "trades": 872,
+      "wr": 78.8,
+      "max_win_streak": 25,
+      "max_loss_streak": 5,
+      "runs_z": -0.659,
+      "runs_p": 0.5096,
+      "lag1_ac": 0.0201
+    },
+    "DOT": {
+      "trades": 894,
+      "wr": 77.9,
+      "max_win_streak": 27,
+      "max_loss_streak": 7,
+      "runs_z": -3.427,
+      "runs_p": 0.0006,
+      "lag1_ac": 0.1126
+    },
+    "ADA": {
+      "trades": 880,
+      "wr": 77.0,
+      "max_win_streak": 22,
+      "max_loss_streak": 4,
+      "runs_z": -0.407,
+      "runs_p": 0.6842,
+      "lag1_ac": 0.0116
+    },
+    "XRP": {
+      "trades": 871,
+      "wr": 74.5,
+      "max_win_streak": 21,
+      "max_loss_streak": 5,
+      "runs_z": -0.342,
+      "runs_p": 0.7321,
+      "lag1_ac": 0.0097
+    },
+    "BTC": {
+      "trades": 893,
+      "wr": 63.7,
+      "max_win_streak": 14,
+      "max_loss_streak": 7,
+      "runs_z": -1.006,
+      "runs_p": 0.3144,
+      "lag1_ac": 0.0324
+    }
+  },
+  "exp5_time_gap": {
+    "< 1h": {
+      "trades": 658,
+      "wr": 78.0,
+      "avg_pnl": 5.0
+    },
+    "1-4h": {
+      "trades": 622,
+      "wr": 75.9,
+      "avg_pnl": 5.17
+    },
+    "4-12h": {
+      "trades": 209,
+      "wr": 79.9,
+      "avg_pnl": 3.69
+    },
+    "12-24h": {
+      "trades": 122,
+      "wr": 62.3,
+      "avg_pnl": 1.17
+    },
+    "> 24h": {
+      "trades": 35,
+      "wr": 57.1,
+      "avg_pnl": 1.86
+    },
+    "gap_win_corr": -0.0946,
+    "gap_pnl_corr": -0.0793
+  },
+  "exp6_drawdown": {
+    "total_dd_episodes": 458,
+    "max_dd_depth": -503.74,
+    "max_dd_trades": 163,
+    "avg_dd_trades": 5.9,
+    "top10_drawdowns": [
+      {
+        "start_idx": 329,
+        "end_idx": 453,
+        "depth": -503.74,
+        "n_trades": 124,
+        "n_losses": 25,
+        "start_time": "2025-07-17 07:30:00",
+        "recovery_time": "2025-07-23 12:30:00"
+      },
+      {
+        "start_idx": 4899,
+        "end_idx": 5062,
+        "depth": -412.95,
+        "n_trades": 163,
+        "n_losses": 55,
+        "start_time": "2026-03-09 06:15:00",
+        "recovery_time": "2026-03-13 17:15:00"
+      },
+      {
+        "start_idx": 3154,
+        "end_idx": 3259,
+        "depth": -369.35,
+        "n_trades": 105,
+        "n_losses": 27,
+        "start_time": "2025-12-07 16:30:00",
+        "recovery_time": "2025-12-14 11:30:00"
+      },
+      {
+        "start_idx": 4692,
+        "end_idx": 4738,
+        "depth": -261.11,
+        "n_trades": 46,
+        "n_losses": 10,
+        "start_time": "2026-02-25 21:45:00",
+        "recovery_time": "2026-02-27 11:15:00"
+      },
+      {
+        "start_idx": 1986,
+        "end_idx": 2063,
+        "depth": -160.58,
+        "n_trades": 77,
+        "n_losses": 25,
+        "start_time": "2025-10-07 07:30:00",
+        "recovery_time": "2025-10-12 08:30:00"
+      }
+    ],
+    "loss_run_by_length": {
+      "1": {
+        "count": 557,
+        "total_loss": -2400.3099999999995
+      },
+      "2": {
+        "count": 154,
+        "total_loss": -1681.6799999999992
+      },
+      "3": {
+        "count": 49,
+        "total_loss": -916.11
+      },
+      "4": {
+        "count": 25,
+        "total_loss": -902.5300000000001
+      },
+      "5": {
+        "count": 10,
+        "total_loss": -730.81
+      },
+      "6": {
+        "count": 13,
+        "total_loss": -1084.9199999999998
+      },
+      "7": {
+        "count": 4,
+        "total_loss": -455.37
+      },
+      "9": {
+        "count": 2,
+        "total_loss": -105.69
+      },
+      "11": {
+        "count": 1,
+        "total_loss": -76.6
+      }
+    }
+  },
+  "exp7_sizing": {
+    "baseline_1x": {
+      "total_pnl": 22882.0,
+      "delta_vs_baseline": 0.0,
+      "max_dd": -504.0,
+      "sharpe": 9.97
+    },
+    "martingale_after_loss": {
+      "total_pnl": 22402.0,
+      "delta_vs_baseline": -481.0,
+      "max_dd": -504.0,
+      "sharpe": 9.2
+    },
+    "anti_martingale_hot_hand": {
+      "total_pnl": 31795.0,
+      "delta_vs_baseline": 8912.0,
+      "max_dd": -636.0,
+      "sharpe": 10.69
+    },
+    "reduce_after_3_losses": {
+      "total_pnl": 23380.0,
+      "delta_vs_baseline": 498.0,
+      "max_dd": -504.0,
+      "sharpe": 10.48
+    },
+    "streak_proportional": {
+      "total_pnl": 35945.0,
+      "delta_vs_baseline": 13063.0,
+      "max_dd": -740.0,
+      "sharpe": 11.03
+    },
+    "conservative_dd": {
+      "total_pnl": 26735.0,
+      "delta_vs_baseline": 3853.0,
+      "max_dd": -557.0,
+      "sharpe": 10.7
+    },
+    "fr_neg_inspired": {
+      "total_pnl": 29277.0,
+      "delta_vs_baseline": 6395.0,
+      "max_dd": -583.0,
+      "sharpe": 10.75
+    }
+  }
+}

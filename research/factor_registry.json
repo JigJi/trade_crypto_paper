@@ -1,0 +1,630 @@
+[
+  {
+    "name": "liquidation",
+    "category": "derivatives",
+    "scorer_module": "mega_factor_discovery",
+    "scorer_function": "score_core_liq",
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "production",
+    "production_weight": 2.0,
+    "best_weight": 2.0,
+    "best_delta_pnl": 10837,
+    "best_pnl": null,
+    "last_tested": "2026-03-09",
+    "test_metrics": {},
+    "notes": null
+  },
+  {
+    "name": "funding_rate",
+    "category": "derivatives",
+    "scorer_module": "mega_factor_discovery",
+    "scorer_function": "score_core_funding",
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "production",
+    "production_weight": 2.0,
+    "best_weight": 2.0,
+    "best_delta_pnl": 1218,
+    "best_pnl": null,
+    "last_tested": "2026-03-09",
+    "test_metrics": {},
+    "notes": null
+  },
+  {
+    "name": "ob_combined",
+    "category": "orderbook",
+    "scorer_module": "test_orderbook_factor",
+    "scorer_function": "score_ob_combined",
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "production",
+    "production_weight": 2.0,
+    "best_weight": 2.0,
+    "best_delta_pnl": 1274,
+    "best_pnl": null,
+    "last_tested": "2026-03-09",
+    "test_metrics": {},
+    "notes": null
+  },
+  {
+    "name": "etf_flows",
+    "category": "institutional",
+    "scorer_module": "mega_factor_discovery",
+    "scorer_function": "score_core_etf",
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "production",
+    "production_weight": 1.0,
+    "best_weight": 1.0,
+    "best_delta_pnl": 1654,
+    "best_pnl": null,
+    "last_tested": "2026-03-09",
+    "test_metrics": {},
+    "notes": null
+  },
+  {
+    "name": "basis_contrarian",
+    "category": "derivatives",
+    "scorer_module": "test_new_factors",
+    "scorer_function": "score_basis",
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "production",
+    "production_weight": 1.5,
+    "best_weight": 1.5,
+    "best_delta_pnl": 1709,
+    "best_pnl": null,
+    "last_tested": "2026-03-09",
+    "test_metrics": {},
+    "notes": null
+  },
+  {
+    "name": "tick_liq",
+    "category": "derivatives",
+    "scorer_module": "test_new_factors",
+    "scorer_function": "score_tick_liq",
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "production",
+    "production_weight": 2.0,
+    "best_weight": 2.0,
+    "best_delta_pnl": 657,
+    "best_pnl": null,
+    "last_tested": "2026-03-09",
+    "test_metrics": {},
+    "notes": null
+  },
+  {
+    "name": "oi_divergence",
+    "category": "derivatives",
+    "scorer_module": "mega_factor_discovery",
+    "scorer_function": "score_core_oi",
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "production",
+    "production_weight": 0.5,
+    "best_weight": 0.5,
+    "best_delta_pnl": 493,
+    "best_pnl": null,
+    "last_tested": "2026-03-09",
+    "test_metrics": {},
+    "notes": null
+  },
+  {
+    "name": "whale_alerts",
+    "category": "onchain",
+    "scorer_module": "mega_factor_discovery",
+    "scorer_function": "score_core_whale",
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "production",
+    "production_weight": 1.5,
+    "best_weight": 1.5,
+    "best_delta_pnl": 214,
+    "best_pnl": null,
+    "last_tested": "2026-03-09",
+    "test_metrics": {},
+    "notes": null
+  },
+  {
+    "name": "stable_supply",
+    "category": "onchain",
+    "scorer_module": "test_v4_factors",
+    "scorer_function": "score_stable_supply",
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "tested_positive",
+    "production_weight": null,
+    "best_weight": null,
+    "best_delta_pnl": 1337,
+    "best_pnl": null,
+    "last_tested": "2026-03-09",
+    "test_metrics": {},
+    "notes": "Best v4 addition, but overlaps short_bias. SKIP for now."
+  },
+  {
+    "name": "cvd_contrarian",
+    "category": "derivatives",
+    "scorer_module": "test_phase1_factors",
+    "scorer_function": "score_cvd_contrarian",
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "tested_positive",
+    "production_weight": null,
+    "best_weight": null,
+    "best_delta_pnl": 667,
+    "best_pnl": null,
+    "last_tested": "2026-03-09",
+    "test_metrics": {},
+    "notes": "Modest lift, failed stepwise."
+  },
+  {
+    "name": "macro_risk_off",
+    "category": "macro",
+    "scorer_module": "test_phase1_factors",
+    "scorer_function": "score_macro_risk_off",
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "tested_positive",
+    "production_weight": null,
+    "best_weight": null,
+    "best_delta_pnl": 785,
+    "best_pnl": null,
+    "last_tested": "2026-03-09",
+    "test_metrics": {},
+    "notes": "Modest lift, failed stepwise."
+  },
+  {
+    "name": "dvol_level",
+    "category": "volatility",
+    "scorer_module": "test_v4_factors",
+    "scorer_function": "score_dvol_level",
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "tested_positive",
+    "production_weight": null,
+    "best_weight": null,
+    "best_delta_pnl": 343,
+    "best_pnl": null,
+    "last_tested": "2026-03-09",
+    "test_metrics": {},
+    "notes": null
+  },
+  {
+    "name": "dvol_change",
+    "category": "volatility",
+    "scorer_module": "test_v4_factors",
+    "scorer_function": "score_dvol_change",
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "tested_positive",
+    "production_weight": null,
+    "best_weight": null,
+    "best_delta_pnl": 297,
+    "best_pnl": null,
+    "last_tested": "2026-03-09",
+    "test_metrics": {},
+    "notes": null
+  },
+  {
+    "name": "hashrate",
+    "category": "onchain",
+    "scorer_module": "test_v4_factors",
+    "scorer_function": "score_hashrate",
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "tested_positive",
+    "production_weight": null,
+    "best_weight": null,
+    "best_delta_pnl": 345,
+    "best_pnl": null,
+    "last_tested": "2026-03-09",
+    "test_metrics": {},
+    "notes": null
+  },
+  {
+    "name": "fear_greed",
+    "category": "sentiment",
+    "scorer_module": "mega_factor_discovery",
+    "scorer_function": "score_core_fg",
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "tested_negative",
+    "production_weight": null,
+    "best_weight": null,
+    "best_delta_pnl": -500,
+    "best_pnl": null,
+    "last_tested": "2026-03-09",
+    "test_metrics": {},
+    "notes": "Hurts v3. Daily data = noise on 15m."
+  },
+  {
+    "name": "taker_ratio",
+    "category": "derivatives",
+    "scorer_module": "mega_factor_discovery",
+    "scorer_function": "score_core_taker",
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "tested_negative",
+    "production_weight": null,
+    "best_weight": null,
+    "best_delta_pnl": -200,
+    "best_pnl": null,
+    "last_tested": "2026-03-09",
+    "test_metrics": {},
+    "notes": "Redundant with liquidation."
+  },
+  {
+    "name": "ls_ratio",
+    "category": "derivatives",
+    "scorer_module": "mega_factor_discovery",
+    "scorer_function": "score_core_ls",
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "tested_negative",
+    "production_weight": null,
+    "best_weight": null,
+    "best_delta_pnl": -150,
+    "best_pnl": null,
+    "last_tested": "2026-03-09",
+    "test_metrics": {},
+    "notes": "Redundant."
+  },
+  {
+    "name": "active_addr",
+    "category": "onchain",
+    "scorer_module": "test_v4_factors",
+    "scorer_function": "score_active_addr",
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "tested_negative",
+    "production_weight": null,
+    "best_weight": null,
+    "best_delta_pnl": -754,
+    "best_pnl": null,
+    "last_tested": "2026-03-09",
+    "test_metrics": {},
+    "notes": null
+  },
+  {
+    "name": "dex_ratio",
+    "category": "onchain",
+    "scorer_module": "test_v4_factors",
+    "scorer_function": "score_dex_ratio",
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "tested_negative",
+    "production_weight": null,
+    "best_weight": null,
+    "best_delta_pnl": -53,
+    "best_pnl": null,
+    "last_tested": "2026-03-09",
+    "test_metrics": {},
+    "notes": "Was lookahead alpha, flipped negative after fix."
+  },
+  {
+    "name": "basis_momentum",
+    "category": "derivatives",
+    "scorer_module": "test_new_factors",
+    "scorer_function": "score_basis_momentum",
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "tested_negative",
+    "production_weight": null,
+    "best_weight": null,
+    "best_delta_pnl": -100,
+    "best_pnl": null,
+    "last_tested": "2026-03-08",
+    "test_metrics": {},
+    "notes": null
+  },
+  {
+    "name": "news_directional",
+    "category": "sentiment",
+    "scorer_module": "test_new_factors",
+    "scorer_function": "score_news",
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "tested_negative",
+    "production_weight": null,
+    "best_weight": null,
+    "best_delta_pnl": -200,
+    "best_pnl": null,
+    "last_tested": "2026-03-08",
+    "test_metrics": {},
+    "notes": null
+  },
+  {
+    "name": "news_contrarian",
+    "category": "sentiment",
+    "scorer_module": "test_new_factors",
+    "scorer_function": "score_news_contrarian",
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "tested_negative",
+    "production_weight": null,
+    "best_weight": null,
+    "best_delta_pnl": -100,
+    "best_pnl": null,
+    "last_tested": "2026-03-08",
+    "test_metrics": {},
+    "notes": null
+  },
+  {
+    "name": "displacement",
+    "category": "price_action",
+    "scorer_module": "test_new_factors",
+    "scorer_function": "score_displacement",
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "tested_negative",
+    "production_weight": null,
+    "best_weight": null,
+    "best_delta_pnl": -300,
+    "best_pnl": null,
+    "last_tested": "2026-03-08",
+    "test_metrics": {},
+    "notes": null
+  },
+  {
+    "name": "fvg",
+    "category": "price_action",
+    "scorer_module": "test_new_factors",
+    "scorer_function": "score_fvg",
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "tested_negative",
+    "production_weight": null,
+    "best_weight": null,
+    "best_delta_pnl": -250,
+    "best_pnl": null,
+    "last_tested": "2026-03-08",
+    "test_metrics": {},
+    "notes": null
+  },
+  {
+    "name": "sweep",
+    "category": "price_action",
+    "scorer_module": "test_new_factors",
+    "scorer_function": "score_sweep",
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "tested_negative",
+    "production_weight": null,
+    "best_weight": null,
+    "best_delta_pnl": -350,
+    "best_pnl": null,
+    "last_tested": "2026-03-08",
+    "test_metrics": {},
+    "notes": null
+  },
+  {
+    "name": "btc_dominance",
+    "category": "macro",
+    "scorer_module": "test_phase1_factors",
+    "scorer_function": "score_btc_dominance",
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "tested_negative",
+    "production_weight": null,
+    "best_weight": null,
+    "best_delta_pnl": -50,
+    "best_pnl": null,
+    "last_tested": "2026-03-09",
+    "test_metrics": {},
+    "notes": null
+  },
+  {
+    "name": "skew_25d",
+    "category": "volatility",
+    "scorer_module": "research.run_mission_004",
+    "scorer_function": "score_skew",
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "tested_negative",
+    "production_weight": null,
+    "best_weight": null,
+    "best_delta_pnl": -373,
+    "best_pnl": null,
+    "last_tested": "2026-03-15",
+    "test_metrics": {
+      "data_source": "Binance EAPI option_greeks",
+      "data_rows": 26066,
+      "data_resolution_min": 627
+    },
+    "notes": "Tested via Binance EAPI (10h res, no OI). Hurts v3 at all weights. Deribit 15m data pending (only 5 days so far)."
+  },
+  {
+    "name": "put_call_ratio",
+    "category": "volatility",
+    "scorer_module": null,
+    "scorer_function": null,
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "untested",
+    "production_weight": null,
+    "best_weight": null,
+    "best_delta_pnl": null,
+    "best_pnl": null,
+    "last_tested": "2026-03-15",
+    "test_metrics": {},
+    "notes": "BLOCKED: Binance EAPI has no OI data. Deribit has P/C ratio at 15m but only 5 days collected. Retest when Deribit data >= 3 months."
+  },
+  {
+    "name": "gamma_exposure",
+    "category": "volatility",
+    "scorer_module": null,
+    "scorer_function": null,
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "untested",
+    "production_weight": null,
+    "best_weight": null,
+    "best_delta_pnl": null,
+    "best_pnl": null,
+    "last_tested": "2026-03-15",
+    "test_metrics": {},
+    "notes": "BLOCKED: Binance EAPI has no OI data (needed for GEX weighting). Deribit has gex_net at 15m but only 5 days. Retest when Deribit data >= 3 months."
+  },
+  {
+    "name": "max_pain",
+    "category": "volatility",
+    "scorer_module": null,
+    "scorer_function": null,
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "untested",
+    "production_weight": null,
+    "best_weight": null,
+    "best_delta_pnl": null,
+    "best_pnl": null,
+    "last_tested": "2026-03-15",
+    "test_metrics": {},
+    "notes": "BLOCKED: Binance EAPI has no OI data. Deribit has max_pain at 15m but only 5 days. Gravitational pull strongest 24-48h before expiry. Retest when Deribit data >= 3 months."
+  },
+  {
+    "name": "atm_iv",
+    "category": "volatility",
+    "scorer_module": "research.run_mission_004",
+    "scorer_function": "score_atm_iv",
+    "weight_range": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "status": "tested_negative",
+    "production_weight": null,
+    "best_weight": null,
+    "best_delta_pnl": -549,
+    "best_pnl": null,
+    "last_tested": "2026-03-15",
+    "test_metrics": {
+      "data_source": "Binance EAPI option_greeks",
+      "data_rows": 26066,
+      "data_resolution_min": 627
+    },
+    "notes": "ATM IV z-score contrarian. Hurts v3 badly: -$549 to -$1646. State-based signal (not event-based) with 10h resolution = noise."
+  }
+]

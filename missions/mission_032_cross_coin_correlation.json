@@ -1,0 +1,241 @@
+{
+  "mission_id": "mission_032_cross_coin_correlation",
+  "date": "2026-04-09",
+  "experiments": {
+    "exp1": {
+      "total_bars": 42649,
+      "bars_with_trades": 8265,
+      "pct_in_market": 19.4,
+      "concurrent_distribution": {
+        "0": 34384,
+        "1": 2861,
+        "2": 1759,
+        "3": 1266,
+        "4": 1330,
+        "5": 531,
+        "6": 518
+      },
+      "concurrent_distribution_pct": {
+        "0": 80.6,
+        "1": 6.7,
+        "2": 4.1,
+        "3": 3.0,
+        "4": 3.1,
+        "5": 1.2,
+        "6": 1.2
+      },
+      "avg_concurrent": 0.5,
+      "max_concurrent": 6,
+      "multi_entry_bars": 923,
+      "total_entry_bars": 1386,
+      "pct_multi_entry": 66.6,
+      "avg_coins_per_entry_bar": 2.78
+    },
+    "exp2": {
+      "correlation_matrix": {
+        "BTC": {
+          "BTC": 1.0,
+          "XRP": 0.729,
+          "ADA": 0.714,
+          "DOT": 0.676,
+          "SUI": 0.725,
+          "FIL": 0.63
+        },
+        "XRP": {
+          "BTC": 0.729,
+          "XRP": 1.0,
+          "ADA": 0.838,
+          "DOT": 0.769,
+          "SUI": 0.764,
+          "FIL": 0.663
+        },
+        "ADA": {
+          "BTC": 0.714,
+          "XRP": 0.838,
+          "ADA": 1.0,
+          "DOT": 0.848,
+          "SUI": 0.803,
+          "FIL": 0.711
+        },
+        "DOT": {
+          "BTC": 0.676,
+          "XRP": 0.769,
+          "ADA": 0.848,
+          "DOT": 1.0,
+          "SUI": 0.795,
+          "FIL": 0.749
+        },
+        "SUI": {
+          "BTC": 0.725,
+          "XRP": 0.764,
+          "ADA": 0.803,
+          "DOT": 0.795,
+          "SUI": 1.0,
+          "FIL": 0.699
+        },
+        "FIL": {
+          "BTC": 0.63,
+          "XRP": 0.663,
+          "ADA": 0.711,
+          "DOT": 0.749,
+          "SUI": 0.699,
+          "FIL": 1.0
+        }
+      },
+      "avg_pairwise_corr": 0.741,
+      "min_corr": 0.63,
+      "max_corr": 0.848,
+      "most_correlated": [
+        {
+          "pair": "ADA-DOT",
+          "corr": 0.848
+        },
+        {
+          "pair": "XRP-ADA",
+          "corr": 0.838
+        },
+        {
+          "pair": "ADA-SUI",
+          "corr": 0.803
+        }
+      ],
+      "least_correlated": [
+        {
+          "pair": "BTC-DOT",
+          "corr": 0.676
+        },
+        {
+          "pair": "XRP-FIL",
+          "corr": 0.663
+        },
+        {
+          "pair": "BTC-FIL",
+          "corr": 0.63
+        }
+      ]
+    },
+    "exp3": {
+      "multi_coin_entries": 923,
+      "pct_all_same_outcome": 52.3,
+      "pct_all_win": 47.3,
+      "pct_all_lose": 5.0,
+      "avg_win_fraction": 0.751
+    },
+    "exp4": {
+      "n_coins": 6,
+      "effective_n": 1.59,
+      "diversification_ratio": 0.266,
+      "pc1_variance_pct": 78.5,
+      "pc2_variance_pct": 6.7,
+      "top2_variance_pct": 85.2,
+      "eigenvalues": [
+        4.712,
+        0.399,
+        0.332,
+        0.237,
+        0.189,
+        0.13
+      ]
+    },
+    "exp5": {
+      "selection_order": [
+        {
+          "step": 1,
+          "added": "ADA",
+          "sharpe": 7.56,
+          "total_pnl": 2249.3,
+          "coins": [
+            "ADA"
+          ]
+        },
+        {
+          "step": 2,
+          "added": "SUI",
+          "sharpe": 7.36,
+          "total_pnl": 4963.5,
+          "coins": [
+            "ADA",
+            "SUI"
+          ]
+        },
+        {
+          "step": 3,
+          "added": "BTC",
+          "sharpe": 7.2,
+          "total_pnl": 6145.0,
+          "coins": [
+            "ADA",
+            "SUI",
+            "BTC"
+          ]
+        },
+        {
+          "step": 4,
+          "added": "XRP",
+          "sharpe": 7.1,
+          "total_pnl": 7796.5,
+          "coins": [
+            "ADA",
+            "SUI",
+            "BTC",
+            "XRP"
+          ]
+        },
+        {
+          "step": 5,
+          "added": "DOT",
+          "sharpe": 6.33,
+          "total_pnl": 8837.0,
+          "coins": [
+            "ADA",
+            "SUI",
+            "BTC",
+            "XRP",
+            "DOT"
+          ]
+        },
+        {
+          "step": 6,
+          "added": "FIL",
+          "sharpe": 5.55,
+          "total_pnl": 9625.1,
+          "coins": [
+            "ADA",
+            "SUI",
+            "BTC",
+            "XRP",
+            "DOT",
+            "FIL"
+          ]
+        }
+      ],
+      "peak_sharpe_at": 1,
+      "peak_sharpe": 7.56,
+      "peak_coins": [
+        "ADA"
+      ],
+      "full_portfolio_sharpe": 5.55
+    },
+    "exp6": {
+      "max_drawdown": -780.7,
+      "max_dd_date": "2025-11-08",
+      "worst_day_pnl": -383.0,
+      "worst_day_date": "2025-11-06",
+      "worst_day_breakdown": {
+        "ADA": 9.9,
+        "BTC": 7.1,
+        "DOT": -11.3,
+        "FIL": -228.3,
+        "SUI": -181.5,
+        "XRP": 21.2
+      },
+      "worst_5d_rolling": -626.8,
+      "worst_5d_date": "2025-10-05",
+      "all_red_days": 7,
+      "total_trading_days": 210,
+      "pct_all_red": 3.3,
+      "max_losing_streak_days": 4,
+      "worst_streak_pnl": -414.3
+    }
+  }
+}

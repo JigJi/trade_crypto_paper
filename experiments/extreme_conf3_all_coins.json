@@ -1,0 +1,581 @@
+{
+  "test": "extreme_conf3_all_coins",
+  "date": "2026-03-22T03:14:02.866034",
+  "oos_period": "2025-01-01 to 2026-03-31",
+  "results_by_version": {
+    "v3": {
+      "n_coins": 19,
+      "baseline": {
+        "trades": 20663,
+        "wr": 73.7,
+        "pnl": 37943.3,
+        "max_dd": -4280.2,
+        "calmar": 8.86,
+        "avg_pnl": 1.84
+      },
+      "extreme_conf3": {
+        "trades": 19078,
+        "wr": 74.2,
+        "pnl": 44773.4,
+        "max_dd": -4632.7,
+        "calmar": 9.66,
+        "avg_pnl": 2.35
+      },
+      "delta_pnl": 6830.1,
+      "delta_calmar_pct": 9.0,
+      "dropped_trades": 1585,
+      "dropped_pct": 7.7,
+      "extreme_low_conf": {
+        "trades": 1585,
+        "wr": 68.3,
+        "pnl": -6830.2,
+        "max_dd": -8278.4,
+        "calmar": -0.83,
+        "avg_pnl": -4.31
+      },
+      "extreme_high_conf": {
+        "trades": 542,
+        "wr": 86.0,
+        "pnl": 5325.1,
+        "max_dd": -339.1,
+        "calmar": 15.7,
+        "avg_pnl": 9.82
+      }
+    },
+    "v4": {
+      "n_coins": 12,
+      "baseline": {
+        "trades": 13292,
+        "wr": 75.1,
+        "pnl": 28341.6,
+        "max_dd": -2379.1,
+        "calmar": 11.91,
+        "avg_pnl": 2.13
+      },
+      "extreme_conf3": {
+        "trades": 12237,
+        "wr": 75.5,
+        "pnl": 32252.2,
+        "max_dd": -2417.6,
+        "calmar": 13.34,
+        "avg_pnl": 2.64
+      },
+      "delta_pnl": 3910.6,
+      "delta_calmar_pct": 12.0,
+      "dropped_trades": 1055,
+      "dropped_pct": 7.9,
+      "extreme_low_conf": {
+        "trades": 1055,
+        "wr": 70.0,
+        "pnl": -3910.6,
+        "max_dd": -4589.6,
+        "calmar": -0.85,
+        "avg_pnl": -3.71
+      },
+      "extreme_high_conf": {
+        "trades": 338,
+        "wr": 89.3,
+        "pnl": 4006.5,
+        "max_dd": -77.0,
+        "calmar": 52.0,
+        "avg_pnl": 11.85
+      }
+    },
+    "v5": {
+      "n_coins": 15,
+      "baseline": {
+        "trades": 18928,
+        "wr": 75.3,
+        "pnl": 49500.1,
+        "max_dd": -1214.7,
+        "calmar": 40.75,
+        "avg_pnl": 2.62
+      },
+      "extreme_conf3": {
+        "trades": 17617,
+        "wr": 75.6,
+        "pnl": 54573.0,
+        "max_dd": -646.5,
+        "calmar": 84.42,
+        "avg_pnl": 3.1
+      },
+      "delta_pnl": 5072.9,
+      "delta_calmar_pct": 107.2,
+      "dropped_trades": 1311,
+      "dropped_pct": 6.9,
+      "extreme_low_conf": {
+        "trades": 1311,
+        "wr": 71.0,
+        "pnl": -5073.0,
+        "max_dd": -5385.2,
+        "calmar": -0.94,
+        "avg_pnl": -3.87
+      },
+      "extreme_high_conf": {
+        "trades": 417,
+        "wr": 86.1,
+        "pnl": 5046.7,
+        "max_dd": -59.9,
+        "calmar": 84.18,
+        "avg_pnl": 12.1
+      }
+    },
+    "ALL": {
+      "n_coins": 46,
+      "baseline": {
+        "trades": 52883,
+        "wr": 74.6,
+        "pnl": 115785.0,
+        "max_dd": -4280.2,
+        "calmar": 27.05,
+        "avg_pnl": 2.19
+      },
+      "extreme_conf3": {
+        "trades": 48932,
+        "wr": 75.0,
+        "pnl": 131598.7,
+        "max_dd": -4632.7,
+        "calmar": 28.41,
+        "avg_pnl": 2.69
+      },
+      "delta_pnl": 15813.7,
+      "delta_calmar_pct": 5.0,
+      "dropped_trades": 3951,
+      "dropped_pct": 7.5,
+      "extreme_low_conf": {
+        "trades": 3951,
+        "wr": 69.7,
+        "pnl": -15813.7,
+        "max_dd": -16066.9,
+        "calmar": -0.98,
+        "avg_pnl": -4.0
+      },
+      "extreme_high_conf": {
+        "trades": 1297,
+        "wr": 86.9,
+        "pnl": 14378.2,
+        "max_dd": -339.1,
+        "calmar": 42.4,
+        "avg_pnl": 11.09
+      }
+    }
+  },
+  "per_coin": [
+    {
+      "coin": "NAORIS",
+      "ver": "v4",
+      "base_trades": 1081,
+      "base_pnl": 4867.6,
+      "filt_pnl": 6139.0,
+      "delta_pnl": 1271.4,
+      "dropped": 84
+    },
+    {
+      "coin": "AXS",
+      "ver": "v3",
+      "base_trades": 1155,
+      "base_pnl": -29.5,
+      "filt_pnl": 1067.5,
+      "delta_pnl": 1097.0,
+      "dropped": 79
+    },
+    {
+      "coin": "BARD",
+      "ver": "v3",
+      "base_trades": 1041,
+      "base_pnl": -293.1,
+      "filt_pnl": 803.3,
+      "delta_pnl": 1096.4,
+      "dropped": 78
+    },
+    {
+      "coin": "RENDER",
+      "ver": "v3",
+      "base_trades": 1181,
+      "base_pnl": 1981.5,
+      "filt_pnl": 2872.9,
+      "delta_pnl": 891.5,
+      "dropped": 92
+    },
+    {
+      "coin": "GALA",
+      "ver": "v5",
+      "base_trades": 1267,
+      "base_pnl": 3001.9,
+      "filt_pnl": 3859.9,
+      "delta_pnl": 858.0,
+      "dropped": 81
+    },
+    {
+      "coin": "ARIA",
+      "ver": "v3",
+      "base_trades": 1063,
+      "base_pnl": 1813.2,
+      "filt_pnl": 2655.6,
+      "delta_pnl": 842.4,
+      "dropped": 79
+    },
+    {
+      "coin": "HYPE",
+      "ver": "v4",
+      "base_trades": 1147,
+      "base_pnl": 2020.7,
+      "filt_pnl": 2825.7,
+      "delta_pnl": 804.9,
+      "dropped": 87
+    },
+    {
+      "coin": "UNI",
+      "ver": "v5",
+      "base_trades": 1287,
+      "base_pnl": 4016.1,
+      "filt_pnl": 4784.4,
+      "delta_pnl": 768.3,
+      "dropped": 88
+    },
+    {
+      "coin": "AAVE",
+      "ver": "v5",
+      "base_trades": 1266,
+      "base_pnl": 2809.3,
+      "filt_pnl": 3440.2,
+      "delta_pnl": 630.9,
+      "dropped": 83
+    },
+    {
+      "coin": "CRV",
+      "ver": "v5",
+      "base_trades": 1268,
+      "base_pnl": 3392.1,
+      "filt_pnl": 3979.5,
+      "delta_pnl": 587.4,
+      "dropped": 83
+    },
+    {
+      "coin": "ONDO",
+      "ver": "v5",
+      "base_trades": 1306,
+      "base_pnl": 3360.6,
+      "filt_pnl": 3938.1,
+      "delta_pnl": 577.5,
+      "dropped": 88
+    },
+    {
+      "coin": "ASTER",
+      "ver": "v4",
+      "base_trades": 1079,
+      "base_pnl": 1064.0,
+      "filt_pnl": 1639.2,
+      "delta_pnl": 575.3,
+      "dropped": 89
+    },
+    {
+      "coin": "FIL",
+      "ver": "v3",
+      "base_trades": 1190,
+      "base_pnl": 2819.5,
+      "filt_pnl": 3359.5,
+      "delta_pnl": 540.1,
+      "dropped": 91
+    },
+    {
+      "coin": "SUI",
+      "ver": "v3",
+      "base_trades": 1167,
+      "base_pnl": 2729.0,
+      "filt_pnl": 3261.6,
+      "delta_pnl": 532.5,
+      "dropped": 84
+    },
+    {
+      "coin": "ZRO",
+      "ver": "v4",
+      "base_trades": 1161,
+      "base_pnl": 2363.5,
+      "filt_pnl": 2882.8,
+      "delta_pnl": 519.3,
+      "dropped": 90
+    },
+    {
+      "coin": "1000SHIB",
+      "ver": "v5",
+      "base_trades": 1286,
+      "base_pnl": 2027.6,
+      "filt_pnl": 2507.1,
+      "delta_pnl": 479.5,
+      "dropped": 89
+    },
+    {
+      "coin": "NEAR",
+      "ver": "v3",
+      "base_trades": 1113,
+      "base_pnl": 1884.9,
+      "filt_pnl": 2326.3,
+      "delta_pnl": 441.4,
+      "dropped": 85
+    },
+    {
+      "coin": "JCT",
+      "ver": "v4",
+      "base_trades": 729,
+      "base_pnl": 271.6,
+      "filt_pnl": 710.6,
+      "delta_pnl": 438.9,
+      "dropped": 78
+    },
+    {
+      "coin": "SEI",
+      "ver": "v5",
+      "base_trades": 1258,
+      "base_pnl": 2393.5,
+      "filt_pnl": 2808.6,
+      "delta_pnl": 415.1,
+      "dropped": 90
+    },
+    {
+      "coin": "ETH",
+      "ver": "v3",
+      "base_trades": 1071,
+      "base_pnl": 1754.6,
+      "filt_pnl": 2159.0,
+      "delta_pnl": 404.4,
+      "dropped": 78
+    },
+    {
+      "coin": "DOT",
+      "ver": "v3",
+      "base_trades": 879,
+      "base_pnl": 1355.7,
+      "filt_pnl": 1746.0,
+      "delta_pnl": 390.2,
+      "dropped": 63
+    },
+    {
+      "coin": "ARB",
+      "ver": "v3",
+      "base_trades": 1094,
+      "base_pnl": 2461.6,
+      "filt_pnl": 2836.3,
+      "delta_pnl": 374.8,
+      "dropped": 82
+    },
+    {
+      "coin": "1000BONK",
+      "ver": "v3",
+      "base_trades": 1183,
+      "base_pnl": 3501.5,
+      "filt_pnl": 3855.0,
+      "delta_pnl": 353.5,
+      "dropped": 92
+    },
+    {
+      "coin": "BTC",
+      "ver": "v3",
+      "base_trades": 1214,
+      "base_pnl": 945.4,
+      "filt_pnl": 1290.9,
+      "delta_pnl": 345.6,
+      "dropped": 85
+    },
+    {
+      "coin": "WIF",
+      "ver": "v5",
+      "base_trades": 1271,
+      "base_pnl": 3878.8,
+      "filt_pnl": 4205.1,
+      "delta_pnl": 326.2,
+      "dropped": 93
+    },
+    {
+      "coin": "SOL",
+      "ver": "v3",
+      "base_trades": 1128,
+      "base_pnl": 2100.8,
+      "filt_pnl": 2416.8,
+      "delta_pnl": 316.0,
+      "dropped": 80
+    },
+    {
+      "coin": "PIXEL",
+      "ver": "v3",
+      "base_trades": 1177,
+      "base_pnl": 3187.0,
+      "filt_pnl": 3477.6,
+      "delta_pnl": 290.6,
+      "dropped": 93
+    },
+    {
+      "coin": "1000PEPE",
+      "ver": "v4",
+      "base_trades": 1177,
+      "base_pnl": 3659.4,
+      "filt_pnl": 3944.9,
+      "delta_pnl": 285.5,
+      "dropped": 90
+    },
+    {
+      "coin": "PENGU",
+      "ver": "v4",
+      "base_trades": 1193,
+      "base_pnl": 3784.0,
+      "filt_pnl": 4057.9,
+      "delta_pnl": 273.9,
+      "dropped": 90
+    },
+    {
+      "coin": "ADA",
+      "ver": "v3",
+      "base_trades": 1025,
+      "base_pnl": 3166.9,
+      "filt_pnl": 3421.6,
+      "delta_pnl": 254.7,
+      "dropped": 80
+    },
+    {
+      "coin": "LTC",
+      "ver": "v4",
+      "base_trades": 1158,
+      "base_pnl": 1855.7,
+      "filt_pnl": 2070.2,
+      "delta_pnl": 214.5,
+      "dropped": 92
+    },
+    {
+      "coin": "DOGE",
+      "ver": "v5",
+      "base_trades": 1217,
+      "base_pnl": 3073.1,
+      "filt_pnl": 3261.2,
+      "delta_pnl": 188.1,
+      "dropped": 82
+    },
+    {
+      "coin": "XRP",
+      "ver": "v3",
+      "base_trades": 1007,
+      "base_pnl": 1806.9,
+      "filt_pnl": 1947.9,
+      "delta_pnl": 141.0,
+      "dropped": 82
+    },
+    {
+      "coin": "FARTCOIN",
+      "ver": "v5",
+      "base_trades": 1266,
+      "base_pnl": 8311.5,
+      "filt_pnl": 8434.6,
+      "delta_pnl": 123.1,
+      "dropped": 88
+    },
+    {
+      "coin": "TAO",
+      "ver": "v5",
+      "base_trades": 1285,
+      "base_pnl": 3259.4,
+      "filt_pnl": 3371.0,
+      "delta_pnl": 111.6,
+      "dropped": 87
+    },
+    {
+      "coin": "LINK",
+      "ver": "v4",
+      "base_trades": 1107,
+      "base_pnl": 2755.6,
+      "filt_pnl": 2858.0,
+      "delta_pnl": 102.4,
+      "dropped": 82
+    },
+    {
+      "coin": "ICX",
+      "ver": "v5",
+      "base_trades": 1245,
+      "base_pnl": 2230.3,
+      "filt_pnl": 2287.5,
+      "delta_pnl": 57.1,
+      "dropped": 91
+    },
+    {
+      "coin": "AVAX",
+      "ver": "v5",
+      "base_trades": 1200,
+      "base_pnl": 3066.0,
+      "filt_pnl": 3075.3,
+      "delta_pnl": 9.3,
+      "dropped": 91
+    },
+    {
+      "coin": "BNB",
+      "ver": "v5",
+      "base_trades": 1220,
+      "base_pnl": 1131.1,
+      "filt_pnl": 1113.4,
+      "delta_pnl": -17.7,
+      "dropped": 90
+    },
+    {
+      "coin": "ACX",
+      "ver": "v5",
+      "base_trades": 1286,
+      "base_pnl": 3548.8,
+      "filt_pnl": 3507.2,
+      "delta_pnl": -41.6,
+      "dropped": 87
+    },
+    {
+      "coin": "DEGO",
+      "ver": "v4",
+      "base_trades": 1140,
+      "base_pnl": 670.3,
+      "filt_pnl": 555.5,
+      "delta_pnl": -114.8,
+      "dropped": 90
+    },
+    {
+      "coin": "OGN",
+      "ver": "v4",
+      "base_trades": 1170,
+      "base_pnl": 2281.1,
+      "filt_pnl": 2129.5,
+      "delta_pnl": -151.6,
+      "dropped": 94
+    },
+    {
+      "coin": "BANANAS31",
+      "ver": "v3",
+      "base_trades": 1175,
+      "base_pnl": 3458.6,
+      "filt_pnl": 3279.6,
+      "delta_pnl": -179.0,
+      "dropped": 87
+    },
+    {
+      "coin": "SAHARA",
+      "ver": "v4",
+      "base_trades": 1150,
+      "base_pnl": 2748.2,
+      "filt_pnl": 2438.9,
+      "delta_pnl": -309.2,
+      "dropped": 89
+    },
+    {
+      "coin": "BEAT",
+      "ver": "v3",
+      "base_trades": 716,
+      "base_pnl": 3802.4,
+      "filt_pnl": 3278.2,
+      "delta_pnl": -524.2,
+      "dropped": 75
+    },
+    {
+      "coin": "PIPPIN",
+      "ver": "v3",
+      "base_trades": 1084,
+      "base_pnl": -503.6,
+      "filt_pnl": -1282.2,
+      "delta_pnl": -778.7,
+      "dropped": 100
+    }
+  ],
+  "skipped": [],
+  "duration_sec": 6.6
+}

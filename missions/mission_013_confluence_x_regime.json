@@ -1,0 +1,566 @@
+{
+  "exp1_confluence_x_regime": {
+    "Low": {
+      "0-1": {
+        "trades": 614,
+        "wr": 64.8,
+        "avg_pnl": 0.83,
+        "total_pnl": 506.7
+      },
+      "2": {
+        "trades": 526,
+        "wr": 69.6,
+        "avg_pnl": 1.63,
+        "total_pnl": 857.7
+      },
+      "3": {
+        "trades": 235,
+        "wr": 69.8,
+        "avg_pnl": 2.01,
+        "total_pnl": 472.1
+      },
+      "4+": {
+        "trades": 87,
+        "wr": 71.3,
+        "avg_pnl": 3.02,
+        "total_pnl": 262.7
+      }
+    },
+    "Normal": {
+      "0-1": {
+        "trades": 1444,
+        "wr": 69.9,
+        "avg_pnl": 1.96,
+        "total_pnl": 2827.5
+      },
+      "2": {
+        "trades": 1071,
+        "wr": 76.0,
+        "avg_pnl": 2.65,
+        "total_pnl": 2833.5
+      },
+      "3": {
+        "trades": 402,
+        "wr": 76.1,
+        "avg_pnl": 3.87,
+        "total_pnl": 1554.1
+      },
+      "4+": {
+        "trades": 91,
+        "wr": 74.7,
+        "avg_pnl": 2.42,
+        "total_pnl": 220.1
+      }
+    },
+    "High": {
+      "0-1": {
+        "trades": 738,
+        "wr": 70.7,
+        "avg_pnl": 3.08,
+        "total_pnl": 2273.2
+      },
+      "2": {
+        "trades": 440,
+        "wr": 71.6,
+        "avg_pnl": 1.47,
+        "total_pnl": 646.3
+      },
+      "3": {
+        "trades": 161,
+        "wr": 78.3,
+        "avg_pnl": 4.31,
+        "total_pnl": 693.7
+      },
+      "4+": {
+        "trades": 31,
+        "wr": 64.5,
+        "avg_pnl": 1.19,
+        "total_pnl": 37.0
+      }
+    },
+    "Extreme": {
+      "0-1": {
+        "trades": 297,
+        "wr": 64.6,
+        "avg_pnl": -3.98,
+        "total_pnl": -1180.6
+      },
+      "2": {
+        "trades": 188,
+        "wr": 67.6,
+        "avg_pnl": -5.44,
+        "total_pnl": -1023.5
+      },
+      "3": {
+        "trades": 106,
+        "wr": 89.6,
+        "avg_pnl": 11.62,
+        "total_pnl": 1231.9
+      },
+      "4+": {
+        "trades": 51,
+        "wr": 88.2,
+        "avg_pnl": 11.98,
+        "total_pnl": 611.0
+      }
+    }
+  },
+  "exp2_adaptive_filter": {
+    "baseline": {
+      "trades": 6482,
+      "wr": 71.4,
+      "total_pnl": 12823.4,
+      "max_dd": -847.3,
+      "calmar": 15.13,
+      "delta_pnl": 0.0,
+      "min_conf": {
+        "Low": 0,
+        "Normal": 0,
+        "High": 0,
+        "Extreme": 0
+      }
+    },
+    "extreme_conf3": {
+      "trades": 5997,
+      "wr": 71.9,
+      "total_pnl": 15027.6,
+      "max_dd": -523.5,
+      "calmar": 28.71,
+      "delta_pnl": 2204.1,
+      "min_conf": {
+        "Low": 0,
+        "Normal": 0,
+        "High": 0,
+        "Extreme": 3
+      }
+    },
+    "high_extreme_conf2": {
+      "trades": 5447,
+      "wr": 71.9,
+      "total_pnl": 11730.9,
+      "max_dd": -684.7,
+      "calmar": 17.13,
+      "delta_pnl": -1092.5,
+      "min_conf": {
+        "Low": 0,
+        "Normal": 0,
+        "High": 2,
+        "Extreme": 2
+      }
+    },
+    "high_extreme_conf3": {
+      "trades": 4819,
+      "wr": 72.1,
+      "total_pnl": 12108.1,
+      "max_dd": -653.7,
+      "calmar": 18.52,
+      "delta_pnl": -715.3,
+      "min_conf": {
+        "Low": 0,
+        "Normal": 0,
+        "High": 3,
+        "Extreme": 3
+      }
+    },
+    "progressive": {
+      "trades": 5015,
+      "wr": 72.2,
+      "total_pnl": 12057.5,
+      "max_dd": -725.2,
+      "calmar": 16.63,
+      "delta_pnl": -765.9,
+      "min_conf": {
+        "Low": 0,
+        "Normal": 1,
+        "High": 2,
+        "Extreme": 3
+      }
+    },
+    "aggressive": {
+      "trades": 3149,
+      "wr": 73.2,
+      "total_pnl": 7946.2,
+      "max_dd": -586.9,
+      "calmar": 13.54,
+      "delta_pnl": -4877.2,
+      "min_conf": {
+        "Low": 1,
+        "Normal": 2,
+        "High": 3,
+        "Extreme": 4
+      }
+    },
+    "conf2_everywhere": {
+      "trades": 3389,
+      "wr": 74.0,
+      "total_pnl": 8396.7,
+      "max_dd": -504.1,
+      "calmar": 16.66,
+      "delta_pnl": -4426.8,
+      "min_conf": {
+        "Low": 2,
+        "Normal": 2,
+        "High": 2,
+        "Extreme": 2
+      }
+    },
+    "conf3_everywhere": {
+      "trades": 1164,
+      "wr": 76.1,
+      "total_pnl": 5082.7,
+      "max_dd": -214.7,
+      "calmar": 23.67,
+      "delta_pnl": -7740.8,
+      "min_conf": {
+        "Low": 3,
+        "Normal": 3,
+        "High": 3,
+        "Extreme": 3
+      }
+    }
+  },
+  "exp3_confidence_sizing": {
+    "baseline_fixed": {
+      "trades": 6482,
+      "wr": 71.4,
+      "total_pnl": 12823.4,
+      "max_dd": -847.3,
+      "calmar": 15.13,
+      "delta_pnl": 0.0
+    },
+    "vol_only": {
+      "trades": 5840,
+      "wr": 71.4,
+      "total_pnl": 12272.1,
+      "max_dd": -494.8,
+      "calmar": 24.8,
+      "delta_pnl": -551.3
+    },
+    "conf_only": {
+      "trades": 6482,
+      "wr": 71.4,
+      "total_pnl": 13151.4,
+      "max_dd": -655.8,
+      "calmar": 20.05,
+      "delta_pnl": 328.0
+    },
+    "vol_x_conf": {
+      "trades": 6482,
+      "wr": 71.4,
+      "total_pnl": 11856.4,
+      "max_dd": -494.8,
+      "calmar": 23.96,
+      "delta_pnl": -967.1
+    },
+    "vol_x_conf_skip_extreme": {
+      "trades": 5997,
+      "wr": 71.9,
+      "total_pnl": 12663.3,
+      "max_dd": -460.1,
+      "calmar": 27.52,
+      "delta_pnl": -160.2
+    },
+    "smart_filter": {
+      "trades": 5259,
+      "wr": 72.0,
+      "total_pnl": 13628.6,
+      "max_dd": -525.5,
+      "calmar": 25.94,
+      "delta_pnl": 805.2
+    }
+  },
+  "exp4_confluence_trend": {
+    "falling": {
+      "trades": 1941,
+      "wr": 71.4,
+      "avg_pnl": 0.96,
+      "total_pnl": 1867.9
+    },
+    "stable": {
+      "trades": 2340,
+      "wr": 71.6,
+      "avg_pnl": 2.63,
+      "total_pnl": 6159.2
+    },
+    "rising": {
+      "trades": 2201,
+      "wr": 71.3,
+      "avg_pnl": 2.18,
+      "total_pnl": 4796.3
+    }
+  },
+  "exp5_grid_search": {
+    "total_configs_tested": 100,
+    "best_config": {
+      "Low": 0,
+      "Normal": 0,
+      "High": 0,
+      "Extreme": 3
+    },
+    "best_result": {
+      "normal": 0,
+      "high": 0,
+      "extreme": 3,
+      "trades": 5997,
+      "wr": 71.9,
+      "pnl": 15027.6,
+      "max_dd": -523.5,
+      "calmar": 28.71
+    },
+    "top10": [
+      {
+        "normal": 0,
+        "high": 0,
+        "extreme": 3,
+        "trades": 5997,
+        "wr": 71.9,
+        "pnl": 15027.6,
+        "max_dd": -523.5,
+        "calmar": 28.71
+      },
+      {
+        "normal": 1,
+        "high": 0,
+        "extreme": 3,
+        "trades": 5753,
+        "wr": 72.0,
+        "pnl": 14330.7,
+        "max_dd": -523.8,
+        "calmar": 27.36
+      },
+      {
+        "normal": 0,
+        "high": 1,
+        "extreme": 3,
+        "trades": 5844,
+        "wr": 72.1,
+        "pnl": 14475.2,
+        "max_dd": -533.1,
+        "calmar": 27.15
+      },
+      {
+        "normal": 0,
+        "high": 0,
+        "extreme": 4,
+        "trades": 5891,
+        "wr": 71.6,
+        "pnl": 13795.7,
+        "max_dd": -523.5,
+        "calmar": 26.35
+      },
+      {
+        "normal": 1,
+        "high": 1,
+        "extreme": 3,
+        "trades": 5600,
+        "wr": 72.2,
+        "pnl": 13778.3,
+        "max_dd": -533.4,
+        "calmar": 25.83
+      },
+      {
+        "normal": 1,
+        "high": 0,
+        "extreme": 4,
+        "trades": 5647,
+        "wr": 71.6,
+        "pnl": 13098.8,
+        "max_dd": -523.8,
+        "calmar": 25.01
+      },
+      {
+        "normal": 0,
+        "high": 1,
+        "extreme": 4,
+        "trades": 5738,
+        "wr": 71.8,
+        "pnl": 13243.3,
+        "max_dd": -533.1,
+        "calmar": 24.84
+      },
+      {
+        "normal": 1,
+        "high": 1,
+        "extreme": 4,
+        "trades": 5494,
+        "wr": 71.9,
+        "pnl": 12546.4,
+        "max_dd": -533.4,
+        "calmar": 23.52
+      },
+      {
+        "normal": 2,
+        "high": 0,
+        "extreme": 3,
+        "trades": 4553,
+        "wr": 72.5,
+        "pnl": 12200.0,
+        "max_dd": -534.0,
+        "calmar": 22.84
+      },
+      {
+        "normal": 2,
+        "high": 1,
+        "extreme": 3,
+        "trades": 4400,
+        "wr": 72.8,
+        "pnl": 11647.6,
+        "max_dd": -543.7,
+        "calmar": 21.42
+      }
+    ]
+  },
+  "exp6_3way_interaction": {
+    "L": {
+      "Low": {
+        "0-2": {
+          "trades": 505,
+          "wr": 66.7,
+          "avg_pnl": 1.52,
+          "total_pnl": 767.3
+        },
+        "3+": {
+          "trades": 127,
+          "wr": 68.5,
+          "avg_pnl": 3.56,
+          "total_pnl": 452.2
+        }
+      },
+      "Normal": {
+        "0-2": {
+          "trades": 1193,
+          "wr": 69.2,
+          "avg_pnl": 1.25,
+          "total_pnl": 1492.8
+        },
+        "3+": {
+          "trades": 214,
+          "wr": 77.6,
+          "avg_pnl": 2.36,
+          "total_pnl": 505.6
+        }
+      },
+      "High": {
+        "0-2": {
+          "trades": 512,
+          "wr": 71.3,
+          "avg_pnl": 4.11,
+          "total_pnl": 2103.2
+        },
+        "3+": {
+          "trades": 69,
+          "wr": 71.0,
+          "avg_pnl": -0.7,
+          "total_pnl": -48.0
+        }
+      },
+      "Extreme": {
+        "0-2": {
+          "trades": 249,
+          "wr": 64.7,
+          "avg_pnl": -4.26,
+          "total_pnl": -1060.8
+        },
+        "3+": {
+          "trades": 66,
+          "wr": 89.4,
+          "avg_pnl": 10.32,
+          "total_pnl": 681.3
+        }
+      }
+    },
+    "S": {
+      "Low": {
+        "0-2": {
+          "trades": 635,
+          "wr": 67.2,
+          "avg_pnl": 0.94,
+          "total_pnl": 597.1
+        },
+        "3+": {
+          "trades": 195,
+          "wr": 71.3,
+          "avg_pnl": 1.45,
+          "total_pnl": 282.5
+        }
+      },
+      "Normal": {
+        "0-2": {
+          "trades": 1322,
+          "wr": 75.6,
+          "avg_pnl": 3.15,
+          "total_pnl": 4168.2
+        },
+        "3+": {
+          "trades": 279,
+          "wr": 74.6,
+          "avg_pnl": 4.55,
+          "total_pnl": 1268.6
+        }
+      },
+      "High": {
+        "0-2": {
+          "trades": 666,
+          "wr": 70.9,
+          "avg_pnl": 1.23,
+          "total_pnl": 816.2
+        },
+        "3+": {
+          "trades": 123,
+          "wr": 78.9,
+          "avg_pnl": 6.33,
+          "total_pnl": 778.8
+        }
+      },
+      "Extreme": {
+        "0-2": {
+          "trades": 236,
+          "wr": 66.9,
+          "avg_pnl": -4.84,
+          "total_pnl": -1143.4
+        },
+        "3+": {
+          "trades": 91,
+          "wr": 89.0,
+          "avg_pnl": 12.77,
+          "total_pnl": 1161.6
+        }
+      }
+    }
+  },
+  "summary": {
+    "baseline_trades": 6482,
+    "baseline_wr": 71.4,
+    "baseline_pnl": 12823.4,
+    "best_adaptive_filter": "extreme_conf3",
+    "best_filter_calmar": 28.71,
+    "best_filter_pnl": 15027.6,
+    "best_filter_delta_pnl": 2204.1,
+    "best_sizing": "vol_x_conf_skip_extreme",
+    "best_sizing_calmar": 27.52,
+    "best_sizing_pnl": 12663.3,
+    "grid_search_best_config": {
+      "Low": 0,
+      "Normal": 0,
+      "High": 0,
+      "Extreme": 3
+    },
+    "grid_search_best_calmar": 28.71,
+    "experiments": 6,
+    "total_configs_tested": 100,
+    "duration_sec": 171.6
+  },
+  "meta": {
+    "started_at": "2026-03-21T19:13:16.813663",
+    "finished_at": "2026-03-21T19:16:08.458453",
+    "oos_period": "2025-01-01 to 2026-03-31",
+    "coins": [
+      "BTC",
+      "XRP",
+      "ADA",
+      "DOT",
+      "SUI",
+      "FIL"
+    ]
+  }
+}

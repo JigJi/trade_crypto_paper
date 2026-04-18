@@ -1,0 +1,332 @@
+{
+  "exp1_magnitude": [
+    {
+      "bucket": "<1.1x (no cascade)",
+      "trades": 1233,
+      "wr_pct": 78.8,
+      "total_pnl": 6069.12,
+      "avg_pnl": 4.92
+    },
+    {
+      "bucket": "1.1-1.5x",
+      "trades": 707,
+      "wr_pct": 71.3,
+      "total_pnl": 2041.62,
+      "avg_pnl": 2.89
+    },
+    {
+      "bucket": "1.5-2.0x",
+      "trades": 557,
+      "wr_pct": 73.6,
+      "total_pnl": 1736.67,
+      "avg_pnl": 3.12
+    },
+    {
+      "bucket": "2.0-3.0x",
+      "trades": 852,
+      "wr_pct": 71.2,
+      "total_pnl": 2400.28,
+      "avg_pnl": 2.82
+    },
+    {
+      "bucket": "3.0-5.0x",
+      "trades": 918,
+      "wr_pct": 77.2,
+      "total_pnl": 4102.38,
+      "avg_pnl": 4.47
+    },
+    {
+      "bucket": "5.0x+",
+      "trades": 788,
+      "wr_pct": 79.6,
+      "total_pnl": 5326.52,
+      "avg_pnl": 6.76
+    }
+  ],
+  "exp2_side_dominance": [
+    {
+      "bucket": "<0.3 (mixed)",
+      "trades": 546,
+      "wr_pct": 78.6,
+      "total_pnl": 2259.0,
+      "avg_pnl": 4.14
+    },
+    {
+      "bucket": "0.3-0.5",
+      "trades": 319,
+      "wr_pct": 74.9,
+      "total_pnl": 1256.73,
+      "avg_pnl": 3.94
+    },
+    {
+      "bucket": "0.5-0.7",
+      "trades": 462,
+      "wr_pct": 74.7,
+      "total_pnl": 2202.88,
+      "avg_pnl": 4.77
+    },
+    {
+      "bucket": "0.7-0.9",
+      "trades": 1077,
+      "wr_pct": 73.5,
+      "total_pnl": 4564.1,
+      "avg_pnl": 4.24
+    },
+    {
+      "bucket": "0.9+ (one-sided)",
+      "trades": 2698,
+      "wr_pct": 75.9,
+      "total_pnl": 11388.49,
+      "avg_pnl": 4.22
+    }
+  ],
+  "exp3_freshness": [
+    {
+      "bucket": "1 bar (immediate)",
+      "trades": 4029,
+      "wr_pct": 74.8,
+      "total_pnl": 16717.28,
+      "avg_pnl": 4.15
+    },
+    {
+      "bucket": "2-4 bars",
+      "trades": 118,
+      "wr_pct": 73.7,
+      "total_pnl": 537.34,
+      "avg_pnl": 4.55
+    },
+    {
+      "bucket": "5-9 bars",
+      "trades": 209,
+      "wr_pct": 80.4,
+      "total_pnl": 1340.73,
+      "avg_pnl": 6.41
+    },
+    {
+      "bucket": "10-19 bars",
+      "trades": 214,
+      "wr_pct": 83.6,
+      "total_pnl": 1245.86,
+      "avg_pnl": 5.82
+    },
+    {
+      "bucket": "20-49 bars",
+      "trades": 245,
+      "wr_pct": 75.1,
+      "total_pnl": 754.01,
+      "avg_pnl": 3.08
+    },
+    {
+      "bucket": "50+ bars",
+      "trades": 287,
+      "wr_pct": 76.7,
+      "total_pnl": 1075.98,
+      "avg_pnl": 3.75
+    }
+  ],
+  "exp4_displacement": [
+    {
+      "bucket": "<0.1%",
+      "trades": 2525,
+      "wr_pct": 70.5,
+      "total_pnl": 7322.3,
+      "avg_pnl": 2.9
+    },
+    {
+      "bucket": "0.1-0.3%",
+      "trades": 1899,
+      "wr_pct": 80.1,
+      "total_pnl": 9635.77,
+      "avg_pnl": 5.07
+    },
+    {
+      "bucket": "0.3-0.5%",
+      "trades": 441,
+      "wr_pct": 79.4,
+      "total_pnl": 2349.74,
+      "avg_pnl": 5.33
+    },
+    {
+      "bucket": "0.5-1.0%",
+      "trades": 194,
+      "wr_pct": 83.5,
+      "total_pnl": 1587.53,
+      "avg_pnl": 8.18
+    },
+    {
+      "bucket": "1.0%+",
+      "trades": 43,
+      "wr_pct": 86.0,
+      "total_pnl": 775.86,
+      "avg_pnl": 18.04
+    }
+  ],
+  "exp5_multibar": [
+    {
+      "bucket": "no cascade bar",
+      "trades": 106,
+      "wr_pct": 72.6,
+      "total_pnl": 523.01,
+      "avg_pnl": 4.93
+    },
+    {
+      "bucket": "1st bar",
+      "trades": 2322,
+      "wr_pct": 74.5,
+      "total_pnl": 9149.21,
+      "avg_pnl": 3.94
+    },
+    {
+      "bucket": "2nd-3rd bar",
+      "trades": 248,
+      "wr_pct": 77.0,
+      "total_pnl": 1099.89,
+      "avg_pnl": 4.44
+    },
+    {
+      "bucket": "4th-7th bar",
+      "trades": 609,
+      "wr_pct": 75.5,
+      "total_pnl": 2570.76,
+      "avg_pnl": 4.22
+    },
+    {
+      "bucket": "8+ bar",
+      "trades": 584,
+      "wr_pct": 72.3,
+      "total_pnl": 2259.21,
+      "avg_pnl": 3.87
+    }
+  ],
+  "exp6_quality_score": {
+    "quality_buckets": [
+      {
+        "bucket": "Q1 (lowest)",
+        "trades": 1278,
+        "wr_pct": 72.5,
+        "total_pnl": 3429.95,
+        "avg_pnl": 2.68
+      },
+      {
+        "bucket": "Q2",
+        "trades": 1273,
+        "wr_pct": 71.8,
+        "total_pnl": 4799.55,
+        "avg_pnl": 3.77
+      },
+      {
+        "bucket": "Q3",
+        "trades": 1275,
+        "wr_pct": 75.6,
+        "total_pnl": 4963.06,
+        "avg_pnl": 3.89
+      },
+      {
+        "bucket": "Q4 (highest)",
+        "trades": 1276,
+        "wr_pct": 82.1,
+        "total_pnl": 8478.64,
+        "avg_pnl": 6.64
+      }
+    ],
+    "filter_tests": [
+      {
+        "filter": "skip Q1 (lowest)",
+        "trades": 3824,
+        "wr_pct": 76.5,
+        "total_pnl": 18241.25,
+        "delta_pnl": -3429.95,
+        "trades_removed_pct": 25.0
+      },
+      {
+        "filter": "skip Q2",
+        "trades": 2551,
+        "wr_pct": 78.8,
+        "total_pnl": 13441.7,
+        "delta_pnl": -8229.5,
+        "trades_removed_pct": 50.0
+      }
+    ],
+    "direction_x_quality": {
+      "LONG_Q1 (lowest)": {
+        "trades": 630,
+        "wr_pct": 70.6,
+        "avg_pnl": 2.26
+      },
+      "LONG_Q2": {
+        "trades": 578,
+        "wr_pct": 70.6,
+        "avg_pnl": 3.59
+      },
+      "LONG_Q3": {
+        "trades": 545,
+        "wr_pct": 74.3,
+        "avg_pnl": 3.95
+      },
+      "LONG_Q4 (highest)": {
+        "trades": 479,
+        "wr_pct": 82.9,
+        "avg_pnl": 7.05
+      },
+      "SHORT_Q1 (lowest)": {
+        "trades": 648,
+        "wr_pct": 74.4,
+        "avg_pnl": 3.1
+      },
+      "SHORT_Q2": {
+        "trades": 695,
+        "wr_pct": 72.8,
+        "avg_pnl": 3.92
+      },
+      "SHORT_Q3": {
+        "trades": 730,
+        "wr_pct": 76.6,
+        "avg_pnl": 3.85
+      },
+      "SHORT_Q4 (highest)": {
+        "trades": 797,
+        "wr_pct": 81.6,
+        "avg_pnl": 6.4
+      }
+    },
+    "baseline": {
+      "trades": 5102,
+      "wr_pct": 75.5,
+      "total_pnl": 21671.2
+    }
+  },
+  "direction_summary": {
+    "LONG": {
+      "trades": 2232,
+      "wr_pct": 74.1,
+      "total_pnl": 9026.2
+    },
+    "SHORT": {
+      "trades": 2870,
+      "wr_pct": 76.6,
+      "total_pnl": 12645.0
+    }
+  },
+  "summary": {
+    "total_trades": 5102,
+    "total_pnl": 21671.2,
+    "overall_wr": 75.5,
+    "oos_period": "2025-01-01 to 2026-03-31",
+    "coins": [
+      "BTC",
+      "XRP",
+      "ADA",
+      "DOT",
+      "SUI",
+      "FIL"
+    ],
+    "v6_config": {
+      "cascade_mult": 1.1,
+      "liq_w": 8.0,
+      "tick_w": 8.0,
+      "sl": 25.0,
+      "tp": 20.0
+    }
+  },
+  "duration_sec": 16.4
+}

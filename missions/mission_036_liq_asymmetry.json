@@ -1,0 +1,317 @@
+{
+  "data_summary": {
+    "total_events": 98016,
+    "long_liqs": 53565,
+    "short_liqs": 44451,
+    "long_pct": 54.64924094025465,
+    "date_range": "2025-09-14 02:05:32.647000 to 2026-04-13 12:13:38.142000"
+  },
+  "cascade_counts": {
+    "long_cascades": 909,
+    "short_cascades": 891,
+    "total_cascades": 912,
+    "both_simultaneous": 152
+  },
+  "forward_returns": {
+    "Long Cascade": {
+      "count": 703,
+      "ret_1h_mean": 0.013117594084008805,
+      "ret_1h_median": 0.0054618240880710545,
+      "ret_4h_mean": 0.06705800399810397,
+      "ret_4h_median": 0.04358145005460834,
+      "contrarian_wr_1h": 51.35135135135135,
+      "contrarian_wr_4h": 53.62731152204836
+    },
+    "Short Cascade": {
+      "count": 680,
+      "ret_1h_mean": -0.02562952783627515,
+      "ret_1h_median": -0.0011860416944065033,
+      "ret_4h_mean": -0.022035656213393203,
+      "ret_4h_median": -0.040007632385258285,
+      "contrarian_wr_1h": 50.14705882352941,
+      "contrarian_wr_4h": 54.264705882352935
+    },
+    "Total Cascade": {
+      "count": 717,
+      "ret_1h_mean": 0.014305009584726858,
+      "ret_1h_median": 0.014734423184536993,
+      "ret_4h_mean": 0.07397335605831533,
+      "ret_4h_median": 0.015092832014573787,
+      "contrarian_wr_1h": null,
+      "contrarian_wr_4h": null
+    },
+    "No Cascade": {
+      "count": 17332,
+      "ret_1h_mean": -0.010596256007229913,
+      "ret_1h_median": -0.000830869523965605,
+      "ret_4h_mean": -0.043029609717308,
+      "ret_4h_median": -0.004315493969536677,
+      "contrarian_wr_1h": null,
+      "contrarian_wr_4h": null
+    }
+  },
+  "exclusive_cascades": {
+    "Long-Only Cascade": {
+      "count": 570,
+      "ret_1h_mean": 0.009731671698476349,
+      "ret_4h_mean": 0.06784744300940145,
+      "contrarian_wr_1h": 51.2280701754386,
+      "contrarian_wr_4h": 55.614035087719294
+    },
+    "Short-Only Cascade": {
+      "count": 547,
+      "ret_1h_mean": -0.03857896654770342,
+      "ret_4h_mean": -0.04287564994591526,
+      "contrarian_wr_1h": 50.6398537477148,
+      "contrarian_wr_4h": 54.11334552102377
+    },
+    "Both-Side Cascade": {
+      "count": 133,
+      "ret_1h_mean": 0.02762869002200504,
+      "ret_4h_mean": 0.06367469394968621,
+      "contrarian_wr_1h": null,
+      "contrarian_wr_4h": null
+    }
+  },
+  "ratio_quintiles": {
+    "Q1": {
+      "count": 12499,
+      "median_ratio": 1.0,
+      "mean_ret_4h": -0.03829164127106188,
+      "wr_short": 50.30002400192015,
+      "wr_long": 49.69997599807985
+    },
+    "Q2": {
+      "count": 1928,
+      "median_ratio": 478.8115748912784,
+      "mean_ret_4h": 0.025527474365386563,
+      "wr_short": 45.02074688796681,
+      "wr_long": 54.9792531120332
+    },
+    "Q3": {
+      "count": 3607,
+      "median_ratio": 7375.73234134102,
+      "mean_ret_4h": -0.0732196996670303,
+      "wr_short": 53.22983088439146,
+      "wr_long": 46.77016911560854
+    }
+  },
+  "trade_impact": {
+    "During Long Cascade": {
+      "trades": 50,
+      "wr": 74.0,
+      "avg_pnl": 2.384128473500513,
+      "total_pnl": 119.20642367502565
+    },
+    "During Long Cascade_S": {
+      "trades": 27,
+      "wr": 70.37037037037037,
+      "avg_pnl": 1.030904070873356
+    },
+    "During Long Cascade_L": {
+      "trades": 23,
+      "wr": 78.26086956521739,
+      "avg_pnl": 3.9726962504976107
+    },
+    "During Short Cascade": {
+      "trades": 43,
+      "wr": 58.139534883720934,
+      "avg_pnl": -0.751823460957112,
+      "total_pnl": -32.32840882115582
+    },
+    "During Short Cascade_S": {
+      "trades": 24,
+      "wr": 50.0,
+      "avg_pnl": -3.0102125311282464
+    },
+    "During Short Cascade_L": {
+      "trades": 19,
+      "wr": 68.42105263157895,
+      "avg_pnl": 2.100878522416952
+    },
+    "No Cascade": {
+      "trades": 1084,
+      "wr": 61.162361623616235,
+      "avg_pnl": 0.6561809083908191,
+      "total_pnl": 711.3001046956479
+    },
+    "No Cascade_S": {
+      "trades": 575,
+      "wr": 62.60869565217392,
+      "avg_pnl": 0.9909491478346257
+    },
+    "No Cascade_L": {
+      "trades": 509,
+      "wr": 59.52848722986247,
+      "avg_pnl": 0.27800460646510416
+    }
+  },
+  "trade_filter": {
+    "low_ratio": {
+      "trades": 1017,
+      "wr": 60.27531956735497,
+      "total_pnl": 429.6464078883324
+    },
+    "mid_ratio": {
+      "trades": 195,
+      "wr": 65.12820512820512,
+      "total_pnl": 395.8857830283441
+    }
+  },
+  "size_buckets": {
+    "Long_Small (<$10K)": {
+      "count": 48700,
+      "total_usd": 76782177.63827
+    },
+    "Short_Small (<$10K)": {
+      "count": 40170,
+      "total_usd": 67071989.051630005
+    },
+    "Long_Medium ($10K-$100K)": {
+      "count": 4750,
+      "total_usd": 113003753.36166
+    },
+    "Short_Medium ($10K-$100K)": {
+      "count": 4205,
+      "total_usd": 100251821.22921
+    },
+    "Long_Large ($100K-$1M)": {
+      "count": 115,
+      "total_usd": 20841793.58794
+    },
+    "Short_Large ($100K-$1M)": {
+      "count": 75,
+      "total_usd": 13546150.16888
+    },
+    "Long_Whale (>$1M)": {
+      "count": 0,
+      "total_usd": 0.0
+    },
+    "Short_Whale (>$1M)": {
+      "count": 1,
+      "total_usd": 1768710.4346
+    }
+  },
+  "hourly_asymmetry": {
+    "0": {
+      "long_notional": 5059973.63625,
+      "short_notional": 6493310.83785,
+      "ratio": 0.7792594538206267
+    },
+    "1": {
+      "long_notional": 6100896.26424,
+      "short_notional": 6707521.92385,
+      "ratio": 0.9095604045641029
+    },
+    "2": {
+      "long_notional": 6857637.48465,
+      "short_notional": 5872396.52104,
+      "ratio": 1.1677749096650927
+    },
+    "3": {
+      "long_notional": 6169516.47405,
+      "short_notional": 3914357.45344,
+      "ratio": 1.576124810089411
+    },
+    "4": {
+      "long_notional": 8452490.12437,
+      "short_notional": 6826101.72053,
+      "ratio": 1.2382601713490948
+    },
+    "5": {
+      "long_notional": 9377082.43181,
+      "short_notional": 5494842.00737,
+      "ratio": 1.7065243573352171
+    },
+    "6": {
+      "long_notional": 13508210.80901,
+      "short_notional": 12341703.90873,
+      "ratio": 1.094517484327053
+    },
+    "7": {
+      "long_notional": 16155738.06706,
+      "short_notional": 15173609.98278,
+      "ratio": 1.064726061937042
+    },
+    "8": {
+      "long_notional": 16594331.44008,
+      "short_notional": 13835149.91463,
+      "ratio": 1.199432701708537
+    },
+    "9": {
+      "long_notional": 11104294.79206,
+      "short_notional": 9205547.29229,
+      "ratio": 1.2062612067724716
+    },
+    "10": {
+      "long_notional": 14552802.36596,
+      "short_notional": 8808367.29624,
+      "ratio": 1.652156548923154
+    },
+    "11": {
+      "long_notional": 9397879.50534,
+      "short_notional": 8330996.57489,
+      "ratio": 1.1280618462386345
+    },
+    "12": {
+      "long_notional": 8003485.84549,
+      "short_notional": 9131286.72958,
+      "ratio": 0.87649048880186
+    },
+    "13": {
+      "long_notional": 6087483.404060001,
+      "short_notional": 7651985.65273,
+      "ratio": 0.7955429982210134
+    },
+    "14": {
+      "long_notional": 4049614.25651,
+      "short_notional": 6031490.01862,
+      "ratio": 0.6714119682858366
+    },
+    "15": {
+      "long_notional": 7430162.59547,
+      "short_notional": 9316987.76241,
+      "ratio": 0.7974855165058781
+    },
+    "16": {
+      "long_notional": 8368660.49831,
+      "short_notional": 5734821.54064,
+      "ratio": 1.4592712222575706
+    },
+    "17": {
+      "long_notional": 9587904.1899,
+      "short_notional": 9177389.65454,
+      "ratio": 1.0447310734404578
+    },
+    "18": {
+      "long_notional": 6495156.9174,
+      "short_notional": 5729634.09161,
+      "ratio": 1.1336076056415822
+    },
+    "19": {
+      "long_notional": 7698472.67545,
+      "short_notional": 5265105.36026,
+      "ratio": 1.4621686911315948
+    },
+    "20": {
+      "long_notional": 7841543.14441,
+      "short_notional": 5824483.80302,
+      "ratio": 1.3463069111870896
+    },
+    "21": {
+      "long_notional": 6957018.22808,
+      "short_notional": 5374842.13731,
+      "ratio": 1.2943669332016723
+    },
+    "22": {
+      "long_notional": 4933226.92541,
+      "short_notional": 5765839.40157,
+      "ratio": 0.8555956429294704
+    },
+    "23": {
+      "long_notional": 9844142.5125,
+      "short_notional": 4630899.29839,
+      "ratio": 2.125751555463731
+    }
+  }
+}

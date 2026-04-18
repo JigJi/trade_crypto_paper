@@ -1,0 +1,421 @@
+{
+  "exp1_baseline": {
+    "label": "Baseline (no score exit)",
+    "trades": 5130,
+    "wins": 3868,
+    "wr": 75.4,
+    "pnl": 20716.02,
+    "avg_pnl": 4.04,
+    "exits": {
+      "TRAIL": 4721,
+      "SIGNAL_FLIP": 380,
+      "SL": 17,
+      "TIMEOUT": 12
+    },
+    "flip_trades": 380,
+    "flip_pnl": -6515.81,
+    "flip_wr": 3.2
+  },
+  "exp2_zero_cross": {
+    "label": "Score Zero-Cross",
+    "trades": 5717,
+    "wins": 3295,
+    "wr": 57.6,
+    "pnl": 1481.73,
+    "avg_pnl": 0.26,
+    "exits": {
+      "TRAIL": 3853,
+      "SCORE_ZERO": 1860,
+      "SL": 4
+    },
+    "flip_trades": 0,
+    "flip_pnl": 0,
+    "flip_wr": 0
+  },
+  "exp3_decay_grid": {
+    "0.1": {
+      "label": "Decay 0.1",
+      "trades": 5717,
+      "wins": 3295,
+      "wr": 57.6,
+      "pnl": 1481.73,
+      "avg_pnl": 0.26,
+      "exits": {
+        "TRAIL": 3853,
+        "SCORE_DECAY": 1860,
+        "SL": 4
+      },
+      "flip_trades": 0,
+      "flip_pnl": 0,
+      "flip_wr": 0
+    },
+    "0.2": {
+      "label": "Decay 0.2",
+      "trades": 5717,
+      "wins": 3295,
+      "wr": 57.6,
+      "pnl": 1481.73,
+      "avg_pnl": 0.26,
+      "exits": {
+        "TRAIL": 3853,
+        "SCORE_DECAY": 1860,
+        "SL": 4
+      },
+      "flip_trades": 0,
+      "flip_pnl": 0,
+      "flip_wr": 0
+    },
+    "0.3": {
+      "label": "Decay 0.3",
+      "trades": 5717,
+      "wins": 3295,
+      "wr": 57.6,
+      "pnl": 1481.73,
+      "avg_pnl": 0.26,
+      "exits": {
+        "TRAIL": 3853,
+        "SCORE_DECAY": 1860,
+        "SL": 4
+      },
+      "flip_trades": 0,
+      "flip_pnl": 0,
+      "flip_wr": 0
+    },
+    "0.5": {
+      "label": "Decay 0.5",
+      "trades": 5717,
+      "wins": 3295,
+      "wr": 57.6,
+      "pnl": 1481.73,
+      "avg_pnl": 0.26,
+      "exits": {
+        "TRAIL": 3853,
+        "SCORE_DECAY": 1860,
+        "SL": 4
+      },
+      "flip_trades": 0,
+      "flip_pnl": 0,
+      "flip_wr": 0
+    },
+    "0.7": {
+      "label": "Decay 0.7",
+      "trades": 5717,
+      "wins": 3295,
+      "wr": 57.6,
+      "pnl": 1481.73,
+      "avg_pnl": 0.26,
+      "exits": {
+        "TRAIL": 3853,
+        "SCORE_DECAY": 1860,
+        "SL": 4
+      },
+      "flip_trades": 0,
+      "flip_pnl": 0,
+      "flip_wr": 0
+    }
+  },
+  "exp3_best_decay": 0.1,
+  "exp4_adverse_grid": {
+    "2": {
+      "label": "Adverse 2 bars",
+      "trades": 5140,
+      "wins": 3865,
+      "wr": 75.2,
+      "pnl": 20196.07,
+      "avg_pnl": 3.93,
+      "exits": {
+        "TRAIL": 4702,
+        "SIGNAL_FLIP": 350,
+        "SCORE_ADVERSE": 59,
+        "SL": 18,
+        "TIMEOUT": 11
+      },
+      "flip_trades": 350,
+      "flip_pnl": -5998.51,
+      "flip_wr": 3.4
+    },
+    "3": {
+      "label": "Adverse 3 bars",
+      "trades": 5132,
+      "wins": 3871,
+      "wr": 75.4,
+      "pnl": 20862.74,
+      "avg_pnl": 4.07,
+      "exits": {
+        "TRAIL": 4724,
+        "SIGNAL_FLIP": 377,
+        "SL": 17,
+        "TIMEOUT": 11,
+        "SCORE_ADVERSE": 3
+      },
+      "flip_trades": 377,
+      "flip_pnl": -6414.65,
+      "flip_wr": 3.2
+    },
+    "4": {
+      "label": "Adverse 4 bars",
+      "trades": 5130,
+      "wins": 3868,
+      "wr": 75.4,
+      "pnl": 20716.02,
+      "avg_pnl": 4.04,
+      "exits": {
+        "TRAIL": 4721,
+        "SIGNAL_FLIP": 380,
+        "SL": 17,
+        "TIMEOUT": 12
+      },
+      "flip_trades": 380,
+      "flip_pnl": -6515.81,
+      "flip_wr": 3.2
+    },
+    "6": {
+      "label": "Adverse 6 bars",
+      "trades": 5130,
+      "wins": 3868,
+      "wr": 75.4,
+      "pnl": 20716.02,
+      "avg_pnl": 4.04,
+      "exits": {
+        "TRAIL": 4721,
+        "SIGNAL_FLIP": 380,
+        "SL": 17,
+        "TIMEOUT": 12
+      },
+      "flip_trades": 380,
+      "flip_pnl": -6515.81,
+      "flip_wr": 3.2
+    },
+    "8": {
+      "label": "Adverse 8 bars",
+      "trades": 5130,
+      "wins": 3868,
+      "wr": 75.4,
+      "pnl": 20716.02,
+      "avg_pnl": 4.04,
+      "exits": {
+        "TRAIL": 4721,
+        "SIGNAL_FLIP": 380,
+        "SL": 17,
+        "TIMEOUT": 12
+      },
+      "flip_trades": 380,
+      "flip_pnl": -6515.81,
+      "flip_wr": 3.2
+    }
+  },
+  "exp4_best_adverse": 3,
+  "exp5_combos": {
+    "ZeroCross + BestDecay": {
+      "label": "ZeroCross + BestDecay",
+      "trades": 5717,
+      "wins": 3295,
+      "wr": 57.6,
+      "pnl": 1481.73,
+      "avg_pnl": 0.26,
+      "exits": {
+        "TRAIL": 3853,
+        "SCORE_DECAY": 1860,
+        "SL": 4
+      },
+      "flip_trades": 0,
+      "flip_pnl": 0,
+      "flip_wr": 0
+    },
+    "ZeroCross + BestAdverse": {
+      "label": "ZeroCross + BestAdverse",
+      "trades": 5717,
+      "wins": 3295,
+      "wr": 57.6,
+      "pnl": 1481.73,
+      "avg_pnl": 0.26,
+      "exits": {
+        "TRAIL": 3853,
+        "SCORE_ZERO": 1860,
+        "SL": 4
+      },
+      "flip_trades": 0,
+      "flip_pnl": 0,
+      "flip_wr": 0
+    },
+    "BestDecay + BestAdverse": {
+      "label": "BestDecay + BestAdverse",
+      "trades": 5717,
+      "wins": 3295,
+      "wr": 57.6,
+      "pnl": 1481.73,
+      "avg_pnl": 0.26,
+      "exits": {
+        "TRAIL": 3853,
+        "SCORE_DECAY": 1860,
+        "SL": 4
+      },
+      "flip_trades": 0,
+      "flip_pnl": 0,
+      "flip_wr": 0
+    },
+    "All Three": {
+      "label": "All Three",
+      "trades": 5717,
+      "wins": 3295,
+      "wr": 57.6,
+      "pnl": 1481.73,
+      "avg_pnl": 0.26,
+      "exits": {
+        "TRAIL": 3853,
+        "SCORE_DECAY": 1860,
+        "SL": 4
+      },
+      "flip_trades": 0,
+      "flip_pnl": 0,
+      "flip_wr": 0
+    }
+  },
+  "exp6_TRAIL_trajectory": {
+    "count": 4721,
+    "avg_entry_score_abs": 8.098,
+    "avg_exit_score_abs": 6.058,
+    "score_decay_ratio": 0.748,
+    "avg_bars_held": 5.2
+  },
+  "exp6_SIGNAL_FLIP_trajectory": {
+    "count": 380,
+    "avg_entry_score_abs": 7.642,
+    "avg_exit_score_abs": 7.789,
+    "score_decay_ratio": 1.019,
+    "avg_bars_held": 11.1
+  },
+  "exp6_SL_trajectory": {
+    "count": 17,
+    "avg_entry_score_abs": 6.118,
+    "avg_exit_score_abs": 3.294,
+    "score_decay_ratio": 0.538,
+    "avg_bars_held": 16.1
+  },
+  "exp6b_zero_cross_overlap": {
+    "pct_all_trades_cross_zero": 39.8
+  },
+  "exp6c_delayed_zero_cross": {
+    "4": {
+      "label": "ZeroCross after 4 bars",
+      "trades": 5651,
+      "wins": 3460,
+      "wr": 61.2,
+      "pnl": 2148.91,
+      "avg_pnl": 0.38,
+      "exits": {
+        "TRAIL": 4121,
+        "SCORE_ZERO": 1458,
+        "SIGNAL_FLIP": 65,
+        "SL": 7
+      },
+      "flip_trades": 65,
+      "flip_pnl": -384.81,
+      "flip_wr": 4.6
+    },
+    "8": {
+      "label": "ZeroCross after 8 bars",
+      "trades": 5458,
+      "wins": 3557,
+      "wr": 65.2,
+      "pnl": 4402.55,
+      "avg_pnl": 0.81,
+      "exits": {
+        "TRAIL": 4296,
+        "SCORE_ZERO": 946,
+        "SIGNAL_FLIP": 200,
+        "SL": 16
+      },
+      "flip_trades": 200,
+      "flip_pnl": -2216.02,
+      "flip_wr": 4.0
+    },
+    "12": {
+      "label": "ZeroCross after 12 bars",
+      "trades": 5337,
+      "wins": 3603,
+      "wr": 67.5,
+      "pnl": 6874.38,
+      "avg_pnl": 1.29,
+      "exits": {
+        "TRAIL": 4384,
+        "SCORE_ZERO": 675,
+        "SIGNAL_FLIP": 261,
+        "SL": 17
+      },
+      "flip_trades": 261,
+      "flip_pnl": -2939.08,
+      "flip_wr": 4.2
+    },
+    "16": {
+      "label": "ZeroCross after 16 bars",
+      "trades": 5277,
+      "wins": 3662,
+      "wr": 69.4,
+      "pnl": 10414.74,
+      "avg_pnl": 1.97,
+      "exits": {
+        "TRAIL": 4467,
+        "SCORE_ZERO": 487,
+        "SIGNAL_FLIP": 309,
+        "SL": 14
+      },
+      "flip_trades": 309,
+      "flip_pnl": -3970.74,
+      "flip_wr": 3.6
+    },
+    "24": {
+      "label": "ZeroCross after 24 bars",
+      "trades": 5210,
+      "wins": 3829,
+      "wr": 73.5,
+      "pnl": 17830.98,
+      "avg_pnl": 3.42,
+      "exits": {
+        "TRAIL": 4671,
+        "SIGNAL_FLIP": 347,
+        "SCORE_ZERO": 177,
+        "SL": 15
+      },
+      "flip_trades": 347,
+      "flip_pnl": -5217.07,
+      "flip_wr": 3.5
+    }
+  },
+  "exp7_walk_forward": [
+    {
+      "period": "2025-01-01 to 2025-05-31",
+      "baseline_pnl": 0,
+      "best_pnl": 0,
+      "delta": 0,
+      "baseline_flips": 0,
+      "best_flips": 0
+    },
+    {
+      "period": "2025-06-01 to 2025-10-31",
+      "baseline_pnl": 7922.96,
+      "best_pnl": 7922.96,
+      "delta": 0.0,
+      "baseline_flips": 135,
+      "best_flips": 135
+    },
+    {
+      "period": "2025-11-01 to 2026-03-31",
+      "baseline_pnl": 12793.6,
+      "best_pnl": 12940.32,
+      "delta": 146.72,
+      "baseline_flips": 239,
+      "best_flips": 236
+    }
+  ],
+  "exp7_consistent": true,
+  "summary": {
+    "best_approach": "adverse_3",
+    "baseline_pnl": 20716.02,
+    "best_pnl": 20862.74,
+    "delta": 146.72,
+    "delta_pct": 0.7,
+    "baseline_flips": 380,
+    "walk_forward_consistent": true
+  }
+}

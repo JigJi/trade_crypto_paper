@@ -1,0 +1,818 @@
+{
+  "timestamp": "20260309_230020",
+  "description": "Alt-specific OHLCV indicator test on v3 baseline",
+  "oos_period": "2026-01-01 00:00:00 to 2026-03-10 00:00:00",
+  "baseline_pnl": 14120.91,
+  "baseline_per_coin": {
+    "BTC": {
+      "pnl": 1545.46,
+      "trades": 173
+    },
+    "XRP": {
+      "pnl": 1734.23,
+      "trades": 116
+    },
+    "ADA": {
+      "pnl": 2439.88,
+      "trades": 115
+    },
+    "DOT": {
+      "pnl": 2724.61,
+      "trades": 130
+    },
+    "SUI": {
+      "pnl": 2828.83,
+      "trades": 153
+    },
+    "FIL": {
+      "pnl": 2847.9,
+      "trades": 141
+    }
+  },
+  "phase_a_tests": [
+    {
+      "indicator": "rsi_contrarian",
+      "weight": 0.25,
+      "pnl": 14380.44,
+      "delta": 259.53,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1455.8,
+          "trades": 177
+        },
+        "XRP": {
+          "pnl": 1884.06,
+          "trades": 117
+        },
+        "ADA": {
+          "pnl": 2465.41,
+          "trades": 115
+        },
+        "DOT": {
+          "pnl": 2767.13,
+          "trades": 130
+        },
+        "SUI": {
+          "pnl": 2765.31,
+          "trades": 151
+        },
+        "FIL": {
+          "pnl": 3042.73,
+          "trades": 139
+        }
+      }
+    },
+    {
+      "indicator": "rsi_contrarian",
+      "weight": 0.5,
+      "pnl": 14431.94,
+      "delta": 311.03,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1601.78,
+          "trades": 178
+        },
+        "XRP": {
+          "pnl": 2067.6,
+          "trades": 121
+        },
+        "ADA": {
+          "pnl": 2443.56,
+          "trades": 118
+        },
+        "DOT": {
+          "pnl": 2675.09,
+          "trades": 133
+        },
+        "SUI": {
+          "pnl": 2736.7,
+          "trades": 153
+        },
+        "FIL": {
+          "pnl": 2907.2,
+          "trades": 142
+        }
+      }
+    },
+    {
+      "indicator": "rsi_contrarian",
+      "weight": 1.0,
+      "pnl": 13750.18,
+      "delta": -370.73,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1571.4,
+          "trades": 180
+        },
+        "XRP": {
+          "pnl": 1764.79,
+          "trades": 125
+        },
+        "ADA": {
+          "pnl": 2321.12,
+          "trades": 120
+        },
+        "DOT": {
+          "pnl": 2704.79,
+          "trades": 132
+        },
+        "SUI": {
+          "pnl": 2597.71,
+          "trades": 165
+        },
+        "FIL": {
+          "pnl": 2790.37,
+          "trades": 143
+        }
+      }
+    },
+    {
+      "indicator": "bollinger_contrarian",
+      "weight": 0.25,
+      "pnl": 14319.07,
+      "delta": 198.16,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1550.96,
+          "trades": 175
+        },
+        "XRP": {
+          "pnl": 1695.05,
+          "trades": 115
+        },
+        "ADA": {
+          "pnl": 2474.99,
+          "trades": 116
+        },
+        "DOT": {
+          "pnl": 2829.64,
+          "trades": 132
+        },
+        "SUI": {
+          "pnl": 2883.96,
+          "trades": 154
+        },
+        "FIL": {
+          "pnl": 2884.48,
+          "trades": 142
+        }
+      }
+    },
+    {
+      "indicator": "bollinger_contrarian",
+      "weight": 0.5,
+      "pnl": 14341.03,
+      "delta": 220.12,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1621.69,
+          "trades": 180
+        },
+        "XRP": {
+          "pnl": 1768.18,
+          "trades": 118
+        },
+        "ADA": {
+          "pnl": 2442.16,
+          "trades": 119
+        },
+        "DOT": {
+          "pnl": 2832.21,
+          "trades": 132
+        },
+        "SUI": {
+          "pnl": 2861.57,
+          "trades": 153
+        },
+        "FIL": {
+          "pnl": 2815.22,
+          "trades": 141
+        }
+      }
+    },
+    {
+      "indicator": "bollinger_contrarian",
+      "weight": 1.0,
+      "pnl": 14473.59,
+      "delta": 352.68,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1549.06,
+          "trades": 182
+        },
+        "XRP": {
+          "pnl": 1678.58,
+          "trades": 120
+        },
+        "ADA": {
+          "pnl": 2616.29,
+          "trades": 120
+        },
+        "DOT": {
+          "pnl": 3013.44,
+          "trades": 140
+        },
+        "SUI": {
+          "pnl": 2872.93,
+          "trades": 160
+        },
+        "FIL": {
+          "pnl": 2743.29,
+          "trades": 146
+        }
+      }
+    },
+    {
+      "indicator": "mean_reversion",
+      "weight": 0.25,
+      "pnl": 14428.06,
+      "delta": 307.15,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1543.65,
+          "trades": 176
+        },
+        "XRP": {
+          "pnl": 1740.95,
+          "trades": 116
+        },
+        "ADA": {
+          "pnl": 2339.43,
+          "trades": 114
+        },
+        "DOT": {
+          "pnl": 2931.91,
+          "trades": 132
+        },
+        "SUI": {
+          "pnl": 2912.13,
+          "trades": 152
+        },
+        "FIL": {
+          "pnl": 2959.99,
+          "trades": 140
+        }
+      }
+    },
+    {
+      "indicator": "mean_reversion",
+      "weight": 0.5,
+      "pnl": 14485.1,
+      "delta": 364.19,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1631.34,
+          "trades": 180
+        },
+        "XRP": {
+          "pnl": 1744.29,
+          "trades": 119
+        },
+        "ADA": {
+          "pnl": 2408.17,
+          "trades": 118
+        },
+        "DOT": {
+          "pnl": 3024.54,
+          "trades": 132
+        },
+        "SUI": {
+          "pnl": 2816.29,
+          "trades": 154
+        },
+        "FIL": {
+          "pnl": 2860.47,
+          "trades": 140
+        }
+      }
+    },
+    {
+      "indicator": "mean_reversion",
+      "weight": 1.0,
+      "pnl": 14502.09,
+      "delta": 381.18,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1636.44,
+          "trades": 182
+        },
+        "XRP": {
+          "pnl": 1524.8,
+          "trades": 126
+        },
+        "ADA": {
+          "pnl": 2370.48,
+          "trades": 120
+        },
+        "DOT": {
+          "pnl": 3009.45,
+          "trades": 139
+        },
+        "SUI": {
+          "pnl": 3035.79,
+          "trades": 163
+        },
+        "FIL": {
+          "pnl": 2925.14,
+          "trades": 146
+        }
+      }
+    },
+    {
+      "indicator": "volume_spike",
+      "weight": 0.25,
+      "pnl": 14269.19,
+      "delta": 148.28,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1591.34,
+          "trades": 172
+        },
+        "XRP": {
+          "pnl": 1734.23,
+          "trades": 116
+        },
+        "ADA": {
+          "pnl": 2439.88,
+          "trades": 115
+        },
+        "DOT": {
+          "pnl": 2701.96,
+          "trades": 130
+        },
+        "SUI": {
+          "pnl": 2909.91,
+          "trades": 153
+        },
+        "FIL": {
+          "pnl": 2891.86,
+          "trades": 141
+        }
+      }
+    },
+    {
+      "indicator": "volume_spike",
+      "weight": 0.5,
+      "pnl": 14293.0,
+      "delta": 172.09,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1685.86,
+          "trades": 175
+        },
+        "XRP": {
+          "pnl": 1779.19,
+          "trades": 118
+        },
+        "ADA": {
+          "pnl": 2476.36,
+          "trades": 118
+        },
+        "DOT": {
+          "pnl": 2662.9,
+          "trades": 131
+        },
+        "SUI": {
+          "pnl": 2847.47,
+          "trades": 153
+        },
+        "FIL": {
+          "pnl": 2841.23,
+          "trades": 142
+        }
+      }
+    },
+    {
+      "indicator": "volume_spike",
+      "weight": 1.0,
+      "pnl": 14412.85,
+      "delta": 291.94,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1678.91,
+          "trades": 179
+        },
+        "XRP": {
+          "pnl": 1838.48,
+          "trades": 119
+        },
+        "ADA": {
+          "pnl": 2490.91,
+          "trades": 118
+        },
+        "DOT": {
+          "pnl": 2571.72,
+          "trades": 134
+        },
+        "SUI": {
+          "pnl": 2986.93,
+          "trades": 155
+        },
+        "FIL": {
+          "pnl": 2845.91,
+          "trades": 148
+        }
+      }
+    },
+    {
+      "indicator": "momentum_roc",
+      "weight": 0.25,
+      "pnl": 14404.77,
+      "delta": 283.86,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1600.19,
+          "trades": 170
+        },
+        "XRP": {
+          "pnl": 2195.57,
+          "trades": 119
+        },
+        "ADA": {
+          "pnl": 2192.96,
+          "trades": 119
+        },
+        "DOT": {
+          "pnl": 2605.09,
+          "trades": 133
+        },
+        "SUI": {
+          "pnl": 2916.02,
+          "trades": 149
+        },
+        "FIL": {
+          "pnl": 2894.94,
+          "trades": 138
+        }
+      }
+    },
+    {
+      "indicator": "momentum_roc",
+      "weight": 0.5,
+      "pnl": 14936.72,
+      "delta": 815.8,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1385.8,
+          "trades": 176
+        },
+        "XRP": {
+          "pnl": 2463.78,
+          "trades": 125
+        },
+        "ADA": {
+          "pnl": 2435.19,
+          "trades": 131
+        },
+        "DOT": {
+          "pnl": 2563.27,
+          "trades": 135
+        },
+        "SUI": {
+          "pnl": 2981.32,
+          "trades": 148
+        },
+        "FIL": {
+          "pnl": 3107.36,
+          "trades": 138
+        }
+      }
+    },
+    {
+      "indicator": "momentum_roc",
+      "weight": 1.0,
+      "pnl": 15046.51,
+      "delta": 925.6,
+      "per_coin": {
+        "BTC": {
+          "pnl": 935.18,
+          "trades": 180
+        },
+        "XRP": {
+          "pnl": 2607.26,
+          "trades": 135
+        },
+        "ADA": {
+          "pnl": 2613.17,
+          "trades": 136
+        },
+        "DOT": {
+          "pnl": 2880.65,
+          "trades": 154
+        },
+        "SUI": {
+          "pnl": 3017.3,
+          "trades": 168
+        },
+        "FIL": {
+          "pnl": 2992.95,
+          "trades": 160
+        }
+      }
+    },
+    {
+      "indicator": "ema_trend",
+      "weight": 0.25,
+      "pnl": 13468.42,
+      "delta": -652.49,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1527.0,
+          "trades": 171
+        },
+        "XRP": {
+          "pnl": 1999.44,
+          "trades": 111
+        },
+        "ADA": {
+          "pnl": 2463.07,
+          "trades": 108
+        },
+        "DOT": {
+          "pnl": 2371.71,
+          "trades": 126
+        },
+        "SUI": {
+          "pnl": 2566.89,
+          "trades": 144
+        },
+        "FIL": {
+          "pnl": 2540.3,
+          "trades": 128
+        }
+      }
+    },
+    {
+      "indicator": "ema_trend",
+      "weight": 0.5,
+      "pnl": 14055.9,
+      "delta": -65.01,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1439.88,
+          "trades": 177
+        },
+        "XRP": {
+          "pnl": 2195.7,
+          "trades": 124
+        },
+        "ADA": {
+          "pnl": 2417.76,
+          "trades": 122
+        },
+        "DOT": {
+          "pnl": 2500.38,
+          "trades": 127
+        },
+        "SUI": {
+          "pnl": 2793.67,
+          "trades": 146
+        },
+        "FIL": {
+          "pnl": 2708.52,
+          "trades": 129
+        }
+      }
+    },
+    {
+      "indicator": "ema_trend",
+      "weight": 1.0,
+      "pnl": 14565.04,
+      "delta": 444.13,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1608.32,
+          "trades": 193
+        },
+        "XRP": {
+          "pnl": 2428.88,
+          "trades": 137
+        },
+        "ADA": {
+          "pnl": 2605.1,
+          "trades": 137
+        },
+        "DOT": {
+          "pnl": 2595.75,
+          "trades": 123
+        },
+        "SUI": {
+          "pnl": 2785.48,
+          "trades": 142
+        },
+        "FIL": {
+          "pnl": 2541.52,
+          "trades": 131
+        }
+      }
+    }
+  ],
+  "phase_a_best": {
+    "rsi_contrarian": {
+      "indicator": "rsi_contrarian",
+      "weight": 0.5,
+      "pnl": 14431.94,
+      "delta": 311.03,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1601.78,
+          "trades": 178
+        },
+        "XRP": {
+          "pnl": 2067.6,
+          "trades": 121
+        },
+        "ADA": {
+          "pnl": 2443.56,
+          "trades": 118
+        },
+        "DOT": {
+          "pnl": 2675.09,
+          "trades": 133
+        },
+        "SUI": {
+          "pnl": 2736.7,
+          "trades": 153
+        },
+        "FIL": {
+          "pnl": 2907.2,
+          "trades": 142
+        }
+      }
+    },
+    "bollinger_contrarian": {
+      "indicator": "bollinger_contrarian",
+      "weight": 1.0,
+      "pnl": 14473.59,
+      "delta": 352.68,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1549.06,
+          "trades": 182
+        },
+        "XRP": {
+          "pnl": 1678.58,
+          "trades": 120
+        },
+        "ADA": {
+          "pnl": 2616.29,
+          "trades": 120
+        },
+        "DOT": {
+          "pnl": 3013.44,
+          "trades": 140
+        },
+        "SUI": {
+          "pnl": 2872.93,
+          "trades": 160
+        },
+        "FIL": {
+          "pnl": 2743.29,
+          "trades": 146
+        }
+      }
+    },
+    "mean_reversion": {
+      "indicator": "mean_reversion",
+      "weight": 1.0,
+      "pnl": 14502.09,
+      "delta": 381.18,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1636.44,
+          "trades": 182
+        },
+        "XRP": {
+          "pnl": 1524.8,
+          "trades": 126
+        },
+        "ADA": {
+          "pnl": 2370.48,
+          "trades": 120
+        },
+        "DOT": {
+          "pnl": 3009.45,
+          "trades": 139
+        },
+        "SUI": {
+          "pnl": 3035.79,
+          "trades": 163
+        },
+        "FIL": {
+          "pnl": 2925.14,
+          "trades": 146
+        }
+      }
+    },
+    "volume_spike": {
+      "indicator": "volume_spike",
+      "weight": 1.0,
+      "pnl": 14412.85,
+      "delta": 291.94,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1678.91,
+          "trades": 179
+        },
+        "XRP": {
+          "pnl": 1838.48,
+          "trades": 119
+        },
+        "ADA": {
+          "pnl": 2490.91,
+          "trades": 118
+        },
+        "DOT": {
+          "pnl": 2571.72,
+          "trades": 134
+        },
+        "SUI": {
+          "pnl": 2986.93,
+          "trades": 155
+        },
+        "FIL": {
+          "pnl": 2845.91,
+          "trades": 148
+        }
+      }
+    },
+    "momentum_roc": {
+      "indicator": "momentum_roc",
+      "weight": 1.0,
+      "pnl": 15046.51,
+      "delta": 925.6,
+      "per_coin": {
+        "BTC": {
+          "pnl": 935.18,
+          "trades": 180
+        },
+        "XRP": {
+          "pnl": 2607.26,
+          "trades": 135
+        },
+        "ADA": {
+          "pnl": 2613.17,
+          "trades": 136
+        },
+        "DOT": {
+          "pnl": 2880.65,
+          "trades": 154
+        },
+        "SUI": {
+          "pnl": 3017.3,
+          "trades": 168
+        },
+        "FIL": {
+          "pnl": 2992.95,
+          "trades": 160
+        }
+      }
+    },
+    "ema_trend": {
+      "indicator": "ema_trend",
+      "weight": 1.0,
+      "pnl": 14565.04,
+      "delta": 444.13,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1608.32,
+          "trades": 193
+        },
+        "XRP": {
+          "pnl": 2428.88,
+          "trades": 137
+        },
+        "ADA": {
+          "pnl": 2605.1,
+          "trades": 137
+        },
+        "DOT": {
+          "pnl": 2595.75,
+          "trades": 123
+        },
+        "SUI": {
+          "pnl": 2785.48,
+          "trades": 142
+        },
+        "FIL": {
+          "pnl": 2541.52,
+          "trades": 131
+        }
+      }
+    }
+  },
+  "phase_b_stepwise": {
+    "selected": [
+      [
+        "momentum_roc",
+        1.0
+      ],
+      [
+        "volume_spike",
+        1.0
+      ]
+    ],
+    "final_pnl": 15136.63,
+    "delta_vs_baseline": 1015.72
+  }
+}

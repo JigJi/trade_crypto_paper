@@ -1,0 +1,258 @@
+[
+  {
+    "version": "v1",
+    "created": "2026-03-08",
+    "description": "Initial 8 factors, grid-searched",
+    "status": "retired",
+    "is_champion": false,
+    "factors": [
+      {
+        "name": "oi_divergence",
+        "weight": 1.0
+      },
+      {
+        "name": "taker_ratio",
+        "weight": 1.0
+      },
+      {
+        "name": "ls_ratio",
+        "weight": 1.0
+      },
+      {
+        "name": "funding_rate",
+        "weight": 1.0
+      },
+      {
+        "name": "fear_greed",
+        "weight": 1.0
+      },
+      {
+        "name": "whale_alerts",
+        "weight": 1.0
+      },
+      {
+        "name": "liquidation",
+        "weight": 1.0
+      },
+      {
+        "name": "etf_flows",
+        "weight": 1.0
+      }
+    ],
+    "oos_pnl": 1575,
+    "oos_sharpe": null,
+    "oos_win_rate": null,
+    "oos_trades": null,
+    "metrics": {
+      "oos_pnl": 1575
+    }
+  },
+  {
+    "version": "v1.1",
+    "created": "2026-03-08",
+    "description": "TZ fix, 6 coins, pa=False, 2x leverage",
+    "status": "retired",
+    "is_champion": false,
+    "factors": [
+      {
+        "name": "oi_divergence",
+        "weight": 1.0
+      },
+      {
+        "name": "taker_ratio",
+        "weight": 1.0
+      },
+      {
+        "name": "ls_ratio",
+        "weight": 1.0
+      },
+      {
+        "name": "funding_rate",
+        "weight": 1.0
+      },
+      {
+        "name": "fear_greed",
+        "weight": 1.0
+      },
+      {
+        "name": "whale_alerts",
+        "weight": 1.0
+      },
+      {
+        "name": "liquidation",
+        "weight": 1.0
+      },
+      {
+        "name": "etf_flows",
+        "weight": 1.0
+      }
+    ],
+    "oos_pnl": 7486,
+    "oos_sharpe": null,
+    "oos_win_rate": null,
+    "oos_trades": null,
+    "metrics": {
+      "oos_pnl": 7486
+    }
+  },
+  {
+    "version": "v1.2",
+    "created": "2026-03-08",
+    "description": "Short bias (threshold-0.5)",
+    "status": "retired",
+    "is_champion": false,
+    "factors": [
+      {
+        "name": "oi_divergence",
+        "weight": 1.0
+      },
+      {
+        "name": "taker_ratio",
+        "weight": 1.0
+      },
+      {
+        "name": "ls_ratio",
+        "weight": 1.0
+      },
+      {
+        "name": "funding_rate",
+        "weight": 1.0
+      },
+      {
+        "name": "fear_greed",
+        "weight": 1.0
+      },
+      {
+        "name": "whale_alerts",
+        "weight": 1.0
+      },
+      {
+        "name": "liquidation",
+        "weight": 1.0
+      },
+      {
+        "name": "etf_flows",
+        "weight": 1.0
+      }
+    ],
+    "oos_pnl": 9819,
+    "oos_sharpe": null,
+    "oos_win_rate": null,
+    "oos_trades": null,
+    "metrics": {
+      "oos_pnl": 9819,
+      "notes": "+31.2% vs v1.1"
+    }
+  },
+  {
+    "version": "v2",
+    "created": "2026-03-08",
+    "description": "Dead zone + re-grid-search",
+    "status": "rejected",
+    "is_champion": false,
+    "factors": [],
+    "oos_pnl": null,
+    "oos_sharpe": null,
+    "oos_win_rate": null,
+    "oos_trades": null,
+    "reject_reason": "Overfit to in-sample",
+    "metrics": {}
+  },
+  {
+    "version": "v3",
+    "created": "2026-03-09",
+    "description": "8 optimal factors from scratch (mega discovery)",
+    "status": "champion",
+    "is_champion": true,
+    "promoted_date": "2026-03-09",
+    "factors": [
+      {
+        "name": "liquidation",
+        "weight": 2.0
+      },
+      {
+        "name": "funding_rate",
+        "weight": 2.0
+      },
+      {
+        "name": "ob_combined",
+        "weight": 2.0
+      },
+      {
+        "name": "etf_flows",
+        "weight": 1.0
+      },
+      {
+        "name": "basis_contrarian",
+        "weight": 1.5
+      },
+      {
+        "name": "tick_liq",
+        "weight": 2.0
+      },
+      {
+        "name": "oi_divergence",
+        "weight": 0.5
+      },
+      {
+        "name": "whale_alerts",
+        "weight": 1.5
+      }
+    ],
+    "oos_pnl": 14121,
+    "oos_sharpe": 4.97,
+    "oos_win_rate": 66.6,
+    "oos_trades": 946,
+    "oos_max_dd": -6.0,
+    "realistic_return_pct": 145.4,
+    "realistic_max_dd": -6.0,
+    "metrics": {
+      "oos_pnl": 14121,
+      "full_pnl": 18056,
+      "oos_sharpe_range": "4.97-6.83",
+      "test_groups": {
+        "original": {
+          "label": "Original 6",
+          "period": "2026-01-01 to 2026-03-10",
+          "params": "Grid-searched per-coin (threshold, cooldown optimized)",
+          "note": "Params optimized per coin, PnL not comparable with screened coins"
+        },
+        "screened": {
+          "label": "100-Coin Screening",
+          "period": "2025-12-01 to 2026-03-12",
+          "params": "Default params (threshold=3.0, SL=2.5x, TP=4.0x, cooldown=4)",
+          "note": "Same params for all coins, filtered by Sharpe >= 1.0"
+        }
+      },
+      "per_coin": {
+        "BTC": { "trades": 206, "wr": 64.1, "sharpe": 4.97, "pnl": 1922, "tier": "original" },
+        "XRP": { "trades": 146, "wr": 69.2, "sharpe": 6.30, "pnl": 2865, "tier": "original" },
+        "ADA": { "trades": 149, "wr": 69.1, "sharpe": 6.65, "pnl": 3247, "tier": "original" },
+        "DOT": { "trades": 137, "wr": 69.3, "sharpe": 6.83, "pnl": 3420, "tier": "original" },
+        "SUI": { "trades": 161, "wr": 64.0, "sharpe": 6.07, "pnl": 3513, "tier": "original" },
+        "FIL": { "trades": 147, "wr": 64.0, "sharpe": 5.50, "pnl": 3089, "tier": "original" },
+        "PIPPIN": { "pnl": 1533, "sharpe": 1.73, "wr": 80.8, "tier": "screened" },
+        "BERA":   { "pnl": 1424, "sharpe": 1.49, "wr": 78.8, "tier": "screened" },
+        "BEAT":   { "pnl": 1013, "sharpe": 1.38, "wr": 81.3, "tier": "screened" },
+        "BLUAI":  { "pnl": 991,  "sharpe": 1.47, "wr": 78.7, "tier": "screened" },
+        "ENSO":   { "pnl": 920,  "sharpe": 1.59, "wr": 77.6, "tier": "screened" },
+        "ZEC":    { "pnl": 840,  "sharpe": 1.93, "wr": 75.9, "tier": "screened" },
+        "XPL":    { "pnl": 744,  "sharpe": 1.91, "wr": 74.1, "tier": "screened" },
+        "ARIA":   { "pnl": 697,  "sharpe": 1.16, "wr": 72.1, "tier": "screened" },
+        "BANANAS31": { "pnl": 673, "sharpe": 1.43, "wr": 75.9, "tier": "screened" },
+        "PIXEL":  { "pnl": 629,  "sharpe": 1.11, "wr": 74.6, "tier": "screened" },
+        "VIRTUAL":{ "pnl": 607,  "sharpe": 1.58, "wr": 77.8, "tier": "screened" },
+        "PORTAL": { "pnl": 585,  "sharpe": 1.87, "wr": 76.4, "tier": "screened" },
+        "RENDER": { "pnl": 548,  "sharpe": 1.49, "wr": 77.5, "tier": "screened" },
+        "BARD":   { "pnl": 518,  "sharpe": 1.22, "wr": 73.9, "tier": "screened" },
+        "AXS":    { "pnl": 488,  "sharpe": 1.18, "wr": 69.8, "tier": "screened" },
+        "NEAR":   { "pnl": 477,  "sharpe": 1.44, "wr": 76.0, "tier": "screened" },
+        "ARB":    { "pnl": 415,  "sharpe": 1.33, "wr": 74.1, "tier": "screened" },
+        "ICP":    { "pnl": 359,  "sharpe": 1.17, "wr": 77.6, "tier": "screened" },
+        "1000BONK":{ "pnl": 357, "sharpe": 1.06, "wr": 74.2, "tier": "screened" },
+        "SOL":    { "pnl": 355,  "sharpe": 1.21, "wr": 70.3, "tier": "screened" },
+        "ETH":    { "pnl": 206,  "sharpe": 0.86, "wr": 67.9, "tier": "screened" }
+      }
+    }
+  }
+]

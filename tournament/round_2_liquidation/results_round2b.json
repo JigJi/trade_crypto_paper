@@ -1,0 +1,4724 @@
+{
+  "tournament": "round_2b_liquidation_advanced",
+  "timestamp": "2026-03-22T16:03:58.484734",
+  "oos_period": "2025-01-01 to 2026-03-22",
+  "coins": [
+    "BTC",
+    "XRP",
+    "ADA",
+    "DOT",
+    "SUI",
+    "FIL"
+  ],
+  "r2_champion_pnl": 59360.28,
+  "total_experiments": 86,
+  "results": [
+    {
+      "name": "ultimate_hybrid_everything",
+      "description": "Cascade + Ratio(4.0) + best SL/TP + best threshold",
+      "total_pnl": 70858.54,
+      "total_trades": 2270,
+      "win_rate": 68.4,
+      "sharpe": 25.04,
+      "max_dd_pct": -1.05,
+      "long_trades": 1053,
+      "long_wr": 67.7,
+      "long_pnl": 31656.04,
+      "short_trades": 1217,
+      "short_wr": 69.0,
+      "short_pnl": 39202.5,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6870.15,
+          "wr": 70.2,
+          "trades": 379,
+          "sharpe": 11.23
+        },
+        "XRP": {
+          "pnl": 10053.09,
+          "wr": 68.0,
+          "trades": 378,
+          "sharpe": 10.16
+        },
+        "ADA": {
+          "pnl": 12767.45,
+          "wr": 67.2,
+          "trades": 378,
+          "sharpe": 11.12
+        },
+        "DOT": {
+          "pnl": 12337.93,
+          "wr": 67.3,
+          "trades": 379,
+          "sharpe": 10.41
+        },
+        "SUI": {
+          "pnl": 14771.53,
+          "wr": 71.0,
+          "trades": 380,
+          "sharpe": 11.59
+        },
+        "FIL": {
+          "pnl": 14058.39,
+          "wr": 66.8,
+          "trades": 376,
+          "sharpe": 9.44
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "ultimate_tiered_both",
+      "description": "Both tiered + best SL/TP",
+      "total_pnl": 69846.19,
+      "total_trades": 2287,
+      "win_rate": 68.4,
+      "sharpe": 24.39,
+      "max_dd_pct": -1.06,
+      "long_trades": 1065,
+      "long_wr": 67.4,
+      "long_pnl": 31231.09,
+      "short_trades": 1222,
+      "short_wr": 69.3,
+      "short_pnl": 38615.09,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6749.85,
+          "wr": 71.1,
+          "trades": 381,
+          "sharpe": 11.2
+        },
+        "XRP": {
+          "pnl": 10114.0,
+          "wr": 67.8,
+          "trades": 382,
+          "sharpe": 10.24
+        },
+        "ADA": {
+          "pnl": 12709.67,
+          "wr": 67.5,
+          "trades": 381,
+          "sharpe": 10.7
+        },
+        "DOT": {
+          "pnl": 12390.82,
+          "wr": 66.3,
+          "trades": 383,
+          "sharpe": 10.2
+        },
+        "SUI": {
+          "pnl": 14587.55,
+          "wr": 70.2,
+          "trades": 382,
+          "sharpe": 11.36
+        },
+        "FIL": {
+          "pnl": 13294.3,
+          "wr": 67.7,
+          "trades": 378,
+          "sharpe": 8.88
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "ultimate_cascade_velocity",
+      "description": "Cascade + Velocity(3.0) + best SL/TP",
+      "total_pnl": 69546.01,
+      "total_trades": 2629,
+      "win_rate": 65.5,
+      "sharpe": 21.91,
+      "max_dd_pct": -1.18,
+      "long_trades": 1236,
+      "long_wr": 64.7,
+      "long_pnl": 31378.27,
+      "short_trades": 1393,
+      "short_wr": 66.3,
+      "short_pnl": 38167.74,
+      "coin_results": {
+        "BTC": {
+          "pnl": 7148.97,
+          "wr": 68.3,
+          "trades": 439,
+          "sharpe": 11.62
+        },
+        "XRP": {
+          "pnl": 9764.96,
+          "wr": 63.6,
+          "trades": 437,
+          "sharpe": 9.5
+        },
+        "ADA": {
+          "pnl": 12895.78,
+          "wr": 66.3,
+          "trades": 439,
+          "sharpe": 10.96
+        },
+        "DOT": {
+          "pnl": 12213.34,
+          "wr": 63.8,
+          "trades": 439,
+          "sharpe": 9.6
+        },
+        "SUI": {
+          "pnl": 13713.91,
+          "wr": 66.7,
+          "trades": 439,
+          "sharpe": 10.49
+        },
+        "FIL": {
+          "pnl": 13809.05,
+          "wr": 64.5,
+          "trades": 436,
+          "sharpe": 7.02
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "ultimate_kitchen_sink",
+      "description": "Cascade + Ratio(3.0) + Velocity(2.0) + Tiered tick",
+      "total_pnl": 68941.33,
+      "total_trades": 2552,
+      "win_rate": 66.2,
+      "sharpe": 22.16,
+      "max_dd_pct": -1.05,
+      "long_trades": 1217,
+      "long_wr": 64.2,
+      "long_pnl": 32463.13,
+      "short_trades": 1335,
+      "short_wr": 68.0,
+      "short_pnl": 36478.2,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6872.06,
+          "wr": 69.0,
+          "trades": 426,
+          "sharpe": 11.51
+        },
+        "XRP": {
+          "pnl": 9774.86,
+          "wr": 64.2,
+          "trades": 425,
+          "sharpe": 9.56
+        },
+        "ADA": {
+          "pnl": 12489.33,
+          "wr": 66.3,
+          "trades": 425,
+          "sharpe": 10.75
+        },
+        "DOT": {
+          "pnl": 12065.47,
+          "wr": 65.3,
+          "trades": 426,
+          "sharpe": 9.83
+        },
+        "SUI": {
+          "pnl": 14179.14,
+          "wr": 67.5,
+          "trades": 425,
+          "sharpe": 11.05
+        },
+        "FIL": {
+          "pnl": 13560.46,
+          "wr": 64.7,
+          "trades": 425,
+          "sharpe": 7.04
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "ultimate_thr4.0",
+      "description": "Best cascade + threshold=4.0",
+      "total_pnl": 68409.94,
+      "total_trades": 2263,
+      "win_rate": 69.1,
+      "sharpe": 26.24,
+      "max_dd_pct": -1.06,
+      "long_trades": 1015,
+      "long_wr": 69.6,
+      "long_pnl": 30460.76,
+      "short_trades": 1248,
+      "short_wr": 68.7,
+      "short_pnl": 37949.18,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6788.38,
+          "wr": 72.0,
+          "trades": 378,
+          "sharpe": 12.24
+        },
+        "XRP": {
+          "pnl": 10228.32,
+          "wr": 69.1,
+          "trades": 382,
+          "sharpe": 10.03
+        },
+        "ADA": {
+          "pnl": 12317.29,
+          "wr": 67.0,
+          "trades": 376,
+          "sharpe": 12.03
+        },
+        "DOT": {
+          "pnl": 11840.6,
+          "wr": 67.5,
+          "trades": 376,
+          "sharpe": 11.39
+        },
+        "SUI": {
+          "pnl": 13668.92,
+          "wr": 71.1,
+          "trades": 377,
+          "sharpe": 12.3
+        },
+        "FIL": {
+          "pnl": 13566.43,
+          "wr": 67.7,
+          "trades": 374,
+          "sharpe": 9.58
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "ultimate_sl20.0_tp20.0",
+      "description": "Best cascade + SL=20.0, TP=20.0",
+      "total_pnl": 68220.32,
+      "total_trades": 2466,
+      "win_rate": 67.2,
+      "sharpe": 23.99,
+      "max_dd_pct": -1.05,
+      "long_trades": 1140,
+      "long_wr": 66.7,
+      "long_pnl": 30849.34,
+      "short_trades": 1326,
+      "short_wr": 67.7,
+      "short_pnl": 37370.98,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6953.85,
+          "wr": 68.5,
+          "trades": 438,
+          "sharpe": 11.81
+        },
+        "XRP": {
+          "pnl": 9754.88,
+          "wr": 68.5,
+          "trades": 384,
+          "sharpe": 9.9
+        },
+        "ADA": {
+          "pnl": 12502.41,
+          "wr": 67.9,
+          "trades": 386,
+          "sharpe": 11.06
+        },
+        "DOT": {
+          "pnl": 12138.3,
+          "wr": 66.0,
+          "trades": 420,
+          "sharpe": 10.42
+        },
+        "SUI": {
+          "pnl": 14082.53,
+          "wr": 67.8,
+          "trades": 419,
+          "sharpe": 11.46
+        },
+        "FIL": {
+          "pnl": 12788.35,
+          "wr": 64.9,
+          "trades": 419,
+          "sharpe": 8.01
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "liq_only_ratio",
+      "description": "Liq-only: ratio(65/80) + tick(8.0)",
+      "total_pnl": 67934.8,
+      "total_trades": 2154,
+      "win_rate": 70.0,
+      "sharpe": 26.19,
+      "max_dd_pct": -1.05,
+      "long_trades": 942,
+      "long_wr": 71.3,
+      "long_pnl": 29196.1,
+      "short_trades": 1212,
+      "short_wr": 68.9,
+      "short_pnl": 38738.7,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6969.68,
+          "wr": 74.4,
+          "trades": 363,
+          "sharpe": 12.6
+        },
+        "XRP": {
+          "pnl": 9875.26,
+          "wr": 68.5,
+          "trades": 359,
+          "sharpe": 10.73
+        },
+        "ADA": {
+          "pnl": 11880.23,
+          "wr": 67.8,
+          "trades": 357,
+          "sharpe": 11.79
+        },
+        "DOT": {
+          "pnl": 11765.14,
+          "wr": 69.3,
+          "trades": 358,
+          "sharpe": 11.16
+        },
+        "SUI": {
+          "pnl": 13444.08,
+          "wr": 70.4,
+          "trades": 361,
+          "sharpe": 12.04
+        },
+        "FIL": {
+          "pnl": 14000.41,
+          "wr": 69.4,
+          "trades": 356,
+          "sharpe": 9.62
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "liq_only_best_cascade",
+      "description": "Liq-only: cascade 1.1x + tick(8.0, net>3)",
+      "total_pnl": 67648.04,
+      "total_trades": 2110,
+      "win_rate": 70.0,
+      "sharpe": 26.49,
+      "max_dd_pct": -1.06,
+      "long_trades": 945,
+      "long_wr": 71.0,
+      "long_pnl": 29514.09,
+      "short_trades": 1165,
+      "short_wr": 69.3,
+      "short_pnl": 38133.95,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6826.06,
+          "wr": 72.8,
+          "trades": 356,
+          "sharpe": 12.73
+        },
+        "XRP": {
+          "pnl": 9883.93,
+          "wr": 69.0,
+          "trades": 352,
+          "sharpe": 10.82
+        },
+        "ADA": {
+          "pnl": 12165.53,
+          "wr": 68.5,
+          "trades": 352,
+          "sharpe": 12.26
+        },
+        "DOT": {
+          "pnl": 11671.88,
+          "wr": 68.8,
+          "trades": 352,
+          "sharpe": 11.14
+        },
+        "SUI": {
+          "pnl": 13119.85,
+          "wr": 71.4,
+          "trades": 350,
+          "sharpe": 11.99
+        },
+        "FIL": {
+          "pnl": 13980.78,
+          "wr": 69.8,
+          "trades": 348,
+          "sharpe": 9.8
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "liq_only_thr2.0",
+      "description": "Liq-only + lower threshold=2.0",
+      "total_pnl": 67648.04,
+      "total_trades": 2110,
+      "win_rate": 70.0,
+      "sharpe": 26.49,
+      "max_dd_pct": -1.06,
+      "long_trades": 945,
+      "long_wr": 71.0,
+      "long_pnl": 29514.09,
+      "short_trades": 1165,
+      "short_wr": 69.3,
+      "short_pnl": 38133.95,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6826.06,
+          "wr": 72.8,
+          "trades": 356,
+          "sharpe": 12.73
+        },
+        "XRP": {
+          "pnl": 9883.93,
+          "wr": 69.0,
+          "trades": 352,
+          "sharpe": 10.82
+        },
+        "ADA": {
+          "pnl": 12165.53,
+          "wr": 68.5,
+          "trades": 352,
+          "sharpe": 12.26
+        },
+        "DOT": {
+          "pnl": 11671.88,
+          "wr": 68.8,
+          "trades": 352,
+          "sharpe": 11.14
+        },
+        "SUI": {
+          "pnl": 13119.85,
+          "wr": 71.4,
+          "trades": 350,
+          "sharpe": 11.99
+        },
+        "FIL": {
+          "pnl": 13980.78,
+          "wr": 69.8,
+          "trades": 348,
+          "sharpe": 9.8
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "liq_only_thr2.5",
+      "description": "Liq-only + lower threshold=2.5",
+      "total_pnl": 67648.04,
+      "total_trades": 2110,
+      "win_rate": 70.0,
+      "sharpe": 26.49,
+      "max_dd_pct": -1.06,
+      "long_trades": 945,
+      "long_wr": 71.0,
+      "long_pnl": 29514.09,
+      "short_trades": 1165,
+      "short_wr": 69.3,
+      "short_pnl": 38133.95,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6826.06,
+          "wr": 72.8,
+          "trades": 356,
+          "sharpe": 12.73
+        },
+        "XRP": {
+          "pnl": 9883.93,
+          "wr": 69.0,
+          "trades": 352,
+          "sharpe": 10.82
+        },
+        "ADA": {
+          "pnl": 12165.53,
+          "wr": 68.5,
+          "trades": 352,
+          "sharpe": 12.26
+        },
+        "DOT": {
+          "pnl": 11671.88,
+          "wr": 68.8,
+          "trades": 352,
+          "sharpe": 11.14
+        },
+        "SUI": {
+          "pnl": 13119.85,
+          "wr": 71.4,
+          "trades": 350,
+          "sharpe": 11.99
+        },
+        "FIL": {
+          "pnl": 13980.78,
+          "wr": 69.8,
+          "trades": 348,
+          "sharpe": 9.8
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "hybrid_cascade_velocity_w3.0",
+      "description": "Cascade(1.1x) + Velocity(w=3.0)",
+      "total_pnl": 66953.76,
+      "total_trades": 3220,
+      "win_rate": 64.1,
+      "sharpe": 23.85,
+      "max_dd_pct": -1.24,
+      "long_trades": 1514,
+      "long_wr": 62.5,
+      "long_pnl": 28951.25,
+      "short_trades": 1706,
+      "short_wr": 65.5,
+      "short_pnl": 38002.51,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6552.48,
+          "wr": 62.5,
+          "trades": 600,
+          "sharpe": 10.84
+        },
+        "XRP": {
+          "pnl": 9592.76,
+          "wr": 63.7,
+          "trades": 466,
+          "sharpe": 9.51
+        },
+        "ADA": {
+          "pnl": 12292.31,
+          "wr": 67.0,
+          "trades": 461,
+          "sharpe": 11.81
+        },
+        "DOT": {
+          "pnl": 11704.15,
+          "wr": 62.4,
+          "trades": 564,
+          "sharpe": 10.24
+        },
+        "SUI": {
+          "pnl": 13627.33,
+          "wr": 66.7,
+          "trades": 567,
+          "sharpe": 11.43
+        },
+        "FIL": {
+          "pnl": 13184.72,
+          "wr": 62.8,
+          "trades": 562,
+          "sharpe": 8.15
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "hybrid_cascade_velocity_w4.0",
+      "description": "Cascade(1.1x) + Velocity(w=4.0)",
+      "total_pnl": 66884.63,
+      "total_trades": 3634,
+      "win_rate": 62.1,
+      "sharpe": 23.34,
+      "max_dd_pct": -1.18,
+      "long_trades": 1734,
+      "long_wr": 59.2,
+      "long_pnl": 28778.41,
+      "short_trades": 1900,
+      "short_wr": 64.7,
+      "short_pnl": 38106.22,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6642.19,
+          "wr": 61.4,
+          "trades": 653,
+          "sharpe": 10.89
+        },
+        "XRP": {
+          "pnl": 9560.98,
+          "wr": 62.2,
+          "trades": 551,
+          "sharpe": 9.3
+        },
+        "ADA": {
+          "pnl": 12124.98,
+          "wr": 64.3,
+          "trades": 543,
+          "sharpe": 11.27
+        },
+        "DOT": {
+          "pnl": 11959.87,
+          "wr": 60.6,
+          "trades": 629,
+          "sharpe": 10.23
+        },
+        "SUI": {
+          "pnl": 13334.62,
+          "wr": 62.1,
+          "trades": 630,
+          "sharpe": 10.73
+        },
+        "FIL": {
+          "pnl": 13261.99,
+          "wr": 62.1,
+          "trades": 628,
+          "sharpe": 8.13
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "ratio_65_80_min0.5x",
+      "description": "Ratio 65/80 + min_mult=0.5x",
+      "total_pnl": 66588.16,
+      "total_trades": 3099,
+      "win_rate": 64.3,
+      "sharpe": 23.86,
+      "max_dd_pct": -0.8,
+      "long_trades": 1408,
+      "long_wr": 62.9,
+      "long_pnl": 29397.5,
+      "short_trades": 1691,
+      "short_wr": 65.4,
+      "short_pnl": 37190.66,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6863.59,
+          "wr": 65.0,
+          "trades": 540,
+          "sharpe": 12.27
+        },
+        "XRP": {
+          "pnl": 9941.6,
+          "wr": 65.0,
+          "trades": 494,
+          "sharpe": 10.0
+        },
+        "ADA": {
+          "pnl": 12416.41,
+          "wr": 65.2,
+          "trades": 491,
+          "sharpe": 11.08
+        },
+        "DOT": {
+          "pnl": 11781.4,
+          "wr": 63.5,
+          "trades": 524,
+          "sharpe": 10.22
+        },
+        "SUI": {
+          "pnl": 13174.13,
+          "wr": 64.5,
+          "trades": 527,
+          "sharpe": 11.11
+        },
+        "FIL": {
+          "pnl": 12411.03,
+          "wr": 62.5,
+          "trades": 523,
+          "sharpe": 7.93
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "liq_only_hybrid",
+      "description": "Liq-only: cascade(1.1x) + ratio(4.0) + tick",
+      "total_pnl": 66552.86,
+      "total_trades": 2196,
+      "win_rate": 69.1,
+      "sharpe": 25.87,
+      "max_dd_pct": -1.07,
+      "long_trades": 980,
+      "long_wr": 69.7,
+      "long_pnl": 28598.71,
+      "short_trades": 1216,
+      "short_wr": 68.7,
+      "short_pnl": 37954.15,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6687.77,
+          "wr": 72.2,
+          "trades": 370,
+          "sharpe": 12.18
+        },
+        "XRP": {
+          "pnl": 9654.86,
+          "wr": 68.5,
+          "trades": 365,
+          "sharpe": 10.54
+        },
+        "ADA": {
+          "pnl": 11863.67,
+          "wr": 67.1,
+          "trades": 365,
+          "sharpe": 12.02
+        },
+        "DOT": {
+          "pnl": 11507.63,
+          "wr": 68.3,
+          "trades": 366,
+          "sharpe": 11.02
+        },
+        "SUI": {
+          "pnl": 13060.65,
+          "wr": 70.2,
+          "trades": 366,
+          "sharpe": 11.78
+        },
+        "FIL": {
+          "pnl": 13778.29,
+          "wr": 68.4,
+          "trades": 364,
+          "sharpe": 9.5
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "triple_r4.0_v3.0",
+      "description": "Cascade + Ratio(w=4.0) + Velocity(w=3.0)",
+      "total_pnl": 66516.48,
+      "total_trades": 3272,
+      "win_rate": 63.6,
+      "sharpe": 23.7,
+      "max_dd_pct": -1.4,
+      "long_trades": 1526,
+      "long_wr": 62.3,
+      "long_pnl": 28751.66,
+      "short_trades": 1746,
+      "short_wr": 64.7,
+      "short_pnl": 37764.83,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6456.14,
+          "wr": 61.7,
+          "trades": 609,
+          "sharpe": 10.61
+        },
+        "XRP": {
+          "pnl": 9486.18,
+          "wr": 62.8,
+          "trades": 476,
+          "sharpe": 9.35
+        },
+        "ADA": {
+          "pnl": 12055.27,
+          "wr": 66.2,
+          "trades": 470,
+          "sharpe": 11.62
+        },
+        "DOT": {
+          "pnl": 11706.24,
+          "wr": 62.2,
+          "trades": 572,
+          "sharpe": 10.29
+        },
+        "SUI": {
+          "pnl": 13558.43,
+          "wr": 66.4,
+          "trades": 575,
+          "sharpe": 11.36
+        },
+        "FIL": {
+          "pnl": 13254.23,
+          "wr": 62.6,
+          "trades": 570,
+          "sharpe": 8.2
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "hybrid_cascade_velocity_w2.0",
+      "description": "Cascade(1.1x) + Velocity(w=2.0)",
+      "total_pnl": 66079.74,
+      "total_trades": 2814,
+      "win_rate": 65.9,
+      "sharpe": 24.28,
+      "max_dd_pct": -0.97,
+      "long_trades": 1323,
+      "long_wr": 64.2,
+      "long_pnl": 28189.83,
+      "short_trades": 1491,
+      "short_wr": 67.5,
+      "short_pnl": 37889.92,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6795.19,
+          "wr": 65.2,
+          "trades": 512,
+          "sharpe": 11.19
+        },
+        "XRP": {
+          "pnl": 10034.31,
+          "wr": 67.0,
+          "trades": 436,
+          "sharpe": 10.02
+        },
+        "ADA": {
+          "pnl": 12520.76,
+          "wr": 68.7,
+          "trades": 435,
+          "sharpe": 12.34
+        },
+        "DOT": {
+          "pnl": 11437.49,
+          "wr": 63.1,
+          "trades": 477,
+          "sharpe": 10.24
+        },
+        "SUI": {
+          "pnl": 12849.95,
+          "wr": 66.6,
+          "trades": 479,
+          "sharpe": 11.11
+        },
+        "FIL": {
+          "pnl": 12442.04,
+          "wr": 65.3,
+          "trades": 475,
+          "sharpe": 8.1
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "hybrid_cascade_velocity_w5.0",
+      "description": "Cascade(1.1x) + Velocity(w=5.0)",
+      "total_pnl": 65906.15,
+      "total_trades": 3925,
+      "win_rate": 60.5,
+      "sharpe": 22.89,
+      "max_dd_pct": -1.01,
+      "long_trades": 1888,
+      "long_wr": 57.6,
+      "long_pnl": 28977.82,
+      "short_trades": 2037,
+      "short_wr": 63.2,
+      "short_pnl": 36928.33,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6067.53,
+          "wr": 58.5,
+          "trades": 721,
+          "sharpe": 9.89
+        },
+        "XRP": {
+          "pnl": 9819.27,
+          "wr": 60.8,
+          "trades": 622,
+          "sharpe": 9.21
+        },
+        "ADA": {
+          "pnl": 12526.39,
+          "wr": 62.3,
+          "trades": 615,
+          "sharpe": 11.48
+        },
+        "DOT": {
+          "pnl": 11724.28,
+          "wr": 59.6,
+          "trades": 654,
+          "sharpe": 10.14
+        },
+        "SUI": {
+          "pnl": 12745.5,
+          "wr": 61.3,
+          "trades": 657,
+          "sharpe": 10.27
+        },
+        "FIL": {
+          "pnl": 13023.17,
+          "wr": 60.8,
+          "trades": 656,
+          "sharpe": 8.0
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "ratio_65_80",
+      "description": "Ratio: 0.65/0.8 threshold",
+      "total_pnl": 65628.92,
+      "total_trades": 2551,
+      "win_rate": 67.2,
+      "sharpe": 24.42,
+      "max_dd_pct": -1.05,
+      "long_trades": 1156,
+      "long_wr": 66.5,
+      "long_pnl": 28526.43,
+      "short_trades": 1395,
+      "short_wr": 67.8,
+      "short_pnl": 37102.49,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6971.27,
+          "wr": 69.6,
+          "trades": 450,
+          "sharpe": 12.53
+        },
+        "XRP": {
+          "pnl": 9524.2,
+          "wr": 66.6,
+          "trades": 401,
+          "sharpe": 9.44
+        },
+        "ADA": {
+          "pnl": 11558.05,
+          "wr": 67.4,
+          "trades": 396,
+          "sharpe": 11.44
+        },
+        "DOT": {
+          "pnl": 11674.73,
+          "wr": 66.7,
+          "trades": 435,
+          "sharpe": 10.81
+        },
+        "SUI": {
+          "pnl": 13223.83,
+          "wr": 68.0,
+          "trades": 437,
+          "sharpe": 11.78
+        },
+        "FIL": {
+          "pnl": 12676.83,
+          "wr": 65.0,
+          "trades": 432,
+          "sharpe": 8.19
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "ratio_65_85",
+      "description": "Ratio: 0.65/0.85 threshold",
+      "total_pnl": 65628.92,
+      "total_trades": 2551,
+      "win_rate": 67.2,
+      "sharpe": 24.42,
+      "max_dd_pct": -1.05,
+      "long_trades": 1156,
+      "long_wr": 66.5,
+      "long_pnl": 28526.43,
+      "short_trades": 1395,
+      "short_wr": 67.8,
+      "short_pnl": 37102.49,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6971.27,
+          "wr": 69.6,
+          "trades": 450,
+          "sharpe": 12.53
+        },
+        "XRP": {
+          "pnl": 9524.2,
+          "wr": 66.6,
+          "trades": 401,
+          "sharpe": 9.44
+        },
+        "ADA": {
+          "pnl": 11558.05,
+          "wr": 67.4,
+          "trades": 396,
+          "sharpe": 11.44
+        },
+        "DOT": {
+          "pnl": 11674.73,
+          "wr": 66.7,
+          "trades": 435,
+          "sharpe": 10.81
+        },
+        "SUI": {
+          "pnl": 13223.83,
+          "wr": 68.0,
+          "trades": 437,
+          "sharpe": 11.78
+        },
+        "FIL": {
+          "pnl": 12676.83,
+          "wr": 65.0,
+          "trades": 432,
+          "sharpe": 8.19
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "ratio_70_85",
+      "description": "Ratio: 0.7/0.85 threshold",
+      "total_pnl": 65555.2,
+      "total_trades": 2530,
+      "win_rate": 67.2,
+      "sharpe": 24.34,
+      "max_dd_pct": -1.04,
+      "long_trades": 1147,
+      "long_wr": 66.0,
+      "long_pnl": 28435.5,
+      "short_trades": 1383,
+      "short_wr": 68.2,
+      "short_pnl": 37119.71,
+      "coin_results": {
+        "BTC": {
+          "pnl": 7070.73,
+          "wr": 69.7,
+          "trades": 446,
+          "sharpe": 12.71
+        },
+        "XRP": {
+          "pnl": 9417.21,
+          "wr": 66.8,
+          "trades": 398,
+          "sharpe": 9.38
+        },
+        "ADA": {
+          "pnl": 11492.09,
+          "wr": 67.2,
+          "trades": 393,
+          "sharpe": 11.35
+        },
+        "DOT": {
+          "pnl": 11640.0,
+          "wr": 66.2,
+          "trades": 432,
+          "sharpe": 10.75
+        },
+        "SUI": {
+          "pnl": 13237.06,
+          "wr": 67.4,
+          "trades": 433,
+          "sharpe": 11.62
+        },
+        "FIL": {
+          "pnl": 12698.11,
+          "wr": 65.7,
+          "trades": 428,
+          "sharpe": 8.21
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "ratio_70_90",
+      "description": "Ratio: 0.7/0.9 threshold",
+      "total_pnl": 65555.2,
+      "total_trades": 2530,
+      "win_rate": 67.2,
+      "sharpe": 24.34,
+      "max_dd_pct": -1.04,
+      "long_trades": 1147,
+      "long_wr": 66.0,
+      "long_pnl": 28435.5,
+      "short_trades": 1383,
+      "short_wr": 68.2,
+      "short_pnl": 37119.71,
+      "coin_results": {
+        "BTC": {
+          "pnl": 7070.73,
+          "wr": 69.7,
+          "trades": 446,
+          "sharpe": 12.71
+        },
+        "XRP": {
+          "pnl": 9417.21,
+          "wr": 66.8,
+          "trades": 398,
+          "sharpe": 9.38
+        },
+        "ADA": {
+          "pnl": 11492.09,
+          "wr": 67.2,
+          "trades": 393,
+          "sharpe": 11.35
+        },
+        "DOT": {
+          "pnl": 11640.0,
+          "wr": 66.2,
+          "trades": 432,
+          "sharpe": 10.75
+        },
+        "SUI": {
+          "pnl": 13237.06,
+          "wr": 67.4,
+          "trades": 433,
+          "sharpe": 11.62
+        },
+        "FIL": {
+          "pnl": 12698.11,
+          "wr": 65.7,
+          "trades": 428,
+          "sharpe": 8.21
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "triple_r5.0_v2.0",
+      "description": "Cascade + Ratio(w=5.0) + Velocity(w=2.0)",
+      "total_pnl": 65463.59,
+      "total_trades": 2885,
+      "win_rate": 65.1,
+      "sharpe": 24.03,
+      "max_dd_pct": -0.98,
+      "long_trades": 1367,
+      "long_wr": 63.1,
+      "long_pnl": 27876.11,
+      "short_trades": 1518,
+      "short_wr": 66.9,
+      "short_pnl": 37587.48,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6663.35,
+          "wr": 63.9,
+          "trades": 523,
+          "sharpe": 10.89
+        },
+        "XRP": {
+          "pnl": 9856.11,
+          "wr": 65.5,
+          "trades": 447,
+          "sharpe": 9.78
+        },
+        "ADA": {
+          "pnl": 12305.25,
+          "wr": 68.4,
+          "trades": 446,
+          "sharpe": 12.25
+        },
+        "DOT": {
+          "pnl": 11354.45,
+          "wr": 62.6,
+          "trades": 490,
+          "sharpe": 10.18
+        },
+        "SUI": {
+          "pnl": 12660.42,
+          "wr": 66.3,
+          "trades": 492,
+          "sharpe": 10.91
+        },
+        "FIL": {
+          "pnl": 12624.02,
+          "wr": 64.1,
+          "trades": 487,
+          "sharpe": 8.2
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "triple_r3.0_v2.0",
+      "description": "Cascade + Ratio(w=3.0) + Velocity(w=2.0)",
+      "total_pnl": 65449.11,
+      "total_trades": 2883,
+      "win_rate": 65.2,
+      "sharpe": 24.03,
+      "max_dd_pct": -0.98,
+      "long_trades": 1365,
+      "long_wr": 63.2,
+      "long_pnl": 27848.01,
+      "short_trades": 1518,
+      "short_wr": 66.9,
+      "short_pnl": 37601.1,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6656.69,
+          "wr": 63.9,
+          "trades": 523,
+          "sharpe": 10.9
+        },
+        "XRP": {
+          "pnl": 9874.27,
+          "wr": 65.9,
+          "trades": 446,
+          "sharpe": 9.8
+        },
+        "ADA": {
+          "pnl": 12306.33,
+          "wr": 68.5,
+          "trades": 445,
+          "sharpe": 12.25
+        },
+        "DOT": {
+          "pnl": 11336.3,
+          "wr": 62.6,
+          "trades": 490,
+          "sharpe": 10.17
+        },
+        "SUI": {
+          "pnl": 12664.2,
+          "wr": 66.5,
+          "trades": 492,
+          "sharpe": 10.92
+        },
+        "FIL": {
+          "pnl": 12611.32,
+          "wr": 64.1,
+          "trades": 487,
+          "sharpe": 8.19
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "hybrid_cascade_ratio_w3.0",
+      "description": "Cascade(1.1x) + Ratio(65/80, w=3.0)",
+      "total_pnl": 65316.4,
+      "total_trades": 2606,
+      "win_rate": 67.3,
+      "sharpe": 24.55,
+      "max_dd_pct": -1.07,
+      "long_trades": 1200,
+      "long_wr": 65.4,
+      "long_pnl": 28312.33,
+      "short_trades": 1406,
+      "short_wr": 69.0,
+      "short_pnl": 37004.07,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6791.84,
+          "wr": 68.5,
+          "trades": 463,
+          "sharpe": 12.24
+        },
+        "XRP": {
+          "pnl": 9449.69,
+          "wr": 68.1,
+          "trades": 408,
+          "sharpe": 9.46
+        },
+        "ADA": {
+          "pnl": 11641.24,
+          "wr": 67.8,
+          "trades": 404,
+          "sharpe": 11.79
+        },
+        "DOT": {
+          "pnl": 11600.9,
+          "wr": 66.4,
+          "trades": 444,
+          "sharpe": 10.91
+        },
+        "SUI": {
+          "pnl": 13180.47,
+          "wr": 68.2,
+          "trades": 444,
+          "sharpe": 11.9
+        },
+        "FIL": {
+          "pnl": 12652.25,
+          "wr": 65.0,
+          "trades": 443,
+          "sharpe": 8.2
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "tiered_tick_3_6_12",
+      "description": "Best cascade + tiered tick: 3/6/12",
+      "total_pnl": 65275.04,
+      "total_trades": 2538,
+      "win_rate": 67.4,
+      "sharpe": 24.44,
+      "max_dd_pct": -1.06,
+      "long_trades": 1165,
+      "long_wr": 66.4,
+      "long_pnl": 28421.81,
+      "short_trades": 1373,
+      "short_wr": 68.2,
+      "short_pnl": 36853.23,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6860.61,
+          "wr": 69.1,
+          "trades": 450,
+          "sharpe": 12.42
+        },
+        "XRP": {
+          "pnl": 9616.29,
+          "wr": 68.7,
+          "trades": 399,
+          "sharpe": 9.74
+        },
+        "ADA": {
+          "pnl": 11739.3,
+          "wr": 67.8,
+          "trades": 395,
+          "sharpe": 11.72
+        },
+        "DOT": {
+          "pnl": 11569.15,
+          "wr": 66.0,
+          "trades": 433,
+          "sharpe": 10.75
+        },
+        "SUI": {
+          "pnl": 13106.64,
+          "wr": 67.8,
+          "trades": 431,
+          "sharpe": 11.83
+        },
+        "FIL": {
+          "pnl": 12383.05,
+          "wr": 65.1,
+          "trades": 430,
+          "sharpe": 7.98
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "cascade_1.1x",
+      "description": "Cascade mult=1.1x",
+      "total_pnl": 65255.27,
+      "total_trades": 2538,
+      "win_rate": 67.4,
+      "sharpe": 24.43,
+      "max_dd_pct": -1.06,
+      "long_trades": 1165,
+      "long_wr": 66.4,
+      "long_pnl": 28421.81,
+      "short_trades": 1373,
+      "short_wr": 68.2,
+      "short_pnl": 36833.46,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6856.23,
+          "wr": 68.9,
+          "trades": 450,
+          "sharpe": 12.4
+        },
+        "XRP": {
+          "pnl": 9613.25,
+          "wr": 68.7,
+          "trades": 399,
+          "sharpe": 9.73
+        },
+        "ADA": {
+          "pnl": 11736.19,
+          "wr": 67.8,
+          "trades": 395,
+          "sharpe": 11.72
+        },
+        "DOT": {
+          "pnl": 11567.83,
+          "wr": 66.0,
+          "trades": 433,
+          "sharpe": 10.75
+        },
+        "SUI": {
+          "pnl": 13101.26,
+          "wr": 67.8,
+          "trades": 431,
+          "sharpe": 11.83
+        },
+        "FIL": {
+          "pnl": 12380.5,
+          "wr": 65.1,
+          "trades": 430,
+          "sharpe": 7.98
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "cascade_ma_12",
+      "description": "Cascade MA=12 bars (mult=1.1x)",
+      "total_pnl": 65255.27,
+      "total_trades": 2538,
+      "win_rate": 67.4,
+      "sharpe": 24.43,
+      "max_dd_pct": -1.06,
+      "long_trades": 1165,
+      "long_wr": 66.4,
+      "long_pnl": 28421.81,
+      "short_trades": 1373,
+      "short_wr": 68.2,
+      "short_pnl": 36833.46,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6856.23,
+          "wr": 68.9,
+          "trades": 450,
+          "sharpe": 12.4
+        },
+        "XRP": {
+          "pnl": 9613.25,
+          "wr": 68.7,
+          "trades": 399,
+          "sharpe": 9.73
+        },
+        "ADA": {
+          "pnl": 11736.19,
+          "wr": 67.8,
+          "trades": 395,
+          "sharpe": 11.72
+        },
+        "DOT": {
+          "pnl": 11567.83,
+          "wr": 66.0,
+          "trades": 433,
+          "sharpe": 10.75
+        },
+        "SUI": {
+          "pnl": 13101.26,
+          "wr": 67.8,
+          "trades": 431,
+          "sharpe": 11.83
+        },
+        "FIL": {
+          "pnl": 12380.5,
+          "wr": 65.1,
+          "trades": 430,
+          "sharpe": 7.98
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "cascade_ma_14",
+      "description": "Cascade MA=14 bars (mult=1.1x)",
+      "total_pnl": 65255.27,
+      "total_trades": 2538,
+      "win_rate": 67.4,
+      "sharpe": 24.43,
+      "max_dd_pct": -1.06,
+      "long_trades": 1165,
+      "long_wr": 66.4,
+      "long_pnl": 28421.81,
+      "short_trades": 1373,
+      "short_wr": 68.2,
+      "short_pnl": 36833.46,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6856.23,
+          "wr": 68.9,
+          "trades": 450,
+          "sharpe": 12.4
+        },
+        "XRP": {
+          "pnl": 9613.25,
+          "wr": 68.7,
+          "trades": 399,
+          "sharpe": 9.73
+        },
+        "ADA": {
+          "pnl": 11736.19,
+          "wr": 67.8,
+          "trades": 395,
+          "sharpe": 11.72
+        },
+        "DOT": {
+          "pnl": 11567.83,
+          "wr": 66.0,
+          "trades": 433,
+          "sharpe": 10.75
+        },
+        "SUI": {
+          "pnl": 13101.26,
+          "wr": 67.8,
+          "trades": 431,
+          "sharpe": 11.83
+        },
+        "FIL": {
+          "pnl": 12380.5,
+          "wr": 65.1,
+          "trades": 430,
+          "sharpe": 7.98
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "cascade_ma_15",
+      "description": "Cascade MA=15 bars (mult=1.1x)",
+      "total_pnl": 65255.27,
+      "total_trades": 2538,
+      "win_rate": 67.4,
+      "sharpe": 24.43,
+      "max_dd_pct": -1.06,
+      "long_trades": 1165,
+      "long_wr": 66.4,
+      "long_pnl": 28421.81,
+      "short_trades": 1373,
+      "short_wr": 68.2,
+      "short_pnl": 36833.46,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6856.23,
+          "wr": 68.9,
+          "trades": 450,
+          "sharpe": 12.4
+        },
+        "XRP": {
+          "pnl": 9613.25,
+          "wr": 68.7,
+          "trades": 399,
+          "sharpe": 9.73
+        },
+        "ADA": {
+          "pnl": 11736.19,
+          "wr": 67.8,
+          "trades": 395,
+          "sharpe": 11.72
+        },
+        "DOT": {
+          "pnl": 11567.83,
+          "wr": 66.0,
+          "trades": 433,
+          "sharpe": 10.75
+        },
+        "SUI": {
+          "pnl": 13101.26,
+          "wr": 67.8,
+          "trades": 431,
+          "sharpe": 11.83
+        },
+        "FIL": {
+          "pnl": 12380.5,
+          "wr": 65.1,
+          "trades": 430,
+          "sharpe": 7.98
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "cascade_ma_16",
+      "description": "Cascade MA=16 bars (mult=1.1x)",
+      "total_pnl": 65255.27,
+      "total_trades": 2538,
+      "win_rate": 67.4,
+      "sharpe": 24.43,
+      "max_dd_pct": -1.06,
+      "long_trades": 1165,
+      "long_wr": 66.4,
+      "long_pnl": 28421.81,
+      "short_trades": 1373,
+      "short_wr": 68.2,
+      "short_pnl": 36833.46,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6856.23,
+          "wr": 68.9,
+          "trades": 450,
+          "sharpe": 12.4
+        },
+        "XRP": {
+          "pnl": 9613.25,
+          "wr": 68.7,
+          "trades": 399,
+          "sharpe": 9.73
+        },
+        "ADA": {
+          "pnl": 11736.19,
+          "wr": 67.8,
+          "trades": 395,
+          "sharpe": 11.72
+        },
+        "DOT": {
+          "pnl": 11567.83,
+          "wr": 66.0,
+          "trades": 433,
+          "sharpe": 10.75
+        },
+        "SUI": {
+          "pnl": 13101.26,
+          "wr": 67.8,
+          "trades": 431,
+          "sharpe": 11.83
+        },
+        "FIL": {
+          "pnl": 12380.5,
+          "wr": 65.1,
+          "trades": 430,
+          "sharpe": 7.98
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "cascade_ma_17",
+      "description": "Cascade MA=17 bars (mult=1.1x)",
+      "total_pnl": 65255.27,
+      "total_trades": 2538,
+      "win_rate": 67.4,
+      "sharpe": 24.43,
+      "max_dd_pct": -1.06,
+      "long_trades": 1165,
+      "long_wr": 66.4,
+      "long_pnl": 28421.81,
+      "short_trades": 1373,
+      "short_wr": 68.2,
+      "short_pnl": 36833.46,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6856.23,
+          "wr": 68.9,
+          "trades": 450,
+          "sharpe": 12.4
+        },
+        "XRP": {
+          "pnl": 9613.25,
+          "wr": 68.7,
+          "trades": 399,
+          "sharpe": 9.73
+        },
+        "ADA": {
+          "pnl": 11736.19,
+          "wr": 67.8,
+          "trades": 395,
+          "sharpe": 11.72
+        },
+        "DOT": {
+          "pnl": 11567.83,
+          "wr": 66.0,
+          "trades": 433,
+          "sharpe": 10.75
+        },
+        "SUI": {
+          "pnl": 13101.26,
+          "wr": 67.8,
+          "trades": 431,
+          "sharpe": 11.83
+        },
+        "FIL": {
+          "pnl": 12380.5,
+          "wr": 65.1,
+          "trades": 430,
+          "sharpe": 7.98
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "cascade_ma_19",
+      "description": "Cascade MA=19 bars (mult=1.1x)",
+      "total_pnl": 65255.27,
+      "total_trades": 2538,
+      "win_rate": 67.4,
+      "sharpe": 24.43,
+      "max_dd_pct": -1.06,
+      "long_trades": 1165,
+      "long_wr": 66.4,
+      "long_pnl": 28421.81,
+      "short_trades": 1373,
+      "short_wr": 68.2,
+      "short_pnl": 36833.46,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6856.23,
+          "wr": 68.9,
+          "trades": 450,
+          "sharpe": 12.4
+        },
+        "XRP": {
+          "pnl": 9613.25,
+          "wr": 68.7,
+          "trades": 399,
+          "sharpe": 9.73
+        },
+        "ADA": {
+          "pnl": 11736.19,
+          "wr": 67.8,
+          "trades": 395,
+          "sharpe": 11.72
+        },
+        "DOT": {
+          "pnl": 11567.83,
+          "wr": 66.0,
+          "trades": 433,
+          "sharpe": 10.75
+        },
+        "SUI": {
+          "pnl": 13101.26,
+          "wr": 67.8,
+          "trades": 431,
+          "sharpe": 11.83
+        },
+        "FIL": {
+          "pnl": 12380.5,
+          "wr": 65.1,
+          "trades": 430,
+          "sharpe": 7.98
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "cascade_ma_20",
+      "description": "Cascade MA=20 bars (mult=1.1x)",
+      "total_pnl": 65255.27,
+      "total_trades": 2538,
+      "win_rate": 67.4,
+      "sharpe": 24.43,
+      "max_dd_pct": -1.06,
+      "long_trades": 1165,
+      "long_wr": 66.4,
+      "long_pnl": 28421.81,
+      "short_trades": 1373,
+      "short_wr": 68.2,
+      "short_pnl": 36833.46,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6856.23,
+          "wr": 68.9,
+          "trades": 450,
+          "sharpe": 12.4
+        },
+        "XRP": {
+          "pnl": 9613.25,
+          "wr": 68.7,
+          "trades": 399,
+          "sharpe": 9.73
+        },
+        "ADA": {
+          "pnl": 11736.19,
+          "wr": 67.8,
+          "trades": 395,
+          "sharpe": 11.72
+        },
+        "DOT": {
+          "pnl": 11567.83,
+          "wr": 66.0,
+          "trades": 433,
+          "sharpe": 10.75
+        },
+        "SUI": {
+          "pnl": 13101.26,
+          "wr": 67.8,
+          "trades": 431,
+          "sharpe": 11.83
+        },
+        "FIL": {
+          "pnl": 12380.5,
+          "wr": 65.1,
+          "trades": 430,
+          "sharpe": 7.98
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "cascade_ma_22",
+      "description": "Cascade MA=22 bars (mult=1.1x)",
+      "total_pnl": 65255.27,
+      "total_trades": 2538,
+      "win_rate": 67.4,
+      "sharpe": 24.43,
+      "max_dd_pct": -1.06,
+      "long_trades": 1165,
+      "long_wr": 66.4,
+      "long_pnl": 28421.81,
+      "short_trades": 1373,
+      "short_wr": 68.2,
+      "short_pnl": 36833.46,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6856.23,
+          "wr": 68.9,
+          "trades": 450,
+          "sharpe": 12.4
+        },
+        "XRP": {
+          "pnl": 9613.25,
+          "wr": 68.7,
+          "trades": 399,
+          "sharpe": 9.73
+        },
+        "ADA": {
+          "pnl": 11736.19,
+          "wr": 67.8,
+          "trades": 395,
+          "sharpe": 11.72
+        },
+        "DOT": {
+          "pnl": 11567.83,
+          "wr": 66.0,
+          "trades": 433,
+          "sharpe": 10.75
+        },
+        "SUI": {
+          "pnl": 13101.26,
+          "wr": 67.8,
+          "trades": 431,
+          "sharpe": 11.83
+        },
+        "FIL": {
+          "pnl": 12380.5,
+          "wr": 65.1,
+          "trades": 430,
+          "sharpe": 7.98
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "cascade_ma_24",
+      "description": "Cascade MA=24 bars (mult=1.1x)",
+      "total_pnl": 65255.27,
+      "total_trades": 2538,
+      "win_rate": 67.4,
+      "sharpe": 24.43,
+      "max_dd_pct": -1.06,
+      "long_trades": 1165,
+      "long_wr": 66.4,
+      "long_pnl": 28421.81,
+      "short_trades": 1373,
+      "short_wr": 68.2,
+      "short_pnl": 36833.46,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6856.23,
+          "wr": 68.9,
+          "trades": 450,
+          "sharpe": 12.4
+        },
+        "XRP": {
+          "pnl": 9613.25,
+          "wr": 68.7,
+          "trades": 399,
+          "sharpe": 9.73
+        },
+        "ADA": {
+          "pnl": 11736.19,
+          "wr": 67.8,
+          "trades": 395,
+          "sharpe": 11.72
+        },
+        "DOT": {
+          "pnl": 11567.83,
+          "wr": 66.0,
+          "trades": 433,
+          "sharpe": 10.75
+        },
+        "SUI": {
+          "pnl": 13101.26,
+          "wr": 67.8,
+          "trades": 431,
+          "sharpe": 11.83
+        },
+        "FIL": {
+          "pnl": 12380.5,
+          "wr": 65.1,
+          "trades": 430,
+          "sharpe": 7.98
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "tiered_1.1_3.0_6.0_b0.3_0.2",
+      "description": "Tiered: 1.1x/3.0x/6.0x, bonus=0.3/0.2",
+      "total_pnl": 65255.27,
+      "total_trades": 2538,
+      "win_rate": 67.4,
+      "sharpe": 24.43,
+      "max_dd_pct": -1.06,
+      "long_trades": 1165,
+      "long_wr": 66.4,
+      "long_pnl": 28421.81,
+      "short_trades": 1373,
+      "short_wr": 68.2,
+      "short_pnl": 36833.46,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6856.23,
+          "wr": 68.9,
+          "trades": 450,
+          "sharpe": 12.4
+        },
+        "XRP": {
+          "pnl": 9613.25,
+          "wr": 68.7,
+          "trades": 399,
+          "sharpe": 9.73
+        },
+        "ADA": {
+          "pnl": 11736.19,
+          "wr": 67.8,
+          "trades": 395,
+          "sharpe": 11.72
+        },
+        "DOT": {
+          "pnl": 11567.83,
+          "wr": 66.0,
+          "trades": 433,
+          "sharpe": 10.75
+        },
+        "SUI": {
+          "pnl": 13101.26,
+          "wr": 67.8,
+          "trades": 431,
+          "sharpe": 11.83
+        },
+        "FIL": {
+          "pnl": 12380.5,
+          "wr": 65.1,
+          "trades": 430,
+          "sharpe": 7.98
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "tiered_1.1_4.0_8.0_b0.5_0.5",
+      "description": "Tiered: 1.1x/4.0x/8.0x, bonus=0.5/0.5",
+      "total_pnl": 65255.27,
+      "total_trades": 2538,
+      "win_rate": 67.4,
+      "sharpe": 24.43,
+      "max_dd_pct": -1.06,
+      "long_trades": 1165,
+      "long_wr": 66.4,
+      "long_pnl": 28421.81,
+      "short_trades": 1373,
+      "short_wr": 68.2,
+      "short_pnl": 36833.46,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6856.23,
+          "wr": 68.9,
+          "trades": 450,
+          "sharpe": 12.4
+        },
+        "XRP": {
+          "pnl": 9613.25,
+          "wr": 68.7,
+          "trades": 399,
+          "sharpe": 9.73
+        },
+        "ADA": {
+          "pnl": 11736.19,
+          "wr": 67.8,
+          "trades": 395,
+          "sharpe": 11.72
+        },
+        "DOT": {
+          "pnl": 11567.83,
+          "wr": 66.0,
+          "trades": 433,
+          "sharpe": 10.75
+        },
+        "SUI": {
+          "pnl": 13101.26,
+          "wr": 67.8,
+          "trades": 431,
+          "sharpe": 11.83
+        },
+        "FIL": {
+          "pnl": 12380.5,
+          "wr": 65.1,
+          "trades": 430,
+          "sharpe": 7.98
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "ratio_55_70",
+      "description": "Ratio: 0.55/0.7 threshold",
+      "total_pnl": 65221.11,
+      "total_trades": 2601,
+      "win_rate": 67.5,
+      "sharpe": 24.44,
+      "max_dd_pct": -1.06,
+      "long_trades": 1187,
+      "long_wr": 66.1,
+      "long_pnl": 28052.23,
+      "short_trades": 1414,
+      "short_wr": 68.6,
+      "short_pnl": 37168.88,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6911.82,
+          "wr": 69.7,
+          "trades": 459,
+          "sharpe": 12.44
+        },
+        "XRP": {
+          "pnl": 9383.02,
+          "wr": 67.4,
+          "trades": 408,
+          "sharpe": 9.42
+        },
+        "ADA": {
+          "pnl": 11529.81,
+          "wr": 68.1,
+          "trades": 404,
+          "sharpe": 11.59
+        },
+        "DOT": {
+          "pnl": 11562.95,
+          "wr": 66.4,
+          "trades": 443,
+          "sharpe": 10.81
+        },
+        "SUI": {
+          "pnl": 13201.74,
+          "wr": 68.5,
+          "trades": 445,
+          "sharpe": 11.85
+        },
+        "FIL": {
+          "pnl": 12631.77,
+          "wr": 64.7,
+          "trades": 442,
+          "sharpe": 8.16
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "tiered_1.1_2.5_5.0_b0.5_0.5",
+      "description": "Tiered: 1.1x/2.5x/5.0x, bonus=0.5/0.5",
+      "total_pnl": 65191.49,
+      "total_trades": 2550,
+      "win_rate": 67.3,
+      "sharpe": 24.41,
+      "max_dd_pct": -1.06,
+      "long_trades": 1171,
+      "long_wr": 66.1,
+      "long_pnl": 28396.45,
+      "short_trades": 1379,
+      "short_wr": 68.2,
+      "short_pnl": 36795.04,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6849.05,
+          "wr": 68.8,
+          "trades": 452,
+          "sharpe": 12.38
+        },
+        "XRP": {
+          "pnl": 9619.31,
+          "wr": 68.6,
+          "trades": 401,
+          "sharpe": 9.74
+        },
+        "ADA": {
+          "pnl": 11733.27,
+          "wr": 67.8,
+          "trades": 397,
+          "sharpe": 11.72
+        },
+        "DOT": {
+          "pnl": 11561.99,
+          "wr": 66.0,
+          "trades": 435,
+          "sharpe": 10.75
+        },
+        "SUI": {
+          "pnl": 13107.26,
+          "wr": 67.7,
+          "trades": 433,
+          "sharpe": 11.84
+        },
+        "FIL": {
+          "pnl": 12320.61,
+          "wr": 64.8,
+          "trades": 432,
+          "sharpe": 7.94
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "tiered_1.1_2.0_4.0_b0.5_0.5",
+      "description": "Tiered: 1.1x/2.0x/4.0x, bonus=0.5/0.5",
+      "total_pnl": 65177.14,
+      "total_trades": 2556,
+      "win_rate": 67.1,
+      "sharpe": 24.4,
+      "max_dd_pct": -1.06,
+      "long_trades": 1177,
+      "long_wr": 65.8,
+      "long_pnl": 28402.81,
+      "short_trades": 1379,
+      "short_wr": 68.2,
+      "short_pnl": 36774.33,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6836.46,
+          "wr": 68.7,
+          "trades": 453,
+          "sharpe": 12.34
+        },
+        "XRP": {
+          "pnl": 9605.49,
+          "wr": 68.4,
+          "trades": 402,
+          "sharpe": 9.72
+        },
+        "ADA": {
+          "pnl": 11734.38,
+          "wr": 67.6,
+          "trades": 398,
+          "sharpe": 11.71
+        },
+        "DOT": {
+          "pnl": 11575.34,
+          "wr": 66.1,
+          "trades": 436,
+          "sharpe": 10.79
+        },
+        "SUI": {
+          "pnl": 13107.61,
+          "wr": 67.5,
+          "trades": 434,
+          "sharpe": 11.84
+        },
+        "FIL": {
+          "pnl": 12317.87,
+          "wr": 64.7,
+          "trades": 433,
+          "sharpe": 7.93
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "ratio_55_75",
+      "description": "Ratio: 0.55/0.75 threshold",
+      "total_pnl": 65170.91,
+      "total_trades": 2595,
+      "win_rate": 67.5,
+      "sharpe": 24.43,
+      "max_dd_pct": -1.06,
+      "long_trades": 1187,
+      "long_wr": 66.1,
+      "long_pnl": 27984.31,
+      "short_trades": 1408,
+      "short_wr": 68.7,
+      "short_pnl": 37186.6,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6928.01,
+          "wr": 69.9,
+          "trades": 458,
+          "sharpe": 12.48
+        },
+        "XRP": {
+          "pnl": 9393.8,
+          "wr": 67.3,
+          "trades": 407,
+          "sharpe": 9.43
+        },
+        "ADA": {
+          "pnl": 11522.86,
+          "wr": 68.0,
+          "trades": 403,
+          "sharpe": 11.59
+        },
+        "DOT": {
+          "pnl": 11522.55,
+          "wr": 66.5,
+          "trades": 442,
+          "sharpe": 10.81
+        },
+        "SUI": {
+          "pnl": 13184.9,
+          "wr": 68.5,
+          "trades": 444,
+          "sharpe": 11.84
+        },
+        "FIL": {
+          "pnl": 12618.79,
+          "wr": 64.8,
+          "trades": 441,
+          "sharpe": 8.15
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "ratio_55_80",
+      "description": "Ratio: 0.55/0.8 threshold",
+      "total_pnl": 65170.91,
+      "total_trades": 2595,
+      "win_rate": 67.5,
+      "sharpe": 24.43,
+      "max_dd_pct": -1.06,
+      "long_trades": 1187,
+      "long_wr": 66.1,
+      "long_pnl": 27984.31,
+      "short_trades": 1408,
+      "short_wr": 68.7,
+      "short_pnl": 37186.6,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6928.01,
+          "wr": 69.9,
+          "trades": 458,
+          "sharpe": 12.48
+        },
+        "XRP": {
+          "pnl": 9393.8,
+          "wr": 67.3,
+          "trades": 407,
+          "sharpe": 9.43
+        },
+        "ADA": {
+          "pnl": 11522.86,
+          "wr": 68.0,
+          "trades": 403,
+          "sharpe": 11.59
+        },
+        "DOT": {
+          "pnl": 11522.55,
+          "wr": 66.5,
+          "trades": 442,
+          "sharpe": 10.81
+        },
+        "SUI": {
+          "pnl": 13184.9,
+          "wr": 68.5,
+          "trades": 444,
+          "sharpe": 11.84
+        },
+        "FIL": {
+          "pnl": 12618.79,
+          "wr": 64.8,
+          "trades": 441,
+          "sharpe": 8.15
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "tiered_1.1_3.0_6.0_b0.5_0.3",
+      "description": "Tiered: 1.1x/3.0x/6.0x, bonus=0.5/0.3",
+      "total_pnl": 65148.58,
+      "total_trades": 2544,
+      "win_rate": 67.4,
+      "sharpe": 24.4,
+      "max_dd_pct": -1.06,
+      "long_trades": 1165,
+      "long_wr": 66.4,
+      "long_pnl": 28421.81,
+      "short_trades": 1379,
+      "short_wr": 68.2,
+      "short_pnl": 36726.77,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6844.52,
+          "wr": 68.7,
+          "trades": 451,
+          "sharpe": 12.37
+        },
+        "XRP": {
+          "pnl": 9606.45,
+          "wr": 68.8,
+          "trades": 400,
+          "sharpe": 9.72
+        },
+        "ADA": {
+          "pnl": 11730.31,
+          "wr": 67.9,
+          "trades": 396,
+          "sharpe": 11.72
+        },
+        "DOT": {
+          "pnl": 11553.52,
+          "wr": 66.1,
+          "trades": 434,
+          "sharpe": 10.74
+        },
+        "SUI": {
+          "pnl": 13091.77,
+          "wr": 67.8,
+          "trades": 432,
+          "sharpe": 11.82
+        },
+        "FIL": {
+          "pnl": 12322.01,
+          "wr": 65.0,
+          "trades": 431,
+          "sharpe": 7.94
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "ratio_65_80_min0.75x",
+      "description": "Ratio 65/80 + min_mult=0.75x",
+      "total_pnl": 65091.31,
+      "total_trades": 2736,
+      "win_rate": 66.1,
+      "sharpe": 23.9,
+      "max_dd_pct": -0.95,
+      "long_trades": 1258,
+      "long_wr": 66.5,
+      "long_pnl": 29982.12,
+      "short_trades": 1478,
+      "short_wr": 65.8,
+      "short_pnl": 35109.2,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6966.48,
+          "wr": 67.2,
+          "trades": 482,
+          "sharpe": 12.67
+        },
+        "XRP": {
+          "pnl": 9788.49,
+          "wr": 66.7,
+          "trades": 433,
+          "sharpe": 9.31
+        },
+        "ADA": {
+          "pnl": 11743.64,
+          "wr": 67.7,
+          "trades": 427,
+          "sharpe": 11.11
+        },
+        "DOT": {
+          "pnl": 11262.73,
+          "wr": 64.3,
+          "trades": 465,
+          "sharpe": 10.26
+        },
+        "SUI": {
+          "pnl": 12998.18,
+          "wr": 67.6,
+          "trades": 466,
+          "sharpe": 11.4
+        },
+        "FIL": {
+          "pnl": 12331.79,
+          "wr": 63.1,
+          "trades": 463,
+          "sharpe": 8.06
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "tiered_1.1_3.0_5.0_b0.75_0.5",
+      "description": "Tiered: 1.1x/3.0x/5.0x, bonus=0.75/0.5",
+      "total_pnl": 65047.49,
+      "total_trades": 2544,
+      "win_rate": 67.3,
+      "sharpe": 24.34,
+      "max_dd_pct": -1.06,
+      "long_trades": 1165,
+      "long_wr": 66.4,
+      "long_pnl": 28421.81,
+      "short_trades": 1379,
+      "short_wr": 68.1,
+      "short_pnl": 36625.68,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6844.52,
+          "wr": 68.7,
+          "trades": 451,
+          "sharpe": 12.37
+        },
+        "XRP": {
+          "pnl": 9596.82,
+          "wr": 68.8,
+          "trades": 400,
+          "sharpe": 9.71
+        },
+        "ADA": {
+          "pnl": 11708.55,
+          "wr": 67.9,
+          "trades": 396,
+          "sharpe": 11.69
+        },
+        "DOT": {
+          "pnl": 11539.52,
+          "wr": 65.9,
+          "trades": 434,
+          "sharpe": 10.72
+        },
+        "SUI": {
+          "pnl": 13072.67,
+          "wr": 67.8,
+          "trades": 432,
+          "sharpe": 11.8
+        },
+        "FIL": {
+          "pnl": 12285.42,
+          "wr": 65.0,
+          "trades": 431,
+          "sharpe": 7.9
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "hybrid_cascade_ratio_w4.0",
+      "description": "Cascade(1.1x) + Ratio(65/80, w=4.0)",
+      "total_pnl": 64978.57,
+      "total_trades": 2618,
+      "win_rate": 67.1,
+      "sharpe": 24.35,
+      "max_dd_pct": -1.07,
+      "long_trades": 1202,
+      "long_wr": 65.2,
+      "long_pnl": 28097.08,
+      "short_trades": 1416,
+      "short_wr": 68.6,
+      "short_pnl": 36881.49,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6791.84,
+          "wr": 68.5,
+          "trades": 463,
+          "sharpe": 12.24
+        },
+        "XRP": {
+          "pnl": 9396.01,
+          "wr": 67.2,
+          "trades": 411,
+          "sharpe": 9.39
+        },
+        "ADA": {
+          "pnl": 11564.21,
+          "wr": 67.6,
+          "trades": 407,
+          "sharpe": 11.64
+        },
+        "DOT": {
+          "pnl": 11550.2,
+          "wr": 66.1,
+          "trades": 446,
+          "sharpe": 10.8
+        },
+        "SUI": {
+          "pnl": 13052.5,
+          "wr": 68.2,
+          "trades": 446,
+          "sharpe": 11.73
+        },
+        "FIL": {
+          "pnl": 12623.8,
+          "wr": 64.9,
+          "trades": 445,
+          "sharpe": 8.17
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "hybrid_cascade_ratio_w5.0",
+      "description": "Cascade(1.1x) + Ratio(65/80, w=5.0)",
+      "total_pnl": 64978.57,
+      "total_trades": 2618,
+      "win_rate": 67.1,
+      "sharpe": 24.35,
+      "max_dd_pct": -1.07,
+      "long_trades": 1202,
+      "long_wr": 65.2,
+      "long_pnl": 28097.08,
+      "short_trades": 1416,
+      "short_wr": 68.6,
+      "short_pnl": 36881.49,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6791.84,
+          "wr": 68.5,
+          "trades": 463,
+          "sharpe": 12.24
+        },
+        "XRP": {
+          "pnl": 9396.01,
+          "wr": 67.2,
+          "trades": 411,
+          "sharpe": 9.39
+        },
+        "ADA": {
+          "pnl": 11564.21,
+          "wr": 67.6,
+          "trades": 407,
+          "sharpe": 11.64
+        },
+        "DOT": {
+          "pnl": 11550.2,
+          "wr": 66.1,
+          "trades": 446,
+          "sharpe": 10.8
+        },
+        "SUI": {
+          "pnl": 13052.5,
+          "wr": 68.2,
+          "trades": 446,
+          "sharpe": 11.73
+        },
+        "FIL": {
+          "pnl": 12623.8,
+          "wr": 64.9,
+          "trades": 445,
+          "sharpe": 8.17
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "ratio_60_75",
+      "description": "Ratio: 0.6/0.75 threshold",
+      "total_pnl": 64973.13,
+      "total_trades": 2575,
+      "win_rate": 67.6,
+      "sharpe": 24.38,
+      "max_dd_pct": -1.06,
+      "long_trades": 1174,
+      "long_wr": 66.4,
+      "long_pnl": 27896.15,
+      "short_trades": 1401,
+      "short_wr": 68.7,
+      "short_pnl": 37076.98,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6937.0,
+          "wr": 69.8,
+          "trades": 454,
+          "sharpe": 12.54
+        },
+        "XRP": {
+          "pnl": 9411.32,
+          "wr": 67.8,
+          "trades": 404,
+          "sharpe": 9.48
+        },
+        "ADA": {
+          "pnl": 11432.8,
+          "wr": 68.0,
+          "trades": 400,
+          "sharpe": 11.51
+        },
+        "DOT": {
+          "pnl": 11454.61,
+          "wr": 66.5,
+          "trades": 439,
+          "sharpe": 10.7
+        },
+        "SUI": {
+          "pnl": 13145.77,
+          "wr": 68.2,
+          "trades": 440,
+          "sharpe": 11.81
+        },
+        "FIL": {
+          "pnl": 12591.64,
+          "wr": 65.3,
+          "trades": 438,
+          "sharpe": 8.15
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "ratio_60_80",
+      "description": "Ratio: 0.6/0.8 threshold",
+      "total_pnl": 64973.13,
+      "total_trades": 2575,
+      "win_rate": 67.6,
+      "sharpe": 24.38,
+      "max_dd_pct": -1.06,
+      "long_trades": 1174,
+      "long_wr": 66.4,
+      "long_pnl": 27896.15,
+      "short_trades": 1401,
+      "short_wr": 68.7,
+      "short_pnl": 37076.98,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6937.0,
+          "wr": 69.8,
+          "trades": 454,
+          "sharpe": 12.54
+        },
+        "XRP": {
+          "pnl": 9411.32,
+          "wr": 67.8,
+          "trades": 404,
+          "sharpe": 9.48
+        },
+        "ADA": {
+          "pnl": 11432.8,
+          "wr": 68.0,
+          "trades": 400,
+          "sharpe": 11.51
+        },
+        "DOT": {
+          "pnl": 11454.61,
+          "wr": 66.5,
+          "trades": 439,
+          "sharpe": 10.7
+        },
+        "SUI": {
+          "pnl": 13145.77,
+          "wr": 68.2,
+          "trades": 440,
+          "sharpe": 11.81
+        },
+        "FIL": {
+          "pnl": 12591.64,
+          "wr": 65.3,
+          "trades": 438,
+          "sharpe": 8.15
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "ratio_60_85",
+      "description": "Ratio: 0.6/0.85 threshold",
+      "total_pnl": 64973.13,
+      "total_trades": 2575,
+      "win_rate": 67.6,
+      "sharpe": 24.38,
+      "max_dd_pct": -1.06,
+      "long_trades": 1174,
+      "long_wr": 66.4,
+      "long_pnl": 27896.15,
+      "short_trades": 1401,
+      "short_wr": 68.7,
+      "short_pnl": 37076.98,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6937.0,
+          "wr": 69.8,
+          "trades": 454,
+          "sharpe": 12.54
+        },
+        "XRP": {
+          "pnl": 9411.32,
+          "wr": 67.8,
+          "trades": 404,
+          "sharpe": 9.48
+        },
+        "ADA": {
+          "pnl": 11432.8,
+          "wr": 68.0,
+          "trades": 400,
+          "sharpe": 11.51
+        },
+        "DOT": {
+          "pnl": 11454.61,
+          "wr": 66.5,
+          "trades": 439,
+          "sharpe": 10.7
+        },
+        "SUI": {
+          "pnl": 13145.77,
+          "wr": 68.2,
+          "trades": 440,
+          "sharpe": 11.81
+        },
+        "FIL": {
+          "pnl": 12591.64,
+          "wr": 65.3,
+          "trades": 438,
+          "sharpe": 8.15
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "hybrid_cascade_ratio_w6.0",
+      "description": "Cascade(1.1x) + Ratio(65/80, w=6.0)",
+      "total_pnl": 64961.71,
+      "total_trades": 2618,
+      "win_rate": 67.1,
+      "sharpe": 24.34,
+      "max_dd_pct": -1.07,
+      "long_trades": 1202,
+      "long_wr": 65.2,
+      "long_pnl": 28097.08,
+      "short_trades": 1416,
+      "short_wr": 68.6,
+      "short_pnl": 36864.63,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6785.89,
+          "wr": 68.5,
+          "trades": 463,
+          "sharpe": 12.22
+        },
+        "XRP": {
+          "pnl": 9396.01,
+          "wr": 67.2,
+          "trades": 411,
+          "sharpe": 9.39
+        },
+        "ADA": {
+          "pnl": 11564.21,
+          "wr": 67.6,
+          "trades": 407,
+          "sharpe": 11.64
+        },
+        "DOT": {
+          "pnl": 11551.52,
+          "wr": 66.1,
+          "trades": 446,
+          "sharpe": 10.8
+        },
+        "SUI": {
+          "pnl": 13046.21,
+          "wr": 68.2,
+          "trades": 446,
+          "sharpe": 11.72
+        },
+        "FIL": {
+          "pnl": 12617.87,
+          "wr": 64.9,
+          "trades": 445,
+          "sharpe": 8.17
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "cascade_1.0x",
+      "description": "Cascade mult=1.0x",
+      "total_pnl": 64412.8,
+      "total_trades": 2630,
+      "win_rate": 66.7,
+      "sharpe": 24.11,
+      "max_dd_pct": -1.07,
+      "long_trades": 1213,
+      "long_wr": 64.6,
+      "long_pnl": 27684.97,
+      "short_trades": 1417,
+      "short_wr": 68.5,
+      "short_pnl": 36727.83,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6790.51,
+          "wr": 68.4,
+          "trades": 465,
+          "sharpe": 12.2
+        },
+        "XRP": {
+          "pnl": 9278.03,
+          "wr": 67.0,
+          "trades": 412,
+          "sharpe": 9.3
+        },
+        "ADA": {
+          "pnl": 11452.54,
+          "wr": 67.0,
+          "trades": 409,
+          "sharpe": 11.51
+        },
+        "DOT": {
+          "pnl": 11379.96,
+          "wr": 65.4,
+          "trades": 448,
+          "sharpe": 10.63
+        },
+        "SUI": {
+          "pnl": 12975.29,
+          "wr": 67.9,
+          "trades": 449,
+          "sharpe": 11.62
+        },
+        "FIL": {
+          "pnl": 12536.47,
+          "wr": 64.4,
+          "trades": 447,
+          "sharpe": 8.1
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "tiered_tick_2_5_10",
+      "description": "Best cascade + tiered tick: 2/5/10",
+      "total_pnl": 63643.22,
+      "total_trades": 2608,
+      "win_rate": 67.1,
+      "sharpe": 23.73,
+      "max_dd_pct": -1.07,
+      "long_trades": 1206,
+      "long_wr": 65.4,
+      "long_pnl": 27880.84,
+      "short_trades": 1402,
+      "short_wr": 68.5,
+      "short_pnl": 35762.39,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6662.5,
+          "wr": 68.9,
+          "trades": 460,
+          "sharpe": 12.06
+        },
+        "XRP": {
+          "pnl": 9527.75,
+          "wr": 66.8,
+          "trades": 413,
+          "sharpe": 9.64
+        },
+        "ADA": {
+          "pnl": 11655.56,
+          "wr": 67.7,
+          "trades": 409,
+          "sharpe": 11.63
+        },
+        "DOT": {
+          "pnl": 11035.96,
+          "wr": 66.0,
+          "trades": 444,
+          "sharpe": 10.14
+        },
+        "SUI": {
+          "pnl": 12819.46,
+          "wr": 68.0,
+          "trades": 441,
+          "sharpe": 11.58
+        },
+        "FIL": {
+          "pnl": 11941.98,
+          "wr": 65.1,
+          "trades": 441,
+          "sharpe": 7.64
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "both_tiered_optimized",
+      "description": "Both tiered: cascade 1.1/3/6 + tick 2/5/10",
+      "total_pnl": 63643.22,
+      "total_trades": 2608,
+      "win_rate": 67.1,
+      "sharpe": 23.73,
+      "max_dd_pct": -1.07,
+      "long_trades": 1206,
+      "long_wr": 65.4,
+      "long_pnl": 27880.84,
+      "short_trades": 1402,
+      "short_wr": 68.5,
+      "short_pnl": 35762.39,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6662.5,
+          "wr": 68.9,
+          "trades": 460,
+          "sharpe": 12.06
+        },
+        "XRP": {
+          "pnl": 9527.75,
+          "wr": 66.8,
+          "trades": 413,
+          "sharpe": 9.64
+        },
+        "ADA": {
+          "pnl": 11655.56,
+          "wr": 67.7,
+          "trades": 409,
+          "sharpe": 11.63
+        },
+        "DOT": {
+          "pnl": 11035.96,
+          "wr": 66.0,
+          "trades": 444,
+          "sharpe": 10.14
+        },
+        "SUI": {
+          "pnl": 12819.46,
+          "wr": 68.0,
+          "trades": 441,
+          "sharpe": 11.58
+        },
+        "FIL": {
+          "pnl": 11941.98,
+          "wr": 65.1,
+          "trades": 441,
+          "sharpe": 7.64
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "tiered_tick_1_3_7",
+      "description": "Best cascade + tiered tick: 1/3/7",
+      "total_pnl": 63593.46,
+      "total_trades": 2758,
+      "win_rate": 65.1,
+      "sharpe": 23.27,
+      "max_dd_pct": -1.07,
+      "long_trades": 1254,
+      "long_wr": 65.0,
+      "long_pnl": 28170.16,
+      "short_trades": 1504,
+      "short_wr": 65.2,
+      "short_pnl": 35423.3,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6641.32,
+          "wr": 66.5,
+          "trades": 484,
+          "sharpe": 11.56
+        },
+        "XRP": {
+          "pnl": 9446.06,
+          "wr": 64.3,
+          "trades": 437,
+          "sharpe": 9.52
+        },
+        "ADA": {
+          "pnl": 11505.28,
+          "wr": 66.4,
+          "trades": 434,
+          "sharpe": 11.13
+        },
+        "DOT": {
+          "pnl": 11019.85,
+          "wr": 65.0,
+          "trades": 469,
+          "sharpe": 9.92
+        },
+        "SUI": {
+          "pnl": 12846.56,
+          "wr": 65.7,
+          "trades": 467,
+          "sharpe": 11.26
+        },
+        "FIL": {
+          "pnl": 12134.4,
+          "wr": 62.5,
+          "trades": 467,
+          "sharpe": 7.68
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "tiered_tick_1_4_8",
+      "description": "Best cascade + tiered tick: 1/4/8",
+      "total_pnl": 63589.82,
+      "total_trades": 2758,
+      "win_rate": 65.1,
+      "sharpe": 23.27,
+      "max_dd_pct": -1.07,
+      "long_trades": 1254,
+      "long_wr": 65.0,
+      "long_pnl": 28162.88,
+      "short_trades": 1504,
+      "short_wr": 65.2,
+      "short_pnl": 35426.94,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6640.35,
+          "wr": 66.5,
+          "trades": 484,
+          "sharpe": 11.55
+        },
+        "XRP": {
+          "pnl": 9443.2,
+          "wr": 64.3,
+          "trades": 437,
+          "sharpe": 9.51
+        },
+        "ADA": {
+          "pnl": 11505.28,
+          "wr": 66.4,
+          "trades": 434,
+          "sharpe": 11.13
+        },
+        "DOT": {
+          "pnl": 11031.17,
+          "wr": 65.0,
+          "trades": 469,
+          "sharpe": 9.93
+        },
+        "SUI": {
+          "pnl": 12841.81,
+          "wr": 65.7,
+          "trades": 467,
+          "sharpe": 11.24
+        },
+        "FIL": {
+          "pnl": 12128.01,
+          "wr": 62.5,
+          "trades": 467,
+          "sharpe": 7.67
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "tiered_tick_2_4_8",
+      "description": "Best cascade + tiered tick: 2/4/8",
+      "total_pnl": 63376.11,
+      "total_trades": 2608,
+      "win_rate": 66.8,
+      "sharpe": 23.61,
+      "max_dd_pct": -1.07,
+      "long_trades": 1206,
+      "long_wr": 65.1,
+      "long_pnl": 27767.9,
+      "short_trades": 1402,
+      "short_wr": 68.3,
+      "short_pnl": 35608.21,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6646.3,
+          "wr": 68.5,
+          "trades": 460,
+          "sharpe": 12.02
+        },
+        "XRP": {
+          "pnl": 9464.42,
+          "wr": 66.3,
+          "trades": 413,
+          "sharpe": 9.55
+        },
+        "ADA": {
+          "pnl": 11595.89,
+          "wr": 67.2,
+          "trades": 409,
+          "sharpe": 11.55
+        },
+        "DOT": {
+          "pnl": 11020.87,
+          "wr": 66.0,
+          "trades": 444,
+          "sharpe": 10.12
+        },
+        "SUI": {
+          "pnl": 12756.15,
+          "wr": 67.8,
+          "trades": 441,
+          "sharpe": 11.5
+        },
+        "FIL": {
+          "pnl": 11892.47,
+          "wr": 64.8,
+          "trades": 441,
+          "sharpe": 7.6
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "cascade_1.2x",
+      "description": "Cascade mult=1.2x",
+      "total_pnl": 63112.82,
+      "total_trades": 2511,
+      "win_rate": 67.3,
+      "sharpe": 23.7,
+      "max_dd_pct": -1.08,
+      "long_trades": 1134,
+      "long_wr": 65.8,
+      "long_pnl": 27409.58,
+      "short_trades": 1377,
+      "short_wr": 68.6,
+      "short_pnl": 35703.24,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6645.02,
+          "wr": 68.0,
+          "trades": 443,
+          "sharpe": 12.09
+        },
+        "XRP": {
+          "pnl": 9490.32,
+          "wr": 69.5,
+          "trades": 397,
+          "sharpe": 9.74
+        },
+        "ADA": {
+          "pnl": 11394.98,
+          "wr": 67.8,
+          "trades": 391,
+          "sharpe": 11.44
+        },
+        "DOT": {
+          "pnl": 10841.66,
+          "wr": 65.6,
+          "trades": 427,
+          "sharpe": 9.97
+        },
+        "SUI": {
+          "pnl": 12741.36,
+          "wr": 67.9,
+          "trades": 427,
+          "sharpe": 11.62
+        },
+        "FIL": {
+          "pnl": 11999.49,
+          "wr": 65.3,
+          "trades": 426,
+          "sharpe": 7.73
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "sl20.0_tp20.0",
+      "description": "Best liq + SL=20.0, TP=20.0",
+      "total_pnl": 61309.15,
+      "total_trades": 2275,
+      "win_rate": 67.5,
+      "sharpe": 19.94,
+      "max_dd_pct": -3.58,
+      "long_trades": 1081,
+      "long_wr": 66.4,
+      "long_pnl": 28478.67,
+      "short_trades": 1194,
+      "short_wr": 68.5,
+      "short_pnl": 32830.48,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6430.2,
+          "wr": 68.9,
+          "trades": 402,
+          "sharpe": 11.05
+        },
+        "XRP": {
+          "pnl": 9362.12,
+          "wr": 70.0,
+          "trades": 353,
+          "sharpe": 9.69
+        },
+        "ADA": {
+          "pnl": 11768.63,
+          "wr": 68.0,
+          "trades": 356,
+          "sharpe": 10.35
+        },
+        "DOT": {
+          "pnl": 10825.64,
+          "wr": 65.4,
+          "trades": 387,
+          "sharpe": 9.72
+        },
+        "SUI": {
+          "pnl": 13388.32,
+          "wr": 68.1,
+          "trades": 389,
+          "sharpe": 10.87
+        },
+        "FIL": {
+          "pnl": 9534.25,
+          "wr": 65.0,
+          "trades": 388,
+          "sharpe": 4.73
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "threshold_4.0",
+      "description": "Best liq + threshold=4.0 (all coins)",
+      "total_pnl": 61120.7,
+      "total_trades": 2096,
+      "win_rate": 69.5,
+      "sharpe": 22.68,
+      "max_dd_pct": -2.21,
+      "long_trades": 952,
+      "long_wr": 70.6,
+      "long_pnl": 27094.59,
+      "short_trades": 1144,
+      "short_wr": 68.5,
+      "short_pnl": 34026.11,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6351.67,
+          "wr": 72.2,
+          "trades": 349,
+          "sharpe": 11.76
+        },
+        "XRP": {
+          "pnl": 9772.72,
+          "wr": 71.3,
+          "trades": 355,
+          "sharpe": 10.54
+        },
+        "ADA": {
+          "pnl": 11559.34,
+          "wr": 68.4,
+          "trades": 351,
+          "sharpe": 11.34
+        },
+        "DOT": {
+          "pnl": 10353.62,
+          "wr": 66.2,
+          "trades": 346,
+          "sharpe": 9.79
+        },
+        "SUI": {
+          "pnl": 12878.48,
+          "wr": 72.2,
+          "trades": 349,
+          "sharpe": 11.62
+        },
+        "FIL": {
+          "pnl": 10204.88,
+          "wr": 66.5,
+          "trades": 346,
+          "sharpe": 6.24
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "cascade_1.3x",
+      "description": "Cascade mult=1.3x",
+      "total_pnl": 60999.53,
+      "total_trades": 2447,
+      "win_rate": 67.3,
+      "sharpe": 24.31,
+      "max_dd_pct": -1.47,
+      "long_trades": 1122,
+      "long_wr": 66.4,
+      "long_pnl": 26241.13,
+      "short_trades": 1325,
+      "short_wr": 68.1,
+      "short_pnl": 34758.4,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6626.01,
+          "wr": 68.8,
+          "trades": 433,
+          "sharpe": 12.1
+        },
+        "XRP": {
+          "pnl": 9366.63,
+          "wr": 69.2,
+          "trades": 387,
+          "sharpe": 9.47
+        },
+        "ADA": {
+          "pnl": 11214.89,
+          "wr": 68.0,
+          "trades": 381,
+          "sharpe": 11.07
+        },
+        "DOT": {
+          "pnl": 10371.23,
+          "wr": 65.5,
+          "trades": 415,
+          "sharpe": 9.87
+        },
+        "SUI": {
+          "pnl": 12575.14,
+          "wr": 67.4,
+          "trades": 417,
+          "sharpe": 11.51
+        },
+        "FIL": {
+          "pnl": 10845.63,
+          "wr": 65.0,
+          "trades": 414,
+          "sharpe": 8.46
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "sl25.0_tp15.0",
+      "description": "Best liq + SL=25.0, TP=15.0",
+      "total_pnl": 60735.3,
+      "total_trades": 2313,
+      "win_rate": 67.7,
+      "sharpe": 22.08,
+      "max_dd_pct": -3.0,
+      "long_trades": 1085,
+      "long_wr": 66.7,
+      "long_pnl": 27347.82,
+      "short_trades": 1228,
+      "short_wr": 68.6,
+      "short_pnl": 33387.48,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6464.05,
+          "wr": 69.7,
+          "trades": 413,
+          "sharpe": 11.85
+        },
+        "XRP": {
+          "pnl": 9195.65,
+          "wr": 70.6,
+          "trades": 360,
+          "sharpe": 9.93
+        },
+        "ADA": {
+          "pnl": 11441.39,
+          "wr": 68.4,
+          "trades": 361,
+          "sharpe": 10.89
+        },
+        "DOT": {
+          "pnl": 10929.45,
+          "wr": 65.9,
+          "trades": 393,
+          "sharpe": 10.23
+        },
+        "SUI": {
+          "pnl": 12893.52,
+          "wr": 68.0,
+          "trades": 394,
+          "sharpe": 11.15
+        },
+        "FIL": {
+          "pnl": 9811.23,
+          "wr": 64.0,
+          "trades": 392,
+          "sharpe": 5.9
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "cascade_1.9x",
+      "description": "Cascade mult=1.9x",
+      "total_pnl": 60565.35,
+      "total_trades": 2263,
+      "win_rate": 69.3,
+      "sharpe": 22.17,
+      "max_dd_pct": -2.55,
+      "long_trades": 1017,
+      "long_wr": 70.0,
+      "long_pnl": 27087.06,
+      "short_trades": 1246,
+      "short_wr": 68.8,
+      "short_pnl": 33478.28,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6513.86,
+          "wr": 71.1,
+          "trades": 398,
+          "sharpe": 11.97
+        },
+        "XRP": {
+          "pnl": 9891.46,
+          "wr": 70.2,
+          "trades": 359,
+          "sharpe": 10.44
+        },
+        "ADA": {
+          "pnl": 11060.27,
+          "wr": 69.3,
+          "trades": 352,
+          "sharpe": 11.29
+        },
+        "DOT": {
+          "pnl": 10147.74,
+          "wr": 65.9,
+          "trades": 387,
+          "sharpe": 9.03
+        },
+        "SUI": {
+          "pnl": 13053.23,
+          "wr": 71.2,
+          "trades": 385,
+          "sharpe": 11.84
+        },
+        "FIL": {
+          "pnl": 9898.78,
+          "wr": 68.3,
+          "trades": 382,
+          "sharpe": 5.94
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "sl15.0_tp15.0",
+      "description": "Best liq + SL=15.0, TP=15.0",
+      "total_pnl": 60472.7,
+      "total_trades": 2314,
+      "win_rate": 67.8,
+      "sharpe": 21.74,
+      "max_dd_pct": -2.88,
+      "long_trades": 1083,
+      "long_wr": 66.8,
+      "long_pnl": 27261.02,
+      "short_trades": 1231,
+      "short_wr": 68.6,
+      "short_pnl": 33211.67,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6438.47,
+          "wr": 69.7,
+          "trades": 413,
+          "sharpe": 11.68
+        },
+        "XRP": {
+          "pnl": 9195.65,
+          "wr": 70.6,
+          "trades": 360,
+          "sharpe": 9.93
+        },
+        "ADA": {
+          "pnl": 11441.39,
+          "wr": 68.4,
+          "trades": 361,
+          "sharpe": 10.89
+        },
+        "DOT": {
+          "pnl": 10830.97,
+          "wr": 65.7,
+          "trades": 394,
+          "sharpe": 9.99
+        },
+        "SUI": {
+          "pnl": 12893.52,
+          "wr": 68.0,
+          "trades": 394,
+          "sharpe": 11.15
+        },
+        "FIL": {
+          "pnl": 9672.69,
+          "wr": 64.3,
+          "trades": 392,
+          "sharpe": 5.68
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "cascade_2.0x",
+      "description": "Cascade mult=2.0x",
+      "total_pnl": 60313.08,
+      "total_trades": 2235,
+      "win_rate": 69.6,
+      "sharpe": 21.91,
+      "max_dd_pct": -2.74,
+      "long_trades": 1004,
+      "long_wr": 70.0,
+      "long_pnl": 27026.08,
+      "short_trades": 1231,
+      "short_wr": 69.3,
+      "short_pnl": 33287.0,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6551.15,
+          "wr": 70.8,
+          "trades": 394,
+          "sharpe": 12.02
+        },
+        "XRP": {
+          "pnl": 9850.68,
+          "wr": 70.7,
+          "trades": 355,
+          "sharpe": 10.41
+        },
+        "ADA": {
+          "pnl": 11045.29,
+          "wr": 69.7,
+          "trades": 347,
+          "sharpe": 11.34
+        },
+        "DOT": {
+          "pnl": 10125.6,
+          "wr": 66.5,
+          "trades": 382,
+          "sharpe": 8.98
+        },
+        "SUI": {
+          "pnl": 13001.64,
+          "wr": 71.0,
+          "trades": 380,
+          "sharpe": 11.76
+        },
+        "FIL": {
+          "pnl": 9738.72,
+          "wr": 69.0,
+          "trades": 377,
+          "sharpe": 5.73
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "sl12.0_tp15.0",
+      "description": "Best liq + SL=12.0, TP=15.0",
+      "total_pnl": 60302.07,
+      "total_trades": 2320,
+      "win_rate": 67.5,
+      "sharpe": 22.29,
+      "max_dd_pct": -2.44,
+      "long_trades": 1085,
+      "long_wr": 66.5,
+      "long_pnl": 27088.7,
+      "short_trades": 1235,
+      "short_wr": 68.3,
+      "short_pnl": 33213.37,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6355.23,
+          "wr": 69.2,
+          "trades": 415,
+          "sharpe": 11.39
+        },
+        "XRP": {
+          "pnl": 8977.85,
+          "wr": 70.1,
+          "trades": 361,
+          "sharpe": 9.47
+        },
+        "ADA": {
+          "pnl": 11317.45,
+          "wr": 68.0,
+          "trades": 362,
+          "sharpe": 10.7
+        },
+        "DOT": {
+          "pnl": 10755.18,
+          "wr": 65.5,
+          "trades": 394,
+          "sharpe": 9.88
+        },
+        "SUI": {
+          "pnl": 12893.52,
+          "wr": 68.0,
+          "trades": 394,
+          "sharpe": 11.15
+        },
+        "FIL": {
+          "pnl": 10002.84,
+          "wr": 64.2,
+          "trades": 394,
+          "sharpe": 6.45
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "sl20.0_tp15.0",
+      "description": "Best liq + SL=20.0, TP=15.0",
+      "total_pnl": 60257.33,
+      "total_trades": 2313,
+      "win_rate": 67.8,
+      "sharpe": 20.38,
+      "max_dd_pct": -3.64,
+      "long_trades": 1083,
+      "long_wr": 66.9,
+      "long_pnl": 27334.57,
+      "short_trades": 1230,
+      "short_wr": 68.7,
+      "short_pnl": 32922.76,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6464.05,
+          "wr": 69.7,
+          "trades": 413,
+          "sharpe": 11.85
+        },
+        "XRP": {
+          "pnl": 9195.65,
+          "wr": 70.6,
+          "trades": 360,
+          "sharpe": 9.93
+        },
+        "ADA": {
+          "pnl": 11441.39,
+          "wr": 68.4,
+          "trades": 361,
+          "sharpe": 10.89
+        },
+        "DOT": {
+          "pnl": 10929.45,
+          "wr": 65.9,
+          "trades": 393,
+          "sharpe": 10.23
+        },
+        "SUI": {
+          "pnl": 12893.52,
+          "wr": 68.0,
+          "trades": 394,
+          "sharpe": 11.15
+        },
+        "FIL": {
+          "pnl": 9333.27,
+          "wr": 64.5,
+          "trades": 392,
+          "sharpe": 4.7
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "ratio_65_80_min2.0x",
+      "description": "Ratio 65/80 + min_mult=2.0x",
+      "total_pnl": 59691.62,
+      "total_trades": 2192,
+      "win_rate": 69.0,
+      "sharpe": 21.62,
+      "max_dd_pct": -2.77,
+      "long_trades": 983,
+      "long_wr": 70.3,
+      "long_pnl": 26765.9,
+      "short_trades": 1209,
+      "short_wr": 68.0,
+      "short_pnl": 32925.71,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6637.5,
+          "wr": 71.1,
+          "trades": 388,
+          "sharpe": 12.15
+        },
+        "XRP": {
+          "pnl": 9774.01,
+          "wr": 70.1,
+          "trades": 345,
+          "sharpe": 10.29
+        },
+        "ADA": {
+          "pnl": 11118.26,
+          "wr": 69.1,
+          "trades": 340,
+          "sharpe": 11.57
+        },
+        "DOT": {
+          "pnl": 10044.61,
+          "wr": 66.8,
+          "trades": 376,
+          "sharpe": 8.79
+        },
+        "SUI": {
+          "pnl": 12545.97,
+          "wr": 68.5,
+          "trades": 374,
+          "sharpe": 11.24
+        },
+        "FIL": {
+          "pnl": 9571.27,
+          "wr": 68.6,
+          "trades": 369,
+          "sharpe": 5.62
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "threshold_4.5",
+      "description": "Best liq + threshold=4.5 (all coins)",
+      "total_pnl": 59623.67,
+      "total_trades": 1991,
+      "win_rate": 70.8,
+      "sharpe": 22.85,
+      "max_dd_pct": -1.68,
+      "long_trades": 891,
+      "long_wr": 71.7,
+      "long_pnl": 26505.39,
+      "short_trades": 1100,
+      "short_wr": 70.0,
+      "short_pnl": 33118.29,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6170.14,
+          "wr": 73.9,
+          "trades": 333,
+          "sharpe": 12.07
+        },
+        "XRP": {
+          "pnl": 9091.33,
+          "wr": 71.3,
+          "trades": 335,
+          "sharpe": 10.63
+        },
+        "ADA": {
+          "pnl": 11330.21,
+          "wr": 70.4,
+          "trades": 334,
+          "sharpe": 11.53
+        },
+        "DOT": {
+          "pnl": 10193.99,
+          "wr": 67.0,
+          "trades": 330,
+          "sharpe": 9.69
+        },
+        "SUI": {
+          "pnl": 12437.07,
+          "wr": 73.4,
+          "trades": 331,
+          "sharpe": 11.42
+        },
+        "FIL": {
+          "pnl": 10400.94,
+          "wr": 68.6,
+          "trades": 328,
+          "sharpe": 6.58
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "sl25.0_tp12.0",
+      "description": "Best liq + SL=25.0, TP=12.0",
+      "total_pnl": 59622.88,
+      "total_trades": 2354,
+      "win_rate": 67.7,
+      "sharpe": 22.23,
+      "max_dd_pct": -3.04,
+      "long_trades": 1099,
+      "long_wr": 66.6,
+      "long_pnl": 25622.63,
+      "short_trades": 1255,
+      "short_wr": 68.6,
+      "short_pnl": 34000.25,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6317.06,
+          "wr": 69.2,
+          "trades": 416,
+          "sharpe": 11.91
+        },
+        "XRP": {
+          "pnl": 9600.33,
+          "wr": 70.3,
+          "trades": 374,
+          "sharpe": 10.09
+        },
+        "ADA": {
+          "pnl": 11129.94,
+          "wr": 67.9,
+          "trades": 368,
+          "sharpe": 11.02
+        },
+        "DOT": {
+          "pnl": 10316.27,
+          "wr": 65.7,
+          "trades": 399,
+          "sharpe": 10.08
+        },
+        "SUI": {
+          "pnl": 12614.41,
+          "wr": 68.5,
+          "trades": 400,
+          "sharpe": 11.45
+        },
+        "FIL": {
+          "pnl": 9644.87,
+          "wr": 64.5,
+          "trades": 397,
+          "sharpe": 5.9
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "cascade_1.7x",
+      "description": "Cascade mult=1.7x",
+      "total_pnl": 59617.67,
+      "total_trades": 2299,
+      "win_rate": 68.9,
+      "sharpe": 21.7,
+      "max_dd_pct": -2.59,
+      "long_trades": 1056,
+      "long_wr": 68.3,
+      "long_pnl": 26473.52,
+      "short_trades": 1243,
+      "short_wr": 69.3,
+      "short_pnl": 33144.16,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6339.87,
+          "wr": 70.7,
+          "trades": 406,
+          "sharpe": 11.76
+        },
+        "XRP": {
+          "pnl": 9592.4,
+          "wr": 70.7,
+          "trades": 365,
+          "sharpe": 9.93
+        },
+        "ADA": {
+          "pnl": 11089.91,
+          "wr": 68.6,
+          "trades": 357,
+          "sharpe": 11.23
+        },
+        "DOT": {
+          "pnl": 10155.78,
+          "wr": 66.1,
+          "trades": 392,
+          "sharpe": 9.07
+        },
+        "SUI": {
+          "pnl": 12888.77,
+          "wr": 69.9,
+          "trades": 392,
+          "sharpe": 11.46
+        },
+        "FIL": {
+          "pnl": 9550.95,
+          "wr": 67.2,
+          "trades": 387,
+          "sharpe": 5.74
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "cascade_1.6x",
+      "description": "Cascade mult=1.6x",
+      "total_pnl": 59462.06,
+      "total_trades": 2323,
+      "win_rate": 68.2,
+      "sharpe": 21.79,
+      "max_dd_pct": -2.9,
+      "long_trades": 1064,
+      "long_wr": 67.3,
+      "long_pnl": 25891.85,
+      "short_trades": 1259,
+      "short_wr": 69.0,
+      "short_pnl": 33570.21,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6268.88,
+          "wr": 69.8,
+          "trades": 410,
+          "sharpe": 11.78
+        },
+        "XRP": {
+          "pnl": 9550.43,
+          "wr": 70.5,
+          "trades": 370,
+          "sharpe": 10.05
+        },
+        "ADA": {
+          "pnl": 10949.74,
+          "wr": 68.3,
+          "trades": 363,
+          "sharpe": 10.94
+        },
+        "DOT": {
+          "pnl": 10455.81,
+          "wr": 65.6,
+          "trades": 395,
+          "sharpe": 9.91
+        },
+        "SUI": {
+          "pnl": 12784.44,
+          "wr": 69.3,
+          "trades": 394,
+          "sharpe": 11.52
+        },
+        "FIL": {
+          "pnl": 9452.75,
+          "wr": 66.0,
+          "trades": 391,
+          "sharpe": 5.59
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "R2_champion",
+      "description": "cascade=1.5x, MA=18, liq=8, tick=8, net=3",
+      "total_pnl": 59360.28,
+      "total_trades": 2355,
+      "win_rate": 67.7,
+      "sharpe": 21.87,
+      "max_dd_pct": -2.92,
+      "long_trades": 1097,
+      "long_wr": 66.6,
+      "long_pnl": 25535.83,
+      "short_trades": 1258,
+      "short_wr": 68.6,
+      "short_pnl": 33824.45,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6291.48,
+          "wr": 69.2,
+          "trades": 416,
+          "sharpe": 11.74
+        },
+        "XRP": {
+          "pnl": 9600.33,
+          "wr": 70.3,
+          "trades": 374,
+          "sharpe": 10.09
+        },
+        "ADA": {
+          "pnl": 11129.94,
+          "wr": 67.9,
+          "trades": 368,
+          "sharpe": 11.02
+        },
+        "DOT": {
+          "pnl": 10217.79,
+          "wr": 65.5,
+          "trades": 400,
+          "sharpe": 9.82
+        },
+        "SUI": {
+          "pnl": 12614.41,
+          "wr": 68.5,
+          "trades": 400,
+          "sharpe": 11.45
+        },
+        "FIL": {
+          "pnl": 9506.33,
+          "wr": 64.7,
+          "trades": 397,
+          "sharpe": 5.67
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "sl12.0_tp12.0",
+      "description": "Best liq + SL=12.0, TP=12.0",
+      "total_pnl": 59149.53,
+      "total_trades": 2360,
+      "win_rate": 67.4,
+      "sharpe": 22.45,
+      "max_dd_pct": -2.48,
+      "long_trades": 1097,
+      "long_wr": 66.5,
+      "long_pnl": 25380.02,
+      "short_trades": 1263,
+      "short_wr": 68.2,
+      "short_pnl": 33769.51,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6208.24,
+          "wr": 68.7,
+          "trades": 418,
+          "sharpe": 11.44
+        },
+        "XRP": {
+          "pnl": 9395.52,
+          "wr": 69.9,
+          "trades": 375,
+          "sharpe": 9.64
+        },
+        "ADA": {
+          "pnl": 10952.89,
+          "wr": 67.7,
+          "trades": 368,
+          "sharpe": 10.82
+        },
+        "DOT": {
+          "pnl": 10142.0,
+          "wr": 65.2,
+          "trades": 400,
+          "sharpe": 9.71
+        },
+        "SUI": {
+          "pnl": 12614.41,
+          "wr": 68.5,
+          "trades": 400,
+          "sharpe": 11.45
+        },
+        "FIL": {
+          "pnl": 9836.47,
+          "wr": 64.7,
+          "trades": 399,
+          "sharpe": 6.46
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "sl20.0_tp12.0",
+      "description": "Best liq + SL=20.0, TP=12.0",
+      "total_pnl": 59144.92,
+      "total_trades": 2354,
+      "win_rate": 67.8,
+      "sharpe": 20.44,
+      "max_dd_pct": -3.69,
+      "long_trades": 1097,
+      "long_wr": 66.7,
+      "long_pnl": 25609.38,
+      "short_trades": 1257,
+      "short_wr": 68.7,
+      "short_pnl": 33535.54,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6317.06,
+          "wr": 69.2,
+          "trades": 416,
+          "sharpe": 11.91
+        },
+        "XRP": {
+          "pnl": 9600.33,
+          "wr": 70.3,
+          "trades": 374,
+          "sharpe": 10.09
+        },
+        "ADA": {
+          "pnl": 11129.94,
+          "wr": 67.9,
+          "trades": 368,
+          "sharpe": 11.02
+        },
+        "DOT": {
+          "pnl": 10316.27,
+          "wr": 65.7,
+          "trades": 399,
+          "sharpe": 10.08
+        },
+        "SUI": {
+          "pnl": 12614.41,
+          "wr": 68.5,
+          "trades": 400,
+          "sharpe": 11.45
+        },
+        "FIL": {
+          "pnl": 9166.9,
+          "wr": 65.0,
+          "trades": 397,
+          "sharpe": 4.67
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "ratio_65_80_min1.5x",
+      "description": "Ratio 65/80 + min_mult=1.5x",
+      "total_pnl": 59056.0,
+      "total_trades": 2306,
+      "win_rate": 67.6,
+      "sharpe": 21.57,
+      "max_dd_pct": -2.93,
+      "long_trades": 1058,
+      "long_wr": 67.3,
+      "long_pnl": 25379.07,
+      "short_trades": 1248,
+      "short_wr": 67.9,
+      "short_pnl": 33676.93,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6447.46,
+          "wr": 69.7,
+          "trades": 409,
+          "sharpe": 11.95
+        },
+        "XRP": {
+          "pnl": 9564.36,
+          "wr": 70.1,
+          "trades": 365,
+          "sharpe": 9.97
+        },
+        "ADA": {
+          "pnl": 10879.4,
+          "wr": 68.2,
+          "trades": 359,
+          "sharpe": 10.64
+        },
+        "DOT": {
+          "pnl": 10161.82,
+          "wr": 66.2,
+          "trades": 393,
+          "sharpe": 9.62
+        },
+        "SUI": {
+          "pnl": 12489.01,
+          "wr": 67.2,
+          "trades": 393,
+          "sharpe": 11.17
+        },
+        "FIL": {
+          "pnl": 9513.96,
+          "wr": 64.3,
+          "trades": 387,
+          "sharpe": 5.66
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "sl10.0_tp12.0",
+      "description": "Best liq + SL=10.0, TP=12.0",
+      "total_pnl": 59017.1,
+      "total_trades": 2363,
+      "win_rate": 67.3,
+      "sharpe": 22.83,
+      "max_dd_pct": -2.18,
+      "long_trades": 1099,
+      "long_wr": 66.5,
+      "long_pnl": 25305.31,
+      "short_trades": 1264,
+      "short_wr": 68.0,
+      "short_pnl": 33711.79,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6175.2,
+          "wr": 68.7,
+          "trades": 418,
+          "sharpe": 11.37
+        },
+        "XRP": {
+          "pnl": 9155.81,
+          "wr": 69.2,
+          "trades": 376,
+          "sharpe": 9.33
+        },
+        "ADA": {
+          "pnl": 10999.37,
+          "wr": 67.7,
+          "trades": 368,
+          "sharpe": 10.96
+        },
+        "DOT": {
+          "pnl": 9997.44,
+          "wr": 65.1,
+          "trades": 401,
+          "sharpe": 9.43
+        },
+        "SUI": {
+          "pnl": 12614.41,
+          "wr": 68.5,
+          "trades": 400,
+          "sharpe": 11.45
+        },
+        "FIL": {
+          "pnl": 10074.86,
+          "wr": 64.8,
+          "trades": 400,
+          "sharpe": 7.09
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "cascade_1.4x",
+      "description": "Cascade mult=1.4x",
+      "total_pnl": 58975.75,
+      "total_trades": 2409,
+      "win_rate": 67.2,
+      "sharpe": 21.32,
+      "max_dd_pct": -2.94,
+      "long_trades": 1113,
+      "long_wr": 66.4,
+      "long_pnl": 25632.59,
+      "short_trades": 1296,
+      "short_wr": 68.0,
+      "short_pnl": 33343.16,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6436.75,
+          "wr": 69.4,
+          "trades": 425,
+          "sharpe": 11.84
+        },
+        "XRP": {
+          "pnl": 9334.3,
+          "wr": 69.4,
+          "trades": 382,
+          "sharpe": 9.43
+        },
+        "ADA": {
+          "pnl": 10822.8,
+          "wr": 67.5,
+          "trades": 375,
+          "sharpe": 10.28
+        },
+        "DOT": {
+          "pnl": 10313.49,
+          "wr": 65.6,
+          "trades": 410,
+          "sharpe": 9.68
+        },
+        "SUI": {
+          "pnl": 12526.7,
+          "wr": 67.1,
+          "trades": 410,
+          "sharpe": 11.35
+        },
+        "FIL": {
+          "pnl": 9541.72,
+          "wr": 64.6,
+          "trades": 407,
+          "sharpe": 5.63
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "cascade_1.8x",
+      "description": "Cascade mult=1.8x",
+      "total_pnl": 58941.75,
+      "total_trades": 2291,
+      "win_rate": 68.4,
+      "sharpe": 21.4,
+      "max_dd_pct": -2.62,
+      "long_trades": 1043,
+      "long_wr": 68.1,
+      "long_pnl": 26310.3,
+      "short_trades": 1248,
+      "short_wr": 68.7,
+      "short_pnl": 32631.46,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6275.25,
+          "wr": 69.9,
+          "trades": 405,
+          "sharpe": 11.59
+        },
+        "XRP": {
+          "pnl": 9517.3,
+          "wr": 70.0,
+          "trades": 363,
+          "sharpe": 9.84
+        },
+        "ADA": {
+          "pnl": 10914.13,
+          "wr": 68.7,
+          "trades": 355,
+          "sharpe": 10.95
+        },
+        "DOT": {
+          "pnl": 10007.93,
+          "wr": 65.0,
+          "trades": 391,
+          "sharpe": 8.89
+        },
+        "SUI": {
+          "pnl": 12568.78,
+          "wr": 69.6,
+          "trades": 391,
+          "sharpe": 11.2
+        },
+        "FIL": {
+          "pnl": 9658.37,
+          "wr": 67.4,
+          "trades": 386,
+          "sharpe": 5.78
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "threshold_5.0",
+      "description": "Best liq + threshold=5.0 (all coins)",
+      "total_pnl": 58653.02,
+      "total_trades": 1950,
+      "win_rate": 70.5,
+      "sharpe": 22.5,
+      "max_dd_pct": -1.7,
+      "long_trades": 890,
+      "long_wr": 71.0,
+      "long_pnl": 25562.64,
+      "short_trades": 1060,
+      "short_wr": 70.1,
+      "short_pnl": 33090.38,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6182.58,
+          "wr": 73.6,
+          "trades": 330,
+          "sharpe": 12.1
+        },
+        "XRP": {
+          "pnl": 8842.92,
+          "wr": 70.7,
+          "trades": 328,
+          "sharpe": 9.86
+        },
+        "ADA": {
+          "pnl": 10994.68,
+          "wr": 69.0,
+          "trades": 326,
+          "sharpe": 11.11
+        },
+        "DOT": {
+          "pnl": 10000.56,
+          "wr": 67.1,
+          "trades": 322,
+          "sharpe": 9.43
+        },
+        "SUI": {
+          "pnl": 12202.01,
+          "wr": 72.5,
+          "trades": 323,
+          "sharpe": 11.34
+        },
+        "FIL": {
+          "pnl": 10430.27,
+          "wr": 70.1,
+          "trades": 321,
+          "sharpe": 6.72
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "sl15.0_tp10.0",
+      "description": "Best liq + SL=15.0, TP=10.0",
+      "total_pnl": 58650.98,
+      "total_trades": 2416,
+      "win_rate": 67.9,
+      "sharpe": 21.86,
+      "max_dd_pct": -2.94,
+      "long_trades": 1111,
+      "long_wr": 66.4,
+      "long_pnl": 24817.9,
+      "short_trades": 1305,
+      "short_wr": 69.2,
+      "short_pnl": 33833.08,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6487.21,
+          "wr": 69.9,
+          "trades": 429,
+          "sharpe": 12.19
+        },
+        "XRP": {
+          "pnl": 9283.36,
+          "wr": 71.8,
+          "trades": 387,
+          "sharpe": 9.88
+        },
+        "ADA": {
+          "pnl": 10757.71,
+          "wr": 67.8,
+          "trades": 379,
+          "sharpe": 10.72
+        },
+        "DOT": {
+          "pnl": 10286.06,
+          "wr": 66.3,
+          "trades": 409,
+          "sharpe": 10.14
+        },
+        "SUI": {
+          "pnl": 12911.84,
+          "wr": 68.5,
+          "trades": 410,
+          "sharpe": 11.8
+        },
+        "FIL": {
+          "pnl": 8924.81,
+          "wr": 63.2,
+          "trades": 402,
+          "sharpe": 5.38
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "threshold_3.5",
+      "description": "Best liq + threshold=3.5 (all coins)",
+      "total_pnl": 58629.96,
+      "total_trades": 2209,
+      "win_rate": 68.2,
+      "sharpe": 21.09,
+      "max_dd_pct": -3.38,
+      "long_trades": 1016,
+      "long_wr": 67.5,
+      "long_pnl": 26103.61,
+      "short_trades": 1193,
+      "short_wr": 68.8,
+      "short_pnl": 32526.35,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6102.05,
+          "wr": 70.7,
+          "trades": 369,
+          "sharpe": 11.5
+        },
+        "XRP": {
+          "pnl": 9600.33,
+          "wr": 70.3,
+          "trades": 374,
+          "sharpe": 10.09
+        },
+        "ADA": {
+          "pnl": 11129.94,
+          "wr": 67.9,
+          "trades": 368,
+          "sharpe": 11.02
+        },
+        "DOT": {
+          "pnl": 10037.18,
+          "wr": 64.9,
+          "trades": 365,
+          "sharpe": 9.68
+        },
+        "SUI": {
+          "pnl": 12377.43,
+          "wr": 71.1,
+          "trades": 367,
+          "sharpe": 11.08
+        },
+        "FIL": {
+          "pnl": 9383.04,
+          "wr": 64.2,
+          "trades": 366,
+          "sharpe": 5.28
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "sl12.0_tp10.0",
+      "description": "Best liq + SL=12.0, TP=10.0",
+      "total_pnl": 58564.91,
+      "total_trades": 2421,
+      "win_rate": 67.7,
+      "sharpe": 22.5,
+      "max_dd_pct": -2.49,
+      "long_trades": 1111,
+      "long_wr": 66.3,
+      "long_pnl": 24653.7,
+      "short_trades": 1310,
+      "short_wr": 68.8,
+      "short_pnl": 33911.21,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6464.12,
+          "wr": 69.1,
+          "trades": 431,
+          "sharpe": 11.9
+        },
+        "XRP": {
+          "pnl": 9127.19,
+          "wr": 71.7,
+          "trades": 388,
+          "sharpe": 9.49
+        },
+        "ADA": {
+          "pnl": 10596.54,
+          "wr": 67.5,
+          "trades": 379,
+          "sharpe": 10.53
+        },
+        "DOT": {
+          "pnl": 10210.26,
+          "wr": 66.0,
+          "trades": 409,
+          "sharpe": 10.02
+        },
+        "SUI": {
+          "pnl": 12911.84,
+          "wr": 68.5,
+          "trades": 410,
+          "sharpe": 11.8
+        },
+        "FIL": {
+          "pnl": 9254.95,
+          "wr": 63.1,
+          "trades": 404,
+          "sharpe": 6.16
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "sl10.0_tp10.0",
+      "description": "Best liq + SL=10.0, TP=10.0",
+      "total_pnl": 58488.72,
+      "total_trades": 2424,
+      "win_rate": 67.5,
+      "sharpe": 22.94,
+      "max_dd_pct": -2.18,
+      "long_trades": 1113,
+      "long_wr": 66.3,
+      "long_pnl": 24591.25,
+      "short_trades": 1311,
+      "short_wr": 68.6,
+      "short_pnl": 33897.46,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6431.09,
+          "wr": 69.1,
+          "trades": 431,
+          "sharpe": 11.83
+        },
+        "XRP": {
+          "pnl": 8943.72,
+          "wr": 71.0,
+          "trades": 389,
+          "sharpe": 9.29
+        },
+        "ADA": {
+          "pnl": 10643.02,
+          "wr": 67.5,
+          "trades": 379,
+          "sharpe": 10.66
+        },
+        "DOT": {
+          "pnl": 10065.7,
+          "wr": 65.8,
+          "trades": 410,
+          "sharpe": 9.73
+        },
+        "SUI": {
+          "pnl": 12911.84,
+          "wr": 68.5,
+          "trades": 410,
+          "sharpe": 11.8
+        },
+        "FIL": {
+          "pnl": 9493.34,
+          "wr": 63.2,
+          "trades": 405,
+          "sharpe": 6.78
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "threshold_2.5",
+      "description": "Best liq + threshold=2.5 (all coins)",
+      "total_pnl": 57510.44,
+      "total_trades": 2497,
+      "win_rate": 66.9,
+      "sharpe": 20.78,
+      "max_dd_pct": -2.99,
+      "long_trades": 1136,
+      "long_wr": 65.6,
+      "long_pnl": 24322.04,
+      "short_trades": 1361,
+      "short_wr": 68.0,
+      "short_pnl": 33188.4,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6291.48,
+          "wr": 69.2,
+          "trades": 416,
+          "sharpe": 11.74
+        },
+        "XRP": {
+          "pnl": 9353.41,
+          "wr": 68.0,
+          "trades": 419,
+          "sharpe": 9.49
+        },
+        "ADA": {
+          "pnl": 10814.95,
+          "wr": 67.0,
+          "trades": 415,
+          "sharpe": 10.54
+        },
+        "DOT": {
+          "pnl": 9635.57,
+          "wr": 65.1,
+          "trades": 416,
+          "sharpe": 8.76
+        },
+        "SUI": {
+          "pnl": 12153.57,
+          "wr": 67.5,
+          "trades": 415,
+          "sharpe": 10.83
+        },
+        "FIL": {
+          "pnl": 9261.46,
+          "wr": 64.7,
+          "trades": 416,
+          "sharpe": 5.49
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "threshold_2.0",
+      "description": "Best liq + threshold=2.0 (all coins)",
+      "total_pnl": 55137.99,
+      "total_trades": 3099,
+      "win_rate": 61.3,
+      "sharpe": 18.93,
+      "max_dd_pct": -2.37,
+      "long_trades": 1446,
+      "long_wr": 59.8,
+      "long_pnl": 22793.15,
+      "short_trades": 1653,
+      "short_wr": 62.7,
+      "short_pnl": 32344.83,
+      "coin_results": {
+        "BTC": {
+          "pnl": 5865.45,
+          "wr": 62.3,
+          "trades": 520,
+          "sharpe": 9.97
+        },
+        "XRP": {
+          "pnl": 8260.62,
+          "wr": 59.9,
+          "trades": 516,
+          "sharpe": 7.6
+        },
+        "ADA": {
+          "pnl": 10325.79,
+          "wr": 62.5,
+          "trades": 515,
+          "sharpe": 9.13
+        },
+        "DOT": {
+          "pnl": 9427.59,
+          "wr": 60.9,
+          "trades": 517,
+          "sharpe": 7.59
+        },
+        "SUI": {
+          "pnl": 10850.43,
+          "wr": 60.8,
+          "trades": 515,
+          "sharpe": 8.76
+        },
+        "FIL": {
+          "pnl": 10408.12,
+          "wr": 61.6,
+          "trades": 516,
+          "sharpe": 6.48
+        }
+      },
+      "elapsed_s": 0.4
+    }
+  ],
+  "king": {
+    "name": "ultimate_hybrid_everything",
+    "description": "Cascade + Ratio(4.0) + best SL/TP + best threshold",
+    "total_pnl": 70858.54,
+    "total_trades": 2270,
+    "win_rate": 68.4,
+    "sharpe": 25.04,
+    "max_dd_pct": -1.05,
+    "long_trades": 1053,
+    "long_wr": 67.7,
+    "long_pnl": 31656.04,
+    "short_trades": 1217,
+    "short_wr": 69.0,
+    "short_pnl": 39202.5,
+    "coin_results": {
+      "BTC": {
+        "pnl": 6870.15,
+        "wr": 70.2,
+        "trades": 379,
+        "sharpe": 11.23
+      },
+      "XRP": {
+        "pnl": 10053.09,
+        "wr": 68.0,
+        "trades": 378,
+        "sharpe": 10.16
+      },
+      "ADA": {
+        "pnl": 12767.45,
+        "wr": 67.2,
+        "trades": 378,
+        "sharpe": 11.12
+      },
+      "DOT": {
+        "pnl": 12337.93,
+        "wr": 67.3,
+        "trades": 379,
+        "sharpe": 10.41
+      },
+      "SUI": {
+        "pnl": 14771.53,
+        "wr": 71.0,
+        "trades": 380,
+        "sharpe": 11.59
+      },
+      "FIL": {
+        "pnl": 14058.39,
+        "wr": 66.8,
+        "trades": 376,
+        "sharpe": 9.44
+      }
+    },
+    "elapsed_s": 0.4
+  },
+  "best_params": {
+    "cascade_mult": 1.1,
+    "cascade_ma": 12,
+    "best_sl_tp": [
+      20.0,
+      20.0
+    ],
+    "best_threshold": 4.0
+  }
+}

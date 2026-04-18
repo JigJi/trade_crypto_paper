@@ -1,0 +1,314 @@
+{
+  "timestamp": "20260309_161537",
+  "baseline_pnl": 14120.910455286672,
+  "baseline_results": {
+    "BTC": {
+      "pnl": 1545.45740789926,
+      "trades": 173
+    },
+    "XRP": {
+      "pnl": 1734.232814495152,
+      "trades": 116
+    },
+    "ADA": {
+      "pnl": 2439.8796235952923,
+      "trades": 115
+    },
+    "DOT": {
+      "pnl": 2724.6072167178554,
+      "trades": 130
+    },
+    "SUI": {
+      "pnl": 2828.8333411598182,
+      "trades": 153
+    },
+    "FIL": {
+      "pnl": 2847.9000514192935,
+      "trades": 141
+    }
+  },
+  "factor_tests": [
+    {
+      "factor": "cvd_momentum",
+      "weight": 0.5,
+      "pnl": 14329.948926873056,
+      "delta": 209.03847158638382,
+      "trades": 848
+    },
+    {
+      "factor": "cvd_momentum",
+      "weight": 1.0,
+      "pnl": 14132.743171757069,
+      "delta": 11.832716470396917,
+      "trades": 906
+    },
+    {
+      "factor": "cvd_momentum",
+      "weight": 1.5,
+      "pnl": 13215.83120232396,
+      "delta": -905.0792529627124,
+      "trades": 963
+    },
+    {
+      "factor": "cvd_momentum",
+      "weight": 2.0,
+      "pnl": 12932.689489339127,
+      "delta": -1188.2209659475448,
+      "trades": 1037
+    },
+    {
+      "factor": "cvd_contrarian",
+      "weight": 0.5,
+      "pnl": 14202.754111250215,
+      "delta": 81.84365596354291,
+      "trades": 837
+    },
+    {
+      "factor": "cvd_contrarian",
+      "weight": 1.0,
+      "pnl": 14775.92863169053,
+      "delta": 655.0181764038589,
+      "trades": 864
+    },
+    {
+      "factor": "cvd_contrarian",
+      "weight": 1.5,
+      "pnl": 14788.286786644125,
+      "delta": 667.3763313574527,
+      "trades": 888
+    },
+    {
+      "factor": "cvd_contrarian",
+      "weight": 2.0,
+      "pnl": 14461.29125371294,
+      "delta": 340.3807984262676,
+      "trades": 914
+    },
+    {
+      "factor": "cvd_divergence",
+      "weight": 0.5,
+      "pnl": 14750.788735263857,
+      "delta": 629.8782799771852,
+      "trades": 872
+    },
+    {
+      "factor": "cvd_divergence",
+      "weight": 1.0,
+      "pnl": 13883.38721607035,
+      "delta": -237.5232392163216,
+      "trades": 947
+    },
+    {
+      "factor": "cvd_divergence",
+      "weight": 1.5,
+      "pnl": 13729.485124506096,
+      "delta": -391.4253307805757,
+      "trades": 1038
+    },
+    {
+      "factor": "cvd_divergence",
+      "weight": 2.0,
+      "pnl": 11994.754476622731,
+      "delta": -2126.155978663941,
+      "trades": 1101
+    },
+    {
+      "factor": "macro_dxy",
+      "weight": 0.5,
+      "pnl": 14130.177197351546,
+      "delta": 9.266742064874052,
+      "trades": 798
+    },
+    {
+      "factor": "macro_dxy",
+      "weight": 1.0,
+      "pnl": 12542.960562225506,
+      "delta": -1577.9498930611662,
+      "trades": 824
+    },
+    {
+      "factor": "macro_dxy",
+      "weight": 1.5,
+      "pnl": 10248.72046615967,
+      "delta": -3872.1899891270023,
+      "trades": 842
+    },
+    {
+      "factor": "macro_dxy",
+      "weight": 2.0,
+      "pnl": 8151.842238023781,
+      "delta": -5969.068217262891,
+      "trades": 835
+    },
+    {
+      "factor": "macro_sp500",
+      "weight": 0.5,
+      "pnl": 14269.836557406714,
+      "delta": 148.92610212004183,
+      "trades": 829
+    },
+    {
+      "factor": "macro_sp500",
+      "weight": 1.0,
+      "pnl": 12600.726076531817,
+      "delta": -1520.184378754855,
+      "trades": 838
+    },
+    {
+      "factor": "macro_sp500",
+      "weight": 1.5,
+      "pnl": 12163.277702970427,
+      "delta": -1957.6327523162454,
+      "trades": 857
+    },
+    {
+      "factor": "macro_sp500",
+      "weight": 2.0,
+      "pnl": 11069.615887840398,
+      "delta": -3051.2945674462735,
+      "trades": 850
+    },
+    {
+      "factor": "macro_risk_off",
+      "weight": 0.5,
+      "pnl": 14905.680576271014,
+      "delta": 784.7701209843417,
+      "trades": 847
+    },
+    {
+      "factor": "macro_risk_off",
+      "weight": 1.0,
+      "pnl": 14352.558954711252,
+      "delta": 231.64849942458022,
+      "trades": 867
+    },
+    {
+      "factor": "macro_risk_off",
+      "weight": 1.5,
+      "pnl": 13219.538295387252,
+      "delta": -901.3721598994198,
+      "trades": 873
+    },
+    {
+      "factor": "macro_risk_off",
+      "weight": 2.0,
+      "pnl": 11830.394797698005,
+      "delta": -2290.5156575886667,
+      "trades": 870
+    },
+    {
+      "factor": "macro_gold",
+      "weight": 0.5,
+      "pnl": 13551.724275480885,
+      "delta": -569.1861798057871,
+      "trades": 810
+    },
+    {
+      "factor": "macro_gold",
+      "weight": 1.0,
+      "pnl": 13813.811109376451,
+      "delta": -307.099345910221,
+      "trades": 825
+    },
+    {
+      "factor": "macro_gold",
+      "weight": 1.5,
+      "pnl": 13055.8672129549,
+      "delta": -1065.0432423317725,
+      "trades": 820
+    },
+    {
+      "factor": "macro_gold",
+      "weight": 2.0,
+      "pnl": 13532.550079788429,
+      "delta": -588.3603754982432,
+      "trades": 875
+    },
+    {
+      "factor": "btc_mcap_trend",
+      "weight": 0.5,
+      "pnl": 14571.284962415233,
+      "delta": 450.37450712856116,
+      "trades": 821
+    },
+    {
+      "factor": "btc_mcap_trend",
+      "weight": 1.0,
+      "pnl": 14150.576716669006,
+      "delta": 29.666261382333687,
+      "trades": 826
+    },
+    {
+      "factor": "btc_mcap_trend",
+      "weight": 1.5,
+      "pnl": 13257.039831154088,
+      "delta": -863.8706241325835,
+      "trades": 831
+    },
+    {
+      "factor": "btc_mcap_trend",
+      "weight": 2.0,
+      "pnl": 11715.18580399756,
+      "delta": -2405.7246512891124,
+      "trades": 837
+    }
+  ],
+  "factor_best": {
+    "cvd_momentum": {
+      "factor": "cvd_momentum",
+      "weight": 0.5,
+      "pnl": 14329.948926873056,
+      "delta": 209.03847158638382,
+      "trades": 848
+    },
+    "cvd_contrarian": {
+      "factor": "cvd_contrarian",
+      "weight": 1.5,
+      "pnl": 14788.286786644125,
+      "delta": 667.3763313574527,
+      "trades": 888
+    },
+    "cvd_divergence": {
+      "factor": "cvd_divergence",
+      "weight": 0.5,
+      "pnl": 14750.788735263857,
+      "delta": 629.8782799771852,
+      "trades": 872
+    },
+    "macro_dxy": {
+      "factor": "macro_dxy",
+      "weight": 0.5,
+      "pnl": 14130.177197351546,
+      "delta": 9.266742064874052,
+      "trades": 798
+    },
+    "macro_sp500": {
+      "factor": "macro_sp500",
+      "weight": 0.5,
+      "pnl": 14269.836557406714,
+      "delta": 148.92610212004183,
+      "trades": 829
+    },
+    "macro_risk_off": {
+      "factor": "macro_risk_off",
+      "weight": 0.5,
+      "pnl": 14905.680576271014,
+      "delta": 784.7701209843417,
+      "trades": 847
+    },
+    "macro_gold": {
+      "factor": "macro_gold",
+      "weight": 1.0,
+      "pnl": 13813.811109376451,
+      "delta": -307.099345910221,
+      "trades": 825
+    },
+    "btc_mcap_trend": {
+      "factor": "btc_mcap_trend",
+      "weight": 0.5,
+      "pnl": 14571.284962415233,
+      "delta": 450.37450712856116,
+      "trades": 821
+    }
+  }
+}

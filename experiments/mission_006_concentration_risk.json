@@ -1,0 +1,162 @@
+{
+  "mission_id": "mission_006_concentration_risk",
+  "date": "2026-03-17",
+  "started_at": "2026-03-16T19:14:11.069195",
+  "finished_at": "2026-03-16T19:14:18.257685",
+  "total_trades": 2341,
+  "total_pnl": 8671.0,
+  "exp1_clustering": {
+    "cluster_dist": {
+      "1": 460,
+      "2": 190,
+      "3": 101,
+      "4": 92,
+      "5": 88,
+      "6": 65
+    },
+    "max_cluster": 6,
+    "avg_cluster": 2.35,
+    "multi_entry_pct": 53.8,
+    "single_wr": 72.8,
+    "multi_wr": 73.6,
+    "cluster_pnl": {
+      "1": {
+        "trades": 460,
+        "wr": 72.83,
+        "pnl": 1275.0
+      },
+      "2": {
+        "trades": 380,
+        "wr": 72.11,
+        "pnl": 2255.0
+      },
+      "3": {
+        "trades": 303,
+        "wr": 75.25,
+        "pnl": 1170.0
+      },
+      "4": {
+        "trades": 368,
+        "wr": 68.48,
+        "pnl": 797.0
+      },
+      "5": {
+        "trades": 440,
+        "wr": 77.5,
+        "pnl": 2028.0
+      },
+      "6": {
+        "trades": 390,
+        "wr": 74.1,
+        "pnl": 1146.0
+      }
+    }
+  },
+  "exp2_correlation": {
+    "total_multi_clusters": 536,
+    "all_win_pct": 50.0,
+    "all_loss_pct": 9.9,
+    "mixed_pct": 40.1,
+    "avg_pnl_correlation": 0.614
+  },
+  "exp3_mass_loss": {
+    "mass_loss_events": 62,
+    "total_mass_loss": -3135.0,
+    "total_all_losses": -6355.0,
+    "mass_loss_pct": 49.3,
+    "worst_event": {
+      "bar": "2026-01-02 07:30:00",
+      "total_coins": 5,
+      "losing_coins": 5,
+      "total_loss": -63.01142284117076,
+      "coins": [
+        "BTC",
+        "XRP",
+        "ADA",
+        "DOT",
+        "SUI"
+      ],
+      "directions": [
+        "S",
+        "S",
+        "S",
+        "S",
+        "S"
+      ]
+    }
+  },
+  "exp4_cap_entries": {
+    "1": {
+      "trades": 996,
+      "wr": 74.1,
+      "pnl": 3637.0,
+      "delta": -5034.0
+    },
+    "2": {
+      "trades": 1532,
+      "wr": 74.7,
+      "pnl": 6395.0,
+      "delta": -2276.0
+    },
+    "3": {
+      "trades": 1878,
+      "wr": 73.9,
+      "pnl": 7504.0,
+      "delta": -1168.0
+    },
+    "4": {
+      "trades": 2123,
+      "wr": 73.9,
+      "pnl": 8278.0,
+      "delta": -393.0
+    },
+    "5": {
+      "trades": 2276,
+      "wr": 73.9,
+      "pnl": 8594.0,
+      "delta": -77.0
+    },
+    "baseline": {
+      "trades": 2341,
+      "wr": 73.4,
+      "pnl": 8671.0
+    }
+  },
+  "exp5_diversification": {
+    "avg_daily_corr": 0.528,
+    "coin_sharpes": {
+      "ADA": 9.95,
+      "BTC": 6.09,
+      "DOT": 4.81,
+      "FIL": 10.78,
+      "SUI": 9.91,
+      "XRP": 6.98
+    },
+    "portfolio_sharpe": 10.62,
+    "diversification_ratio": 1.29,
+    "effective_n": 1.65,
+    "max_drawdown": -675.0,
+    "worst_day": "2026-02-28",
+    "worst_day_pnl": -440.0
+  },
+  "exp6_paper": {
+    "paper_trades": 132,
+    "paper_cluster_dist": {
+      "1": 12,
+      "2": 5,
+      "5": 1,
+      "10": 1,
+      "11": 1,
+      "12": 1,
+      "24": 3
+    },
+    "paper_single_wr": 25.0,
+    "paper_multi_wr": 38.3,
+    "paper_mass_loss_clusters": 2
+  },
+  "exp7_direction": {
+    "same_direction_pct": 100.0,
+    "mixed_direction_pct": 0.0,
+    "mixed_examples": []
+  }
+}

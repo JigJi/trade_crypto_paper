@@ -1,0 +1,454 @@
+{
+  "mission_id": "mission_039_regime_birth_survival",
+  "date": "2026-04-16",
+  "type": "signal_quality / regime_analysis",
+  "title": "Regime Birth Survival Predictor — กู้ age=1 trades ได้ไหม?",
+  "hypothesis": "สภาพ factors/volatility ตอน regime birth ทำนายได้ว่าจะ survive >=8 bars",
+  "coins": [
+    "BTC",
+    "XRP",
+    "ADA",
+    "DOT",
+    "SUI",
+    "FIL"
+  ],
+  "oos_period": "2025-01-01 to 2026-03-31",
+  "total_trades": 7409,
+  "baseline_pnl": 7665.69,
+  "baseline_wr": 68.7,
+  "survivor_threshold_bars": 8,
+  "results": {
+    "exp1_birth_catalog": {
+      "total_births": 1897,
+      "survivors": 454,
+      "short_lived": 1443,
+      "survivor_rate_pct": 23.9,
+      "survivor_threshold_bars": 8,
+      "duration_mean": 5.68,
+      "duration_median": 2,
+      "duration_p75": 7,
+      "duration_p90": 16,
+      "duration_max": 72
+    },
+    "exp2_survivor_profile": {
+      "score_abs": {
+        "surv_mean": 4.4659,
+        "short_mean": 4.1836,
+        "surv_median": 4.0,
+        "short_median": 4.0,
+        "delta_mean": 0.2822,
+        "cohen_d": 0.218
+      },
+      "score_core": {
+        "surv_mean": -0.3128,
+        "short_mean": -0.2857,
+        "surv_median": -1.75,
+        "short_median": -1.0,
+        "delta_mean": -0.0271,
+        "cohen_d": -0.011
+      },
+      "score_ob": {
+        "surv_mean": -0.152,
+        "short_mean": -0.1365,
+        "surv_median": 0.0,
+        "short_median": 0.0,
+        "delta_mean": -0.0155,
+        "cohen_d": -0.009
+      },
+      "score_basis": {
+        "surv_mean": -0.0066,
+        "short_mean": -0.0598,
+        "surv_median": 0.0,
+        "short_median": 0.0,
+        "delta_mean": 0.0532,
+        "cohen_d": 0.061
+      },
+      "score_tick": {
+        "surv_mean": -0.0837,
+        "short_mean": 0.0076,
+        "surv_median": 0.0,
+        "short_median": 0.0,
+        "delta_mean": -0.0913,
+        "cohen_d": -0.109
+      },
+      "range_z": {
+        "surv_mean": 0.0184,
+        "short_mean": -0.0005,
+        "surv_median": -0.2251,
+        "short_median": -0.2913,
+        "delta_mean": 0.0189,
+        "cohen_d": 0.018
+      },
+      "atr": {
+        "surv_mean": 305.8563,
+        "short_mean": 297.879,
+        "surv_median": 278.6658,
+        "short_median": 276.309,
+        "delta_mean": 7.9774,
+        "cohen_d": 0.051
+      },
+      "rsi": {
+        "surv_mean": 49.714,
+        "short_mean": 49.5095,
+        "surv_median": 49.8438,
+        "short_median": 49.8995,
+        "delta_mean": 0.2045,
+        "cohen_d": 0.018
+      },
+      "ema21_dist": {
+        "surv_mean": -0.0247,
+        "short_mean": -0.0537,
+        "surv_median": -0.0367,
+        "short_median": -0.0018,
+        "delta_mean": 0.029,
+        "cohen_d": 0.023
+      },
+      "vol_ratio": {
+        "surv_mean": 1.053,
+        "short_mean": 1.0656,
+        "surv_median": 0.7992,
+        "short_median": 0.7932,
+        "delta_mean": -0.0127,
+        "cohen_d": -0.014
+      },
+      "fr_8h": {
+        "surv_mean": 0.0,
+        "short_mean": 0.0,
+        "surv_median": 0.0,
+        "short_median": 0.0,
+        "delta_mean": 0.0,
+        "cohen_d": 0.013
+      },
+      "liq_net": {
+        "surv_mean": -1080747.0691,
+        "short_mean": -3053132.5325,
+        "surv_median": 0.0,
+        "short_median": 0.0,
+        "delta_mean": 1972385.4634,
+        "cohen_d": 0.054
+      },
+      "liq_total_ratio": {
+        "surv_mean": 1.1779,
+        "short_mean": 1.2364,
+        "surv_median": 0.2828,
+        "short_median": 0.262,
+        "delta_mean": -0.0585,
+        "cohen_d": -0.023
+      },
+      "whale_net_ma": {
+        "surv_mean": -120409.024,
+        "short_mean": 762927.159,
+        "surv_median": 0.0,
+        "short_median": 0.0,
+        "delta_mean": -883336.183,
+        "cohen_d": -0.05
+      },
+      "basis_z": {
+        "surv_mean": -0.0105,
+        "short_mean": 0.098,
+        "surv_median": 0.0,
+        "short_median": 0.0209,
+        "delta_mean": -0.1085,
+        "cohen_d": -0.078
+      },
+      "liq_net_ma": {
+        "surv_mean": -0.5553,
+        "short_mean": -0.0729,
+        "surv_median": 0.0,
+        "short_median": 0.0,
+        "delta_mean": -0.4824,
+        "cohen_d": -0.145
+      },
+      "ob_imb_ma": {
+        "surv_mean": 0.0041,
+        "short_mean": 0.0029,
+        "surv_median": 0.0123,
+        "short_median": 0.0019,
+        "delta_mean": 0.0012,
+        "cohen_d": 0.032
+      }
+    },
+    "exp3_direction_profile": {
+      "LONG": {
+        "total": 857,
+        "survivors": 199,
+        "short_lived": 658,
+        "surv_rate_pct": 23.2,
+        "duration_mean": 5.63
+      },
+      "SHORT": {
+        "total": 1040,
+        "survivors": 255,
+        "short_lived": 785,
+        "surv_rate_pct": 24.5,
+        "duration_mean": 5.72
+      }
+    },
+    "exp4_score_magnitude": {
+      "3.0-3.5": {
+        "n": 536,
+        "surv_rate_pct": 12.3,
+        "dur_mean": 3.53,
+        "dur_median": 1
+      },
+      "3.5-4.0": {
+        "n": 102,
+        "surv_rate_pct": 18.6,
+        "dur_mean": 4.18,
+        "dur_median": 1
+      },
+      "4.0-5.0": {
+        "n": 819,
+        "surv_rate_pct": 29.4,
+        "dur_mean": 6.76,
+        "dur_median": 3
+      },
+      "5.0-6.0": {
+        "n": 226,
+        "surv_rate_pct": 27.9,
+        "dur_mean": 5.99,
+        "dur_median": 3
+      },
+      "6.0-8.0": {
+        "n": 159,
+        "surv_rate_pct": 31.4,
+        "dur_mean": 7.65,
+        "dur_median": 3
+      },
+      "8.0+": {
+        "n": 55,
+        "surv_rate_pct": 27.3,
+        "dur_mean": 6.42,
+        "dur_median": 4
+      }
+    },
+    "exp5_discriminator_filters": {
+      "baseline (all births)": {
+        "n": 1897,
+        "surv_rate_pct": 23.9,
+        "dur_mean": 5.68,
+        "lift_pp": 0.0
+      },
+      "score_abs>=3.5": {
+        "n": 1361,
+        "surv_rate_pct": 28.5,
+        "dur_mean": 6.53,
+        "lift_pp": 4.6
+      },
+      "score_abs>=4.0": {
+        "n": 1259,
+        "surv_rate_pct": 29.3,
+        "dur_mean": 6.72,
+        "lift_pp": 5.4
+      },
+      "score_abs>=5.0": {
+        "n": 440,
+        "surv_rate_pct": 29.1,
+        "dur_mean": 6.64,
+        "lift_pp": 5.2
+      },
+      "high range_z (>=0.5)": {
+        "n": 418,
+        "surv_rate_pct": 23.2,
+        "dur_mean": 5.58,
+        "lift_pp": -0.7
+      },
+      "cascade at birth (liq_total_ratio>=2)": {
+        "n": 307,
+        "surv_rate_pct": 25.1,
+        "dur_mean": 5.47,
+        "lift_pp": 1.1
+      },
+      "SHORT only": {
+        "n": 1040,
+        "surv_rate_pct": 24.5,
+        "dur_mean": 5.72,
+        "lift_pp": 0.6
+      },
+      "SHORT + score_abs>=4.0": {
+        "n": 712,
+        "surv_rate_pct": 29.2,
+        "dur_mean": 6.66,
+        "lift_pp": 5.3
+      },
+      "SHORT + score_abs>=4.0 + range_z>=0.5": {
+        "n": 162,
+        "surv_rate_pct": 32.1,
+        "dur_mean": 6.83,
+        "lift_pp": 8.2
+      },
+      "LONG only": {
+        "n": 857,
+        "surv_rate_pct": 23.2,
+        "dur_mean": 5.63,
+        "lift_pp": -0.7
+      },
+      "LONG + score_abs>=4.0": {
+        "n": 547,
+        "surv_rate_pct": 29.4,
+        "dur_mean": 6.78,
+        "lift_pp": 5.5
+      }
+    },
+    "exp6_fresh_by_survival": {
+      "fresh_all": {
+        "n": 217,
+        "wr": 47.9,
+        "pnl": -278.74,
+        "avg": -1.28
+      },
+      "fresh_in_survivor_regime": {
+        "n": 20,
+        "wr": 35.0,
+        "pnl": -58.12,
+        "avg": -2.91
+      },
+      "fresh_in_short_lived_regime": {
+        "n": 197,
+        "wr": 49.2,
+        "pnl": -220.62,
+        "avg": -1.12
+      }
+    },
+    "exp7_birth_score_filter_on_fresh": {
+      "birth_score>=3.0": {
+        "n": 217,
+        "wr": 47.9,
+        "pnl": -278.74,
+        "avg": -1.28
+      },
+      "birth_score>=3.5": {
+        "n": 137,
+        "wr": 49.6,
+        "pnl": -172.76,
+        "avg": -1.26
+      },
+      "birth_score>=4.0": {
+        "n": 113,
+        "wr": 48.7,
+        "pnl": -128.48,
+        "avg": -1.14
+      },
+      "birth_score>=5.0": {
+        "n": 33,
+        "wr": 51.5,
+        "pnl": -42.09,
+        "avg": -1.28
+      },
+      "birth_score>=6.0": {
+        "n": 15,
+        "wr": 60.0,
+        "pnl": 4.12,
+        "avg": 0.27
+      }
+    },
+    "exp8_birth_range_z_filter_on_fresh": {
+      "birth_range_z>=-0.5": {
+        "n": 98,
+        "wr": 50.0,
+        "pnl": -155.62,
+        "avg": -1.59
+      },
+      "birth_range_z>=0.0": {
+        "n": 65,
+        "wr": 46.2,
+        "pnl": -201.45,
+        "avg": -3.1
+      },
+      "birth_range_z>=0.5": {
+        "n": 55,
+        "wr": 40.0,
+        "pnl": -219.53,
+        "avg": -3.99
+      },
+      "birth_range_z>=1.0": {
+        "n": 26,
+        "wr": 34.6,
+        "pnl": -151.67,
+        "avg": -5.83
+      },
+      "birth_range_z>=2.0": {
+        "n": 11,
+        "wr": 9.1,
+        "pnl": -122.71,
+        "avg": -11.16
+      }
+    },
+    "exp9_combined_fresh_filters": {
+      "SHORT + birth_score>=4.0": {
+        "n": 53,
+        "wr": 60.4,
+        "pnl": 18.18,
+        "avg": 0.34
+      },
+      "SHORT + birth_score>=5.0": {
+        "n": 13,
+        "wr": 69.2,
+        "pnl": 26.07,
+        "avg": 2.01
+      },
+      "LONG + birth_score>=4.0": {
+        "n": 60,
+        "wr": 38.3,
+        "pnl": -146.66,
+        "avg": -2.44
+      },
+      "LONG + birth_score>=5.0": {
+        "n": 20,
+        "wr": 40.0,
+        "pnl": -68.16,
+        "avg": -3.41
+      },
+      "regime_survivor==True (hindsight)": {
+        "n": 20,
+        "wr": 35.0,
+        "pnl": -58.12,
+        "avg": -2.91
+      }
+    },
+    "exp10_portfolio_strategies": {
+      "baseline (all trades)": {
+        "n": 7409,
+        "wr": 68.7,
+        "pnl": 7665.69,
+        "avg": 1.03,
+        "delta_vs_baseline": -0.0
+      },
+      "drop age=1 only (Mission 038 rule)": {
+        "n": 7192,
+        "wr": 69.3,
+        "pnl": 7944.43,
+        "avg": 1.1,
+        "delta_vs_baseline": 278.74
+      },
+      "drop age=1 except SHORT+birth>=4": {
+        "n": 7245,
+        "wr": 69.2,
+        "pnl": 7962.61,
+        "avg": 1.1,
+        "delta_vs_baseline": 296.92
+      },
+      "drop age=1 except birth_score>=6": {
+        "n": 7207,
+        "wr": 69.3,
+        "pnl": 7948.56,
+        "avg": 1.1,
+        "delta_vs_baseline": 282.87
+      },
+      "drop age=1 except regime_survivor (hindsight ceiling)": {
+        "n": 7212,
+        "wr": 69.2,
+        "pnl": 7886.31,
+        "avg": 1.09,
+        "delta_vs_baseline": 220.62
+      },
+      "aggressive: skip age<=1 (drops both age=0 and age=1)": {
+        "n": 5548,
+        "wr": 70.4,
+        "pnl": 6985.93,
+        "avg": 1.26,
+        "delta_vs_baseline": -679.76
+      }
+    }
+  }
+}

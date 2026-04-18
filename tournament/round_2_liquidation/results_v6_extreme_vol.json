@@ -1,0 +1,227 @@
+{
+  "test": "v6_extreme_vol_filter",
+  "timestamp": "2026-03-22T16:18:44.001736",
+  "total_experiments": 19,
+  "results": [
+    {
+      "name": "v6_agg_baseline",
+      "description": "v6 aggressive no filter",
+      "total_pnl": 71801.72,
+      "total_trades": 3423,
+      "win_rate": 61.6,
+      "sharpe": 22.08,
+      "max_dd_pct": -0.94,
+      "skipped_bars": 0,
+      "elapsed_s": 0.3
+    },
+    {
+      "name": "v6agg_skip_extreme_1layer",
+      "description": "Aggressive + skip_extreme_1layer",
+      "total_pnl": 71347.2,
+      "total_trades": 3417,
+      "win_rate": 61.7,
+      "sharpe": 22.04,
+      "max_dd_pct": -0.95,
+      "skipped_bars": 90,
+      "elapsed_s": 1.6
+    },
+    {
+      "name": "v6agg_skip_extreme",
+      "description": "Aggressive + skip_extreme",
+      "total_pnl": 70990.53,
+      "total_trades": 3417,
+      "win_rate": 61.6,
+      "sharpe": 21.94,
+      "max_dd_pct": -0.95,
+      "skipped_bars": 114,
+      "elapsed_s": 1.6
+    },
+    {
+      "name": "v6agg_skip_extreme_long",
+      "description": "Aggressive + skip_extreme_long",
+      "total_pnl": 70990.53,
+      "total_trades": 3417,
+      "win_rate": 61.6,
+      "sharpe": 21.94,
+      "max_dd_pct": -0.95,
+      "skipped_bars": 114,
+      "elapsed_s": 1.6
+    },
+    {
+      "name": "v6_baseline",
+      "description": "v6 conservative no filter",
+      "total_pnl": 69701.39,
+      "total_trades": 2038,
+      "win_rate": 69.8,
+      "sharpe": 25.63,
+      "max_dd_pct": -1.05,
+      "skipped_bars": 0,
+      "elapsed_s": 0.3
+    },
+    {
+      "name": "v6_skip_extreme_short",
+      "description": "Skip Extreme for SHORT signals only",
+      "total_pnl": 69701.39,
+      "total_trades": 2038,
+      "win_rate": 69.8,
+      "sharpe": 25.63,
+      "max_dd_pct": -1.05,
+      "skipped_bars": 0,
+      "elapsed_s": 1.4
+    },
+    {
+      "name": "v6agg_skip_extreme+high_1layer",
+      "description": "Aggressive + skip_extreme+high_1layer",
+      "total_pnl": 69642.32,
+      "total_trades": 3399,
+      "win_rate": 61.4,
+      "sharpe": 21.61,
+      "max_dd_pct": -0.96,
+      "skipped_bars": 474,
+      "elapsed_s": 1.6
+    },
+    {
+      "name": "v6_skip_extreme",
+      "description": "Skip ALL signals during Extreme vol",
+      "total_pnl": 69091.89,
+      "total_trades": 2038,
+      "win_rate": 69.6,
+      "sharpe": 25.43,
+      "max_dd_pct": -1.05,
+      "skipped_bars": 24,
+      "elapsed_s": 1.4
+    },
+    {
+      "name": "v6_skip_extreme_1layer",
+      "description": "Skip Extreme when only 1 factor active (|score|<=8)",
+      "total_pnl": 69091.89,
+      "total_trades": 2038,
+      "win_rate": 69.6,
+      "sharpe": 25.43,
+      "max_dd_pct": -1.05,
+      "skipped_bars": 24,
+      "elapsed_s": 1.4
+    },
+    {
+      "name": "v6_skip_extreme_2layer",
+      "description": "Skip Extreme even with 2 factors (all extreme)",
+      "total_pnl": 69091.89,
+      "total_trades": 2038,
+      "win_rate": 69.6,
+      "sharpe": 25.43,
+      "max_dd_pct": -1.05,
+      "skipped_bars": 24,
+      "elapsed_s": 1.4
+    },
+    {
+      "name": "v6_skip_extreme_long",
+      "description": "Skip Extreme for LONG signals only",
+      "total_pnl": 69091.89,
+      "total_trades": 2038,
+      "win_rate": 69.6,
+      "sharpe": 25.43,
+      "max_dd_pct": -1.05,
+      "skipped_bars": 24,
+      "elapsed_s": 1.4
+    },
+    {
+      "name": "v6_skip_extreme+high_1layer",
+      "description": "Skip Extreme always + High when 1-layer",
+      "total_pnl": 67228.9,
+      "total_trades": 2026,
+      "win_rate": 69.3,
+      "sharpe": 25.2,
+      "max_dd_pct": -1.07,
+      "skipped_bars": 306,
+      "elapsed_s": 1.4
+    },
+    {
+      "name": "v6_skip_high+extreme",
+      "description": "Skip High + Extreme",
+      "total_pnl": 67228.9,
+      "total_trades": 2026,
+      "win_rate": 69.3,
+      "sharpe": 25.2,
+      "max_dd_pct": -1.07,
+      "skipped_bars": 306,
+      "elapsed_s": 1.4
+    },
+    {
+      "name": "v6_only_low",
+      "description": "Only trade in low",
+      "total_pnl": 55218.85,
+      "total_trades": 1674,
+      "win_rate": 69.7,
+      "sharpe": 23.11,
+      "max_dd_pct": -1.19,
+      "skipped_bars": 6336,
+      "elapsed_s": 1.5
+    },
+    {
+      "name": "v6_skip_extreme+low",
+      "description": "Skip Extreme + Low vol signals",
+      "total_pnl": 19725.65,
+      "total_trades": 471,
+      "win_rate": 70.3,
+      "sharpe": 12.16,
+      "max_dd_pct": -1.84,
+      "skipped_bars": 26712,
+      "elapsed_s": 1.8
+    },
+    {
+      "name": "v6_normal_only",
+      "description": "Only trade in Normal vol regime",
+      "total_pnl": 17862.66,
+      "total_trades": 459,
+      "win_rate": 69.3,
+      "sharpe": 11.57,
+      "max_dd_pct": -1.93,
+      "skipped_bars": 26994,
+      "elapsed_s": 1.8
+    },
+    {
+      "name": "v6_only_normal",
+      "description": "Only trade in normal",
+      "total_pnl": 17862.66,
+      "total_trades": 459,
+      "win_rate": 69.3,
+      "sharpe": 11.57,
+      "max_dd_pct": -1.93,
+      "skipped_bars": 26994,
+      "elapsed_s": 1.8
+    },
+    {
+      "name": "v6_only_high",
+      "description": "Only trade in high",
+      "total_pnl": 1847.29,
+      "total_trades": 12,
+      "win_rate": 100.0,
+      "sharpe": 3.53,
+      "max_dd_pct": 0.0,
+      "skipped_bars": 32742,
+      "elapsed_s": 1.9
+    },
+    {
+      "name": "v6_only_extreme",
+      "description": "Only trade in extreme",
+      "total_pnl": 525.91,
+      "total_trades": 6,
+      "win_rate": 100.0,
+      "sharpe": 5.64,
+      "max_dd_pct": 0.0,
+      "skipped_bars": 33000,
+      "elapsed_s": 1.9
+    }
+  ],
+  "baseline": {
+    "name": "v6_baseline",
+    "description": "v6 conservative no filter",
+    "total_pnl": 69701.39,
+    "total_trades": 2038,
+    "win_rate": 69.8,
+    "sharpe": 25.63,
+    "max_dd_pct": -1.05,
+    "skipped_bars": 0,
+    "elapsed_s": 0.3
+  }
+}

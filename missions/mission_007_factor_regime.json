@@ -1,0 +1,57 @@
+{
+  "mission_id": "mission_007_factor_regime",
+  "date": "2026-03-18",
+  "type": "factor_analysis",
+  "title": "Factor Regime Decomposition -- Which factors work in BULL vs BEAR vs FLAT?",
+  "description": "Ablation study of 8 v3 factors across market regimes. Found clear tier hierarchy: liquidation+ob_combined+tick_liq = 89% of contribution (universal). BEAR = 60% of PnL. funding_rate is weakest (0.3% firing, $165 delta). Regime-adaptive weighting not worth the complexity.",
+  "difficulty": "hard",
+  "xp_reward": 100,
+  "status": "completed",
+  "experiments": {
+    "exp1_baseline_by_regime": {
+      "BULL": {"trades": 897, "wr": 75.5, "pnl": 2678, "pnl_pct": 24.9},
+      "BEAR": {"trades": 1697, "wr": 79.5, "pnl": 6479, "pnl_pct": 60.2},
+      "FLAT": {"trades": 653, "wr": 73.2, "pnl": 1639, "pnl_pct": 15.2},
+      "ALL": {"trades": 3235, "wr": 77.1, "pnl": 10755}
+    },
+    "exp2_ablation_heatmap": {
+      "liquidation": {"ALL": 4311, "BULL": 964, "BEAR": 2633, "FLAT": 634, "verdict": "UNIVERSAL"},
+      "ob_combined": {"ALL": 3741, "BULL": 850, "BEAR": 2880, "FLAT": 70, "verdict": "UNIVERSAL"},
+      "tick_liq": {"ALL": 1569, "BULL": 297, "BEAR": 820, "FLAT": 441, "verdict": "UNIVERSAL"},
+      "basis_contrarian": {"ALL": 1070, "BULL": 222, "BEAR": 1024, "FLAT": -96, "verdict": "TRENDING"},
+      "oi_divergence": {"ALL": 903, "BULL": 265, "BEAR": 152, "FLAT": 0, "verdict": "TRENDING"},
+      "etf_flows": {"ALL": 722, "BULL": -43, "BEAR": 513, "FLAT": 310, "verdict": "BEAR-SPECIALIST"},
+      "whale_alerts": {"ALL": 183, "BULL": 176, "BEAR": 307, "FLAT": -78, "verdict": "TRENDING"},
+      "funding_rate": {"ALL": 165, "BULL": 0, "BEAR": 88, "FLAT": 77, "verdict": "BEAR-SPECIALIST"}
+    },
+    "exp3_firing_frequency": {
+      "etf_flows": 22.7,
+      "ob_combined": 20.4,
+      "oi_divergence": 7.8,
+      "tick_liq": 6.1,
+      "liquidation": 5.9,
+      "basis_contrarian": 4.5,
+      "whale_alerts": 1.0,
+      "funding_rate": 0.3
+    },
+    "exp4_stability": {
+      "liquidation": {"sign_consistency": 0.4, "cv": 1.02},
+      "ob_combined": {"sign_consistency": 0.4, "cv": 1.38},
+      "tick_liq": {"sign_consistency": 0.4, "cv": 1.07},
+      "basis_contrarian": {"sign_consistency": 0.8, "cv": 1.63},
+      "etf_flows": {"sign_consistency": 0.6, "cv": 1.21},
+      "note": "Q1-Q2 2025 = zero delta due to no DB data, not factor failure"
+    }
+  },
+  "key_findings": {
+    "tier1_universal": ["liquidation", "ob_combined", "tick_liq"],
+    "tier1_pct_of_total": 89.0,
+    "bear_pnl_pct": 60.2,
+    "weakest_factor": "funding_rate",
+    "weakest_firing_pct": 0.3,
+    "regime_adaptive_worth_it": false,
+    "flat_hurt_factors": ["whale_alerts", "basis_contrarian"],
+    "bull_hurt_factors": ["etf_flows"]
+  },
+  "tags": ["factor_analysis", "regime", "ablation", "stability", "factor_hierarchy"]
+}

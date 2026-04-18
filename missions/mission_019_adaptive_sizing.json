@@ -1,0 +1,304 @@
+{
+  "started_at": "2026-03-27T19:15:54.599746",
+  "exp1": {
+    "baseline": {
+      "label": "Flat 1.0x",
+      "trades": 5102,
+      "total_pnl": 21655.17,
+      "win_rate": 75.6,
+      "avg_pnl": 4.24,
+      "max_drawdown": -507.89,
+      "sharpe": 57.35
+    },
+    "disp_conservative": {
+      "label": "Disp 1.2x/1.5x",
+      "trades": 5102,
+      "total_pnl": 26025.29,
+      "win_rate": 75.6,
+      "avg_pnl": 5.1,
+      "max_drawdown": -761.83,
+      "sharpe": 53.36
+    },
+    "disp_aggressive": {
+      "label": "Disp 1.3x/1.7x/2.0x",
+      "trades": 5102,
+      "total_pnl": 28205.37,
+      "win_rate": 75.6,
+      "avg_pnl": 5.53,
+      "max_drawdown": -863.41,
+      "sharpe": 51.83
+    },
+    "disp_extreme_only": {
+      "label": "Disp extreme 1.5x/2.0x",
+      "trades": 5102,
+      "total_pnl": 23253.7,
+      "win_rate": 75.6,
+      "avg_pnl": 4.56,
+      "max_drawdown": -761.83,
+      "sharpe": 51.47
+    }
+  },
+  "exp2": {
+    "baseline": {
+      "label": "Flat 1.0x",
+      "trades": 5102,
+      "total_pnl": 21655.17,
+      "win_rate": 75.6,
+      "avg_pnl": 4.24,
+      "max_drawdown": -507.89,
+      "sharpe": 57.35
+    },
+    "fr_neg_boost": {
+      "label": "FR ext_neg +0.3x",
+      "trades": 5102,
+      "total_pnl": 22284.75,
+      "win_rate": 75.6,
+      "avg_pnl": 4.37,
+      "max_drawdown": -507.89,
+      "sharpe": 57.31
+    },
+    "fr_both": {
+      "label": "FR neg+0.5/pos-0.3",
+      "trades": 5102,
+      "total_pnl": 22177.55,
+      "win_rate": 75.6,
+      "avg_pnl": 4.35,
+      "max_drawdown": -507.89,
+      "sharpe": 56.78
+    },
+    "fr_gradient": {
+      "label": "FR gradient",
+      "trades": 5102,
+      "total_pnl": 22759.43,
+      "win_rate": 75.6,
+      "avg_pnl": 4.46,
+      "max_drawdown": -507.89,
+      "sharpe": 56.81
+    }
+  },
+  "exp3": {
+    "baseline": {
+      "label": "Flat 1.0x",
+      "trades": 5102,
+      "total_pnl": 21655.17,
+      "win_rate": 75.6,
+      "avg_pnl": 4.24,
+      "max_drawdown": -507.89,
+      "sharpe": 57.35
+    },
+    "combo_conservative": {
+      "label": "Combo conservative",
+      "trades": 5102,
+      "total_pnl": 26654.87,
+      "win_rate": 75.6,
+      "avg_pnl": 5.22,
+      "max_drawdown": -761.83,
+      "sharpe": 53.51
+    },
+    "combo_aggressive": {
+      "label": "Combo aggressive",
+      "trades": 5102,
+      "total_pnl": 28658.28,
+      "win_rate": 75.6,
+      "avg_pnl": 5.62,
+      "max_drawdown": -863.41,
+      "sharpe": 51.91
+    },
+    "combo_full": {
+      "label": "Combo full gradient",
+      "trades": 5102,
+      "total_pnl": 27431.53,
+      "win_rate": 75.6,
+      "avg_pnl": 5.38,
+      "max_drawdown": -761.83,
+      "sharpe": 52.94
+    }
+  },
+  "exp4": {
+    "grid_size": 80,
+    "best": {
+      "disp_thr": 0.05,
+      "disp_mult": 1.5,
+      "fr_boost": 0.5,
+      "total_pnl": 31814.05,
+      "avg_pnl": 6.24,
+      "max_dd": -761.83,
+      "pnl_dd_ratio": 41.76
+    },
+    "top5": [
+      {
+        "disp_thr": 0.05,
+        "disp_mult": 1.5,
+        "fr_boost": 0.5,
+        "total_pnl": 31814.05,
+        "avg_pnl": 6.24,
+        "max_dd": -761.83,
+        "pnl_dd_ratio": 41.76
+      },
+      {
+        "disp_thr": 0.05,
+        "disp_mult": 1.5,
+        "fr_boost": 0.3,
+        "total_pnl": 31394.33,
+        "avg_pnl": 6.15,
+        "max_dd": -761.83,
+        "pnl_dd_ratio": 41.21
+      },
+      {
+        "disp_thr": 0.05,
+        "disp_mult": 1.5,
+        "fr_boost": 0.2,
+        "total_pnl": 31184.47,
+        "avg_pnl": 6.11,
+        "max_dd": -761.83,
+        "pnl_dd_ratio": 40.93
+      },
+      {
+        "disp_thr": 0.05,
+        "disp_mult": 1.5,
+        "fr_boost": 0,
+        "total_pnl": 30764.75,
+        "avg_pnl": 6.03,
+        "max_dd": -761.83,
+        "pnl_dd_ratio": 40.38
+      },
+      {
+        "disp_thr": 0.1,
+        "disp_mult": 1.5,
+        "fr_boost": 0.5,
+        "total_pnl": 29971.4,
+        "avg_pnl": 5.87,
+        "max_dd": -761.83,
+        "pnl_dd_ratio": 39.34
+      }
+    ]
+  },
+  "exp5": {
+    "baseline": {
+      "label": "baseline",
+      "total_pnl": 21655.17,
+      "max_dd": -507.89,
+      "max_loss_streak": 11,
+      "worst_streak_pnl": -70.18,
+      "tail_1pct": -38.67,
+      "tail_5pct": -8.06,
+      "pnl_dd_ratio": 42.64
+    },
+    "disp_only": {
+      "label": "disp_only",
+      "total_pnl": 26025.29,
+      "max_dd": -761.83,
+      "max_loss_streak": 11,
+      "worst_streak_pnl": -72.55,
+      "tail_1pct": -44.05,
+      "tail_5pct": -8.76,
+      "pnl_dd_ratio": 34.16
+    },
+    "fr_only": {
+      "label": "fr_only",
+      "total_pnl": 22284.75,
+      "max_dd": -507.89,
+      "max_loss_streak": 11,
+      "worst_streak_pnl": -70.18,
+      "tail_1pct": -39.41,
+      "tail_5pct": -8.16,
+      "pnl_dd_ratio": 43.88
+    },
+    "combo": {
+      "label": "combo",
+      "total_pnl": 26654.87,
+      "max_dd": -761.83,
+      "max_loss_streak": 11,
+      "worst_streak_pnl": -72.55,
+      "tail_1pct": -44.81,
+      "tail_5pct": -8.99,
+      "pnl_dd_ratio": 34.99
+    }
+  },
+  "exp6": {
+    "periods": {
+      "P1_early": {
+        "baseline": {
+          "label": "P1_early baseline",
+          "trades": 1700,
+          "total_pnl": 4555.64,
+          "win_rate": 72.5,
+          "avg_pnl": 2.68,
+          "max_drawdown": -503.74,
+          "sharpe": 37.77
+        },
+        "combo": {
+          "label": "P1_early combo",
+          "trades": 1700,
+          "total_pnl": 5116.3,
+          "win_rate": 72.5,
+          "avg_pnl": 3.01,
+          "max_drawdown": -755.61,
+          "sharpe": 31.35
+        },
+        "delta_pnl": 560.66,
+        "delta_pct": 12.3
+      },
+      "P2_mid": {
+        "baseline": {
+          "label": "P2_mid baseline",
+          "trades": 1700,
+          "total_pnl": 8979.94,
+          "win_rate": 77.1,
+          "avg_pnl": 5.28,
+          "max_drawdown": -297.85,
+          "sharpe": 69.42
+        },
+        "combo": {
+          "label": "P2_mid combo",
+          "trades": 1700,
+          "total_pnl": 11514.46,
+          "win_rate": 77.1,
+          "avg_pnl": 6.77,
+          "max_drawdown": -389.28,
+          "sharpe": 67.66
+        },
+        "delta_pnl": 2534.52,
+        "delta_pct": 28.2
+      },
+      "P3_late": {
+        "baseline": {
+          "label": "P3_late baseline",
+          "trades": 1702,
+          "total_pnl": 8119.58,
+          "win_rate": 77.1,
+          "avg_pnl": 4.77,
+          "max_drawdown": -394.05,
+          "sharpe": 64.29
+        },
+        "combo": {
+          "label": "P3_late combo",
+          "trades": 1702,
+          "total_pnl": 10024.12,
+          "win_rate": 77.1,
+          "avg_pnl": 5.89,
+          "max_drawdown": -415.33,
+          "sharpe": 61.58
+        },
+        "delta_pnl": 1904.54,
+        "delta_pct": 23.5
+      }
+    },
+    "all_positive": true
+  },
+  "config": {
+    "oos_start": "2025-01-01",
+    "oos_end": "2026-03-31",
+    "coins": [
+      "BTC",
+      "XRP",
+      "ADA",
+      "DOT",
+      "SUI",
+      "FIL"
+    ],
+    "v6_sl": 25.0,
+    "v6_tp": 20.0,
+    "v6_cascade_mult": 1.1
+  }
+}

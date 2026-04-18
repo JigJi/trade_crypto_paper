@@ -1,0 +1,344 @@
+{
+  "exp1_vol_regimes": {
+    "q25_rv": 0.3,
+    "q50_rv": 0.4,
+    "q75_rv": 0.5,
+    "q90_rv": 0.7,
+    "regime_stats": {
+      "Low": {
+        "bars": 10352,
+        "pct_of_time": 25.0,
+        "mean_rv": 0.2,
+        "mean_atr_pct": 0.18,
+        "mean_score": -0.27,
+        "score_std": 2.96,
+        "pct_score_above_3": 23.0
+      },
+      "Normal": {
+        "bars": 20702,
+        "pct_of_time": 50.0,
+        "mean_rv": 0.4,
+        "mean_atr_pct": 0.293,
+        "mean_score": -0.14,
+        "score_std": 2.58,
+        "pct_score_above_3": 21.8
+      },
+      "High": {
+        "bars": 6211,
+        "pct_of_time": 15.0,
+        "mean_rv": 0.6,
+        "mean_atr_pct": 0.443,
+        "mean_score": -0.42,
+        "score_std": 2.74,
+        "pct_score_above_3": 30.3
+      },
+      "Extreme": {
+        "bars": 4141,
+        "pct_of_time": 10.0,
+        "mean_rv": 0.9,
+        "mean_atr_pct": 0.626,
+        "mean_score": -0.0,
+        "score_std": 2.58,
+        "pct_score_above_3": 25.7
+      }
+    }
+  },
+  "exp2_perf_by_regime": {
+    "Low": {
+      "trades": 1406,
+      "wins": 946,
+      "wr": 67.3,
+      "total_pnl": 1958.8,
+      "avg_pnl": 1.39,
+      "avg_bars": 5.1,
+      "pnl_per_bar": 0.273
+    },
+    "Normal": {
+      "trades": 2770,
+      "wins": 2019,
+      "wr": 72.9,
+      "total_pnl": 6648.8,
+      "avg_pnl": 2.4,
+      "avg_bars": 6.0,
+      "pnl_per_bar": 0.402
+    },
+    "High": {
+      "trades": 1236,
+      "wins": 897,
+      "wr": 72.6,
+      "total_pnl": 3669.9,
+      "avg_pnl": 2.97,
+      "avg_bars": 5.9,
+      "pnl_per_bar": 0.507
+    },
+    "Extreme": {
+      "trades": 606,
+      "wins": 435,
+      "wr": 71.8,
+      "total_pnl": -239.7,
+      "avg_pnl": -0.4,
+      "avg_bars": 7.4,
+      "pnl_per_bar": -0.053
+    }
+  },
+  "exp3_transitions": {
+    "total_transitions": 569,
+    "avg_transitions_per_day": 1.3,
+    "performance_after": {
+      "escalation": {
+        "trades": 736,
+        "wr": 69.0,
+        "avg_pnl": 0.61,
+        "total_pnl": 448.5
+      },
+      "deescalation": {
+        "trades": 687,
+        "wr": 69.3,
+        "avg_pnl": 2.21,
+        "total_pnl": 1514.9
+      }
+    }
+  },
+  "exp4_adaptive_sizing": {
+    "fixed_1000": {
+      "trades": 6018,
+      "total_pnl": 12037.9,
+      "wr": 71.4,
+      "max_dd": -811.3,
+      "calmar": 14.84,
+      "multipliers": {
+        "Low": 1.0,
+        "Normal": 1.0,
+        "High": 1.0,
+        "Extreme": 1.0
+      }
+    },
+    "vol_inverse": {
+      "trades": 6018,
+      "total_pnl": 12219.7,
+      "wr": 71.4,
+      "max_dd": -651.3,
+      "calmar": 18.76,
+      "multipliers": {
+        "Low": 1.5,
+        "Normal": 1.0,
+        "High": 0.75,
+        "Extreme": 0.5
+      }
+    },
+    "vol_follow": {
+      "trades": 6018,
+      "total_pnl": 12653.7,
+      "wr": 71.4,
+      "max_dd": -1331.1,
+      "calmar": 9.51,
+      "multipliers": {
+        "Low": 0.5,
+        "Normal": 1.0,
+        "High": 1.5,
+        "Extreme": 2.0
+      }
+    },
+    "extreme_avoid": {
+      "trades": 5412,
+      "total_pnl": 12277.6,
+      "wr": 71.4,
+      "max_dd": -497.9,
+      "calmar": 24.66,
+      "multipliers": {
+        "Low": 1.0,
+        "Normal": 1.0,
+        "High": 1.0,
+        "Extreme": 0.0
+      }
+    },
+    "sweet_spot": {
+      "trades": 6018,
+      "total_pnl": 14502.7,
+      "wr": 71.4,
+      "max_dd": -786.1,
+      "calmar": 18.45,
+      "multipliers": {
+        "Low": 0.5,
+        "Normal": 1.5,
+        "High": 1.0,
+        "Extreme": 0.5
+      }
+    }
+  },
+  "exp5_vol_filter": {
+    "all": {
+      "trades": 6018,
+      "wr": 71.4,
+      "total_pnl": 12037.9,
+      "avg_pnl": 2.0,
+      "rv_range": "0.0-9999.0"
+    },
+    "p10_90": {
+      "trades": 4823,
+      "wr": 72.2,
+      "total_pnl": 11699.8,
+      "avg_pnl": 2.43,
+      "rv_range": "0.2-0.7"
+    },
+    "p20_80": {
+      "trades": 3380,
+      "wr": 72.6,
+      "total_pnl": 9265.4,
+      "avg_pnl": 2.74,
+      "rv_range": "0.3-0.5"
+    },
+    "p25_75": {
+      "trades": 2770,
+      "wr": 72.9,
+      "total_pnl": 6648.8,
+      "avg_pnl": 2.4,
+      "rv_range": "0.3-0.5"
+    },
+    "above_p25": {
+      "trades": 4612,
+      "wr": 72.7,
+      "total_pnl": 10079.0,
+      "avg_pnl": 2.19,
+      "rv_range": "0.3-9999.0"
+    },
+    "below_p75": {
+      "trades": 4176,
+      "wr": 71.0,
+      "total_pnl": 8607.6,
+      "avg_pnl": 2.06,
+      "rv_range": "0.0-0.5"
+    },
+    "p25_90": {
+      "trades": 4006,
+      "wr": 72.8,
+      "total_pnl": 10318.7,
+      "avg_pnl": 2.58,
+      "rv_range": "0.3-0.7"
+    }
+  },
+  "exp6_direction_by_regime": {
+    "Low": {
+      "L": {
+        "trades": 594,
+        "wr": 65.8,
+        "pnl": 1016.5,
+        "avg_pnl": 1.71
+      },
+      "S": {
+        "trades": 812,
+        "wr": 68.3,
+        "pnl": 942.4,
+        "avg_pnl": 1.16
+      }
+    },
+    "Normal": {
+      "L": {
+        "trades": 1318,
+        "wr": 70.3,
+        "pnl": 1653.9,
+        "avg_pnl": 1.25
+      },
+      "S": {
+        "trades": 1452,
+        "wr": 75.3,
+        "pnl": 4994.9,
+        "avg_pnl": 3.44
+      }
+    },
+    "High": {
+      "L": {
+        "trades": 486,
+        "wr": 72.2,
+        "pnl": 2128.5,
+        "avg_pnl": 4.38
+      },
+      "S": {
+        "trades": 750,
+        "wr": 72.8,
+        "pnl": 1541.4,
+        "avg_pnl": 2.06
+      }
+    },
+    "Extreme": {
+      "L": {
+        "trades": 295,
+        "wr": 70.8,
+        "pnl": -252.5,
+        "avg_pnl": -0.86
+      },
+      "S": {
+        "trades": 311,
+        "wr": 72.7,
+        "pnl": 12.8,
+        "avg_pnl": 0.04
+      }
+    }
+  },
+  "exp7_duration": {
+    "duration_stats": {
+      "Low": {
+        "episodes": 136,
+        "avg_duration_bars": 76.1,
+        "avg_duration_hours": 19.0,
+        "median_bars": 34.5,
+        "max_bars": 521,
+        "max_hours": 130.2,
+        "min_bars": 1
+      },
+      "Normal": {
+        "episodes": 233,
+        "avg_duration_bars": 88.8,
+        "avg_duration_hours": 22.2,
+        "median_bars": 57.0,
+        "max_bars": 630,
+        "max_hours": 157.5,
+        "min_bars": 1
+      },
+      "High": {
+        "episodes": 148,
+        "avg_duration_bars": 42.0,
+        "avg_duration_hours": 10.5,
+        "median_bars": 22.5,
+        "max_bars": 208,
+        "max_hours": 52.0,
+        "min_bars": 1
+      },
+      "Extreme": {
+        "episodes": 52,
+        "avg_duration_bars": 79.6,
+        "avg_duration_hours": 19.9,
+        "median_bars": 62.0,
+        "max_bars": 437,
+        "max_hours": 109.2,
+        "min_bars": 1
+      }
+    },
+    "autocorrelation": {
+      "lag_1": 0.9913,
+      "lag_4": 0.9719,
+      "lag_16": 0.9061,
+      "lag_96": 0.5204
+    }
+  },
+  "summary": {
+    "best_regime": "Normal",
+    "best_regime_pnl": 6648.8,
+    "worst_regime": "Extreme",
+    "worst_regime_pnl": -239.7,
+    "best_sizing": "extreme_avoid",
+    "best_sizing_calmar": 24.66,
+    "baseline_calmar": 14.84,
+    "calmar_improvement_pct": 66.2,
+    "best_dir_regime": "S+Normal",
+    "best_dir_regime_wr": 75.3,
+    "regime_predictability": 0.5204,
+    "vol_thresholds": {
+      "low": 0.3,
+      "normal": 0.5,
+      "high": 0.7
+    },
+    "total_trades_analyzed": 6018,
+    "experiments_run": 7
+  }
+}

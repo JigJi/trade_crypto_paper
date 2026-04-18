@@ -1,0 +1,5069 @@
+{
+  "tournament": "round_5_volatility_regime",
+  "timestamp": "2026-03-26T10:14:22.758824",
+  "oos_period": "2025-01-01 to 2026-03-26",
+  "baseline_pnl": 83767.83,
+  "phase1_analysis": {
+    "range_z_1.5": {
+      "vol_bars": 3657,
+      "pct": 8.57,
+      "windows": 2349,
+      "avg_duration": 1.6
+    },
+    "range_z_2.0": {
+      "vol_bars": 2336,
+      "pct": 5.48,
+      "windows": 1666,
+      "avg_duration": 1.4
+    },
+    "vol_spike_2.0": {
+      "vol_bars": 4168,
+      "pct": 9.77,
+      "windows": 2531,
+      "avg_duration": 1.6
+    },
+    "vol_spike_3.0": {
+      "vol_bars": 1656,
+      "pct": 3.88,
+      "windows": 1233,
+      "avg_duration": 1.3
+    },
+    "disp_1.5": {
+      "vol_bars": 9674,
+      "pct": 22.68,
+      "windows": 2916,
+      "avg_duration": 3.3
+    },
+    "disp_2.0": {
+      "vol_bars": 5132,
+      "pct": 12.03,
+      "windows": 1755,
+      "avg_duration": 2.9
+    },
+    "disp_2.5": {
+      "vol_bars": 2611,
+      "pct": 6.12,
+      "windows": 973,
+      "avg_duration": 2.7
+    },
+    "ret_z_4bar_2.0": {
+      "vol_bars": 2781,
+      "pct": 6.52,
+      "windows": 1402,
+      "avg_duration": 2.0
+    },
+    "ret_z_4bar_2.5": {
+      "vol_bars": 1517,
+      "pct": 3.56,
+      "windows": 795,
+      "avg_duration": 1.9
+    },
+    "ret_z_8bar_2.0": {
+      "vol_bars": 3174,
+      "pct": 7.44,
+      "windows": 1231,
+      "avg_duration": 2.6
+    },
+    "atr_z_1.5": {
+      "vol_bars": 6128,
+      "pct": 14.37,
+      "windows": 543,
+      "avg_duration": 11.3
+    },
+    "atr_z_2.0": {
+      "vol_bars": 3492,
+      "pct": 8.19,
+      "windows": 416,
+      "avg_duration": 8.4
+    },
+    "liq_cascade_2x": {
+      "vol_bars": 3608,
+      "pct": 8.46,
+      "windows": 561,
+      "avg_duration": 6.4
+    },
+    "liq_cascade_3x": {
+      "vol_bars": 2520,
+      "pct": 5.91,
+      "windows": 421,
+      "avg_duration": 6.0
+    },
+    "bb_exp_1.5": {
+      "vol_bars": 5756,
+      "pct": 13.5,
+      "windows": 511,
+      "avg_duration": 11.3
+    },
+    "combined_any2": {
+      "vol_bars": 4716,
+      "pct": 11.06,
+      "windows": 2502,
+      "avg_duration": 1.9
+    },
+    "combined_any3": {
+      "vol_bars": 2206,
+      "pct": 5.17,
+      "windows": 1354,
+      "avg_duration": 1.6
+    }
+  },
+  "results": [
+    {
+      "name": "H2_baseline_reb_boost",
+      "description": "Baseline v6 + rebound signals fill gaps (displacement>2.0)",
+      "total_pnl": 85029.18,
+      "total_trades": 3500,
+      "win_rate": 69.6,
+      "coin_results": {
+        "BTC": {
+          "pnl": 9028.75,
+          "trades": 594,
+          "wr": 72.39,
+          "sharpe": 10.5,
+          "n_long": 285,
+          "n_short": 309,
+          "wr_long": 71.9,
+          "wr_short": 72.8,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 152,
+              "pnl": 2390.54,
+              "wr": 73.7
+            },
+            "SIGNAL_FLIP": {
+              "count": 411,
+              "pnl": 5358.07,
+              "wr": 71.3
+            },
+            "SL": {
+              "count": 6,
+              "pnl": -685.03,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 25,
+              "pnl": 1965.17,
+              "wr": 100.0
+            }
+          }
+        },
+        "XRP": {
+          "pnl": 10881.27,
+          "trades": 570,
+          "wr": 69.47,
+          "sharpe": 7.469,
+          "n_long": 286,
+          "n_short": 284,
+          "wr_long": 67.5,
+          "wr_short": 71.5,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 95,
+              "pnl": -180.26,
+              "wr": 51.6
+            },
+            "SIGNAL_FLIP": {
+              "count": 466,
+              "pnl": 10875.47,
+              "wr": 73.2
+            },
+            "SL": {
+              "count": 3,
+              "pnl": -713.12,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 6,
+              "pnl": 899.18,
+              "wr": 100.0
+            }
+          }
+        },
+        "ADA": {
+          "pnl": 14023.68,
+          "trades": 570,
+          "wr": 70.0,
+          "sharpe": 8.494,
+          "n_long": 286,
+          "n_short": 284,
+          "wr_long": 69.9,
+          "wr_short": 70.1,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 97,
+              "pnl": 470.25,
+              "wr": 57.7
+            },
+            "SIGNAL_FLIP": {
+              "count": 463,
+              "pnl": 13029.81,
+              "wr": 72.6
+            },
+            "SL": {
+              "count": 3,
+              "pnl": -886.7,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 7,
+              "pnl": 1410.32,
+              "wr": 100.0
+            }
+          }
+        },
+        "DOT": {
+          "pnl": 14745.89,
+          "trades": 588,
+          "wr": 66.84,
+          "sharpe": 9.231,
+          "n_long": 285,
+          "n_short": 303,
+          "wr_long": 67.4,
+          "wr_short": 66.3,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 165,
+              "pnl": 3647.65,
+              "wr": 67.3
+            },
+            "SIGNAL_FLIP": {
+              "count": 409,
+              "pnl": 9236.72,
+              "wr": 66.0
+            },
+            "SL": {
+              "count": 2,
+              "pnl": -528.63,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 12,
+              "pnl": 2390.15,
+              "wr": 100.0
+            }
+          }
+        },
+        "SUI": {
+          "pnl": 17912.56,
+          "trades": 587,
+          "wr": 70.19,
+          "sharpe": 9.761,
+          "n_long": 282,
+          "n_short": 305,
+          "wr_long": 69.1,
+          "wr_short": 71.1,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 160,
+              "pnl": 4575.63,
+              "wr": 69.4
+            },
+            "SIGNAL_FLIP": {
+              "count": 413,
+              "pnl": 11788.7,
+              "wr": 70.0
+            },
+            "SL": {
+              "count": 2,
+              "pnl": -774.08,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 12,
+              "pnl": 2322.3,
+              "wr": 100.0
+            }
+          }
+        },
+        "FIL": {
+          "pnl": 18437.03,
+          "trades": 591,
+          "wr": 68.7,
+          "sharpe": 7.845,
+          "n_long": 287,
+          "n_short": 304,
+          "wr_long": 68.3,
+          "wr_short": 69.1,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 165,
+              "pnl": 4469.32,
+              "wr": 72.1
+            },
+            "SIGNAL_FLIP": {
+              "count": 410,
+              "pnl": 9783.2,
+              "wr": 66.6
+            },
+            "SL": {
+              "count": 2,
+              "pnl": -615.01,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 14,
+              "pnl": 4799.51,
+              "wr": 100.0
+            }
+          }
+        }
+      },
+      "elapsed_s": 1.5
+    },
+    {
+      "name": "BASELINE_v6_R3",
+      "description": "v6 + R3 champion (hysteresis=3.0, exit_only, cd_extra=4)",
+      "total_pnl": 83767.83,
+      "total_trades": 2643,
+      "win_rate": 71.7,
+      "coin_results": {
+        "BTC": {
+          "pnl": 8700.71,
+          "trades": 482,
+          "wr": 74.07,
+          "sharpe": 13.703,
+          "n_long": 228,
+          "n_short": 254,
+          "wr_long": 72.8,
+          "wr_short": 75.2,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 367,
+              "pnl": 3975.28,
+              "wr": 68.1
+            },
+            "TIMEOUT": {
+              "count": 90,
+              "pnl": 2760.26,
+              "wr": 91.1
+            },
+            "TP": {
+              "count": 25,
+              "pnl": 1965.17,
+              "wr": 100.0
+            }
+          }
+        },
+        "XRP": {
+          "pnl": 10443.63,
+          "trades": 366,
+          "wr": 71.86,
+          "sharpe": 11.127,
+          "n_long": 174,
+          "n_short": 192,
+          "wr_long": 71.3,
+          "wr_short": 72.4,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 283,
+              "pnl": 4775.59,
+              "wr": 67.1
+            },
+            "TIMEOUT": {
+              "count": 68,
+              "pnl": 3695.85,
+              "wr": 85.3
+            },
+            "TP": {
+              "count": 15,
+              "pnl": 1972.2,
+              "wr": 100.0
+            }
+          }
+        },
+        "ADA": {
+          "pnl": 13942.81,
+          "trades": 364,
+          "wr": 73.35,
+          "sharpe": 12.228,
+          "n_long": 173,
+          "n_short": 191,
+          "wr_long": 74.6,
+          "wr_short": 72.3,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 284,
+              "pnl": 6699.38,
+              "wr": 68.0
+            },
+            "TIMEOUT": {
+              "count": 62,
+              "pnl": 3882.26,
+              "wr": 90.3
+            },
+            "TP": {
+              "count": 18,
+              "pnl": 3361.17,
+              "wr": 100.0
+            }
+          }
+        },
+        "DOT": {
+          "pnl": 14931.2,
+          "trades": 476,
+          "wr": 68.49,
+          "sharpe": 11.999,
+          "n_long": 228,
+          "n_short": 248,
+          "wr_long": 70.6,
+          "wr_short": 66.5,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 368,
+              "pnl": 7522.45,
+              "wr": 63.9
+            },
+            "TIMEOUT": {
+              "count": 96,
+              "pnl": 5018.6,
+              "wr": 82.3
+            },
+            "TP": {
+              "count": 12,
+              "pnl": 2390.15,
+              "wr": 100.0
+            }
+          }
+        },
+        "SUI": {
+          "pnl": 17634.85,
+          "trades": 476,
+          "wr": 73.53,
+          "sharpe": 13.849,
+          "n_long": 227,
+          "n_short": 249,
+          "wr_long": 73.6,
+          "wr_short": 73.5,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 370,
+              "pnl": 9393.38,
+              "wr": 69.5
+            },
+            "TIMEOUT": {
+              "count": 94,
+              "pnl": 5919.16,
+              "wr": 86.2
+            },
+            "TP": {
+              "count": 12,
+              "pnl": 2322.3,
+              "wr": 100.0
+            }
+          }
+        },
+        "FIL": {
+          "pnl": 18114.63,
+          "trades": 479,
+          "wr": 69.31,
+          "sharpe": 8.63,
+          "n_long": 230,
+          "n_short": 249,
+          "wr_long": 69.1,
+          "wr_short": 69.5,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 369,
+              "pnl": 7601.35,
+              "wr": 63.7
+            },
+            "TIMEOUT": {
+              "count": 96,
+              "pnl": 5713.77,
+              "wr": 86.5
+            },
+            "TP": {
+              "count": 14,
+              "pnl": 4799.51,
+              "wr": 100.0
+            }
+          }
+        }
+      },
+      "elapsed_s": 0.4
+    },
+    {
+      "name": "H1_baseline_mom_boost",
+      "description": "Baseline v6 + momentum signals fill gaps (range_z+ret4)",
+      "total_pnl": 76297.05,
+      "total_trades": 3929,
+      "win_rate": 59.9,
+      "coin_results": {
+        "BTC": {
+          "pnl": 8336.56,
+          "trades": 665,
+          "wr": 63.76,
+          "sharpe": 10.339,
+          "n_long": 320,
+          "n_short": 345,
+          "wr_long": 63.1,
+          "wr_short": 64.3,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 504,
+              "pnl": 3057.85,
+              "wr": 57.7
+            },
+            "TIMEOUT": {
+              "count": 133,
+              "pnl": 3108.11,
+              "wr": 78.9
+            },
+            "TP": {
+              "count": 28,
+              "pnl": 2170.6,
+              "wr": 100.0
+            }
+          }
+        },
+        "XRP": {
+          "pnl": 8696.93,
+          "trades": 642,
+          "wr": 56.39,
+          "sharpe": 6.486,
+          "n_long": 311,
+          "n_short": 331,
+          "wr_long": 53.7,
+          "wr_short": 58.9,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 527,
+              "pnl": 2429.49,
+              "wr": 50.9
+            },
+            "TIMEOUT": {
+              "count": 97,
+              "pnl": 4234.28,
+              "wr": 79.4
+            },
+            "TP": {
+              "count": 17,
+              "pnl": 2317.61,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 1,
+              "pnl": -284.45,
+              "wr": 0.0
+            }
+          }
+        },
+        "ADA": {
+          "pnl": 10402.1,
+          "trades": 641,
+          "wr": 55.69,
+          "sharpe": 6.838,
+          "n_long": 308,
+          "n_short": 333,
+          "wr_long": 54.9,
+          "wr_short": 56.5,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 529,
+              "pnl": 3156.14,
+              "wr": 50.5
+            },
+            "TIMEOUT": {
+              "count": 94,
+              "pnl": 4341.59,
+              "wr": 77.7
+            },
+            "TP": {
+              "count": 17,
+              "pnl": 3179.24,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 1,
+              "pnl": -274.86,
+              "wr": 0.0
+            }
+          }
+        },
+        "DOT": {
+          "pnl": 14452.99,
+          "trades": 659,
+          "wr": 59.94,
+          "sharpe": 9.368,
+          "n_long": 320,
+          "n_short": 339,
+          "wr_long": 58.4,
+          "wr_short": 61.4,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 505,
+              "pnl": 6005.88,
+              "wr": 54.7
+            },
+            "TIMEOUT": {
+              "count": 141,
+              "pnl": 5894.99,
+              "wr": 75.2
+            },
+            "TP": {
+              "count": 13,
+              "pnl": 2552.12,
+              "wr": 100.0
+            }
+          }
+        },
+        "SUI": {
+          "pnl": 16987.82,
+          "trades": 660,
+          "wr": 62.88,
+          "sharpe": 9.659,
+          "n_long": 319,
+          "n_short": 341,
+          "wr_long": 60.5,
+          "wr_short": 65.1,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 507,
+              "pnl": 7057.08,
+              "wr": 58.6
+            },
+            "TP": {
+              "count": 16,
+              "pnl": 3340.02,
+              "wr": 100.0
+            },
+            "TIMEOUT": {
+              "count": 137,
+              "pnl": 6590.72,
+              "wr": 74.5
+            }
+          }
+        },
+        "FIL": {
+          "pnl": 17420.65,
+          "trades": 662,
+          "wr": 60.27,
+          "sharpe": 7.559,
+          "n_long": 322,
+          "n_short": 340,
+          "wr_long": 58.1,
+          "wr_short": 62.4,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 506,
+              "pnl": 5817.85,
+              "wr": 54.0
+            },
+            "TIMEOUT": {
+              "count": 140,
+              "pnl": 6395.99,
+              "wr": 78.6
+            },
+            "TP": {
+              "count": 16,
+              "pnl": 5206.81,
+              "wr": 100.0
+            }
+          }
+        }
+      },
+      "elapsed_s": 1.4
+    },
+    {
+      "name": "H4_baseline_reb_replace",
+      "description": "Replace baseline with rebound during vol spikes",
+      "total_pnl": 75078.22,
+      "total_trades": 4134,
+      "win_rate": 69.4,
+      "coin_results": {
+        "BTC": {
+          "pnl": 8179.95,
+          "trades": 734,
+          "wr": 71.12,
+          "sharpe": 10.68,
+          "n_long": 354,
+          "n_short": 380,
+          "wr_long": 69.5,
+          "wr_short": 72.6,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 102,
+              "pnl": 79.7,
+              "wr": 55.9
+            },
+            "SIGNAL_FLIP": {
+              "count": 620,
+              "pnl": 8446.58,
+              "wr": 74.0
+            },
+            "SL": {
+              "count": 6,
+              "pnl": -685.03,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 6,
+              "pnl": 338.7,
+              "wr": 100.0
+            }
+          }
+        },
+        "XRP": {
+          "pnl": 9558.92,
+          "trades": 600,
+          "wr": 68.67,
+          "sharpe": 6.701,
+          "n_long": 298,
+          "n_short": 302,
+          "wr_long": 66.1,
+          "wr_short": 71.2,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 91,
+              "pnl": -632.78,
+              "wr": 50.5
+            },
+            "SIGNAL_FLIP": {
+              "count": 500,
+              "pnl": 10599.24,
+              "wr": 72.2
+            },
+            "SL": {
+              "count": 4,
+              "pnl": -1058.45,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 5,
+              "pnl": 650.91,
+              "wr": 100.0
+            }
+          }
+        },
+        "ADA": {
+          "pnl": 12066.93,
+          "trades": 600,
+          "wr": 70.17,
+          "sharpe": 8.075,
+          "n_long": 298,
+          "n_short": 302,
+          "wr_long": 69.5,
+          "wr_short": 70.9,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 95,
+              "pnl": -229.25,
+              "wr": 57.9
+            },
+            "SIGNAL_FLIP": {
+              "count": 498,
+              "pnl": 13015.41,
+              "wr": 72.9
+            },
+            "SL": {
+              "count": 4,
+              "pnl": -1296.11,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 3,
+              "pnl": 576.88,
+              "wr": 100.0
+            }
+          }
+        },
+        "DOT": {
+          "pnl": 13208.02,
+          "trades": 733,
+          "wr": 67.12,
+          "sharpe": 8.927,
+          "n_long": 355,
+          "n_short": 378,
+          "wr_long": 66.5,
+          "wr_short": 67.7,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 108,
+              "pnl": -802.31,
+              "wr": 51.9
+            },
+            "SIGNAL_FLIP": {
+              "count": 618,
+              "pnl": 13679.86,
+              "wr": 69.7
+            },
+            "SL": {
+              "count": 2,
+              "pnl": -528.63,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 5,
+              "pnl": 859.09,
+              "wr": 100.0
+            }
+          }
+        },
+        "SUI": {
+          "pnl": 15766.6,
+          "trades": 733,
+          "wr": 70.4,
+          "sharpe": 9.032,
+          "n_long": 354,
+          "n_short": 379,
+          "wr_long": 68.1,
+          "wr_short": 72.6,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 106,
+              "pnl": -403.51,
+              "wr": 54.7
+            },
+            "SIGNAL_FLIP": {
+              "count": 621,
+              "pnl": 16098.72,
+              "wr": 73.1
+            },
+            "SL": {
+              "count": 2,
+              "pnl": -774.08,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 4,
+              "pnl": 845.47,
+              "wr": 100.0
+            }
+          }
+        },
+        "FIL": {
+          "pnl": 16297.8,
+          "trades": 734,
+          "wr": 68.66,
+          "sharpe": 8.506,
+          "n_long": 356,
+          "n_short": 378,
+          "wr_long": 69.4,
+          "wr_short": 68.0,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 108,
+              "pnl": -200.25,
+              "wr": 55.6
+            },
+            "SIGNAL_FLIP": {
+              "count": 619,
+              "pnl": 15543.03,
+              "wr": 70.9
+            },
+            "SL": {
+              "count": 2,
+              "pnl": -615.01,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 5,
+              "pnl": 1570.02,
+              "wr": 100.0
+            }
+          }
+        }
+      },
+      "elapsed_s": 2.7
+    },
+    {
+      "name": "H3_baseline_mom_replace",
+      "description": "Replace baseline with momentum during vol spikes",
+      "total_pnl": 65505.91,
+      "total_trades": 4434,
+      "win_rate": 55.2,
+      "coin_results": {
+        "BTC": {
+          "pnl": 6507.49,
+          "trades": 775,
+          "wr": 56.0,
+          "sharpe": 7.803,
+          "n_long": 385,
+          "n_short": 390,
+          "wr_long": 55.3,
+          "wr_short": 56.7,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 658,
+              "pnl": 2807.27,
+              "wr": 52.0
+            },
+            "TIMEOUT": {
+              "count": 96,
+              "pnl": 2108.97,
+              "wr": 74.0
+            },
+            "TP": {
+              "count": 21,
+              "pnl": 1591.25,
+              "wr": 100.0
+            }
+          }
+        },
+        "XRP": {
+          "pnl": 8070.41,
+          "trades": 671,
+          "wr": 54.84,
+          "sharpe": 5.987,
+          "n_long": 326,
+          "n_short": 345,
+          "wr_long": 52.1,
+          "wr_short": 57.4,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 565,
+              "pnl": 2771.79,
+              "wr": 50.1
+            },
+            "TIMEOUT": {
+              "count": 90,
+              "pnl": 3450.54,
+              "wr": 77.8
+            },
+            "TP": {
+              "count": 15,
+              "pnl": 2132.53,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 1,
+              "pnl": -284.45,
+              "wr": 0.0
+            }
+          }
+        },
+        "ADA": {
+          "pnl": 9665.57,
+          "trades": 670,
+          "wr": 53.58,
+          "sharpe": 6.259,
+          "n_long": 326,
+          "n_short": 344,
+          "wr_long": 52.5,
+          "wr_short": 54.7,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 567,
+              "pnl": 3209.9,
+              "wr": 48.9
+            },
+            "TIMEOUT": {
+              "count": 89,
+              "pnl": 3923.61,
+              "wr": 77.5
+            },
+            "TP": {
+              "count": 13,
+              "pnl": 2806.92,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 1,
+              "pnl": -274.86,
+              "wr": 0.0
+            }
+          }
+        },
+        "DOT": {
+          "pnl": 12352.28,
+          "trades": 771,
+          "wr": 55.25,
+          "sharpe": 7.663,
+          "n_long": 383,
+          "n_short": 388,
+          "wr_long": 53.0,
+          "wr_short": 57.5,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 657,
+              "pnl": 6129.93,
+              "wr": 51.6
+            },
+            "TIMEOUT": {
+              "count": 102,
+              "pnl": 3567.66,
+              "wr": 73.5
+            },
+            "TP": {
+              "count": 12,
+              "pnl": 2654.68,
+              "wr": 100.0
+            }
+          }
+        },
+        "SUI": {
+          "pnl": 14188.97,
+          "trades": 773,
+          "wr": 56.53,
+          "sharpe": 7.887,
+          "n_long": 383,
+          "n_short": 390,
+          "wr_long": 53.8,
+          "wr_short": 59.2,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 661,
+              "pnl": 6802.56,
+              "wr": 53.3
+            },
+            "TP": {
+              "count": 12,
+              "pnl": 2735.89,
+              "wr": 100.0
+            },
+            "TIMEOUT": {
+              "count": 100,
+              "pnl": 4650.52,
+              "wr": 73.0
+            }
+          }
+        },
+        "FIL": {
+          "pnl": 14721.19,
+          "trades": 774,
+          "wr": 54.52,
+          "sharpe": 6.23,
+          "n_long": 385,
+          "n_short": 389,
+          "wr_long": 53.0,
+          "wr_short": 56.0,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 661,
+              "pnl": 6124.61,
+              "wr": 50.7
+            },
+            "TIMEOUT": {
+              "count": 102,
+              "pnl": 4057.38,
+              "wr": 74.5
+            },
+            "TP": {
+              "count": 11,
+              "pnl": 4539.2,
+              "wr": 100.0
+            }
+          }
+        }
+      },
+      "elapsed_s": 2.6
+    },
+    {
+      "name": "R3_rsi_extreme_75_25",
+      "description": "Rebound: vol spike + RSI>75 short / RSI<25 long",
+      "total_pnl": 5348.04,
+      "total_trades": 1059,
+      "win_rate": 56.0,
+      "coin_results": {
+        "BTC": {
+          "pnl": -141.69,
+          "trades": 178,
+          "wr": 50.56,
+          "sharpe": -0.242,
+          "n_long": 94,
+          "n_short": 84,
+          "wr_long": 53.2,
+          "wr_short": 47.6,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 104,
+              "pnl": -497.56,
+              "wr": 45.2
+            },
+            "SIGNAL_FLIP": {
+              "count": 9,
+              "pnl": 392.22,
+              "wr": 100.0
+            },
+            "TP": {
+              "count": 34,
+              "pnl": 1685.13,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 31,
+              "pnl": -1721.48,
+              "wr": 0.0
+            }
+          }
+        },
+        "XRP": {
+          "pnl": 787.15,
+          "trades": 177,
+          "wr": 55.93,
+          "sharpe": 0.766,
+          "n_long": 94,
+          "n_short": 83,
+          "wr_long": 55.3,
+          "wr_short": 56.6,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 109,
+              "pnl": 56.65,
+              "wr": 52.3
+            },
+            "SIGNAL_FLIP": {
+              "count": 14,
+              "pnl": 695.61,
+              "wr": 100.0
+            },
+            "TP": {
+              "count": 28,
+              "pnl": 2839.88,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 26,
+              "pnl": -2804.99,
+              "wr": 0.0
+            }
+          }
+        },
+        "ADA": {
+          "pnl": 416.15,
+          "trades": 177,
+          "wr": 57.06,
+          "sharpe": 0.301,
+          "n_long": 95,
+          "n_short": 82,
+          "wr_long": 58.9,
+          "wr_short": 54.9,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 103,
+              "pnl": -138.9,
+              "wr": 54.4
+            },
+            "SIGNAL_FLIP": {
+              "count": 14,
+              "pnl": 1089.33,
+              "wr": 92.9
+            },
+            "SL": {
+              "count": 28,
+              "pnl": -4008.14,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 32,
+              "pnl": 3473.86,
+              "wr": 100.0
+            }
+          }
+        },
+        "DOT": {
+          "pnl": 1578.88,
+          "trades": 175,
+          "wr": 56.57,
+          "sharpe": 1.415,
+          "n_long": 94,
+          "n_short": 81,
+          "wr_long": 55.3,
+          "wr_short": 58.0,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 105,
+              "pnl": -65.23,
+              "wr": 50.5
+            },
+            "SIGNAL_FLIP": {
+              "count": 14,
+              "pnl": 821.35,
+              "wr": 92.9
+            },
+            "SL": {
+              "count": 23,
+              "pnl": -2698.91,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 33,
+              "pnl": 3521.68,
+              "wr": 100.0
+            }
+          }
+        },
+        "SUI": {
+          "pnl": 1411.16,
+          "trades": 176,
+          "wr": 55.68,
+          "sharpe": 1.058,
+          "n_long": 94,
+          "n_short": 82,
+          "wr_long": 54.3,
+          "wr_short": 57.3,
+          "exit_breakdown": {
+            "SL": {
+              "count": 28,
+              "pnl": -3720.9,
+              "wr": 0.0
+            },
+            "SIGNAL_FLIP": {
+              "count": 13,
+              "pnl": 884.69,
+              "wr": 100.0
+            },
+            "TIMEOUT": {
+              "count": 100,
+              "pnl": -424.63,
+              "wr": 50.0
+            },
+            "TP": {
+              "count": 35,
+              "pnl": 4672.0,
+              "wr": 100.0
+            }
+          }
+        },
+        "FIL": {
+          "pnl": 1296.39,
+          "trades": 176,
+          "wr": 60.23,
+          "sharpe": 1.115,
+          "n_long": 93,
+          "n_short": 83,
+          "wr_long": 60.2,
+          "wr_short": 60.2,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 111,
+              "pnl": 395.34,
+              "wr": 58.6
+            },
+            "SIGNAL_FLIP": {
+              "count": 13,
+              "pnl": 852.97,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 24,
+              "pnl": -3065.19,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 28,
+              "pnl": 3113.26,
+              "wr": 100.0
+            }
+          }
+        }
+      },
+      "elapsed_s": 1.1
+    },
+    {
+      "name": "M10_range_z_ret8",
+      "description": "Momentum: range_z>1.5 + 2h return direction (>0.5%)",
+      "total_pnl": 2138.97,
+      "total_trades": 2167,
+      "win_rate": 41.3,
+      "coin_results": {
+        "BTC": {
+          "pnl": -220.55,
+          "trades": 358,
+          "wr": 40.5,
+          "sharpe": -0.295,
+          "n_long": 165,
+          "n_short": 193,
+          "wr_long": 43.0,
+          "wr_short": 38.3,
+          "exit_breakdown": {
+            "TP": {
+              "count": 29,
+              "pnl": 2126.41,
+              "wr": 100.0
+            },
+            "TIMEOUT": {
+              "count": 120,
+              "pnl": 593.02,
+              "wr": 54.2
+            },
+            "SIGNAL_FLIP": {
+              "count": 207,
+              "pnl": -2777.4,
+              "wr": 24.6
+            },
+            "SL": {
+              "count": 2,
+              "pnl": -162.58,
+              "wr": 0.0
+            }
+          }
+        },
+        "XRP": {
+          "pnl": 791.1,
+          "trades": 362,
+          "wr": 44.2,
+          "sharpe": 0.593,
+          "n_long": 165,
+          "n_short": 197,
+          "wr_long": 40.0,
+          "wr_short": 47.7,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 118,
+              "pnl": 1246.32,
+              "wr": 61.0
+            },
+            "SIGNAL_FLIP": {
+              "count": 211,
+              "pnl": -3899.67,
+              "wr": 28.0
+            },
+            "TP": {
+              "count": 29,
+              "pnl": 3869.87,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 4,
+              "pnl": -425.43,
+              "wr": 0.0
+            }
+          }
+        },
+        "ADA": {
+          "pnl": 1145.31,
+          "trades": 364,
+          "wr": 40.93,
+          "sharpe": 0.831,
+          "n_long": 162,
+          "n_short": 202,
+          "wr_long": 38.3,
+          "wr_short": 43.1,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 129,
+              "pnl": 3160.0,
+              "wr": 65.9
+            },
+            "SIGNAL_FLIP": {
+              "count": 209,
+              "pnl": -5449.37,
+              "wr": 19.1
+            },
+            "TP": {
+              "count": 24,
+              "pnl": 3785.9,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 2,
+              "pnl": -351.22,
+              "wr": 0.0
+            }
+          }
+        },
+        "DOT": {
+          "pnl": 1013.02,
+          "trades": 361,
+          "wr": 41.83,
+          "sharpe": 0.78,
+          "n_long": 162,
+          "n_short": 199,
+          "wr_long": 38.9,
+          "wr_short": 44.2,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 126,
+              "pnl": 2436.51,
+              "wr": 61.9
+            },
+            "SIGNAL_FLIP": {
+              "count": 209,
+              "pnl": -4678.94,
+              "wr": 23.9
+            },
+            "TP": {
+              "count": 23,
+              "pnl": 3682.0,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 3,
+              "pnl": -426.55,
+              "wr": 0.0
+            }
+          }
+        },
+        "SUI": {
+          "pnl": -528.11,
+          "trades": 361,
+          "wr": 40.72,
+          "sharpe": -0.325,
+          "n_long": 162,
+          "n_short": 199,
+          "wr_long": 35.2,
+          "wr_short": 45.2,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 122,
+              "pnl": 1499.2,
+              "wr": 56.6
+            },
+            "TP": {
+              "count": 26,
+              "pnl": 4603.85,
+              "wr": 100.0
+            },
+            "SIGNAL_FLIP": {
+              "count": 211,
+              "pnl": -6154.17,
+              "wr": 24.6
+            },
+            "SL": {
+              "count": 2,
+              "pnl": -476.98,
+              "wr": 0.0
+            }
+          }
+        },
+        "FIL": {
+          "pnl": -61.8,
+          "trades": 361,
+          "wr": 39.89,
+          "sharpe": -0.036,
+          "n_long": 162,
+          "n_short": 199,
+          "wr_long": 37.7,
+          "wr_short": 41.7,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 125,
+              "pnl": 1969.59,
+              "wr": 58.4
+            },
+            "SIGNAL_FLIP": {
+              "count": 209,
+              "pnl": -5286.24,
+              "wr": 23.4
+            },
+            "TP": {
+              "count": 22,
+              "pnl": 4421.16,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 5,
+              "pnl": -1166.3,
+              "wr": 0.0
+            }
+          }
+        }
+      },
+      "elapsed_s": 1.0
+    },
+    {
+      "name": "R4_rsi_extreme_80_20",
+      "description": "Rebound: vol spike + RSI>80 short / RSI<20 long (stricter)",
+      "total_pnl": 1930.99,
+      "total_trades": 438,
+      "win_rate": 53.6,
+      "coin_results": {
+        "BTC": {
+          "pnl": -275.68,
+          "trades": 73,
+          "wr": 52.05,
+          "sharpe": -0.638,
+          "n_long": 35,
+          "n_short": 38,
+          "wr_long": 54.3,
+          "wr_short": 50.0,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 43,
+              "pnl": 24.26,
+              "wr": 53.5
+            },
+            "TP": {
+              "count": 15,
+              "pnl": 757.77,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 15,
+              "pnl": -1057.71,
+              "wr": 0.0
+            }
+          }
+        },
+        "XRP": {
+          "pnl": 478.15,
+          "trades": 73,
+          "wr": 56.16,
+          "sharpe": 0.738,
+          "n_long": 35,
+          "n_short": 38,
+          "wr_long": 57.1,
+          "wr_short": 55.3,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 50,
+              "pnl": 429.8,
+              "wr": 56.0
+            },
+            "TP": {
+              "count": 12,
+              "pnl": 1143.15,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 10,
+              "pnl": -1122.96,
+              "wr": 0.0
+            },
+            "SIGNAL_FLIP": {
+              "count": 1,
+              "pnl": 28.16,
+              "wr": 100.0
+            }
+          }
+        },
+        "ADA": {
+          "pnl": 357.02,
+          "trades": 73,
+          "wr": 56.16,
+          "sharpe": 0.449,
+          "n_long": 35,
+          "n_short": 38,
+          "wr_long": 60.0,
+          "wr_short": 52.6,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 45,
+              "pnl": 72.33,
+              "wr": 55.6
+            },
+            "TP": {
+              "count": 15,
+              "pnl": 1652.86,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 12,
+              "pnl": -1432.19,
+              "wr": 0.0
+            },
+            "SIGNAL_FLIP": {
+              "count": 1,
+              "pnl": 64.02,
+              "wr": 100.0
+            }
+          }
+        },
+        "DOT": {
+          "pnl": 188.6,
+          "trades": 73,
+          "wr": 53.42,
+          "sharpe": 0.224,
+          "n_long": 35,
+          "n_short": 38,
+          "wr_long": 54.3,
+          "wr_short": 52.6,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 46,
+              "pnl": 309.88,
+              "wr": 54.3
+            },
+            "TP": {
+              "count": 13,
+              "pnl": 1569.44,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 13,
+              "pnl": -1723.24,
+              "wr": 0.0
+            },
+            "SIGNAL_FLIP": {
+              "count": 1,
+              "pnl": 32.53,
+              "wr": 100.0
+            }
+          }
+        },
+        "SUI": {
+          "pnl": 880.87,
+          "trades": 73,
+          "wr": 54.79,
+          "sharpe": 0.963,
+          "n_long": 35,
+          "n_short": 38,
+          "wr_long": 54.3,
+          "wr_short": 55.3,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 48,
+              "pnl": 496.44,
+              "wr": 52.1
+            },
+            "TP": {
+              "count": 14,
+              "pnl": 1873.01,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 10,
+              "pnl": -1550.87,
+              "wr": 0.0
+            },
+            "SIGNAL_FLIP": {
+              "count": 1,
+              "pnl": 62.29,
+              "wr": 100.0
+            }
+          }
+        },
+        "FIL": {
+          "pnl": 302.03,
+          "trades": 73,
+          "wr": 49.32,
+          "sharpe": 0.387,
+          "n_long": 35,
+          "n_short": 38,
+          "wr_long": 54.3,
+          "wr_short": 44.7,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 50,
+              "pnl": 284.55,
+              "wr": 48.0
+            },
+            "TP": {
+              "count": 11,
+              "pnl": 1260.97,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 11,
+              "pnl": -1306.13,
+              "wr": 0.0
+            },
+            "SIGNAL_FLIP": {
+              "count": 1,
+              "pnl": 62.65,
+              "wr": 100.0
+            }
+          }
+        }
+      },
+      "elapsed_s": 1.0
+    },
+    {
+      "name": "R7_exhaustion_disp1.5_rsi70",
+      "description": "Rebound: displacement>1.5 + RSI>70/<30 -> contrarian",
+      "total_pnl": 101.62,
+      "total_trades": 1443,
+      "win_rate": 53.7,
+      "coin_results": {
+        "BTC": {
+          "pnl": -233.25,
+          "trades": 241,
+          "wr": 53.94,
+          "sharpe": -0.325,
+          "n_long": 124,
+          "n_short": 117,
+          "wr_long": 51.6,
+          "wr_short": 56.4,
+          "exit_breakdown": {
+            "SL": {
+              "count": 46,
+              "pnl": -2811.62,
+              "wr": 0.0
+            },
+            "TIMEOUT": {
+              "count": 120,
+              "pnl": -184.2,
+              "wr": 48.3
+            },
+            "SIGNAL_FLIP": {
+              "count": 35,
+              "pnl": 885.82,
+              "wr": 91.4
+            },
+            "TP": {
+              "count": 40,
+              "pnl": 1876.75,
+              "wr": 100.0
+            }
+          }
+        },
+        "XRP": {
+          "pnl": -985.73,
+          "trades": 245,
+          "wr": 52.65,
+          "sharpe": -0.832,
+          "n_long": 125,
+          "n_short": 120,
+          "wr_long": 44.8,
+          "wr_short": 60.8,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 129,
+              "pnl": 477.38,
+              "wr": 51.9
+            },
+            "TP": {
+              "count": 34,
+              "pnl": 2531.87,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 46,
+              "pnl": -5143.97,
+              "wr": 0.0
+            },
+            "SIGNAL_FLIP": {
+              "count": 36,
+              "pnl": 1148.99,
+              "wr": 77.8
+            }
+          }
+        },
+        "ADA": {
+          "pnl": -136.73,
+          "trades": 240,
+          "wr": 54.58,
+          "sharpe": -0.103,
+          "n_long": 124,
+          "n_short": 116,
+          "wr_long": 51.6,
+          "wr_short": 57.8,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 129,
+              "pnl": -661.8,
+              "wr": 48.1
+            },
+            "SIGNAL_FLIP": {
+              "count": 40,
+              "pnl": 1530.47,
+              "wr": 82.5
+            },
+            "SL": {
+              "count": 35,
+              "pnl": -4559.19,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 36,
+              "pnl": 3553.79,
+              "wr": 100.0
+            }
+          }
+        },
+        "DOT": {
+          "pnl": -187.94,
+          "trades": 239,
+          "wr": 50.63,
+          "sharpe": -0.142,
+          "n_long": 122,
+          "n_short": 117,
+          "wr_long": 46.7,
+          "wr_short": 54.7,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 131,
+              "pnl": -960.38,
+              "wr": 41.2
+            },
+            "SIGNAL_FLIP": {
+              "count": 39,
+              "pnl": 1464.04,
+              "wr": 79.5
+            },
+            "SL": {
+              "count": 33,
+              "pnl": -4319.01,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 36,
+              "pnl": 3627.42,
+              "wr": 100.0
+            }
+          }
+        },
+        "SUI": {
+          "pnl": 1246.62,
+          "trades": 239,
+          "wr": 55.23,
+          "sharpe": 0.791,
+          "n_long": 121,
+          "n_short": 118,
+          "wr_long": 47.9,
+          "wr_short": 62.7,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 124,
+              "pnl": 38.6,
+              "wr": 48.4
+            },
+            "SL": {
+              "count": 38,
+              "pnl": -5436.23,
+              "wr": 0.0
+            },
+            "SIGNAL_FLIP": {
+              "count": 37,
+              "pnl": 1623.87,
+              "wr": 86.5
+            },
+            "TP": {
+              "count": 40,
+              "pnl": 5020.38,
+              "wr": 100.0
+            }
+          }
+        },
+        "FIL": {
+          "pnl": 398.65,
+          "trades": 239,
+          "wr": 55.23,
+          "sharpe": 0.298,
+          "n_long": 122,
+          "n_short": 117,
+          "wr_long": 50.0,
+          "wr_short": 60.7,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 140,
+              "pnl": -327.17,
+              "wr": 50.7
+            },
+            "SIGNAL_FLIP": {
+              "count": 38,
+              "pnl": 1665.27,
+              "wr": 81.6
+            },
+            "SL": {
+              "count": 31,
+              "pnl": -4239.57,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 30,
+              "pnl": 3300.12,
+              "wr": 100.0
+            }
+          }
+        }
+      },
+      "elapsed_s": 1.2
+    },
+    {
+      "name": "M7_range_z_wide_sltp",
+      "description": "Momentum: range_z>1.5 + ret direction + wide SL25/TP20",
+      "total_pnl": 48.79,
+      "total_trades": 2576,
+      "win_rate": 40.4,
+      "coin_results": {
+        "BTC": {
+          "pnl": -518.47,
+          "trades": 429,
+          "wr": 37.53,
+          "sharpe": -0.72,
+          "n_long": 195,
+          "n_short": 234,
+          "wr_long": 40.0,
+          "wr_short": 35.5,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 321,
+              "pnl": -2338.14,
+              "wr": 30.2
+            },
+            "TIMEOUT": {
+              "count": 100,
+              "pnl": 1042.36,
+              "wr": 56.0
+            },
+            "TP": {
+              "count": 8,
+              "pnl": 777.31,
+              "wr": 100.0
+            }
+          }
+        },
+        "XRP": {
+          "pnl": 1118.24,
+          "trades": 431,
+          "wr": 43.16,
+          "sharpe": 0.841,
+          "n_long": 195,
+          "n_short": 236,
+          "wr_long": 41.0,
+          "wr_short": 44.9,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 319,
+              "pnl": -2135.26,
+              "wr": 34.5
+            },
+            "TIMEOUT": {
+              "count": 98,
+              "pnl": 1468.61,
+              "wr": 64.3
+            },
+            "TP": {
+              "count": 13,
+              "pnl": 2069.34,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 1,
+              "pnl": -284.45,
+              "wr": 0.0
+            }
+          }
+        },
+        "ADA": {
+          "pnl": 431.95,
+          "trades": 431,
+          "wr": 41.76,
+          "sharpe": 0.307,
+          "n_long": 196,
+          "n_short": 235,
+          "wr_long": 38.3,
+          "wr_short": 44.7,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 319,
+              "pnl": -3780.37,
+              "wr": 32.6
+            },
+            "TIMEOUT": {
+              "count": 101,
+              "pnl": 2098.49,
+              "wr": 65.3
+            },
+            "TP": {
+              "count": 10,
+              "pnl": 2388.69,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 1,
+              "pnl": -274.86,
+              "wr": 0.0
+            }
+          }
+        },
+        "DOT": {
+          "pnl": -380.79,
+          "trades": 429,
+          "wr": 40.33,
+          "sharpe": -0.289,
+          "n_long": 196,
+          "n_short": 233,
+          "wr_long": 37.2,
+          "wr_short": 42.9,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 321,
+              "pnl": -3895.86,
+              "wr": 31.8
+            },
+            "TIMEOUT": {
+              "count": 101,
+              "pnl": 1874.21,
+              "wr": 63.4
+            },
+            "TP": {
+              "count": 7,
+              "pnl": 1640.86,
+              "wr": 100.0
+            }
+          }
+        },
+        "SUI": {
+          "pnl": -31.89,
+          "trades": 429,
+          "wr": 38.93,
+          "sharpe": -0.02,
+          "n_long": 196,
+          "n_short": 233,
+          "wr_long": 35.7,
+          "wr_short": 41.6,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 321,
+              "pnl": -4450.53,
+              "wr": 31.5
+            },
+            "TP": {
+              "count": 11,
+              "pnl": 2897.1,
+              "wr": 100.0
+            },
+            "TIMEOUT": {
+              "count": 97,
+              "pnl": 1521.54,
+              "wr": 56.7
+            }
+          }
+        },
+        "FIL": {
+          "pnl": -570.25,
+          "trades": 427,
+          "wr": 40.75,
+          "sharpe": -0.275,
+          "n_long": 195,
+          "n_short": 232,
+          "wr_long": 38.5,
+          "wr_short": 42.7,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 320,
+              "pnl": -3778.49,
+              "wr": 32.8
+            },
+            "TIMEOUT": {
+              "count": 101,
+              "pnl": 1704.72,
+              "wr": 63.4
+            },
+            "TP": {
+              "count": 5,
+              "pnl": 2397.23,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 1,
+              "pnl": -893.71,
+              "wr": 0.0
+            }
+          }
+        }
+      },
+      "elapsed_s": 1.1
+    },
+    {
+      "name": "R1_disp_rebound_2.0",
+      "description": "Rebound: range_z>1.5 + displacement>2.0 ATR -> contrarian",
+      "total_pnl": -262.22,
+      "total_trades": 1810,
+      "win_rate": 56.9,
+      "coin_results": {
+        "BTC": {
+          "pnl": -276.72,
+          "trades": 301,
+          "wr": 56.15,
+          "sharpe": -0.369,
+          "n_long": 167,
+          "n_short": 134,
+          "wr_long": 56.3,
+          "wr_short": 56.0,
+          "exit_breakdown": {
+            "SL": {
+              "count": 53,
+              "pnl": -3215.94,
+              "wr": 0.0
+            },
+            "TIMEOUT": {
+              "count": 133,
+              "pnl": -478.2,
+              "wr": 46.6
+            },
+            "SIGNAL_FLIP": {
+              "count": 78,
+              "pnl": 1717.82,
+              "wr": 89.7
+            },
+            "TP": {
+              "count": 37,
+              "pnl": 1699.6,
+              "wr": 100.0
+            }
+          }
+        },
+        "XRP": {
+          "pnl": -1051.67,
+          "trades": 306,
+          "wr": 55.23,
+          "sharpe": -0.878,
+          "n_long": 165,
+          "n_short": 141,
+          "wr_long": 47.9,
+          "wr_short": 63.8,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 138,
+              "pnl": -51.09,
+              "wr": 50.7
+            },
+            "SIGNAL_FLIP": {
+              "count": 88,
+              "pnl": 2539.18,
+              "wr": 80.7
+            },
+            "SL": {
+              "count": 52,
+              "pnl": -5631.6,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 28,
+              "pnl": 2091.84,
+              "wr": 100.0
+            }
+          }
+        },
+        "ADA": {
+          "pnl": -805.53,
+          "trades": 306,
+          "wr": 56.21,
+          "sharpe": -0.584,
+          "n_long": 171,
+          "n_short": 135,
+          "wr_long": 53.2,
+          "wr_short": 60.0,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 144,
+              "pnl": -732.33,
+              "wr": 49.3
+            },
+            "SIGNAL_FLIP": {
+              "count": 93,
+              "pnl": 3200.34,
+              "wr": 82.8
+            },
+            "SL": {
+              "count": 45,
+              "pnl": -5633.19,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 24,
+              "pnl": 2359.65,
+              "wr": 100.0
+            }
+          }
+        },
+        "DOT": {
+          "pnl": 214.14,
+          "trades": 300,
+          "wr": 57.67,
+          "sharpe": 0.156,
+          "n_long": 162,
+          "n_short": 138,
+          "wr_long": 54.3,
+          "wr_short": 61.6,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 137,
+              "pnl": -1193.87,
+              "wr": 48.2
+            },
+            "SIGNAL_FLIP": {
+              "count": 92,
+              "pnl": 3025.55,
+              "wr": 82.6
+            },
+            "SL": {
+              "count": 40,
+              "pnl": -4990.94,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 31,
+              "pnl": 3373.4,
+              "wr": 100.0
+            }
+          }
+        },
+        "SUI": {
+          "pnl": 378.94,
+          "trades": 298,
+          "wr": 57.38,
+          "sharpe": 0.24,
+          "n_long": 164,
+          "n_short": 134,
+          "wr_long": 52.4,
+          "wr_short": 63.4,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 128,
+              "pnl": -1258.24,
+              "wr": 47.7
+            },
+            "SL": {
+              "count": 44,
+              "pnl": -6088.35,
+              "wr": 0.0
+            },
+            "SIGNAL_FLIP": {
+              "count": 100,
+              "pnl": 4457.88,
+              "wr": 84.0
+            },
+            "TP": {
+              "count": 26,
+              "pnl": 3267.66,
+              "wr": 100.0
+            }
+          }
+        },
+        "FIL": {
+          "pnl": 1278.62,
+          "trades": 299,
+          "wr": 58.86,
+          "sharpe": 0.876,
+          "n_long": 165,
+          "n_short": 134,
+          "wr_long": 54.5,
+          "wr_short": 64.2,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 135,
+              "pnl": -925.43,
+              "wr": 50.4
+            },
+            "SIGNAL_FLIP": {
+              "count": 95,
+              "pnl": 3776.09,
+              "wr": 81.1
+            },
+            "SL": {
+              "count": 38,
+              "pnl": -5199.32,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 31,
+              "pnl": 3627.27,
+              "wr": 100.0
+            }
+          }
+        }
+      },
+      "elapsed_s": 1.2
+    },
+    {
+      "name": "M4_range_z_ema_align",
+      "description": "Momentum: range_z>1.5 + EMA9>EMA21 alignment",
+      "total_pnl": -872.74,
+      "total_trades": 2038,
+      "win_rate": 42.3,
+      "coin_results": {
+        "BTC": {
+          "pnl": -677.22,
+          "trades": 340,
+          "wr": 39.71,
+          "sharpe": -0.924,
+          "n_long": 149,
+          "n_short": 191,
+          "wr_long": 40.9,
+          "wr_short": 38.7,
+          "exit_breakdown": {
+            "TP": {
+              "count": 35,
+              "pnl": 2385.19,
+              "wr": 100.0
+            },
+            "TIMEOUT": {
+              "count": 134,
+              "pnl": 657.69,
+              "wr": 57.5
+            },
+            "SIGNAL_FLIP": {
+              "count": 170,
+              "pnl": -3666.6,
+              "wr": 13.5
+            },
+            "SL": {
+              "count": 1,
+              "pnl": -53.49,
+              "wr": 0.0
+            }
+          }
+        },
+        "XRP": {
+          "pnl": 1775.88,
+          "trades": 341,
+          "wr": 44.57,
+          "sharpe": 1.366,
+          "n_long": 150,
+          "n_short": 191,
+          "wr_long": 38.7,
+          "wr_short": 49.2,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 135,
+              "pnl": 1245.03,
+              "wr": 57.0
+            },
+            "SIGNAL_FLIP": {
+              "count": 168,
+              "pnl": -4163.55,
+              "wr": 22.6
+            },
+            "TP": {
+              "count": 37,
+              "pnl": 4785.66,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 1,
+              "pnl": -91.26,
+              "wr": 0.0
+            }
+          }
+        },
+        "ADA": {
+          "pnl": 188.11,
+          "trades": 341,
+          "wr": 43.11,
+          "sharpe": 0.136,
+          "n_long": 152,
+          "n_short": 189,
+          "wr_long": 38.2,
+          "wr_short": 47.1,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 143,
+              "pnl": 2283.21,
+              "wr": 59.4
+            },
+            "SIGNAL_FLIP": {
+              "count": 170,
+              "pnl": -5839.94,
+              "wr": 20.6
+            },
+            "TP": {
+              "count": 27,
+              "pnl": 3878.82,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 1,
+              "pnl": -133.99,
+              "wr": 0.0
+            }
+          }
+        },
+        "DOT": {
+          "pnl": -402.4,
+          "trades": 338,
+          "wr": 43.79,
+          "sharpe": -0.301,
+          "n_long": 149,
+          "n_short": 189,
+          "wr_long": 38.3,
+          "wr_short": 48.1,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 139,
+              "pnl": 1827.3,
+              "wr": 61.9
+            },
+            "SIGNAL_FLIP": {
+              "count": 173,
+              "pnl": -5252.06,
+              "wr": 22.5
+            },
+            "TP": {
+              "count": 23,
+              "pnl": 3415.41,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 3,
+              "pnl": -393.05,
+              "wr": 0.0
+            }
+          }
+        },
+        "SUI": {
+          "pnl": -449.09,
+          "trades": 342,
+          "wr": 40.94,
+          "sharpe": -0.27,
+          "n_long": 152,
+          "n_short": 190,
+          "wr_long": 35.5,
+          "wr_short": 45.3,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 133,
+              "pnl": 612.02,
+              "wr": 52.6
+            },
+            "TP": {
+              "count": 34,
+              "pnl": 5650.66,
+              "wr": 100.0
+            },
+            "SIGNAL_FLIP": {
+              "count": 174,
+              "pnl": -6575.07,
+              "wr": 20.7
+            },
+            "SL": {
+              "count": 1,
+              "pnl": -136.7,
+              "wr": 0.0
+            }
+          }
+        },
+        "FIL": {
+          "pnl": -1308.02,
+          "trades": 336,
+          "wr": 41.96,
+          "sharpe": -0.876,
+          "n_long": 146,
+          "n_short": 190,
+          "wr_long": 37.7,
+          "wr_short": 45.3,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 139,
+              "pnl": 2119.72,
+              "wr": 59.7
+            },
+            "SIGNAL_FLIP": {
+              "count": 171,
+              "pnl": -5816.98,
+              "wr": 21.1
+            },
+            "TP": {
+              "count": 22,
+              "pnl": 3341.67,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 4,
+              "pnl": -952.43,
+              "wr": 0.0
+            }
+          }
+        }
+      },
+      "elapsed_s": 1.0
+    },
+    {
+      "name": "R9_disp_rebound_wide_sl",
+      "description": "Rebound: displacement>2.0 + wide SL20/TP15",
+      "total_pnl": -953.08,
+      "total_trades": 1693,
+      "win_rate": 57.1,
+      "coin_results": {
+        "BTC": {
+          "pnl": 278.02,
+          "trades": 284,
+          "wr": 59.51,
+          "sharpe": 0.367,
+          "n_long": 155,
+          "n_short": 129,
+          "wr_long": 60.6,
+          "wr_short": 58.1,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 165,
+              "pnl": -1373.16,
+              "wr": 43.6
+            },
+            "SIGNAL_FLIP": {
+              "count": 104,
+              "pnl": 2771.25,
+              "wr": 91.3
+            },
+            "SL": {
+              "count": 13,
+              "pnl": -1201.08,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 2,
+              "pnl": 81.01,
+              "wr": 100.0
+            }
+          }
+        },
+        "XRP": {
+          "pnl": -970.36,
+          "trades": 284,
+          "wr": 55.28,
+          "sharpe": -0.701,
+          "n_long": 156,
+          "n_short": 128,
+          "wr_long": 48.7,
+          "wr_short": 63.3,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 159,
+              "pnl": -2423.65,
+              "wr": 43.4
+            },
+            "SIGNAL_FLIP": {
+              "count": 104,
+              "pnl": 3438.35,
+              "wr": 78.8
+            },
+            "SL": {
+              "count": 15,
+              "pnl": -2684.07,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 6,
+              "pnl": 699.01,
+              "wr": 100.0
+            }
+          }
+        },
+        "ADA": {
+          "pnl": -779.59,
+          "trades": 282,
+          "wr": 57.09,
+          "sharpe": -0.53,
+          "n_long": 153,
+          "n_short": 129,
+          "wr_long": 52.9,
+          "wr_short": 62.0,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 164,
+              "pnl": -2214.41,
+              "wr": 47.0
+            },
+            "SIGNAL_FLIP": {
+              "count": 103,
+              "pnl": 4073.45,
+              "wr": 79.6
+            },
+            "SL": {
+              "count": 13,
+              "pnl": -2861.22,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 2,
+              "pnl": 222.59,
+              "wr": 100.0
+            }
+          }
+        },
+        "DOT": {
+          "pnl": -11.99,
+          "trades": 281,
+          "wr": 56.23,
+          "sharpe": -0.008,
+          "n_long": 152,
+          "n_short": 129,
+          "wr_long": 54.6,
+          "wr_short": 58.1,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 171,
+              "pnl": -2841.59,
+              "wr": 42.7
+            },
+            "SIGNAL_FLIP": {
+              "count": 100,
+              "pnl": 3709.75,
+              "wr": 81.0
+            },
+            "SL": {
+              "count": 6,
+              "pnl": -1548.35,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 4,
+              "pnl": 668.2,
+              "wr": 100.0
+            }
+          }
+        },
+        "SUI": {
+          "pnl": -725.38,
+          "trades": 280,
+          "wr": 55.36,
+          "sharpe": -0.417,
+          "n_long": 152,
+          "n_short": 128,
+          "wr_long": 51.3,
+          "wr_short": 60.2,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 166,
+              "pnl": -3316.27,
+              "wr": 42.8
+            },
+            "SIGNAL_FLIP": {
+              "count": 100,
+              "pnl": 4481.98,
+              "wr": 80.0
+            },
+            "SL": {
+              "count": 10,
+              "pnl": -2647.32,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 4,
+              "pnl": 756.22,
+              "wr": 100.0
+            }
+          }
+        },
+        "FIL": {
+          "pnl": 1256.22,
+          "trades": 282,
+          "wr": 58.87,
+          "sharpe": 0.807,
+          "n_long": 153,
+          "n_short": 129,
+          "wr_long": 53.6,
+          "wr_short": 65.1,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 169,
+              "pnl": -2460.22,
+              "wr": 45.6
+            },
+            "SIGNAL_FLIP": {
+              "count": 100,
+              "pnl": 4242.94,
+              "wr": 83.0
+            },
+            "SL": {
+              "count": 7,
+              "pnl": -1953.82,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 6,
+              "pnl": 1427.32,
+              "wr": 100.0
+            }
+          }
+        }
+      },
+      "elapsed_s": 1.1
+    },
+    {
+      "name": "R10_combined2_exhaustion",
+      "description": "Rebound: 2-of-4 detectors + exhaustion (disp+RSI)",
+      "total_pnl": -1914.84,
+      "total_trades": 1684,
+      "win_rate": 52.8,
+      "coin_results": {
+        "BTC": {
+          "pnl": -417.23,
+          "trades": 281,
+          "wr": 53.38,
+          "sharpe": -0.576,
+          "n_long": 144,
+          "n_short": 137,
+          "wr_long": 50.0,
+          "wr_short": 56.9,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 143,
+              "pnl": -1004.99,
+              "wr": 42.7
+            },
+            "SIGNAL_FLIP": {
+              "count": 76,
+              "pnl": 2193.42,
+              "wr": 90.8
+            },
+            "SL": {
+              "count": 42,
+              "pnl": -2552.66,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 20,
+              "pnl": 947.0,
+              "wr": 100.0
+            }
+          }
+        },
+        "XRP": {
+          "pnl": -1400.64,
+          "trades": 280,
+          "wr": 52.14,
+          "sharpe": -1.092,
+          "n_long": 143,
+          "n_short": 137,
+          "wr_long": 44.1,
+          "wr_short": 60.6,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 145,
+              "pnl": -936.87,
+              "wr": 44.8
+            },
+            "TP": {
+              "count": 19,
+              "pnl": 1549.27,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 39,
+              "pnl": -4887.65,
+              "wr": 0.0
+            },
+            "SIGNAL_FLIP": {
+              "count": 77,
+              "pnl": 2874.61,
+              "wr": 80.5
+            }
+          }
+        },
+        "ADA": {
+          "pnl": -633.92,
+          "trades": 280,
+          "wr": 51.43,
+          "sharpe": -0.45,
+          "n_long": 144,
+          "n_short": 136,
+          "wr_long": 47.2,
+          "wr_short": 55.9,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 149,
+              "pnl": -2022.15,
+              "wr": 40.3
+            },
+            "SIGNAL_FLIP": {
+              "count": 78,
+              "pnl": 3695.01,
+              "wr": 80.8
+            },
+            "SL": {
+              "count": 32,
+              "pnl": -4670.61,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 21,
+              "pnl": 2363.82,
+              "wr": 100.0
+            }
+          }
+        },
+        "DOT": {
+          "pnl": -378.21,
+          "trades": 280,
+          "wr": 50.71,
+          "sharpe": -0.258,
+          "n_long": 145,
+          "n_short": 135,
+          "wr_long": 46.2,
+          "wr_short": 55.6,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 147,
+              "pnl": -2142.43,
+              "wr": 35.4
+            },
+            "SIGNAL_FLIP": {
+              "count": 80,
+              "pnl": 3423.63,
+              "wr": 83.8
+            },
+            "SL": {
+              "count": 30,
+              "pnl": -4570.8,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 23,
+              "pnl": 2911.39,
+              "wr": 100.0
+            }
+          }
+        },
+        "SUI": {
+          "pnl": 142.25,
+          "trades": 280,
+          "wr": 55.36,
+          "sharpe": 0.085,
+          "n_long": 140,
+          "n_short": 140,
+          "wr_long": 48.6,
+          "wr_short": 62.1,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 146,
+              "pnl": -1936.66,
+              "wr": 44.5
+            },
+            "SL": {
+              "count": 32,
+              "pnl": -5173.49,
+              "wr": 0.0
+            },
+            "SIGNAL_FLIP": {
+              "count": 79,
+              "pnl": 4338.48,
+              "wr": 84.8
+            },
+            "TP": {
+              "count": 23,
+              "pnl": 2913.92,
+              "wr": 100.0
+            }
+          }
+        },
+        "FIL": {
+          "pnl": 772.91,
+          "trades": 283,
+          "wr": 53.71,
+          "sharpe": 0.454,
+          "n_long": 145,
+          "n_short": 138,
+          "wr_long": 49.0,
+          "wr_short": 58.7,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 152,
+              "pnl": -2199.39,
+              "wr": 41.4
+            },
+            "SIGNAL_FLIP": {
+              "count": 79,
+              "pnl": 3813.28,
+              "wr": 83.5
+            },
+            "SL": {
+              "count": 29,
+              "pnl": -4543.63,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 23,
+              "pnl": 3702.65,
+              "wr": 100.0
+            }
+          }
+        }
+      },
+      "elapsed_s": 1.5
+    },
+    {
+      "name": "M9_range_z_tight_sltp",
+      "description": "Momentum: range_z>2.0 + ret direction + tight SL8/TP6",
+      "total_pnl": -1977.46,
+      "total_trades": 2315,
+      "win_rate": 41.1,
+      "coin_results": {
+        "BTC": {
+          "pnl": -806.03,
+          "trades": 392,
+          "wr": 39.8,
+          "sharpe": -1.265,
+          "n_long": 189,
+          "n_short": 203,
+          "wr_long": 40.2,
+          "wr_short": 39.4,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 135,
+              "pnl": -2737.45,
+              "wr": 7.4
+            },
+            "TP": {
+              "count": 76,
+              "pnl": 3315.26,
+              "wr": 100.0
+            },
+            "TIMEOUT": {
+              "count": 163,
+              "pnl": -432.64,
+              "wr": 42.9
+            },
+            "SL": {
+              "count": 18,
+              "pnl": -951.21,
+              "wr": 0.0
+            }
+          }
+        },
+        "XRP": {
+          "pnl": 851.95,
+          "trades": 383,
+          "wr": 43.08,
+          "sharpe": 0.781,
+          "n_long": 186,
+          "n_short": 197,
+          "wr_long": 40.9,
+          "wr_short": 45.2,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 145,
+              "pnl": -3635.42,
+              "wr": 11.7
+            },
+            "TIMEOUT": {
+              "count": 162,
+              "pnl": -163.21,
+              "wr": 48.1
+            },
+            "TP": {
+              "count": 70,
+              "pnl": 5371.88,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 6,
+              "pnl": -721.29,
+              "wr": 0.0
+            }
+          }
+        },
+        "ADA": {
+          "pnl": -435.96,
+          "trades": 386,
+          "wr": 40.16,
+          "sharpe": -0.352,
+          "n_long": 187,
+          "n_short": 199,
+          "wr_long": 36.4,
+          "wr_short": 43.7,
+          "exit_breakdown": {
+            "TP": {
+              "count": 67,
+              "pnl": 5990.97,
+              "wr": 100.0
+            },
+            "SIGNAL_FLIP": {
+              "count": 145,
+              "pnl": -4609.15,
+              "wr": 9.7
+            },
+            "TIMEOUT": {
+              "count": 164,
+              "pnl": -593.62,
+              "wr": 45.1
+            },
+            "SL": {
+              "count": 10,
+              "pnl": -1224.16,
+              "wr": 0.0
+            }
+          }
+        },
+        "DOT": {
+          "pnl": -735.87,
+          "trades": 381,
+          "wr": 40.42,
+          "sharpe": -0.641,
+          "n_long": 183,
+          "n_short": 198,
+          "wr_long": 37.2,
+          "wr_short": 43.4,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 144,
+              "pnl": -4009.88,
+              "wr": 12.5
+            },
+            "TIMEOUT": {
+              "count": 168,
+              "pnl": -703.69,
+              "wr": 46.4
+            },
+            "TP": {
+              "count": 58,
+              "pnl": 5316.62,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 11,
+              "pnl": -1338.91,
+              "wr": 0.0
+            }
+          }
+        },
+        "SUI": {
+          "pnl": -1340.22,
+          "trades": 384,
+          "wr": 40.1,
+          "sharpe": -0.963,
+          "n_long": 185,
+          "n_short": 199,
+          "wr_long": 36.2,
+          "wr_short": 43.7,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 146,
+              "pnl": -5405.56,
+              "wr": 13.0
+            },
+            "TP": {
+              "count": 72,
+              "pnl": 7205.34,
+              "wr": 100.0
+            },
+            "TIMEOUT": {
+              "count": 156,
+              "pnl": -1777.67,
+              "wr": 40.4
+            },
+            "SL": {
+              "count": 10,
+              "pnl": -1362.33,
+              "wr": 0.0
+            }
+          }
+        },
+        "FIL": {
+          "pnl": 488.67,
+          "trades": 389,
+          "wr": 42.93,
+          "sharpe": 0.337,
+          "n_long": 188,
+          "n_short": 201,
+          "wr_long": 41.5,
+          "wr_short": 44.3,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 140,
+              "pnl": -3741.86,
+              "wr": 14.3
+            },
+            "TIMEOUT": {
+              "count": 173,
+              "pnl": -892.49,
+              "wr": 48.0
+            },
+            "TP": {
+              "count": 64,
+              "pnl": 6842.21,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 12,
+              "pnl": -1719.19,
+              "wr": 0.0
+            }
+          }
+        }
+      },
+      "elapsed_s": 0.8
+    },
+    {
+      "name": "M1_range_z_ret4",
+      "description": "Momentum: range_z>1.5 + 1h return direction (>0.3%)",
+      "total_pnl": -3197.84,
+      "total_trades": 2620,
+      "win_rate": 40.2,
+      "coin_results": {
+        "BTC": {
+          "pnl": -971.04,
+          "trades": 438,
+          "wr": 37.44,
+          "sharpe": -1.431,
+          "n_long": 199,
+          "n_short": 239,
+          "wr_long": 39.7,
+          "wr_short": 35.6,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 320,
+              "pnl": -2932.09,
+              "wr": 27.5
+            },
+            "TIMEOUT": {
+              "count": 92,
+              "pnl": 508.84,
+              "wr": 55.4
+            },
+            "TP": {
+              "count": 25,
+              "pnl": 1523.37,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 1,
+              "pnl": -71.15,
+              "wr": 0.0
+            }
+          }
+        },
+        "XRP": {
+          "pnl": 814.62,
+          "trades": 439,
+          "wr": 43.28,
+          "sharpe": 0.644,
+          "n_long": 199,
+          "n_short": 240,
+          "wr_long": 42.2,
+          "wr_short": 44.2,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 316,
+              "pnl": -3035.9,
+              "wr": 32.9
+            },
+            "TIMEOUT": {
+              "count": 91,
+              "pnl": 979.7,
+              "wr": 62.6
+            },
+            "TP": {
+              "count": 29,
+              "pnl": 3400.64,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 3,
+              "pnl": -529.81,
+              "wr": 0.0
+            }
+          }
+        },
+        "ADA": {
+          "pnl": -545.13,
+          "trades": 439,
+          "wr": 41.23,
+          "sharpe": -0.381,
+          "n_long": 199,
+          "n_short": 240,
+          "wr_long": 37.2,
+          "wr_short": 44.6,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 318,
+              "pnl": -4479.47,
+              "wr": 30.5
+            },
+            "TIMEOUT": {
+              "count": 96,
+              "pnl": 1481.03,
+              "wr": 63.5
+            },
+            "TP": {
+              "count": 23,
+              "pnl": 3242.3,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 2,
+              "pnl": -789.0,
+              "wr": 0.0
+            }
+          }
+        },
+        "DOT": {
+          "pnl": -963.91,
+          "trades": 435,
+          "wr": 40.46,
+          "sharpe": -0.798,
+          "n_long": 197,
+          "n_short": 238,
+          "wr_long": 37.1,
+          "wr_short": 43.3,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 321,
+              "pnl": -4226.02,
+              "wr": 31.2
+            },
+            "TIMEOUT": {
+              "count": 94,
+              "pnl": 690.55,
+              "wr": 59.6
+            },
+            "TP": {
+              "count": 20,
+              "pnl": 2571.56,
+              "wr": 100.0
+            }
+          }
+        },
+        "SUI": {
+          "pnl": -735.85,
+          "trades": 434,
+          "wr": 38.71,
+          "sharpe": -0.488,
+          "n_long": 197,
+          "n_short": 237,
+          "wr_long": 35.0,
+          "wr_short": 41.8,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 320,
+              "pnl": -5232.55,
+              "wr": 30.0
+            },
+            "TP": {
+              "count": 26,
+              "pnl": 3866.5,
+              "wr": 100.0
+            },
+            "TIMEOUT": {
+              "count": 87,
+              "pnl": 815.23,
+              "wr": 52.9
+            },
+            "SL": {
+              "count": 1,
+              "pnl": -185.02,
+              "wr": 0.0
+            }
+          }
+        },
+        "FIL": {
+          "pnl": -796.53,
+          "trades": 435,
+          "wr": 40.23,
+          "sharpe": -0.498,
+          "n_long": 195,
+          "n_short": 240,
+          "wr_long": 37.9,
+          "wr_short": 42.1,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 317,
+              "pnl": -4816.94,
+              "wr": 30.3
+            },
+            "TIMEOUT": {
+              "count": 97,
+              "pnl": 1328.76,
+              "wr": 61.9
+            },
+            "TP": {
+              "count": 19,
+              "pnl": 3415.41,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 2,
+              "pnl": -723.76,
+              "wr": 0.0
+            }
+          }
+        }
+      },
+      "elapsed_s": 1.1
+    },
+    {
+      "name": "R2_disp_rebound_1.5",
+      "description": "Rebound: range_z>1.5 + displacement>1.5 ATR -> contrarian",
+      "total_pnl": -3206.91,
+      "total_trades": 2116,
+      "win_rate": 57.0,
+      "coin_results": {
+        "BTC": {
+          "pnl": -197.5,
+          "trades": 355,
+          "wr": 57.46,
+          "sharpe": -0.26,
+          "n_long": 202,
+          "n_short": 153,
+          "wr_long": 58.9,
+          "wr_short": 55.6,
+          "exit_breakdown": {
+            "SL": {
+              "count": 53,
+              "pnl": -3190.82,
+              "wr": 0.0
+            },
+            "TIMEOUT": {
+              "count": 131,
+              "pnl": -970.16,
+              "wr": 38.9
+            },
+            "SIGNAL_FLIP": {
+              "count": 145,
+              "pnl": 2934.58,
+              "wr": 87.6
+            },
+            "TP": {
+              "count": 26,
+              "pnl": 1028.9,
+              "wr": 100.0
+            }
+          }
+        },
+        "XRP": {
+          "pnl": -2109.61,
+          "trades": 352,
+          "wr": 55.97,
+          "sharpe": -1.673,
+          "n_long": 194,
+          "n_short": 158,
+          "wr_long": 51.0,
+          "wr_short": 62.0,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 121,
+              "pnl": -1164.01,
+              "wr": 43.8
+            },
+            "SIGNAL_FLIP": {
+              "count": 153,
+              "pnl": 3508.37,
+              "wr": 79.7
+            },
+            "SL": {
+              "count": 56,
+              "pnl": -6073.32,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 22,
+              "pnl": 1619.35,
+              "wr": 100.0
+            }
+          }
+        },
+        "ADA": {
+          "pnl": -1170.73,
+          "trades": 357,
+          "wr": 57.42,
+          "sharpe": -0.8,
+          "n_long": 207,
+          "n_short": 150,
+          "wr_long": 55.1,
+          "wr_short": 60.7,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 123,
+              "pnl": -1459.2,
+              "wr": 45.5
+            },
+            "SIGNAL_FLIP": {
+              "count": 159,
+              "pnl": 4819.4,
+              "wr": 79.2
+            },
+            "SL": {
+              "count": 52,
+              "pnl": -6549.75,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 23,
+              "pnl": 2018.82,
+              "wr": 100.0
+            }
+          }
+        },
+        "DOT": {
+          "pnl": -151.3,
+          "trades": 350,
+          "wr": 56.86,
+          "sharpe": -0.112,
+          "n_long": 198,
+          "n_short": 152,
+          "wr_long": 54.0,
+          "wr_short": 60.5,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 126,
+              "pnl": -2000.33,
+              "wr": 38.9
+            },
+            "SIGNAL_FLIP": {
+              "count": 162,
+              "pnl": 4592.35,
+              "wr": 79.0
+            },
+            "SL": {
+              "count": 40,
+              "pnl": -5080.74,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 22,
+              "pnl": 2337.41,
+              "wr": 100.0
+            }
+          }
+        },
+        "SUI": {
+          "pnl": 219.9,
+          "trades": 352,
+          "wr": 58.24,
+          "sharpe": 0.131,
+          "n_long": 201,
+          "n_short": 151,
+          "wr_long": 54.2,
+          "wr_short": 63.6,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 123,
+              "pnl": -1781.24,
+              "wr": 40.7
+            },
+            "SL": {
+              "count": 46,
+              "pnl": -6849.87,
+              "wr": 0.0
+            },
+            "SIGNAL_FLIP": {
+              "count": 158,
+              "pnl": 5632.43,
+              "wr": 82.3
+            },
+            "TP": {
+              "count": 25,
+              "pnl": 3218.58,
+              "wr": 100.0
+            }
+          }
+        },
+        "FIL": {
+          "pnl": 202.33,
+          "trades": 350,
+          "wr": 56.29,
+          "sharpe": 0.138,
+          "n_long": 201,
+          "n_short": 149,
+          "wr_long": 51.2,
+          "wr_short": 63.1,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 131,
+              "pnl": -2398.57,
+              "wr": 37.4
+            },
+            "SIGNAL_FLIP": {
+              "count": 157,
+              "pnl": 4674.93,
+              "wr": 77.7
+            },
+            "TP": {
+              "count": 26,
+              "pnl": 3011.08,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 36,
+              "pnl": -5085.12,
+              "wr": 0.0
+            }
+          }
+        }
+      },
+      "elapsed_s": 1.3
+    },
+    {
+      "name": "M2_vol_spike_ret4",
+      "description": "Momentum: vol>2x + 1h return direction",
+      "total_pnl": -3666.14,
+      "total_trades": 2747,
+      "win_rate": 37.6,
+      "coin_results": {
+        "BTC": {
+          "pnl": -975.54,
+          "trades": 457,
+          "wr": 34.57,
+          "sharpe": -1.352,
+          "n_long": 212,
+          "n_short": 245,
+          "wr_long": 35.4,
+          "wr_short": 33.9,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 329,
+              "pnl": -4312.18,
+              "wr": 18.5
+            },
+            "TP": {
+              "count": 45,
+              "pnl": 2756.89,
+              "wr": 100.0
+            },
+            "TIMEOUT": {
+              "count": 81,
+              "pnl": 746.22,
+              "wr": 64.2
+            },
+            "SL": {
+              "count": 2,
+              "pnl": -166.47,
+              "wr": 0.0
+            }
+          }
+        },
+        "XRP": {
+          "pnl": 313.62,
+          "trades": 461,
+          "wr": 39.91,
+          "sharpe": 0.249,
+          "n_long": 211,
+          "n_short": 250,
+          "wr_long": 39.3,
+          "wr_short": 40.4,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 333,
+              "pnl": -5267.14,
+              "wr": 25.5
+            },
+            "TIMEOUT": {
+              "count": 85,
+              "pnl": 1691.36,
+              "wr": 68.2
+            },
+            "TP": {
+              "count": 41,
+              "pnl": 4164.85,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 2,
+              "pnl": -275.46,
+              "wr": 0.0
+            }
+          }
+        },
+        "ADA": {
+          "pnl": -1108.92,
+          "trades": 458,
+          "wr": 37.99,
+          "sharpe": -0.732,
+          "n_long": 214,
+          "n_short": 244,
+          "wr_long": 36.4,
+          "wr_short": 39.3,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 325,
+              "pnl": -6625.62,
+              "wr": 24.3
+            },
+            "TIMEOUT": {
+              "count": 95,
+              "pnl": 2300.64,
+              "wr": 65.3
+            },
+            "TP": {
+              "count": 33,
+              "pnl": 4460.26,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 5,
+              "pnl": -1244.2,
+              "wr": 0.0
+            }
+          }
+        },
+        "DOT": {
+          "pnl": -898.51,
+          "trades": 456,
+          "wr": 39.25,
+          "sharpe": -0.659,
+          "n_long": 212,
+          "n_short": 244,
+          "wr_long": 36.8,
+          "wr_short": 41.4,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 333,
+              "pnl": -6473.13,
+              "wr": 26.1
+            },
+            "TIMEOUT": {
+              "count": 89,
+              "pnl": 1838.85,
+              "wr": 68.5
+            },
+            "TP": {
+              "count": 31,
+              "pnl": 4244.98,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 3,
+              "pnl": -509.22,
+              "wr": 0.0
+            }
+          }
+        },
+        "SUI": {
+          "pnl": -43.82,
+          "trades": 456,
+          "wr": 36.84,
+          "sharpe": -0.027,
+          "n_long": 213,
+          "n_short": 243,
+          "wr_long": 32.9,
+          "wr_short": 40.3,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 328,
+              "pnl": -8076.96,
+              "wr": 23.8
+            },
+            "TP": {
+              "count": 41,
+              "pnl": 6170.74,
+              "wr": 100.0
+            },
+            "TIMEOUT": {
+              "count": 85,
+              "pnl": 2147.47,
+              "wr": 57.6
+            },
+            "SL": {
+              "count": 2,
+              "pnl": -285.07,
+              "wr": 0.0
+            }
+          }
+        },
+        "FIL": {
+          "pnl": -952.97,
+          "trades": 459,
+          "wr": 37.25,
+          "sharpe": -0.647,
+          "n_long": 214,
+          "n_short": 245,
+          "wr_long": 35.5,
+          "wr_short": 38.8,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 334,
+              "pnl": -6797.41,
+              "wr": 24.9
+            },
+            "TIMEOUT": {
+              "count": 90,
+              "pnl": 2175.07,
+              "wr": 62.2
+            },
+            "TP": {
+              "count": 32,
+              "pnl": 4491.52,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 3,
+              "pnl": -822.15,
+              "wr": 0.0
+            }
+          }
+        }
+      },
+      "elapsed_s": 1.2
+    },
+    {
+      "name": "R8_range_extreme_90_10",
+      "description": "Rebound: vol spike + price at 90%/10% of 4h range -> contrarian",
+      "total_pnl": -5669.3,
+      "total_trades": 2084,
+      "win_rate": 56.7,
+      "coin_results": {
+        "BTC": {
+          "pnl": -320.05,
+          "trades": 351,
+          "wr": 59.54,
+          "sharpe": -0.44,
+          "n_long": 191,
+          "n_short": 160,
+          "wr_long": 57.6,
+          "wr_short": 61.9,
+          "exit_breakdown": {
+            "SL": {
+              "count": 61,
+              "pnl": -3388.41,
+              "wr": 0.0
+            },
+            "TIMEOUT": {
+              "count": 96,
+              "pnl": -769.16,
+              "wr": 42.7
+            },
+            "SIGNAL_FLIP": {
+              "count": 153,
+              "pnl": 2274.0,
+              "wr": 83.0
+            },
+            "TP": {
+              "count": 41,
+              "pnl": 1563.52,
+              "wr": 100.0
+            }
+          }
+        },
+        "XRP": {
+          "pnl": -2121.03,
+          "trades": 348,
+          "wr": 53.74,
+          "sharpe": -1.694,
+          "n_long": 193,
+          "n_short": 155,
+          "wr_long": 52.8,
+          "wr_short": 54.8,
+          "exit_breakdown": {
+            "SL": {
+              "count": 59,
+              "pnl": -6004.89,
+              "wr": 0.0
+            },
+            "TIMEOUT": {
+              "count": 99,
+              "pnl": -1606.15,
+              "wr": 36.4
+            },
+            "SIGNAL_FLIP": {
+              "count": 161,
+              "pnl": 3305.19,
+              "wr": 75.8
+            },
+            "TP": {
+              "count": 29,
+              "pnl": 2184.81,
+              "wr": 100.0
+            }
+          }
+        },
+        "ADA": {
+          "pnl": -1211.81,
+          "trades": 347,
+          "wr": 55.91,
+          "sharpe": -0.867,
+          "n_long": 192,
+          "n_short": 155,
+          "wr_long": 53.1,
+          "wr_short": 59.4,
+          "exit_breakdown": {
+            "SL": {
+              "count": 53,
+              "pnl": -6170.21,
+              "wr": 0.0
+            },
+            "SIGNAL_FLIP": {
+              "count": 162,
+              "pnl": 3710.24,
+              "wr": 77.8
+            },
+            "TIMEOUT": {
+              "count": 101,
+              "pnl": -1740.44,
+              "wr": 36.6
+            },
+            "TP": {
+              "count": 31,
+              "pnl": 2988.59,
+              "wr": 100.0
+            }
+          }
+        },
+        "DOT": {
+          "pnl": 324.5,
+          "trades": 351,
+          "wr": 57.55,
+          "sharpe": 0.241,
+          "n_long": 199,
+          "n_short": 152,
+          "wr_long": 53.3,
+          "wr_short": 63.2,
+          "exit_breakdown": {
+            "SL": {
+              "count": 43,
+              "pnl": -5234.47,
+              "wr": 0.0
+            },
+            "TIMEOUT": {
+              "count": 98,
+              "pnl": -1824.24,
+              "wr": 34.7
+            },
+            "SIGNAL_FLIP": {
+              "count": 167,
+              "pnl": 3272.37,
+              "wr": 74.9
+            },
+            "TP": {
+              "count": 43,
+              "pnl": 4110.84,
+              "wr": 100.0
+            }
+          }
+        },
+        "SUI": {
+          "pnl": -1606.28,
+          "trades": 341,
+          "wr": 54.55,
+          "sharpe": -1.011,
+          "n_long": 189,
+          "n_short": 152,
+          "wr_long": 50.8,
+          "wr_short": 59.2,
+          "exit_breakdown": {
+            "SL": {
+              "count": 54,
+              "pnl": -7046.31,
+              "wr": 0.0
+            },
+            "TIMEOUT": {
+              "count": 98,
+              "pnl": -2206.85,
+              "wr": 35.7
+            },
+            "SIGNAL_FLIP": {
+              "count": 157,
+              "pnl": 4174.73,
+              "wr": 75.8
+            },
+            "TP": {
+              "count": 32,
+              "pnl": 3472.15,
+              "wr": 100.0
+            }
+          }
+        },
+        "FIL": {
+          "pnl": -734.63,
+          "trades": 346,
+          "wr": 58.96,
+          "sharpe": -0.507,
+          "n_long": 192,
+          "n_short": 154,
+          "wr_long": 55.2,
+          "wr_short": 63.6,
+          "exit_breakdown": {
+            "SL": {
+              "count": 50,
+              "pnl": -6221.62,
+              "wr": 0.0
+            },
+            "TIMEOUT": {
+              "count": 97,
+              "pnl": -2052.82,
+              "wr": 42.3
+            },
+            "SIGNAL_FLIP": {
+              "count": 160,
+              "pnl": 3740.02,
+              "wr": 77.5
+            },
+            "TP": {
+              "count": 39,
+              "pnl": 3799.78,
+              "wr": 100.0
+            }
+          }
+        }
+      },
+      "elapsed_s": 1.2
+    },
+    {
+      "name": "M8_ret_z4_2.0",
+      "description": "Momentum: ret z-score(4bar)>2.0 + same direction",
+      "total_pnl": -6248.6,
+      "total_trades": 2407,
+      "win_rate": 40.0,
+      "coin_results": {
+        "BTC": {
+          "pnl": -313.3,
+          "trades": 399,
+          "wr": 38.35,
+          "sharpe": -0.437,
+          "n_long": 189,
+          "n_short": 210,
+          "wr_long": 38.1,
+          "wr_short": 38.6,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 95,
+              "pnl": 289.51,
+              "wr": 50.5
+            },
+            "SIGNAL_FLIP": {
+              "count": 276,
+              "pnl": -2494.66,
+              "wr": 28.6
+            },
+            "TP": {
+              "count": 26,
+              "pnl": 1995.78,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 2,
+              "pnl": -103.93,
+              "wr": 0.0
+            }
+          }
+        },
+        "XRP": {
+          "pnl": -580.8,
+          "trades": 402,
+          "wr": 39.8,
+          "sharpe": -0.422,
+          "n_long": 191,
+          "n_short": 211,
+          "wr_long": 38.7,
+          "wr_short": 40.8,
+          "exit_breakdown": {
+            "TP": {
+              "count": 28,
+              "pnl": 3061.13,
+              "wr": 100.0
+            },
+            "SIGNAL_FLIP": {
+              "count": 277,
+              "pnl": -3278.91,
+              "wr": 28.5
+            },
+            "TIMEOUT": {
+              "count": 93,
+              "pnl": 885.98,
+              "wr": 57.0
+            },
+            "SL": {
+              "count": 4,
+              "pnl": -1249.0,
+              "wr": 0.0
+            }
+          }
+        },
+        "ADA": {
+          "pnl": -466.05,
+          "trades": 404,
+          "wr": 42.82,
+          "sharpe": -0.33,
+          "n_long": 192,
+          "n_short": 212,
+          "wr_long": 41.1,
+          "wr_short": 44.3,
+          "exit_breakdown": {
+            "TP": {
+              "count": 25,
+              "pnl": 3095.79,
+              "wr": 100.0
+            },
+            "SIGNAL_FLIP": {
+              "count": 276,
+              "pnl": -3782.89,
+              "wr": 33.3
+            },
+            "SL": {
+              "count": 3,
+              "pnl": -950.36,
+              "wr": 0.0
+            },
+            "TIMEOUT": {
+              "count": 100,
+              "pnl": 1171.4,
+              "wr": 56.0
+            }
+          }
+        },
+        "DOT": {
+          "pnl": -2211.58,
+          "trades": 400,
+          "wr": 39.25,
+          "sharpe": -1.654,
+          "n_long": 188,
+          "n_short": 212,
+          "wr_long": 36.2,
+          "wr_short": 42.0,
+          "exit_breakdown": {
+            "TP": {
+              "count": 18,
+              "pnl": 2519.83,
+              "wr": 100.0
+            },
+            "SIGNAL_FLIP": {
+              "count": 278,
+              "pnl": -3778.84,
+              "wr": 31.3
+            },
+            "SL": {
+              "count": 2,
+              "pnl": -730.27,
+              "wr": 0.0
+            },
+            "TIMEOUT": {
+              "count": 102,
+              "pnl": -222.3,
+              "wr": 51.0
+            }
+          }
+        },
+        "SUI": {
+          "pnl": -745.84,
+          "trades": 404,
+          "wr": 40.59,
+          "sharpe": -0.462,
+          "n_long": 190,
+          "n_short": 214,
+          "wr_long": 37.9,
+          "wr_short": 43.0,
+          "exit_breakdown": {
+            "TP": {
+              "count": 27,
+              "pnl": 4049.93,
+              "wr": 100.0
+            },
+            "SIGNAL_FLIP": {
+              "count": 275,
+              "pnl": -5412.11,
+              "wr": 28.4
+            },
+            "TIMEOUT": {
+              "count": 100,
+              "pnl": 1401.15,
+              "wr": 59.0
+            },
+            "SL": {
+              "count": 2,
+              "pnl": -784.81,
+              "wr": 0.0
+            }
+          }
+        },
+        "FIL": {
+          "pnl": -1931.03,
+          "trades": 398,
+          "wr": 38.94,
+          "sharpe": -1.353,
+          "n_long": 182,
+          "n_short": 216,
+          "wr_long": 34.1,
+          "wr_short": 43.1,
+          "exit_breakdown": {
+            "TIMEOUT": {
+              "count": 98,
+              "pnl": -9.03,
+              "wr": 51.0
+            },
+            "SIGNAL_FLIP": {
+              "count": 279,
+              "pnl": -3199.28,
+              "wr": 31.5
+            },
+            "TP": {
+              "count": 17,
+              "pnl": 2444.26,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 4,
+              "pnl": -1166.98,
+              "wr": 0.0
+            }
+          }
+        }
+      },
+      "elapsed_s": 1.2
+    },
+    {
+      "name": "M5_liq_cascade_follow",
+      "description": "Momentum: liq cascade 2x + follow liq direction",
+      "total_pnl": -7765.59,
+      "total_trades": 1427,
+      "win_rate": 35.6,
+      "coin_results": {
+        "BTC": {
+          "pnl": -238.54,
+          "trades": 238,
+          "wr": 33.61,
+          "sharpe": -0.536,
+          "n_long": 128,
+          "n_short": 110,
+          "wr_long": 38.3,
+          "wr_short": 28.2,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 172,
+              "pnl": -1023.3,
+              "wr": 26.7
+            },
+            "TIMEOUT": {
+              "count": 50,
+              "pnl": 28.67,
+              "wr": 40.0
+            },
+            "SL": {
+              "count": 2,
+              "pnl": -145.73,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 14,
+              "pnl": 901.82,
+              "wr": 100.0
+            }
+          }
+        },
+        "XRP": {
+          "pnl": -626.25,
+          "trades": 237,
+          "wr": 33.33,
+          "sharpe": -0.846,
+          "n_long": 128,
+          "n_short": 109,
+          "wr_long": 33.6,
+          "wr_short": 33.0,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 170,
+              "pnl": -1599.18,
+              "wr": 25.9
+            },
+            "TP": {
+              "count": 9,
+              "pnl": 981.47,
+              "wr": 100.0
+            },
+            "TIMEOUT": {
+              "count": 56,
+              "pnl": 204.42,
+              "wr": 46.4
+            },
+            "SL": {
+              "count": 2,
+              "pnl": -212.97,
+              "wr": 0.0
+            }
+          }
+        },
+        "ADA": {
+          "pnl": -1093.48,
+          "trades": 239,
+          "wr": 35.56,
+          "sharpe": -1.313,
+          "n_long": 127,
+          "n_short": 112,
+          "wr_long": 35.4,
+          "wr_short": 35.7,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 174,
+              "pnl": -1897.15,
+              "wr": 28.7
+            },
+            "TIMEOUT": {
+              "count": 56,
+              "pnl": 15.92,
+              "wr": 50.0
+            },
+            "SL": {
+              "count": 2,
+              "pnl": -309.46,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 7,
+              "pnl": 1097.21,
+              "wr": 100.0
+            }
+          }
+        },
+        "DOT": {
+          "pnl": -1610.11,
+          "trades": 238,
+          "wr": 34.87,
+          "sharpe": -1.777,
+          "n_long": 127,
+          "n_short": 111,
+          "wr_long": 33.9,
+          "wr_short": 36.0,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 171,
+              "pnl": -1466.78,
+              "wr": 30.4
+            },
+            "TIMEOUT": {
+              "count": 57,
+              "pnl": -734.64,
+              "wr": 40.4
+            },
+            "SL": {
+              "count": 2,
+              "pnl": -563.72,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 8,
+              "pnl": 1155.04,
+              "wr": 100.0
+            }
+          }
+        },
+        "SUI": {
+          "pnl": -1072.52,
+          "trades": 238,
+          "wr": 37.82,
+          "sharpe": -1.177,
+          "n_long": 128,
+          "n_short": 110,
+          "wr_long": 35.9,
+          "wr_short": 40.0,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 172,
+              "pnl": -1499.6,
+              "wr": 34.3
+            },
+            "TIMEOUT": {
+              "count": 58,
+              "pnl": -599.6,
+              "wr": 41.4
+            },
+            "SL": {
+              "count": 1,
+              "pnl": -184.48,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 7,
+              "pnl": 1211.16,
+              "wr": 100.0
+            }
+          }
+        },
+        "FIL": {
+          "pnl": -3124.69,
+          "trades": 237,
+          "wr": 38.4,
+          "sharpe": -1.872,
+          "n_long": 129,
+          "n_short": 108,
+          "wr_long": 38.0,
+          "wr_short": 38.9,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 169,
+              "pnl": -1402.53,
+              "wr": 34.3
+            },
+            "TIMEOUT": {
+              "count": 61,
+              "pnl": -579.75,
+              "wr": 47.5
+            },
+            "SL": {
+              "count": 3,
+              "pnl": -1781.0,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 4,
+              "pnl": 638.59,
+              "wr": 100.0
+            }
+          }
+        }
+      },
+      "elapsed_s": 0.6
+    },
+    {
+      "name": "M3_combined2_ret4",
+      "description": "Momentum: 2-of-4 detectors + 1h return direction",
+      "total_pnl": -8082.72,
+      "total_trades": 2897,
+      "win_rate": 38.2,
+      "coin_results": {
+        "BTC": {
+          "pnl": -1645.21,
+          "trades": 484,
+          "wr": 34.92,
+          "sharpe": -2.361,
+          "n_long": 228,
+          "n_short": 256,
+          "wr_long": 34.2,
+          "wr_short": 35.5,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 372,
+              "pnl": -4625.21,
+              "wr": 22.0
+            },
+            "TP": {
+              "count": 36,
+              "pnl": 2253.54,
+              "wr": 100.0
+            },
+            "TIMEOUT": {
+              "count": 73,
+              "pnl": 895.75,
+              "wr": 69.9
+            },
+            "SL": {
+              "count": 3,
+              "pnl": -169.28,
+              "wr": 0.0
+            }
+          }
+        },
+        "XRP": {
+          "pnl": 135.16,
+          "trades": 485,
+          "wr": 41.24,
+          "sharpe": 0.104,
+          "n_long": 232,
+          "n_short": 253,
+          "wr_long": 40.9,
+          "wr_short": 41.5,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 371,
+              "pnl": -5677.02,
+              "wr": 29.1
+            },
+            "TIMEOUT": {
+              "count": 74,
+              "pnl": 1500.8,
+              "wr": 71.6
+            },
+            "TP": {
+              "count": 39,
+              "pnl": 4488.89,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 1,
+              "pnl": -177.51,
+              "wr": 0.0
+            }
+          }
+        },
+        "ADA": {
+          "pnl": -1382.89,
+          "trades": 482,
+          "wr": 39.42,
+          "sharpe": -0.88,
+          "n_long": 232,
+          "n_short": 250,
+          "wr_long": 33.6,
+          "wr_short": 44.8,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 367,
+              "pnl": -7113.77,
+              "wr": 27.5
+            },
+            "TIMEOUT": {
+              "count": 84,
+              "pnl": 2406.79,
+              "wr": 72.6
+            },
+            "TP": {
+              "count": 28,
+              "pnl": 4257.21,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 3,
+              "pnl": -933.13,
+              "wr": 0.0
+            }
+          }
+        },
+        "DOT": {
+          "pnl": -1794.61,
+          "trades": 480,
+          "wr": 38.12,
+          "sharpe": -1.351,
+          "n_long": 231,
+          "n_short": 249,
+          "wr_long": 32.5,
+          "wr_short": 43.4,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 370,
+              "pnl": -6791.6,
+              "wr": 28.4
+            },
+            "TIMEOUT": {
+              "count": 83,
+              "pnl": 1602.84,
+              "wr": 62.7
+            },
+            "TP": {
+              "count": 26,
+              "pnl": 3546.84,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 1,
+              "pnl": -152.69,
+              "wr": 0.0
+            }
+          }
+        },
+        "SUI": {
+          "pnl": -1255.5,
+          "trades": 485,
+          "wr": 38.97,
+          "sharpe": -0.781,
+          "n_long": 229,
+          "n_short": 256,
+          "wr_long": 32.8,
+          "wr_short": 44.5,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 367,
+              "pnl": -8444.59,
+              "wr": 27.5
+            },
+            "TP": {
+              "count": 37,
+              "pnl": 5301.71,
+              "wr": 100.0
+            },
+            "TIMEOUT": {
+              "count": 79,
+              "pnl": 2220.76,
+              "wr": 64.6
+            },
+            "SL": {
+              "count": 2,
+              "pnl": -333.39,
+              "wr": 0.0
+            }
+          }
+        },
+        "FIL": {
+          "pnl": -2139.67,
+          "trades": 481,
+          "wr": 36.59,
+          "sharpe": -1.453,
+          "n_long": 230,
+          "n_short": 251,
+          "wr_long": 31.3,
+          "wr_short": 41.4,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 375,
+              "pnl": -7327.21,
+              "wr": 26.7
+            },
+            "TIMEOUT": {
+              "count": 80,
+              "pnl": 2265.1,
+              "wr": 65.0
+            },
+            "TP": {
+              "count": 24,
+              "pnl": 3468.35,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 2,
+              "pnl": -545.92,
+              "wr": 0.0
+            }
+          }
+        }
+      },
+      "elapsed_s": 1.4
+    },
+    {
+      "name": "M6_streak3_vol",
+      "description": "Momentum: vol>2x + 3-bar streak confirmation",
+      "total_pnl": -11721.99,
+      "total_trades": 2226,
+      "win_rate": 38.6,
+      "coin_results": {
+        "BTC": {
+          "pnl": -1808.34,
+          "trades": 371,
+          "wr": 33.96,
+          "sharpe": -2.451,
+          "n_long": 159,
+          "n_short": 212,
+          "wr_long": 34.6,
+          "wr_short": 33.5,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 204,
+              "pnl": -3532.44,
+              "wr": 11.8
+            },
+            "TIMEOUT": {
+              "count": 121,
+              "pnl": -267.31,
+              "wr": 50.4
+            },
+            "TP": {
+              "count": 41,
+              "pnl": 2504.04,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 5,
+              "pnl": -512.63,
+              "wr": 0.0
+            }
+          }
+        },
+        "XRP": {
+          "pnl": -1532.78,
+          "trades": 373,
+          "wr": 39.14,
+          "sharpe": -1.161,
+          "n_long": 162,
+          "n_short": 211,
+          "wr_long": 32.1,
+          "wr_short": 44.5,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 207,
+              "pnl": -4231.89,
+              "wr": 20.8
+            },
+            "TIMEOUT": {
+              "count": 122,
+              "pnl": -497.21,
+              "wr": 54.1
+            },
+            "SL": {
+              "count": 7,
+              "pnl": -764.18,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 37,
+              "pnl": 3960.5,
+              "wr": 100.0
+            }
+          }
+        },
+        "ADA": {
+          "pnl": -1995.75,
+          "trades": 371,
+          "wr": 39.89,
+          "sharpe": -1.402,
+          "n_long": 165,
+          "n_short": 206,
+          "wr_long": 36.4,
+          "wr_short": 42.7,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 209,
+              "pnl": -5373.92,
+              "wr": 23.4
+            },
+            "TIMEOUT": {
+              "count": 124,
+              "pnl": 437.61,
+              "wr": 54.8
+            },
+            "TP": {
+              "count": 31,
+              "pnl": 4088.73,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 7,
+              "pnl": -1148.17,
+              "wr": 0.0
+            }
+          }
+        },
+        "DOT": {
+          "pnl": -2125.03,
+          "trades": 369,
+          "wr": 40.11,
+          "sharpe": -1.464,
+          "n_long": 160,
+          "n_short": 209,
+          "wr_long": 40.0,
+          "wr_short": 40.2,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 207,
+              "pnl": -5406.8,
+              "wr": 22.7
+            },
+            "TIMEOUT": {
+              "count": 127,
+              "pnl": -291.02,
+              "wr": 55.1
+            },
+            "TP": {
+              "count": 31,
+              "pnl": 4463.21,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 4,
+              "pnl": -890.41,
+              "wr": 0.0
+            }
+          }
+        },
+        "SUI": {
+          "pnl": -1651.06,
+          "trades": 374,
+          "wr": 37.97,
+          "sharpe": -0.946,
+          "n_long": 165,
+          "n_short": 209,
+          "wr_long": 32.7,
+          "wr_short": 42.1,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 207,
+              "pnl": -6802.27,
+              "wr": 16.4
+            },
+            "TP": {
+              "count": 38,
+              "pnl": 5772.37,
+              "wr": 100.0
+            },
+            "TIMEOUT": {
+              "count": 124,
+              "pnl": 490.79,
+              "wr": 56.5
+            },
+            "SL": {
+              "count": 5,
+              "pnl": -1111.94,
+              "wr": 0.0
+            }
+          }
+        },
+        "FIL": {
+          "pnl": -2609.03,
+          "trades": 368,
+          "wr": 40.76,
+          "sharpe": -1.486,
+          "n_long": 160,
+          "n_short": 208,
+          "wr_long": 38.8,
+          "wr_short": 42.3,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 208,
+              "pnl": -5690.56,
+              "wr": 25.0
+            },
+            "TIMEOUT": {
+              "count": 131,
+              "pnl": 680.76,
+              "wr": 55.7
+            },
+            "TP": {
+              "count": 25,
+              "pnl": 3795.29,
+              "wr": 100.0
+            },
+            "SL": {
+              "count": 4,
+              "pnl": -1394.51,
+              "wr": 0.0
+            }
+          }
+        }
+      },
+      "elapsed_s": 0.9
+    },
+    {
+      "name": "R5_liq_flush_5x",
+      "description": "Rebound: liq cascade >5x MA -> contrarian",
+      "total_pnl": -33029.58,
+      "total_trades": 772,
+      "win_rate": 25.3,
+      "coin_results": {
+        "BTC": {
+          "pnl": -4543.24,
+          "trades": 134,
+          "wr": 14.93,
+          "sharpe": -11.036,
+          "n_long": 76,
+          "n_short": 58,
+          "wr_long": 19.7,
+          "wr_short": 8.6,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 16,
+              "pnl": -82.3,
+              "wr": 18.8
+            },
+            "TIMEOUT": {
+              "count": 71,
+              "pnl": -1676.12,
+              "wr": 22.5
+            },
+            "SL": {
+              "count": 46,
+              "pnl": -2807.24,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 1,
+              "pnl": 22.42,
+              "wr": 100.0
+            }
+          }
+        },
+        "XRP": {
+          "pnl": -5008.04,
+          "trades": 128,
+          "wr": 25.0,
+          "sharpe": -6.457,
+          "n_long": 72,
+          "n_short": 56,
+          "wr_long": 25.0,
+          "wr_short": 25.0,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 17,
+              "pnl": -142.0,
+              "wr": 29.4
+            },
+            "TIMEOUT": {
+              "count": 79,
+              "pnl": -1926.08,
+              "wr": 30.4
+            },
+            "SL": {
+              "count": 29,
+              "pnl": -3094.19,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 3,
+              "pnl": 154.23,
+              "wr": 100.0
+            }
+          }
+        },
+        "ADA": {
+          "pnl": -5866.83,
+          "trades": 127,
+          "wr": 27.56,
+          "sharpe": -7.059,
+          "n_long": 72,
+          "n_short": 55,
+          "wr_long": 26.4,
+          "wr_short": 29.1,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 17,
+              "pnl": -345.21,
+              "wr": 23.5
+            },
+            "TIMEOUT": {
+              "count": 83,
+              "pnl": -2471.72,
+              "wr": 33.7
+            },
+            "SL": {
+              "count": 24,
+              "pnl": -3343.15,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 3,
+              "pnl": 293.26,
+              "wr": 100.0
+            }
+          }
+        },
+        "DOT": {
+          "pnl": -5218.74,
+          "trades": 127,
+          "wr": 30.71,
+          "sharpe": -5.957,
+          "n_long": 72,
+          "n_short": 55,
+          "wr_long": 29.2,
+          "wr_short": 32.7,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 17,
+              "pnl": -186.48,
+              "wr": 23.5
+            },
+            "TIMEOUT": {
+              "count": 83,
+              "pnl": -2242.93,
+              "wr": 36.1
+            },
+            "SL": {
+              "count": 22,
+              "pnl": -3313.68,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 5,
+              "pnl": 524.35,
+              "wr": 100.0
+            }
+          }
+        },
+        "SUI": {
+          "pnl": -6463.09,
+          "trades": 129,
+          "wr": 24.03,
+          "sharpe": -7.343,
+          "n_long": 73,
+          "n_short": 56,
+          "wr_long": 23.3,
+          "wr_short": 25.0,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 17,
+              "pnl": -179.69,
+              "wr": 23.5
+            },
+            "TIMEOUT": {
+              "count": 83,
+              "pnl": -2603.5,
+              "wr": 28.9
+            },
+            "SL": {
+              "count": 26,
+              "pnl": -3962.53,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 3,
+              "pnl": 282.64,
+              "wr": 100.0
+            }
+          }
+        },
+        "FIL": {
+          "pnl": -5929.64,
+          "trades": 127,
+          "wr": 29.92,
+          "sharpe": -6.259,
+          "n_long": 73,
+          "n_short": 54,
+          "wr_long": 27.4,
+          "wr_short": 33.3,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 16,
+              "pnl": -45.96,
+              "wr": 43.8
+            },
+            "SL": {
+              "count": 25,
+              "pnl": -3854.33,
+              "wr": 0.0
+            },
+            "TIMEOUT": {
+              "count": 82,
+              "pnl": -2572.77,
+              "wr": 32.9
+            },
+            "TP": {
+              "count": 4,
+              "pnl": 543.42,
+              "wr": 100.0
+            }
+          }
+        }
+      },
+      "elapsed_s": 0.9
+    },
+    {
+      "name": "R6_liq_flush_3x",
+      "description": "Rebound: liq cascade >3x MA -> contrarian",
+      "total_pnl": -49061.42,
+      "total_trades": 1148,
+      "win_rate": 23.0,
+      "coin_results": {
+        "BTC": {
+          "pnl": -5987.13,
+          "trades": 197,
+          "wr": 16.24,
+          "sharpe": -11.462,
+          "n_long": 109,
+          "n_short": 88,
+          "wr_long": 21.1,
+          "wr_short": 10.2,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 61,
+              "pnl": -656.83,
+              "wr": 19.7
+            },
+            "TIMEOUT": {
+              "count": 92,
+              "pnl": -2344.39,
+              "wr": 20.7
+            },
+            "SL": {
+              "count": 43,
+              "pnl": -3008.34,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 1,
+              "pnl": 22.42,
+              "wr": 100.0
+            }
+          }
+        },
+        "XRP": {
+          "pnl": -8115.72,
+          "trades": 190,
+          "wr": 21.05,
+          "sharpe": -10.664,
+          "n_long": 107,
+          "n_short": 83,
+          "wr_long": 23.4,
+          "wr_short": 18.1,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 61,
+              "pnl": -913.36,
+              "wr": 31.1
+            },
+            "TIMEOUT": {
+              "count": 96,
+              "pnl": -3620.6,
+              "wr": 20.8
+            },
+            "SL": {
+              "count": 32,
+              "pnl": -3626.31,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 1,
+              "pnl": 44.55,
+              "wr": 100.0
+            }
+          }
+        },
+        "ADA": {
+          "pnl": -9140.17,
+          "trades": 192,
+          "wr": 26.56,
+          "sharpe": -9.144,
+          "n_long": 104,
+          "n_short": 88,
+          "wr_long": 30.8,
+          "wr_short": 21.6,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 61,
+              "pnl": -929.05,
+              "wr": 41.0
+            },
+            "TIMEOUT": {
+              "count": 99,
+              "pnl": -4242.18,
+              "wr": 23.2
+            },
+            "SL": {
+              "count": 29,
+              "pnl": -4295.24,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 3,
+              "pnl": 326.3,
+              "wr": 100.0
+            }
+          }
+        },
+        "DOT": {
+          "pnl": -8379.43,
+          "trades": 190,
+          "wr": 25.79,
+          "sharpe": -8.472,
+          "n_long": 105,
+          "n_short": 85,
+          "wr_long": 26.7,
+          "wr_short": 24.7,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 63,
+              "pnl": -835.26,
+              "wr": 31.7
+            },
+            "TIMEOUT": {
+              "count": 100,
+              "pnl": -4101.8,
+              "wr": 26.0
+            },
+            "SL": {
+              "count": 24,
+              "pnl": -3802.6,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 3,
+              "pnl": 360.24,
+              "wr": 100.0
+            }
+          }
+        },
+        "SUI": {
+          "pnl": -9262.11,
+          "trades": 191,
+          "wr": 24.08,
+          "sharpe": -8.754,
+          "n_long": 105,
+          "n_short": 86,
+          "wr_long": 25.7,
+          "wr_short": 22.1,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 63,
+              "pnl": -1104.38,
+              "wr": 31.7
+            },
+            "TIMEOUT": {
+              "count": 97,
+              "pnl": -4082.31,
+              "wr": 23.7
+            },
+            "SL": {
+              "count": 28,
+              "pnl": -4402.52,
+              "wr": 0.0
+            },
+            "TP": {
+              "count": 3,
+              "pnl": 327.1,
+              "wr": 100.0
+            }
+          }
+        },
+        "FIL": {
+          "pnl": -8176.86,
+          "trades": 188,
+          "wr": 24.47,
+          "sharpe": -7.631,
+          "n_long": 104,
+          "n_short": 84,
+          "wr_long": 25.0,
+          "wr_short": 23.8,
+          "exit_breakdown": {
+            "SIGNAL_FLIP": {
+              "count": 63,
+              "pnl": -784.29,
+              "wr": 31.7
+            },
+            "SL": {
+              "count": 25,
+              "pnl": -3992.97,
+              "wr": 0.0
+            },
+            "TIMEOUT": {
+              "count": 94,
+              "pnl": -4191.07,
+              "wr": 21.3
+            },
+            "TP": {
+              "count": 6,
+              "pnl": 791.46,
+              "wr": 100.0
+            }
+          }
+        }
+      },
+      "elapsed_s": 1.1
+    }
+  ],
+  "champion": "H2_baseline_reb_boost",
+  "champion_pnl": 85029.18
+}

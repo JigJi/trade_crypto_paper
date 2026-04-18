@@ -1,0 +1,290 @@
+{
+  "decomposition_max_diff": 0.0,
+  "exp1_factor_stats": {
+    "oi_divergence": {
+      "active_pct": 8.3,
+      "positive_pct": 4.1,
+      "negative_pct": 4.2,
+      "mean": -0.0002,
+      "std": 0.072,
+      "max": 0.25,
+      "min": -0.25
+    },
+    "funding_rate": {
+      "active_pct": 0.4,
+      "positive_pct": 0.4,
+      "negative_pct": 0.0,
+      "mean": 0.0076,
+      "std": 0.1227,
+      "max": 2.0,
+      "min": 0.0
+    },
+    "whale_alerts": {
+      "active_pct": 1.0,
+      "positive_pct": 0.8,
+      "negative_pct": 0.2,
+      "mean": 0.0082,
+      "std": 0.1468,
+      "max": 1.5,
+      "min": -1.5
+    },
+    "liq_cascade": {
+      "active_pct": 5.9,
+      "positive_pct": 2.5,
+      "negative_pct": 3.4,
+      "mean": -0.0188,
+      "std": 0.4858,
+      "max": 2.0,
+      "min": -2.0
+    },
+    "etf_flows": {
+      "active_pct": 22.1,
+      "positive_pct": 9.5,
+      "negative_pct": 12.6,
+      "mean": -0.0315,
+      "std": 0.4686,
+      "max": 1.0,
+      "min": -1.0
+    },
+    "basis_contrarian": {
+      "active_pct": 4.6,
+      "positive_pct": 2.3,
+      "negative_pct": 2.3,
+      "mean": -0.0002,
+      "std": 0.3737,
+      "max": 2.25,
+      "min": -2.25
+    },
+    "tick_liq": {
+      "active_pct": 7.9,
+      "positive_pct": 3.2,
+      "negative_pct": 4.7,
+      "mean": -0.022,
+      "std": 0.5592,
+      "max": 3.0,
+      "min": -2.0
+    },
+    "ob_combined": {
+      "active_pct": 21.3,
+      "positive_pct": 9.6,
+      "negative_pct": 11.7,
+      "mean": -0.0485,
+      "std": 1.0834,
+      "max": 3.0,
+      "min": -3.0
+    }
+  },
+  "exp2_flip_vs_nonflip": {
+    "total_trades": 3547,
+    "flip_trades": 163,
+    "non_flip_trades": 3384,
+    "flip_pnl": -4498.14,
+    "non_flip_pnl": 16251.58,
+    "flip_agreement": {
+      "mean": 0.908,
+      "median": 1.0,
+      "n_active_mean": 1.68
+    },
+    "non_flip_agreement": {
+      "mean": 0.9132,
+      "median": 1.0,
+      "n_active_mean": 2.02
+    }
+  },
+  "exp3_factor_dominance": {
+    "flip_dominant_counts": {
+      "ob_combined": 95,
+      "tick_liq": 15,
+      "basis_contrarian": 14,
+      "liq_cascade": 11,
+      "oi_divergence": 10,
+      "funding_rate": 4,
+      "etf_flows": 3
+    },
+    "nonflip_dominant_counts": {
+      "ob_combined": 1663,
+      "liq_cascade": 725,
+      "tick_liq": 598,
+      "basis_contrarian": 152,
+      "etf_flows": 98,
+      "whale_alerts": 40,
+      "funding_rate": 28,
+      "oi_divergence": 18
+    },
+    "factor_at_entry": {
+      "oi_divergence": {
+        "flip_mean": -0.0261,
+        "nonflip_mean": -0.0047,
+        "flip_abs_mean": 0.0537,
+        "nonflip_abs_mean": 0.0502
+      },
+      "funding_rate": {
+        "flip_mean": 0.0491,
+        "nonflip_mean": 0.0284,
+        "flip_abs_mean": 0.0491,
+        "nonflip_abs_mean": 0.0284
+      },
+      "whale_alerts": {
+        "flip_mean": 0.0092,
+        "nonflip_mean": 0.0124,
+        "flip_abs_mean": 0.0092,
+        "nonflip_abs_mean": 0.0426
+      },
+      "liq_cascade": {
+        "flip_mean": -0.0491,
+        "nonflip_mean": -0.1028,
+        "flip_abs_mean": 0.1963,
+        "nonflip_abs_mean": 0.5355
+      },
+      "etf_flows": {
+        "flip_mean": 0.0,
+        "nonflip_mean": -0.0694,
+        "flip_abs_mean": 0.2577,
+        "nonflip_abs_mean": 0.3549
+      },
+      "basis_contrarian": {
+        "flip_mean": -0.0046,
+        "nonflip_mean": 0.0027,
+        "flip_abs_mean": 0.2255,
+        "nonflip_abs_mean": 0.2611
+      },
+      "tick_liq": {
+        "flip_mean": -0.2086,
+        "nonflip_mean": -0.0937,
+        "flip_abs_mean": 0.4049,
+        "nonflip_abs_mean": 0.5671
+      },
+      "ob_combined": {
+        "flip_mean": -0.2454,
+        "nonflip_mean": -0.2021,
+        "flip_abs_mean": 1.7669,
+        "nonflip_abs_mean": 1.7086
+      }
+    }
+  },
+  "exp4_agreement_quartiles": {
+    "very_high_80_100": {
+      "count": 2715,
+      "wr": 76.6,
+      "pnl": 7771.13,
+      "avg_pnl": 2.8623,
+      "flip_pct": 4.6,
+      "avg_agreement": 1.0
+    },
+    "med_50_67": {
+      "count": 432,
+      "wr": 81.0,
+      "pnl": 3134.56,
+      "avg_pnl": 7.2559,
+      "flip_pct": 2.8,
+      "avg_agreement": 0.665
+    },
+    "high_67_80": {
+      "count": 140,
+      "wr": 82.9,
+      "pnl": 822.23,
+      "avg_pnl": 5.8731,
+      "flip_pct": 4.3,
+      "avg_agreement": 0.756
+    },
+    "low_0_50": {
+      "count": 260,
+      "wr": 76.2,
+      "pnl": 25.52,
+      "avg_pnl": 0.0982,
+      "flip_pct": 7.3,
+      "avg_agreement": 0.5
+    }
+  },
+  "exp5_trajectory": {
+    "flip_trajectory": {
+      "count": 163,
+      "agreement_start_mean": 0.908,
+      "agreement_end_mean": 0.8686,
+      "agreement_min_mean": 0.6176,
+      "agreement_std_mean": 0.1292,
+      "factor_flips_mean": 1.66,
+      "bars_mean": 24.0
+    },
+    "nonflip_trajectory": {
+      "count": 163,
+      "agreement_start_mean": 0.8929,
+      "agreement_end_mean": 0.9223,
+      "agreement_min_mean": 0.7718,
+      "agreement_std_mean": 0.082,
+      "factor_flips_mean": 0.34,
+      "bars_mean": 6.7
+    }
+  },
+  "exp6_consensus_filter": {
+    "baseline": {
+      "trades": 3547,
+      "wr": 77.4,
+      "pnl": 11753.44,
+      "flip_pnl": -4498.14
+    },
+    "filters": {
+      "min_0.5": {
+        "trades": 3547,
+        "trades_pct": 100.0,
+        "wr": 77.4,
+        "pnl": 11753.44,
+        "pnl_delta": 0.0,
+        "flip_count": 163,
+        "flip_pnl": -4498.14
+      },
+      "min_0.6": {
+        "trades": 3287,
+        "trades_pct": 92.7,
+        "wr": 77.5,
+        "pnl": 11727.92,
+        "pnl_delta": -25.52,
+        "flip_count": 144,
+        "flip_pnl": -3968.8
+      },
+      "min_0.7": {
+        "trades": 2855,
+        "trades_pct": 80.5,
+        "wr": 77.0,
+        "pnl": 8593.36,
+        "pnl_delta": -3160.08,
+        "flip_count": 132,
+        "flip_pnl": -3617.56
+      },
+      "min_0.75": {
+        "trades": 2855,
+        "trades_pct": 80.5,
+        "wr": 77.0,
+        "pnl": 8593.36,
+        "pnl_delta": -3160.08,
+        "flip_count": 132,
+        "flip_pnl": -3617.56
+      },
+      "min_0.8": {
+        "trades": 2733,
+        "trades_pct": 77.1,
+        "wr": 76.8,
+        "pnl": 7878.63,
+        "pnl_delta": -3874.81,
+        "flip_count": 126,
+        "flip_pnl": -3430.03
+      },
+      "min_1.0": {
+        "trades": 2715,
+        "trades_pct": 76.5,
+        "wr": 76.6,
+        "pnl": 7771.13,
+        "pnl_delta": -3982.31,
+        "flip_count": 126,
+        "flip_pnl": -3430.03
+      }
+    }
+  },
+  "exp7_first_flipper": {
+    "ob_combined": 80,
+    "tick_liq": 35,
+    "oi_divergence": 25,
+    "liq_cascade": 9,
+    "basis_contrarian": 3
+  }
+}

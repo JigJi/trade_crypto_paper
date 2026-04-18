@@ -1,0 +1,2716 @@
+{
+  "meta": {
+    "total_xp": 3765,
+    "current_streak": 15,
+    "longest_streak": 22,
+    "level": 27,
+    "last_mission_date": "2026-04-18"
+  },
+  "missions": [
+    {
+      "mission_id": "mission_001_hour_of_day",
+      "date": "2026-03-14",
+      "type": "regime_test",
+      "title": "Hour-of-Day Session Performance Analysis",
+      "description": "Test if v3 model performs differently across Asian/EU/US/Late trading sessions",
+      "difficulty": "hard",
+      "xp_reward": 20,
+      "status": "completed",
+      "target": "hour_of_day",
+      "started_at": "2026-03-14T09:38:16.358763",
+      "finished_at": "2026-03-14T09:38:16.358763",
+      "result": {
+        "success": true,
+        "verdict": "significant",
+        "best_session": "Late",
+        "worst_session": "Asian",
+        "wr_spread": 1.7,
+        "best_delta": -137.0,
+        "baseline_pnl": 2289.0
+      },
+      "insight": "US session ดีสุด (WR 72.1%), Asian แย่สุดแต่ข้ามทั้ง session ไม่ช่วย (-$137) ข้ามเฉพาะ 6 ชม.ที่ขาดทุน -> +$1,250 (+55%) แต่เสี่ยง overfit. วันจันทร์แย่สุด (-$475)",
+      "tags": [
+        "regime_test",
+        "intraday",
+        "session_analysis"
+      ]
+    },
+    {
+      "mission_id": "mission_002_liquidation_cascade",
+      "date": "2026-03-14",
+      "type": "regime_test",
+      "title": "Liquidation Cascade Analysis",
+      "description": "วิเคราะห์ว่า Liquidation Cascade ทำนายทิศทางราคา BTC ได้หรือไม่",
+      "difficulty": "hard",
+      "xp_reward": 20,
+      "status": "completed",
+      "target": "liquidation_cascade",
+      "started_at": "2026-03-14T10:18:47.996270",
+      "finished_at": "2026-03-14T10:18:47.996270",
+      "result": {
+        "success": true,
+        "verdict": "continuation_pattern",
+        "cascade_events_strong": 330,
+        "v3_cascade_wr": 64.8,
+        "v3_normal_wr": 60.4
+      },
+      "insight": "พบ continuation pattern: cascade ไม่ได้ทำให้เกิด reversal. ใช้เป็น momentum confirmation ได้",
+      "tags": [
+        "regime_test",
+        "liquidation",
+        "cascade",
+        "microstructure"
+      ]
+    },
+    {
+      "mission_id": "mission_003_signal_strength",
+      "date": "2026-03-14",
+      "type": "model_quality",
+      "title": "BTC Composite Score -- Signal Strength vs Trade Outcome",
+      "description": "Score magnitude (|score|) predicts trade quality. Q1 WR 63.7% vs Q4 WR 78.2%. Threshold 3.0 = quick win (+16.4% PnL). Short extreme (score<=-4) = 82% WR.",
+      "difficulty": "hard",
+      "xp_reward": 95,
+      "status": "completed",
+      "target": "signal_confidence",
+      "started_at": "2026-03-14T10:57:55.690627",
+      "finished_at": "2026-03-14T10:57:55.690627",
+      "result": {
+        "success": true,
+        "verdict": "strong_signal",
+        "q1_wr": 63.7,
+        "q4_wr": 78.2,
+        "wr_delta_pp": 14.5,
+        "q1_sharpe": 0.54,
+        "q4_sharpe": 10.74,
+        "threshold_3_pnl_gain_pct": 16.4,
+        "short_extreme_wr": 82.0,
+        "best_threshold": 3.0
+      },
+      "insight": "Score magnitude ทำนาย trade quality ได้ชัดเจน (+14.5pp WR). Short extreme (score<=-4) = WR 82%. Threshold 3.0 ตัด noise ได้ +16.4% PnL. ข้อเสนอ: confidence-based sizing + raise BTC threshold.",
+      "tags": [
+        "model_quality",
+        "signal_confidence",
+        "position_sizing",
+        "threshold_optimization"
+      ]
+    },
+    {
+      "mission_id": "mission_004_option_greeks",
+      "date": "2026-03-15",
+      "type": "factor_test",
+      "title": "Option Greeks Deep Dive -- BTC IV/Skew/GEX Signal Analysis",
+      "description": "26K rows option_greeks (Binance EAPI) aggregated into ATM IV + 25d Skew signals. Both HURT v3 at all weights. No OI data -> P/C ratio and GEX untestable. Data resolution ~10h = daily noise on 15m.",
+      "difficulty": "hard",
+      "xp_reward": 20,
+      "status": "completed",
+      "target": "option_greeks",
+      "started_at": "2026-03-15T02:18:49",
+      "finished_at": "2026-03-14T19:24:47.139873",
+      "result": {
+        "success": true,
+        "verdict": "negative",
+        "factors_tested": [
+          "atm_iv",
+          "skew_25d"
+        ],
+        "factors_skipped": [
+          "pc_ratio",
+          "gex"
+        ],
+        "atm_iv_best_delta": -549,
+        "skew_best_delta": -373,
+        "baseline_pnl": 1180,
+        "data_rows": 26066,
+        "data_resolution_min": 627,
+        "oi_available": false,
+        "deribit_rows": 516
+      },
+      "insight": "Option Greeks (Binance EAPI) ไม่ work สำหรับ 15m trading: resolution ~10h = daily noise, ไม่มี OI (P/C ratio + GEX คำนวณไม่ได้). ATM IV hurt -$549, Skew hurt -$373. Deribit data (15m resolution, มี OI) มีแวว แต่ยังมีแค่ 5 วัน.",
+      "tags": [
+        "factor_test",
+        "options",
+        "iv_skew",
+        "greeks",
+        "negative_result",
+        "data_quality"
+      ]
+    },
+    {
+      "mission_id": "mission_005_exit_mechanism",
+      "date": "2026-03-16",
+      "type": "exit_optimization",
+      "title": "Exit Mechanism Deep Dive -- SL/TP/Trail/TimeStop Analysis",
+      "description": "วิเคราะห์ exit mechanism ทั้งหมดของ v3: SL มี 0% WR ทำลาย $8,239. ปิด SL เพิ่มกำไร +74% ($5,055→$8,802). TRAIL (0.5 ATR) คือ exit จริง (84.2% WR, 83.6% ของ trades). TP ไม่เคยโดน trigger.",
+      "difficulty": "hard",
+      "xp_reward": 135,
+      "status": "completed",
+      "target": "exit_mechanism",
+      "started_at": "2026-03-16T02:15:31",
+      "finished_at": "2026-03-16T02:15:41",
+      "result": {
+        "success": true,
+        "verdict": "sl_is_destructive",
+        "baseline_pnl": 5054.83,
+        "no_sl_pnl": 8802.25,
+        "no_sl_delta_pct": 74.1,
+        "sl_wr_pct": 0.0,
+        "sl_total_loss": -8239.16,
+        "trail_wr_pct": 84.2,
+        "trail_total_profit": 15596.8,
+        "trail_avg_bars": 3.2,
+        "signal_flip_wr_pct": 5.4,
+        "best_config": "No-SL + max96",
+        "best_pnl": 8802.25,
+        "wide_sl10_pnl": 8671.17,
+        "tp_never_triggered": true,
+        "win_peak_bar": 92,
+        "loss_worst_bar": 10,
+        "experiments_run": 7
+      },
+      "insight": "SL มี 0% WR ทำลาย $8,239 (-62% ของกำไร TRAIL). ปิด SL = +$3,747 (+74%). TRAIL 0.5 ATR คือ exit จริง (84.2% WR, avg 3.2 bars). TP ไม่เคยโดน. แนะนำ: SL >= 10 ATR หรือปิดเลย. นี่คือ single biggest improvement ที่ทำได้ตอนนี้.",
+      "tags": [
+        "exit_optimization",
+        "stop_loss",
+        "trailing_stop",
+        "holding_period",
+        "critical_finding",
+        "actionable"
+      ]
+    },
+    {
+      "mission_id": "mission_006_concentration_risk",
+      "date": "2026-03-17",
+      "type": "portfolio_risk",
+      "title": "Cross-Coin Entry Synchronization & Concentration Risk",
+      "description": "วิเคราะห์ว่าเหรียญที่ใช้ BTC signal เดียวกัน เข้าพร้อมกันมากแค่ไหน ชนะ/แพ้พร้อมกันไหม และ concentration risk สูงเพียงใด",
+      "difficulty": "hard",
+      "xp_reward": 95,
+      "status": "completed",
+      "target": "concentration_risk",
+      "started_at": "2026-03-17T09:00:00",
+      "finished_at": "2026-03-16T19:16:26.008570",
+      "result": {
+        "success": true,
+        "verdict": "high_concentration_risk",
+        "effective_n": 1.65,
+        "n_coins": 6,
+        "avg_pnl_correlation": 0.614,
+        "mass_loss_pct": 49.3,
+        "mass_loss_events": 62,
+        "same_direction_pct": 100.0,
+        "paper_max_cluster": 24,
+        "cap_does_not_help_pnl": true,
+        "multi_entry_wr": 73.6,
+        "single_entry_wr": 72.8,
+        "diversification_ratio": 1.29,
+        "portfolio_sharpe": 10.62,
+        "max_drawdown": -675,
+        "total_pnl": 8671,
+        "experiments_run": 7
+      },
+      "insight": "Effective N = 1.65 จาก 6 เหรียญ (diversification แค่ 27%). Mass loss events = 49.3% ของ losses ทั้งหมด. 100% same direction. Paper trading มี 24-coin cluster! Cap ลด PnL แต่ลด drawdown. ADA-XRP ซ้ำซ้อนที่สุด (corr 0.76), DOT-SUI หลากหลายที่สุด (corr 0.46).",
+      "tags": [
+        "portfolio_risk",
+        "concentration",
+        "correlation",
+        "diversification",
+        "clustering",
+        "critical_finding"
+      ]
+    },
+    {
+      "mission_id": "mission_008_trade_analysis_7d_review",
+      "date": "2026-03-18",
+      "type": "trade_analysis",
+      "category": "analysis",
+      "title": "Trade Analysis: 7-Day Review",
+      "description": "วิเคราะห์เทรดล่าสุด 7 วัน: WR ตาม direction/score/hour/coin, หาแพทเทิร์นแพ้-ชนะ",
+      "difficulty": "medium",
+      "xp_reward": 65,
+      "status": "completed",
+      "target": "7d-review",
+      "started_at": "2026-03-18T16:13:06.328411",
+      "finished_at": "2026-03-18T16:13:06.343204",
+      "result": {
+        "success": true,
+        "verdict": "actionable",
+        "period_days": 7,
+        "total_trades": 72,
+        "overall_wr": 58.3,
+        "total_pnl": 271.31,
+        "exp1_baseline": {
+          "total_trades": 72,
+          "wins": 42,
+          "losses": 30,
+          "wr": 58.3,
+          "total_pnl": 271.31,
+          "avg_win": 9.49,
+          "avg_loss": -4.24,
+          "profit_factor": 3.13,
+          "init_equity": 4997.25,
+          "final_equity": 5222.6,
+          "by_direction": {
+            "LONG": {
+              "trades": 42,
+              "wr": 33.3,
+              "pnl": -26.36,
+              "avg_pnl": -0.63
+            },
+            "SHORT": {
+              "trades": 30,
+              "wr": 93.3,
+              "pnl": 297.67,
+              "avg_pnl": 9.92
+            }
+          },
+          "by_score": {
+            "0-2": {
+              "trades": 39,
+              "wr": 71.8,
+              "pnl": 279.6
+            },
+            "2-4": {
+              "trades": 30,
+              "wr": 46.7,
+              "pnl": 1.67
+            },
+            "4-6": {
+              "trades": 3,
+              "wr": 0.0,
+              "pnl": -9.97
+            }
+          }
+        },
+        "exp2_direction": {
+          "analysis": {
+            "LONG": {
+              "avg_entry_score": 1.59,
+              "avg_bars_held": 42.3,
+              "exit_breakdown": {
+                "TP": {
+                  "count": 7,
+                  "pnl": 72.66
+                },
+                "SIGNAL_FLIP": {
+                  "count": 34,
+                  "pnl": -99.02
+                },
+                "SL": {
+                  "count": 1,
+                  "pnl": -0.0
+                }
+              },
+              "best_coins": [
+                [
+                  "BEAT",
+                  {
+                    "trades": 1,
+                    "pnl": 23.34
+                  }
+                ],
+                [
+                  "JCT",
+                  {
+                    "trades": 1,
+                    "pnl": 13.79
+                  }
+                ],
+                [
+                  "NAORIS",
+                  {
+                    "trades": 2,
+                    "pnl": 10.43
+                  }
+                ]
+              ],
+              "worst_coins": [
+                [
+                  "PIPPIN",
+                  {
+                    "trades": 1,
+                    "pnl": -38.83
+                  }
+                ],
+                [
+                  "PIXEL",
+                  {
+                    "trades": 1,
+                    "pnl": -19.75
+                  }
+                ],
+                [
+                  "DEGO",
+                  {
+                    "trades": 1,
+                    "pnl": -12.81
+                  }
+                ]
+              ]
+            },
+            "SHORT": {
+              "avg_entry_score": -3.62,
+              "avg_bars_held": 15.0,
+              "exit_breakdown": {
+                "SL": {
+                  "count": 1,
+                  "pnl": -0.0
+                },
+                "SL/TP": {
+                  "count": 5,
+                  "pnl": 130.87
+                },
+                "TP": {
+                  "count": 24,
+                  "pnl": 166.8
+                }
+              },
+              "best_coins": [
+                [
+                  "ARIA",
+                  {
+                    "trades": 4,
+                    "pnl": 132.23
+                  }
+                ],
+                [
+                  "DEGO",
+                  {
+                    "trades": 1,
+                    "pnl": 17.14
+                  }
+                ],
+                [
+                  "BANANAS31",
+                  {
+                    "trades": 1,
+                    "pnl": 13.02
+                  }
+                ]
+              ],
+              "worst_coins": [
+                [
+                  "BTC",
+                  {
+                    "trades": 1,
+                    "pnl": -1.36
+                  }
+                ],
+                [
+                  "RENDER",
+                  {
+                    "trades": 1,
+                    "pnl": 0.91
+                  }
+                ],
+                [
+                  "SOL",
+                  {
+                    "trades": 1,
+                    "pnl": 3.72
+                  }
+                ]
+              ]
+            }
+          }
+        },
+        "exp3_exits": {
+          "by_reason": {
+            "TP": {
+              "trades": 31,
+              "wins": 31,
+              "pnl": 239.46,
+              "bars_sum": 627,
+              "wr": 100.0,
+              "avg_bars": 20.2,
+              "pct": 43.1
+            },
+            "SL": {
+              "trades": 2,
+              "wins": 0,
+              "pnl": -0.01,
+              "bars_sum": 46,
+              "wr": 0.0,
+              "avg_bars": 23.0,
+              "pct": 2.8
+            },
+            "SIGNAL_FLIP": {
+              "trades": 34,
+              "wins": 7,
+              "pnl": -99.02,
+              "bars_sum": 1531,
+              "wr": 20.6,
+              "avg_bars": 45.0,
+              "pct": 47.2
+            },
+            "SL/TP": {
+              "trades": 5,
+              "wins": 4,
+              "pnl": 130.87,
+              "bars_sum": 23,
+              "wr": 80.0,
+              "avg_bars": 4.6,
+              "pct": 6.9
+            }
+          }
+        },
+        "exp4_worst": {
+          "worst_trades": [
+            {
+              "coin": "PIPPIN",
+              "direction": "LONG",
+              "pnl": -38.83,
+              "entry_time": "2026-03-17T16:47",
+              "exit_time": "2026-03-18T08:02",
+              "exit_reason": "SIGNAL_FLIP",
+              "bars_held": 61,
+              "btc_score": 3.0
+            },
+            {
+              "coin": "PIXEL",
+              "direction": "LONG",
+              "pnl": -19.75,
+              "entry_time": "2026-03-17T16:46",
+              "exit_time": "2026-03-18T08:01",
+              "exit_reason": "SIGNAL_FLIP",
+              "bars_held": 61,
+              "btc_score": 3.0
+            },
+            {
+              "coin": "DEGO",
+              "direction": "LONG",
+              "pnl": -12.81,
+              "entry_time": "2026-03-17T16:47",
+              "exit_time": "2026-03-18T08:03",
+              "exit_reason": "SIGNAL_FLIP",
+              "bars_held": 61,
+              "btc_score": 3.0
+            },
+            {
+              "coin": "ARIA",
+              "direction": "LONG",
+              "pnl": -9.0,
+              "entry_time": "2026-03-17T16:47",
+              "exit_time": "2026-03-18T08:02",
+              "exit_reason": "SIGNAL_FLIP",
+              "bars_held": 61,
+              "btc_score": 3.0
+            },
+            {
+              "coin": "SUI",
+              "direction": "LONG",
+              "pnl": -7.05,
+              "entry_time": "2026-03-18T12:16",
+              "exit_time": "2026-03-18T14:46",
+              "exit_reason": "SIGNAL_FLIP",
+              "bars_held": 11,
+              "btc_score": -3.8
+            }
+          ],
+          "common_direction": "LONG",
+          "common_reason": "SIGNAL_FLIP",
+          "common_coin": "PIPPIN"
+        },
+        "exp5_signals": {
+          "signal_stats": {
+            "total_signals": 3162,
+            "entries": 62,
+            "skips": 110,
+            "holds": 0,
+            "entry_rate": 2.0,
+            "avg_entry_score": -0.28,
+            "avg_skip_score": -2.86,
+            "model_distribution": {
+              "v3": 1938,
+              "v4": 1224
+            }
+          }
+        },
+        "exp6_hours": {
+          "2": {
+            "trades": 1,
+            "wins": 0,
+            "pnl": -4.58,
+            "wr": 0.0
+          },
+          "8": {
+            "trades": 26,
+            "wins": 24,
+            "pnl": 172.69,
+            "wr": 92.3
+          },
+          "9": {
+            "trades": 1,
+            "wins": 1,
+            "pnl": 21.1,
+            "wr": 100.0
+          },
+          "11": {
+            "trades": 1,
+            "wins": 1,
+            "pnl": 39.39,
+            "wr": 100.0
+          },
+          "12": {
+            "trades": 6,
+            "wins": 1,
+            "pnl": 51.54,
+            "wr": 16.7
+          },
+          "13": {
+            "trades": 2,
+            "wins": 1,
+            "pnl": 3.85,
+            "wr": 50.0
+          },
+          "14": {
+            "trades": 1,
+            "wins": 0,
+            "pnl": -3.81,
+            "wr": 0.0
+          },
+          "15": {
+            "trades": 1,
+            "wins": 0,
+            "pnl": -0.58,
+            "wr": 0.0
+          },
+          "16": {
+            "trades": 29,
+            "wins": 14,
+            "pnl": 4.17,
+            "wr": 48.3
+          },
+          "17": {
+            "trades": 2,
+            "wins": 0,
+            "pnl": -3.82,
+            "wr": 0.0
+          },
+          "19": {
+            "trades": 1,
+            "wins": 0,
+            "pnl": -6.15,
+            "wr": 0.0
+          },
+          "22": {
+            "trades": 1,
+            "wins": 0,
+            "pnl": -2.5,
+            "wr": 0.0
+          }
+        },
+        "exp7_coins": {
+          "NAORIS": {
+            "trades": 2,
+            "wins": 1,
+            "pnl": 10.43,
+            "wr": 50.0
+          },
+          "ZRO": {
+            "trades": 3,
+            "wins": 2,
+            "pnl": 14.35,
+            "wr": 66.7
+          },
+          "1000BONK": {
+            "trades": 3,
+            "wins": 1,
+            "pnl": 7.01,
+            "wr": 33.3
+          },
+          "DOT": {
+            "trades": 2,
+            "wins": 2,
+            "pnl": 9.66,
+            "wr": 100.0
+          },
+          "HYPE": {
+            "trades": 2,
+            "wins": 2,
+            "pnl": 12.83,
+            "wr": 100.0
+          },
+          "PENGU": {
+            "trades": 2,
+            "wins": 2,
+            "pnl": 21.2,
+            "wr": 100.0
+          },
+          "1000PEPE": {
+            "trades": 2,
+            "wins": 2,
+            "pnl": 11.99,
+            "wr": 100.0
+          },
+          "BEAT": {
+            "trades": 1,
+            "wins": 1,
+            "pnl": 23.34,
+            "wr": 100.0
+          },
+          "BTC": {
+            "trades": 2,
+            "wins": 0,
+            "pnl": -1.91,
+            "wr": 0.0
+          },
+          "XRP": {
+            "trades": 4,
+            "wins": 1,
+            "pnl": 3.53,
+            "wr": 25.0
+          },
+          "ADA": {
+            "trades": 3,
+            "wins": 1,
+            "pnl": 6.12,
+            "wr": 33.3
+          },
+          "SUI": {
+            "trades": 3,
+            "wins": 1,
+            "pnl": -2.41,
+            "wr": 33.3
+          },
+          "FIL": {
+            "trades": 3,
+            "wins": 3,
+            "pnl": 13.08,
+            "wr": 100.0
+          },
+          "RENDER": {
+            "trades": 3,
+            "wins": 2,
+            "pnl": -2.44,
+            "wr": 66.7
+          },
+          "PIXEL": {
+            "trades": 2,
+            "wins": 1,
+            "pnl": -12.31,
+            "wr": 50.0
+          },
+          "NEAR": {
+            "trades": 2,
+            "wins": 1,
+            "pnl": 0.61,
+            "wr": 50.0
+          },
+          "AXS": {
+            "trades": 3,
+            "wins": 1,
+            "pnl": 1.75,
+            "wr": 33.3
+          },
+          "SOL": {
+            "trades": 3,
+            "wins": 1,
+            "pnl": 1.66,
+            "wr": 33.3
+          },
+          "ETH": {
+            "trades": 3,
+            "wins": 1,
+            "pnl": 3.16,
+            "wr": 33.3
+          },
+          "ARB": {
+            "trades": 2,
+            "wins": 1,
+            "pnl": 5.24,
+            "wr": 50.0
+          },
+          "ARIA": {
+            "trades": 5,
+            "wins": 4,
+            "pnl": 123.23,
+            "wr": 80.0
+          },
+          "BARD": {
+            "trades": 2,
+            "wins": 1,
+            "pnl": 3.21,
+            "wr": 50.0
+          },
+          "BANANAS31": {
+            "trades": 2,
+            "wins": 2,
+            "pnl": 17.89,
+            "wr": 100.0
+          },
+          "PIPPIN": {
+            "trades": 1,
+            "wins": 0,
+            "pnl": -38.83,
+            "wr": 0.0
+          },
+          "OGN": {
+            "trades": 2,
+            "wins": 2,
+            "pnl": 10.68,
+            "wr": 100.0
+          },
+          "SAHARA": {
+            "trades": 1,
+            "wins": 1,
+            "pnl": 1.26,
+            "wr": 100.0
+          },
+          "ASTER": {
+            "trades": 2,
+            "wins": 1,
+            "pnl": 1.75,
+            "wr": 50.0
+          },
+          "LTC": {
+            "trades": 2,
+            "wins": 1,
+            "pnl": 2.73,
+            "wr": 50.0
+          },
+          "JCT": {
+            "trades": 1,
+            "wins": 1,
+            "pnl": 13.79,
+            "wr": 100.0
+          },
+          "DEGO": {
+            "trades": 2,
+            "wins": 1,
+            "pnl": 4.33,
+            "wr": 50.0
+          },
+          "LINK": {
+            "trades": 2,
+            "wins": 1,
+            "pnl": 4.39,
+            "wr": 50.0
+          }
+        },
+        "exp8_equity": {
+          "trend": "improving",
+          "first_half_avg": 0.54,
+          "second_half_avg": 7.0,
+          "period_max_dd": 85.93,
+          "total_equity": 5222.6
+        },
+        "exp9_progress": {},
+        "recommendations": [
+          "LONG WR ต่ำมาก (33.3%) เทียบกับ SHORT (93.3%). พิจารณา: เพิ่ม score threshold สำหรับ LONG หรือ ข้าม LONG ในช่วง BEAR",
+          "SIGNAL_FLIP มี WR แค่ 20.6% (34 เทรด, PnL $-99.02). Signal flip ขาดทุนมาก พิจารณาเพิ่ม hysteresis band",
+          "PIPPIN มี PnL ต่ำสุด ($-38.83, WR 0.0%). พิจารณาถอดออกจากระบบหรือปรับ threshold เฉพาะเหรียญ"
+        ],
+        "strengths": [
+          "FIL: WR 100.0% (3 trades, $13)",
+          "ARIA: WR 80.0% (5 trades, $123)",
+          "SHORT: WR 93.3% (30 trades)"
+        ],
+        "by_direction": {
+          "LONG": {
+            "trades": 42,
+            "wr": 33.3,
+            "pnl": -26.36,
+            "avg_pnl": -0.63
+          },
+          "SHORT": {
+            "trades": 30,
+            "wr": 93.3,
+            "pnl": 297.67,
+            "avg_pnl": 9.92
+          }
+        },
+        "by_score": {
+          "0-2": {
+            "trades": 39,
+            "wr": 71.8,
+            "pnl": 279.6
+          },
+          "2-4": {
+            "trades": 30,
+            "wr": 46.7,
+            "pnl": 1.67
+          },
+          "4-6": {
+            "trades": 3,
+            "wr": 0.0,
+            "pnl": -9.97
+          }
+        },
+        "by_hour": {
+          "2": {
+            "trades": 1,
+            "wins": 0,
+            "pnl": -4.58,
+            "wr": 0.0
+          },
+          "8": {
+            "trades": 26,
+            "wins": 24,
+            "pnl": 172.69,
+            "wr": 92.3
+          },
+          "9": {
+            "trades": 1,
+            "wins": 1,
+            "pnl": 21.1,
+            "wr": 100.0
+          },
+          "11": {
+            "trades": 1,
+            "wins": 1,
+            "pnl": 39.39,
+            "wr": 100.0
+          },
+          "12": {
+            "trades": 6,
+            "wins": 1,
+            "pnl": 51.54,
+            "wr": 16.7
+          },
+          "13": {
+            "trades": 2,
+            "wins": 1,
+            "pnl": 3.85,
+            "wr": 50.0
+          },
+          "14": {
+            "trades": 1,
+            "wins": 0,
+            "pnl": -3.81,
+            "wr": 0.0
+          },
+          "15": {
+            "trades": 1,
+            "wins": 0,
+            "pnl": -0.58,
+            "wr": 0.0
+          },
+          "16": {
+            "trades": 29,
+            "wins": 14,
+            "pnl": 4.17,
+            "wr": 48.3
+          },
+          "17": {
+            "trades": 2,
+            "wins": 0,
+            "pnl": -3.82,
+            "wr": 0.0
+          },
+          "19": {
+            "trades": 1,
+            "wins": 0,
+            "pnl": -6.15,
+            "wr": 0.0
+          },
+          "22": {
+            "trades": 1,
+            "wins": 0,
+            "pnl": -2.5,
+            "wr": 0.0
+          }
+        },
+        "by_coin": {
+          "NAORIS": {
+            "trades": 2,
+            "wins": 1,
+            "pnl": 10.43,
+            "wr": 50.0
+          },
+          "ZRO": {
+            "trades": 3,
+            "wins": 2,
+            "pnl": 14.35,
+            "wr": 66.7
+          },
+          "1000BONK": {
+            "trades": 3,
+            "wins": 1,
+            "pnl": 7.01,
+            "wr": 33.3
+          },
+          "DOT": {
+            "trades": 2,
+            "wins": 2,
+            "pnl": 9.66,
+            "wr": 100.0
+          },
+          "HYPE": {
+            "trades": 2,
+            "wins": 2,
+            "pnl": 12.83,
+            "wr": 100.0
+          },
+          "PENGU": {
+            "trades": 2,
+            "wins": 2,
+            "pnl": 21.2,
+            "wr": 100.0
+          },
+          "1000PEPE": {
+            "trades": 2,
+            "wins": 2,
+            "pnl": 11.99,
+            "wr": 100.0
+          },
+          "BEAT": {
+            "trades": 1,
+            "wins": 1,
+            "pnl": 23.34,
+            "wr": 100.0
+          },
+          "BTC": {
+            "trades": 2,
+            "wins": 0,
+            "pnl": -1.91,
+            "wr": 0.0
+          },
+          "XRP": {
+            "trades": 4,
+            "wins": 1,
+            "pnl": 3.53,
+            "wr": 25.0
+          },
+          "ADA": {
+            "trades": 3,
+            "wins": 1,
+            "pnl": 6.12,
+            "wr": 33.3
+          },
+          "SUI": {
+            "trades": 3,
+            "wins": 1,
+            "pnl": -2.41,
+            "wr": 33.3
+          },
+          "FIL": {
+            "trades": 3,
+            "wins": 3,
+            "pnl": 13.08,
+            "wr": 100.0
+          },
+          "RENDER": {
+            "trades": 3,
+            "wins": 2,
+            "pnl": -2.44,
+            "wr": 66.7
+          },
+          "PIXEL": {
+            "trades": 2,
+            "wins": 1,
+            "pnl": -12.31,
+            "wr": 50.0
+          },
+          "NEAR": {
+            "trades": 2,
+            "wins": 1,
+            "pnl": 0.61,
+            "wr": 50.0
+          },
+          "AXS": {
+            "trades": 3,
+            "wins": 1,
+            "pnl": 1.75,
+            "wr": 33.3
+          },
+          "SOL": {
+            "trades": 3,
+            "wins": 1,
+            "pnl": 1.66,
+            "wr": 33.3
+          },
+          "ETH": {
+            "trades": 3,
+            "wins": 1,
+            "pnl": 3.16,
+            "wr": 33.3
+          },
+          "ARB": {
+            "trades": 2,
+            "wins": 1,
+            "pnl": 5.24,
+            "wr": 50.0
+          },
+          "ARIA": {
+            "trades": 5,
+            "wins": 4,
+            "pnl": 123.23,
+            "wr": 80.0
+          },
+          "BARD": {
+            "trades": 2,
+            "wins": 1,
+            "pnl": 3.21,
+            "wr": 50.0
+          },
+          "BANANAS31": {
+            "trades": 2,
+            "wins": 2,
+            "pnl": 17.89,
+            "wr": 100.0
+          },
+          "PIPPIN": {
+            "trades": 1,
+            "wins": 0,
+            "pnl": -38.83,
+            "wr": 0.0
+          },
+          "OGN": {
+            "trades": 2,
+            "wins": 2,
+            "pnl": 10.68,
+            "wr": 100.0
+          },
+          "SAHARA": {
+            "trades": 1,
+            "wins": 1,
+            "pnl": 1.26,
+            "wr": 100.0
+          },
+          "ASTER": {
+            "trades": 2,
+            "wins": 1,
+            "pnl": 1.75,
+            "wr": 50.0
+          },
+          "LTC": {
+            "trades": 2,
+            "wins": 1,
+            "pnl": 2.73,
+            "wr": 50.0
+          },
+          "JCT": {
+            "trades": 1,
+            "wins": 1,
+            "pnl": 13.79,
+            "wr": 100.0
+          },
+          "DEGO": {
+            "trades": 2,
+            "wins": 1,
+            "pnl": 4.33,
+            "wr": 50.0
+          },
+          "LINK": {
+            "trades": 2,
+            "wins": 1,
+            "pnl": 4.39,
+            "wr": 50.0
+          }
+        },
+        "by_exit_reason": {
+          "TP": {
+            "trades": 31,
+            "wr": 100.0,
+            "pnl": 239.46
+          },
+          "SL": {
+            "trades": 2,
+            "wr": 0.0,
+            "pnl": -0.01
+          },
+          "SIGNAL_FLIP": {
+            "trades": 34,
+            "wr": 20.6,
+            "pnl": -99.02
+          },
+          "SL/TP": {
+            "trades": 5,
+            "wr": 80.0,
+            "pnl": 130.87
+          }
+        },
+        "losing_patterns": [
+          "LONG WR ต่ำมาก (33",
+          "SIGNAL_FLIP มี WR แค่ 20",
+          "PIPPIN มี PnL ต่ำสุด ($-38"
+        ],
+        "winning_patterns": [
+          "FIL: WR 100.0% (3 trades, $13)",
+          "ARIA: WR 80.0% (5 trades, $123)",
+          "SHORT: WR 93.3% (30 trades)"
+        ]
+      },
+      "insight": "7 วันล่าสุด: 72 เทรด WR 58.3% PnL $271. ปัญหา: LONG WR ต่ำมาก (33. แนะนำ: LONG WR ต่ำมาก (33.3%) เทียบกับ SHORT (93.3%). พิจารณา: เพิ่ม score threshold สำหรับ LONG หรือ ข้าม LONG ในช่วง BEAR",
+      "tags": [
+        "trade_analysis",
+        "analysis"
+      ]
+    },
+    {
+      "mission_id": "mission_009_web_discovery_volume_profile_vwap",
+      "date": "2026-03-18",
+      "type": "web_discovery",
+      "category": "discovery",
+      "title": "Discovery: volume_profile_vwap",
+      "description": "ค้นหาไอเดียเทรดใหม่จากอินเทอร์เน็ต: volume_profile_vwap",
+      "difficulty": "hard",
+      "xp_reward": 70,
+      "status": "completed",
+      "target": "volume_profile_vwap",
+      "started_at": "2026-03-18T16:13:06.343204",
+      "finished_at": "2026-03-18T16:13:08.529294",
+      "result": {
+        "success": true,
+        "verdict": "not_significant",
+        "topic": "volume_profile_vwap",
+        "search_query": "VWAP deviation crypto futures alpha strategy 2026",
+        "hypothesis": "Price deviation from VWAP predicts mean reversion on 15m timeframe",
+        "search_results": [
+          {
+            "title": "Best Alpha Futures Strategy to Actually Get Consistent Payouts (2026)",
+            "snippet": "The strategy I use to pass Alpha Futures evaluations and pull consistent payouts — VWAP setups, session timing, and position sizing tailored to Alpha.",
+            "url": "https://www.proptradingvibes.com/blog/best-alpha-futures-strategy"
+          },
+          {
+            "title": "VWAP Scalping Strategy for High Volatility Crypto Markets 2026",
+            "snippet": "Meta Description: Master VWAP scalping in crypto&#x27;s volatile markets. Learn institutional-grade execution, optimal entry/exit rules, and risk management for consistent 1-3% daily gains. Target Keywords: VWAP scalping crypto, volume weighted average price strategy, crypto scalping 2026",
+            "url": "https://www.livevolatile.com/blog/vwap-scalping-strategy-crypto-2026"
+          },
+          {
+            "title": "VWAP Trading Strategy That Actually Works in 2026 | FibAlgo",
+            "snippet": "VWAP Trading Strategy That Actually Works in 2026 Master VWAP trading with 3 high-probability setups, sector-specific adjustments, and the institutional benchmark framework professional traders use daily.",
+            "url": "https://fibalgo.com/education/vwap-trading-strategy-institutional-benchmark"
+          },
+          {
+            "title": "What you need to know about crypto vwap orders in 2026",
+            "snippet": "Conclusion A VWAP order is an execution strategy that aims to match the market&#x27;s volume‑weighted average price by slicing a large order into smaller trades across time. In crypto, it helps traders and institutions move size through fragmented markets with more predictable impact and a clear ben",
+            "url": "https://cow.fi/learn/what-you-need-to-know-about-crypto-vwap-orders-in-2026"
+          },
+          {
+            "title": "Mastering VWAP in Crypto Trading - hyrotrader.com",
+            "snippet": "Seasoned crypto traders incorporate VWAP into their strategies to fine-tune trade entries, exits, and overall market bias. Because VWAP represents an average price weighted by volume, it acts as an &quot;equilibrium&quot; level for the day. Many intraday crypto strategies evolve around the VWAP line",
+            "url": "https://www.hyrotrader.com/blog/vwap-trading-strategy/"
+          }
+        ],
+        "proxy_test": {
+          "tested": true,
+          "method": "Computed rolling 96-bar (24h) VWAP, measured deviation vs next-bar return (mean reversion hypothesis)",
+          "data_source": "BTC 15m OHLCV (2250 candles, 30 days)",
+          "n_signals": 2153,
+          "correlation": 0.0031,
+          "hit_rate": 51.4,
+          "bull_signals": 775,
+          "bull_hit_rate": 52.0,
+          "bull_avg_return_bps": 0.16,
+          "bear_signals": 803,
+          "bear_hit_rate": 50.7,
+          "bear_avg_return_bps": -0.56,
+          "conclusion": "VWAP deviation correlation = 0.0031. Buy-below-VWAP: HR 52.0% (775 signals, avg 0.16 bps). Sell-above-VWAP: HR 50.7% (803 signals, avg -0.56 bps). สัญญาณอ่อน ยังไม่พร้อมเป็น factor"
+        },
+        "data_availability": {
+          "needed": "BTC 15m OHLCV",
+          "source": "market_data.index_price_klines / Binance API",
+          "available": true
+        },
+        "next_steps": [
+          "ผลเบื้องต้นยังไม่ชัด (hit rate 51.4%)",
+          "ปรับ parameter (threshold, lookback window) แล้วทดสอบใหม่",
+          "เก็บข้อมูลเพิ่ม 2 สัปดาห์แล้ว retest",
+          "ทดสอบบน alt coins ด้วย (ไม่ใช่แค่ BTC)"
+        ],
+        "n_results": 5,
+        "summary": "ค้นพบ 5 แหล่ง. Proxy test: ผ่าน. Verdict: not_significant",
+        "proposed_test": "1. ผลเบื้องต้นยังไม่ชัด (hit rate 51.4%)\n2. ปรับ parameter (threshold, lookback window) แล้วทดสอบใหม่\n3. เก็บข้อมูลเพิ่ม 2 สัปดาห์แล้ว retest\n4. ทดสอบบน alt coins ด้วย (ไม่ใช่แค่ BTC)"
+      },
+      "insight": "ไอเดียจาก volume_profile_vwap: พบ 5 แหล่ง. Price deviation from VWAP predicts mean reversion on 15m timeframe",
+      "tags": [
+        "web_discovery",
+        "discovery"
+      ]
+    },
+    {
+      "mission_id": "mission_010_factor_attribution",
+      "date": "2026-03-19",
+      "type": "factor_analysis",
+      "category": "analysis",
+      "title": "Factor Contribution Attribution -- Which Factors Drive Winners vs Losers?",
+      "description": "Decompose BTC composite score into 8 individual factors, map to trade entries, compare profiles of winning vs losing trades. 8 experiments: mean scores, agreement, dominance, pairs, composition, v5 comparison, active count, direction split.",
+      "difficulty": "hard",
+      "xp_reward": 100,
+      "status": "completed",
+      "target": "factor_attribution",
+      "started_at": "2026-03-19T02:13:23",
+      "finished_at": "2026-03-19T02:14:20",
+      "result": {
+        "success": true,
+        "verdict": "significant",
+        "total_trades": 3235,
+        "winners": 2495,
+        "losers": 740,
+        "wr_pct": 77.1,
+        "total_pnl": 10754.8,
+        "key_findings": {
+          "ob_combined_dominant_pct": 51.7,
+          "liquidation_dominant_wr": 78.4,
+          "oi_divergence_dominant_wr": 67.4,
+          "oi_divergence_dominant_pnl": -285,
+          "confluence_3plus_wr": 80.8,
+          "confluence_5_wr": 87.5,
+          "best_pair": "funding_rate+tick_liq",
+          "best_pair_wr": 92.0,
+          "best_pair_avg_pnl": 12.58,
+          "v3_wl_separation": 0.067,
+          "v5_wl_separation": 0.132,
+          "v5_doubles_separation": true,
+          "long_key_factor": "liquidation",
+          "short_key_factor": "etf_flows"
+        },
+        "experiments_run": 8
+      },
+      "insight": "Factor confluence (3+ factors active) = WR 80%+ vs 1 factor = 76%. ob_combined เป็น workhorse (51.7%) แต่ liquidation เป็น alpha king (78.4% WR). oi_divergence เป็น weak link (-85 เมื่อ dominant). funding+tick_liq = dream team (92% WR). v5 weighting doubles W-L separation.",
+      "tags": [
+        "factor_analysis",
+        "attribution",
+        "confluence",
+        "interaction_effects",
+        "critical_finding",
+        "actionable"
+      ]
+    },
+    {
+      "mission_id": "mission_011_signal_alpha_decay",
+      "date": "2026-03-20",
+      "type": "model_quality",
+      "category": "analysis",
+      "title": "Signal Alpha Decay & Entry Timing -- Half-life, Persistence, Forward Returns",
+      "description": "BTC composite score alpha decay: shift sweep (1-8), autocorrelation, persistence streaks, forward returns by bucket, paper trading signal age, optimal hold period. 7 experiments, 6018+ trades OOS.",
+      "difficulty": "hard",
+      "xp_reward": 100,
+      "status": "completed",
+      "target": "signal_alpha_decay",
+      "started_at": "2026-03-20T02:16:01",
+      "finished_at": "2026-03-20T02:16:11",
+      "result": {
+        "success": true,
+        "verdict": "significant",
+        "total_trades": 6018,
+        "baseline_pnl": 12038,
+        "key_findings": {
+          "signal_halflife_bars": "8-12",
+          "signal_halflife_hours": "2-3",
+          "shift2_pnl_loss_pct": -6.6,
+          "shift8_pnl_loss_pct": -8.2,
+          "autocorr_lag1": 0.8525,
+          "autocorr_lag8": 0.4921,
+          "flicker_pct_at_thr3": 35.9,
+          "avg_persistence_bars_thr3": 5.9,
+          "score5plus_fwd_return_bps": 7.33,
+          "score0_1_fwd_return_bps": -0.05,
+          "monotonic_score_return": true,
+          "paper_avg_delay_min": 2.1,
+          "paper_delay_ok": true,
+          "trail_05_best": true,
+          "trail_10_pnl_loss_pct": -68.7,
+          "short_decay_slower": true,
+          "extreme_short_h16_bps": 5.3,
+          "extreme_long_h16_bps": 4.0
+        },
+        "experiments_run": 7
+      },
+      "insight": "Signal half-life ~2-3 ชม. (autocorr 0.85 at 15m). Delay 2h loses only 8% PnL. 36% ของ signals เป็น flicker (1 bar) → hysteresis จำเป็น. |Score| ทำนาย forward return แบบ monotonic: 5+ = 7.3bps/hr vs 0-1 = noise. Trail 0.5 ATR = optimal, wider = -69% PnL.",
+      "tags": [
+        "model_quality",
+        "signal_decay",
+        "autocorrelation",
+        "persistence",
+        "entry_timing",
+        "holding_period",
+        "critical_finding",
+        "actionable"
+      ]
+    },
+    {
+      "mission_id": "mission_012_vol_regime",
+      "date": "2026-03-21",
+      "type": "regime_analysis",
+      "category": "analysis",
+      "title": "BTC Volatility Regime Classification & Adaptive Trading",
+      "description": "BTC 15m realized volatility (24h rolling) classifies into 4 regimes (Low/Normal/High/Extreme). v3 performance varies: Normal best (\\,649), Extreme worst (- ). extreme_avoid sizing = Calmar +66%. 7 experiments, 6018 trades.",
+      "difficulty": "hard",
+      "xp_reward": 100,
+      "status": "completed",
+      "target": "vol_regime",
+      "started_at": "2026-03-21T02:00:00",
+      "finished_at": "2026-03-20T19:16:55.054883",
+      "result": {
+        "success": true,
+        "verdict": "significant",
+        "total_trades": 6018,
+        "key_findings": {
+          "best_regime": "Normal",
+          "best_regime_pnl": 6648.8,
+          "best_regime_wr": 72.9,
+          "worst_regime": "Extreme",
+          "worst_regime_pnl": -239.7,
+          "extreme_avoid_calmar": 24.66,
+          "baseline_calmar": 14.84,
+          "calmar_improvement_pct": 66.2,
+          "best_combo": "SHORT+Normal",
+          "best_combo_wr": 75.3,
+          "best_combo_pnl": 4994.9,
+          "long_extreme_pnl": -252.5,
+          "deescalation_avg_pnl": 2.21,
+          "escalation_avg_pnl": 0.61,
+          "regime_autocorr_lag96": 0.5204,
+          "regime_avg_duration_hours": 17.9,
+          "vol_thresholds_rv": {
+            "low": 0.3,
+            "normal": 0.5,
+            "high": 0.7
+          }
+        },
+        "experiments_run": 7
+      },
+      "insight": "Extreme vol regime (RV>0.7%) = PnL -  (71.8% WR แต่ avg PnL ติดลบ -- SL ถูก trigger บ่อย). ข้าม Extreme regime = Calmar +66% (24.66 vs 14.84) โดยไม่เสีย PnL. SHORT+Normal = sweet spot (WR 75.3%, \\,995). Regime sticky (autocorr 0.52 at 24h) = ทำนายได้. ACTIONABLE: เพิ่ม vol regime filter ใน paper trading.",
+      "tags": [
+        "regime_analysis",
+        "volatility",
+        "adaptive_sizing",
+        "entry_filter",
+        "direction_bias",
+        "critical_finding",
+        "actionable"
+      ]
+    },
+    {
+      "mission_id": "mission_013_confluence_x_regime",
+      "date": "2026-03-22",
+      "type": "regime_analysis",
+      "title": "Confluence x Vol Regime Adaptive Filter",
+      "description": "Test if factor confluence (3+ factors active) improves performance in Extreme vol regime. Builds on Mission 010 (confluence) + Mission 012 (vol regime).",
+      "difficulty": "hard",
+      "xp_reward": 100,
+      "status": "completed",
+      "target": "confluence_x_regime",
+      "started_at": "2026-03-21T19:17:42.847487",
+      "finished_at": "2026-03-21T19:17:42.847487",
+      "result": {
+        "success": true,
+        "verdict": "significant",
+        "best_filter": "extreme_conf3",
+        "baseline_pnl": 12823,
+        "best_pnl": 15028,
+        "delta_pnl": 2204,
+        "delta_pnl_pct": 17.2,
+        "baseline_calmar": 15.13,
+        "best_calmar": 28.71,
+        "calmar_improvement_pct": 89.7,
+        "max_dd_reduction_pct": 38.1,
+        "extreme_low_conf_wr": 65.5,
+        "extreme_high_conf_wr": 89.1,
+        "trades_lost_pct": 7.5,
+        "grid_configs_tested": 300,
+        "experiments": 6
+      },
+      "insight": "Extreme vol + 0-2 factors = -,204 (WR 65%). Extreme vol + 3+ factors = +,843 (WR 89%!). Rule: skip Extreme when confluence<3 -> Calmar +90%, MaxDD -38%. Grid search (300 configs) confirms: ONLY filter Extreme, Normal/High ไม่ต้อง.",
+      "tags": [
+        "regime_analysis",
+        "factor_interaction",
+        "confluence",
+        "adaptive_filter",
+        "actionable"
+      ]
+    },
+    {
+      "mission_id": "mission_014_cascade_quality",
+      "date": "2026-03-23",
+      "type": "factor_deep_dive",
+      "title": "Liquidation Cascade Quality Anatomy -- What Makes a Cascade Tradeable?",
+      "description": "v6 proved liq is THE only factor. This mission dissects cascade CHARACTERISTICS (magnitude, side dominance, freshness, displacement, duration) to find what separates profitable from unprofitable cascade-triggered trades.",
+      "difficulty": "hard",
+      "xp_reward": 100,
+      "status": "completed",
+      "target": "cascade_quality",
+      "started_at": "2026-03-23T02:15:06",
+      "finished_at": "2026-03-23T02:15:23",
+      "result": {
+        "success": true,
+        "verdict": "significant",
+        "total_trades": 5102,
+        "total_pnl": 21671,
+        "overall_wr": 75.5,
+        "key_findings": {
+          "displacement_is_king": "Monotonic WR 70.5% (<0.1%) to 86.0% (1.0%+). Avg PnL scales 6.2x.",
+          "magnitude_u_shape": "Tick-only (79%) and 5x+ cascade (80%) beat mid-range (71-74%).",
+          "freshness_sweet_spot": "5-19 bars gap before cascade = WR 80-84%, best entry timing.",
+          "side_dominance_irrelevant": "Mixed vs one-sided cascade = no meaningful difference.",
+          "quality_score_for_sizing": "Q4 avg .64 vs Q1 avg .68 (2.5x). All Qs profitable = use for sizing not filtering."
+        },
+        "actionable": "Position sizing by displacement: 0.3%+ = 1.5x size, 0.1-0.3% = 1.2x size"
+      },
+      "insight": "Price displacement (cascade bar return) คือ quality meter ที่ดีที่สุดของ cascade -- WR 86% ที่ 1%+ vs 70.5% ที่ quiet. ทุก quality quartile กำไร จึงใช้เป็น position sizing ได้ ไม่ใช่ filter. Cascade magnitude มี U-shape: tick-only และ 5x+ ดี mid-range แย่สุด.",
+      "tags": [
+        "factor_deep_dive",
+        "liquidation",
+        "signal_quality",
+        "position_sizing",
+        "v6"
+      ]
+    },
+    {
+      "mission_id": "mission_015_pre_cascade_fingerprint",
+      "date": "2026-03-24",
+      "type": "factor_deep_dive",
+      "title": "Pre-Cascade BTC Fingerprint -- Squeeze -> Pop -> Cascade Pattern",
+      "description": "BTC price action 1-3 hours before liquidation cascade. Does volatility compression predict cascades? Can pre-conditions improve entry?",
+      "difficulty": "hard",
+      "xp_reward": 100,
+      "status": "completed",
+      "target": "pre_cascade_pattern",
+      "started_at": "2026-03-24T10:00:00",
+      "finished_at": "2026-03-23T19:18:29.416635",
+      "result": {
+        "success": true,
+        "verdict": "significant",
+        "key_findings": [
+          "Squeeze-Pop-Cascade pattern confirmed (p<0.001): 19% BB bandwidth compression 1-3h before cascade",
+          "Cascade timing NOT predictable from price action (returns all p>0.2)",
+          "BB bandwidth separates winners (0.0066) from losers (0.0055) at p<0.0001",
+          "Readiness filter hurts PnL: WR 75.5->78.0% but PnL 1,671->1,032 (-49%)",
+          "Price trajectory confirms contrarian: bullish cascade preceded by decline, bearish by incline"
+        ],
+        "cascade_episodes": 736,
+        "total_trades": 5102,
+        "baseline_pnl": 21671,
+        "bb_bw_winners": 0.0066,
+        "bb_bw_losers": 0.0055,
+        "bb_bw_p_val": 0.0,
+        "vol_compression_pct": 19.4,
+        "actionable": "BB Bandwidth position sizing: BW>0.006=1.5x, BW 0.004-0.006=1.0x, BW<0.004=0.7x"
+      },
+      "insight": "BTC compress volatility 19% (BB bandwidth) 1-3h before cascade (p<0.001). Cascade timing predict CANNOT from price but BB bandwidth at entry separates winners/losers (p<0.0001). Use BW for position sizing not filtering.",
+      "tags": [
+        "pre_cascade",
+        "volatility_compression",
+        "bb_bandwidth",
+        "squeeze_pattern",
+        "position_sizing",
+        "v6_liq_only"
+      ]
+    },
+    {
+      "mission_id": "mission_016_funding_regime_cascade",
+      "date": "2026-03-25",
+      "type": "cross_factor_analysis",
+      "title": "Funding Regime × Cascade Quality -- Does FR Predict Cascade Outcomes?",
+      "description": "ทดสอบว่า funding rate extreme ช่วยคัดกรองคุณภาพ cascade ใน v6 ได้หรือไม่ (5 experiments)",
+      "difficulty": "hard",
+      "xp_reward": 100,
+      "status": "completed",
+      "target": "funding_regime_cascade",
+      "started_at": "2026-03-24T19:14:55.615742",
+      "finished_at": "2026-03-24T19:14:55.615742",
+      "result": {
+        "success": true,
+        "verdict": "significant",
+        "baseline_trades": 5293,
+        "baseline_wr": 75.5,
+        "baseline_pnl": 22882.0,
+        "best_filter": "extreme_z2.0",
+        "any_significant": true,
+        "alignment_p": 0.6414
+      },
+      "insight": "Funding rate มี signal (fr_raw, fr_zscore) | Best filter: extreme_z2.0 -> avg $5.36 vs baseline $4.32",
+      "tags": [
+        "cross_factor",
+        "funding_rate",
+        "cascade_quality",
+        "v6",
+        "filter"
+      ]
+    },
+    {
+      "mission_id": "mission_017_streak_dynamics",
+      "date": "2026-03-25",
+      "type": "risk_management",
+      "title": "Win/Loss Streak Dynamics & Serial Correlation",
+      "description": "Analyze serial correlation in trades, streak patterns, drawdown anatomy, and test streak-based position sizing strategies",
+      "difficulty": "hard",
+      "xp_reward": 100,
+      "status": "completed",
+      "target": "streak_serial_correlation",
+      "started_at": "2026-03-25T19:13:47.962183",
+      "finished_at": "2026-03-25T19:13:47.962183",
+      "result": {
+        "success": true,
+        "verdict": "significant_serial_correlation",
+        "runs_test_z": -12.201,
+        "runs_test_p": 0.0,
+        "lag1_ac_outcome": 0.1676,
+        "lag1_ac_pnl": 0.3426,
+        "max_win_streak": 62,
+        "max_loss_streak": 11,
+        "max_dd_depth": -503.74,
+        "best_sizing_strategy": "streak_proportional",
+        "best_sizing_pnl": 35945.0,
+        "best_sizing_delta": 13063.0
+      },
+      "insight": "Runs test z=-12.201 (p=0.0000), lag-1 AC=0.1676. Max win streak=62, max loss streak=11. Max DD=$-504. Best sizing: streak_proportional ($+13063 vs baseline).",
+      "tags": [
+        "risk_management",
+        "serial_correlation",
+        "streak",
+        "position_sizing",
+        "drawdown",
+        "autocorrelation",
+        "runs_test"
+      ]
+    },
+    {
+      "mission_id": "mission_018_paper_vs_backtest",
+      "date": "2026-03-27",
+      "type": "reality_check",
+      "title": "Paper Trading vs Backtest Reality Gap -- Why 26pp WR Difference?",
+      "description": "827 paper trades vs 443 backtest trades over same 10 days. SIGNAL_FLIP is root cause: 64% of paper exits, 22.8% WR, -$898 PnL. Backtest uses TRAIL (84% exits, 84.4% WR). LONG trades WR 34.6% = structural drag.",
+      "difficulty": "hard",
+      "xp_reward": 100,
+      "status": "completed",
+      "target": "paper_vs_backtest",
+      "started_at": "2026-03-27T02:15:00",
+      "finished_at": "2026-03-26T19:17:58.032852",
+      "result": {
+        "success": true,
+        "verdict": "critical_structural_mismatch",
+        "paper_trades": 827,
+        "backtest_trades": 443,
+        "paper_wr": 44.9,
+        "backtest_wr": 71.3,
+        "wr_gap_pp": 26.4,
+        "paper_pnl": 763.19,
+        "root_cause_1": "SIGNAL_FLIP exit: 64% of trades, WR 22.8%, PnL -98",
+        "root_cause_2": "No trailing stop in paper (BT uses TRAIL 84%, WR 84.4%)",
+        "root_cause_3": "LONG WR 34.6% (gap -33pp vs backtest)",
+        "root_cause_4": "Misaligned trades (score vs direction) WR 22-24%",
+        "model_gaps": {
+          "v3": 19.9,
+          "v5": 33.2,
+          "v6": 27.1
+        },
+        "direction_gaps": {
+          "LONG": 33.1,
+          "SHORT": 21.3
+        },
+        "signal_flip_pct": 63.6,
+        "signal_flip_wr": 22.8,
+        "signal_flip_pnl": -897.51,
+        "actionable": true,
+        "experiments_run": 7
+      },
+      "insight": "SIGNAL_FLIP คือ root cause ของ WR gap 26pp: 64% ของ paper trades ออกด้วย signal flip (WR 22.8%) แทน trailing stop (backtest WR 84.4%). LONG WR 34.6% = structural drag. ถ้าเพิ่ม trailing stop ใน paper, WR น่าจะกลับมา 70%+",
+      "tags": [
+        "reality_check",
+        "paper_trading",
+        "exit_mechanism",
+        "signal_flip",
+        "critical_finding",
+        "actionable"
+      ]
+    },
+    {
+      "mission_id": "mission_019_adaptive_sizing",
+      "date": "2026-03-27",
+      "type": "position_sizing / risk_management",
+      "title": "Adaptive Position Sizing — Cascade Quality x FR Regime Combo",
+      "description": "ทดสอบ position sizing แบบ adaptive: เพิ่มขนาด position ตาม cascade displacement + FR extreme neg regime แทนการ filter trades ออก",
+      "difficulty": "hard",
+      "xp_reward": 100,
+      "status": "completed",
+      "target": "position_sizing",
+      "started_at": "2026-03-27T19:15:54.599746",
+      "finished_at": "2026-03-27T19:16:00.167457",
+      "result": {
+        "baseline_pnl": 21655.17,
+        "combo_pnl": 26654.87,
+        "delta_pnl": 4999.7,
+        "delta_pct": 23.1,
+        "walk_forward_consistent": true,
+        "best_grid": {
+          "disp_thr": 0.05,
+          "disp_mult": 1.5,
+          "fr_boost": 0.5,
+          "total_pnl": 31814.05,
+          "avg_pnl": 6.24,
+          "max_dd": -761.83,
+          "pnl_dd_ratio": 41.76
+        },
+        "trades": 5102
+      },
+      "insight": "Adaptive sizing (disp>=0.1%→1.2x, disp>=0.3%→1.5x, FR_ext_neg+0.3x) เพิ่ม PnL $5,000 (+23.1%) จาก $21,655 → $26,655. Walk-forward: ทุก period positive = stable.",
+      "tags": [
+        "position_sizing",
+        "cascade_quality",
+        "funding_rate",
+        "risk_management",
+        "follow_up_m014_m016"
+      ]
+    },
+    {
+      "mission_id": "mission_020_long_signal_autopsy",
+      "date": "2026-03-28",
+      "type": "signal_analysis",
+      "title": "LONG Signal Autopsy — When Do LONGs Work vs Die?",
+      "description": "Deep analysis of LONG signal quality across hour/trend/vol/score/coin dimensions. LONG WR=69.7% vs SHORT WR=70.4%. Best rule: long_only_uptrend (Δ$-2684.16)",
+      "difficulty": "hard",
+      "xp_reward": 100,
+      "status": "completed",
+      "target": "long_signal_quality",
+      "started_at": "2026-03-28T19:13:10.044162",
+      "finished_at": "2026-03-28T19:13:10.044162",
+      "result": {
+        "success": true,
+        "long_wr": 69.7,
+        "short_wr": 70.4,
+        "wr_gap": 0.7,
+        "long_total_pnl": 7994.74,
+        "short_total_pnl": 10649.18,
+        "best_rule": "long_only_uptrend",
+        "best_rule_delta": -2684.16,
+        "experiments_count": 9,
+        "total_trades": 10677
+      },
+      "insight": "LONG WR=69.7% vs SHORT WR=70.4% (gap 0.7pp). LONG ดีขึ้นเมื่อ BTC อยู่ในขาขึ้น (>EMA200) และ vol ต่ำ. Best rule: long_only_uptrend → Δ$-2684.16. SHORT-only ก็เป็นตัวเลือกที่ดี.",
+      "tags": [
+        "signal_analysis",
+        "long_vs_short",
+        "filtering",
+        "position_sizing",
+        "direction_bias"
+      ]
+    },
+    {
+      "mission_id": "mission_021_chop_detection",
+      "date": "2026-03-30",
+      "type": "signal_analysis",
+      "title": "Chop Detection & SIGNAL_FLIP Prevention",
+      "description": "ทดสอบว่า Chop Index (rolling score std) ตอน entry ทำนาย SIGNAL_FLIP ได้หรือไม่ — ผล: ไม่ได้! ปัญหาอยู่ที่ in-trade score instability",
+      "difficulty": "hard",
+      "xp_reward": 100,
+      "status": "completed",
+      "target": "signal_flip_chop",
+      "started_at": "2026-03-30T02:14:17",
+      "finished_at": "2026-03-30T02:14:34",
+      "result": {
+        "success": false,
+        "verdict": "entry_filters_dont_work",
+        "flip_count": 843,
+        "flip_pct": 13.0,
+        "flip_wr": 4.6,
+        "flip_pnl": -19833,
+        "flip_score_std": 2.779,
+        "nonflip_score_std": 1.145,
+        "flip_zero_crossings": 3.8,
+        "nonflip_zero_crossings": 0.6,
+        "chop_q1_flip_rate": 11.4,
+        "chop_q4_flip_rate": 12.5,
+        "best_filter": "none",
+        "best_filter_delta": 0,
+        "all_filters_reduce_pnl": true
+      },
+      "insight": "Chop ตอน entry ไม่ทำนาย SIGNAL_FLIP (FLIP rate 11-15% ทุก quartile). Score volatility ระหว่างเทรดต่างกัน 2.4x แต่วัดตอน entry ไม่ได้. ทุก entry filter ลด PnL. ทางออก = trailing stop + in-trade monitoring",
+      "tags": [
+        "signal_analysis",
+        "signal_flip",
+        "chop_detection",
+        "entry_filter",
+        "important_fail"
+      ]
+    },
+    {
+      "mission_id": "mission_022_score_momentum_exit",
+      "date": "2026-03-31",
+      "type": "exit_mechanism",
+      "title": "In-Trade Score Momentum Exit",
+      "description": "ทดสอบว่า monitor BTC score ระหว่างเทรดแล้วออกเร็วเมื่อ score เสื่อมลง จะลด SIGNAL_FLIP losses ได้หรือไม่",
+      "difficulty": "hard",
+      "xp_reward": 100,
+      "status": "completed",
+      "target": "score_momentum_exit",
+      "started_at": "2026-03-31T02:13:00",
+      "finished_at": "2026-03-31T02:15:00",
+      "result": {
+        "success": false,
+        "verdict": "CRITICAL FAIL - Score exits destroy PnL",
+        "baseline_pnl": 20716,
+        "best_approach": "adverse_3",
+        "best_delta": 147,
+        "best_delta_pct": 0.7,
+        "zero_cross_delta": -19234,
+        "key_finding": "FLIP score decay ratio = 1.02 (no decay before FLIP!)",
+        "trail_zero_cross_pct": 34.8,
+        "flip_entry_score": 7.64,
+        "flip_exit_score": 7.79,
+        "trail_entry_score": 8.1,
+        "trail_exit_score": 6.06,
+        "walk_forward_consistent": true,
+        "exp1_baseline": {
+          "trades": 5130,
+          "pnl": 20716,
+          "wr": 75.4,
+          "flips": 380,
+          "flip_pnl": -6516
+        },
+        "exp2_zero_cross": {
+          "trades": 5717,
+          "pnl": 1482,
+          "wr": 57.6,
+          "delta": -19234
+        },
+        "exp4_best_adverse": {
+          "bars": 3,
+          "trades": 5132,
+          "pnl": 20863,
+          "delta": 147
+        },
+        "exp6c_delayed_best": {
+          "min_hold": 24,
+          "pnl": 17831,
+          "delta": -2885
+        }
+      },
+      "insight": "Score-based exit ทำลาย PnL ทุกรูปแบบ (-93% กรณี zero-cross). FLIP เป็น sudden jump event (decay ratio 1.02) ไม่ใช่ gradual decay. 35% ของ TRAIL trades ก็มี score ข้ามศูนย์. Trailing stop (price-based) เป็นทางออกเดียว.",
+      "tags": [
+        "exit_mechanism",
+        "signal_analysis",
+        "signal_flip",
+        "score_monitoring",
+        "important_fail"
+      ]
+    },
+    {
+      "mission_id": "mission_023_factor_conflict",
+      "date": "2026-03-31",
+      "type": "factor_analysis",
+      "title": "Factor Conflict Analysis — Do Conflicting Factors Predict SIGNAL_FLIP?",
+      "description": "วิเคราะห์ว่า factor 8 ตัวใน v3 ขัดแย้งกันตอน entry ทำให้เกิด SIGNAL_FLIP หรือไม่ ต่อยอดจาก M021 (entry features ไม่ช่วย) และ M022 (FLIP = sudden event)",
+      "difficulty": "hard",
+      "xp_reward": 100,
+      "status": "completed",
+      "target": "factor_conflict_flip",
+      "started_at": "2026-03-31T19:16:00.749641",
+      "finished_at": "2026-03-31T19:16:07.270346",
+      "result": {
+        "decomposition_max_diff": 0.0,
+        "exp1_factor_stats": {
+          "oi_divergence": {
+            "active_pct": 8.3,
+            "positive_pct": 4.1,
+            "negative_pct": 4.2,
+            "mean": -0.0002,
+            "std": 0.072,
+            "max": 0.25,
+            "min": -0.25
+          },
+          "funding_rate": {
+            "active_pct": 0.4,
+            "positive_pct": 0.4,
+            "negative_pct": 0.0,
+            "mean": 0.0076,
+            "std": 0.1227,
+            "max": 2.0,
+            "min": 0.0
+          },
+          "whale_alerts": {
+            "active_pct": 1.0,
+            "positive_pct": 0.8,
+            "negative_pct": 0.2,
+            "mean": 0.0082,
+            "std": 0.1468,
+            "max": 1.5,
+            "min": -1.5
+          },
+          "liq_cascade": {
+            "active_pct": 5.9,
+            "positive_pct": 2.5,
+            "negative_pct": 3.4,
+            "mean": -0.0188,
+            "std": 0.4858,
+            "max": 2.0,
+            "min": -2.0
+          },
+          "etf_flows": {
+            "active_pct": 22.1,
+            "positive_pct": 9.5,
+            "negative_pct": 12.6,
+            "mean": -0.0315,
+            "std": 0.4686,
+            "max": 1.0,
+            "min": -1.0
+          },
+          "basis_contrarian": {
+            "active_pct": 4.6,
+            "positive_pct": 2.3,
+            "negative_pct": 2.3,
+            "mean": -0.0002,
+            "std": 0.3737,
+            "max": 2.25,
+            "min": -2.25
+          },
+          "tick_liq": {
+            "active_pct": 7.9,
+            "positive_pct": 3.2,
+            "negative_pct": 4.7,
+            "mean": -0.022,
+            "std": 0.5592,
+            "max": 3.0,
+            "min": -2.0
+          },
+          "ob_combined": {
+            "active_pct": 21.3,
+            "positive_pct": 9.6,
+            "negative_pct": 11.7,
+            "mean": -0.0485,
+            "std": 1.0834,
+            "max": 3.0,
+            "min": -3.0
+          }
+        },
+        "exp2_flip_vs_nonflip": {
+          "total_trades": 3547,
+          "flip_trades": 163,
+          "non_flip_trades": 3384,
+          "flip_pnl": -4498.14,
+          "non_flip_pnl": 16251.58,
+          "flip_agreement": {
+            "mean": 0.908,
+            "median": 1.0,
+            "n_active_mean": 1.68
+          },
+          "non_flip_agreement": {
+            "mean": 0.9132,
+            "median": 1.0,
+            "n_active_mean": 2.02
+          }
+        },
+        "exp3_factor_dominance": {
+          "flip_dominant_counts": {
+            "ob_combined": 95,
+            "tick_liq": 15,
+            "basis_contrarian": 14,
+            "liq_cascade": 11,
+            "oi_divergence": 10,
+            "funding_rate": 4,
+            "etf_flows": 3
+          },
+          "nonflip_dominant_counts": {
+            "ob_combined": 1663,
+            "liq_cascade": 725,
+            "tick_liq": 598,
+            "basis_contrarian": 152,
+            "etf_flows": 98,
+            "whale_alerts": 40,
+            "funding_rate": 28,
+            "oi_divergence": 18
+          },
+          "factor_at_entry": {
+            "oi_divergence": {
+              "flip_mean": -0.0261,
+              "nonflip_mean": -0.0047,
+              "flip_abs_mean": 0.0537,
+              "nonflip_abs_mean": 0.0502
+            },
+            "funding_rate": {
+              "flip_mean": 0.0491,
+              "nonflip_mean": 0.0284,
+              "flip_abs_mean": 0.0491,
+              "nonflip_abs_mean": 0.0284
+            },
+            "whale_alerts": {
+              "flip_mean": 0.0092,
+              "nonflip_mean": 0.0124,
+              "flip_abs_mean": 0.0092,
+              "nonflip_abs_mean": 0.0426
+            },
+            "liq_cascade": {
+              "flip_mean": -0.0491,
+              "nonflip_mean": -0.1028,
+              "flip_abs_mean": 0.1963,
+              "nonflip_abs_mean": 0.5355
+            },
+            "etf_flows": {
+              "flip_mean": 0.0,
+              "nonflip_mean": -0.0694,
+              "flip_abs_mean": 0.2577,
+              "nonflip_abs_mean": 0.3549
+            },
+            "basis_contrarian": {
+              "flip_mean": -0.0046,
+              "nonflip_mean": 0.0027,
+              "flip_abs_mean": 0.2255,
+              "nonflip_abs_mean": 0.2611
+            },
+            "tick_liq": {
+              "flip_mean": -0.2086,
+              "nonflip_mean": -0.0937,
+              "flip_abs_mean": 0.4049,
+              "nonflip_abs_mean": 0.5671
+            },
+            "ob_combined": {
+              "flip_mean": -0.2454,
+              "nonflip_mean": -0.2021,
+              "flip_abs_mean": 1.7669,
+              "nonflip_abs_mean": 1.7086
+            }
+          }
+        },
+        "exp4_agreement_quartiles": {
+          "very_high_80_100": {
+            "count": 2715,
+            "wr": 76.6,
+            "pnl": 7771.13,
+            "avg_pnl": 2.8623,
+            "flip_pct": 4.6,
+            "avg_agreement": 1.0
+          },
+          "med_50_67": {
+            "count": 432,
+            "wr": 81.0,
+            "pnl": 3134.56,
+            "avg_pnl": 7.2559,
+            "flip_pct": 2.8,
+            "avg_agreement": 0.665
+          },
+          "high_67_80": {
+            "count": 140,
+            "wr": 82.9,
+            "pnl": 822.23,
+            "avg_pnl": 5.8731,
+            "flip_pct": 4.3,
+            "avg_agreement": 0.756
+          },
+          "low_0_50": {
+            "count": 260,
+            "wr": 76.2,
+            "pnl": 25.52,
+            "avg_pnl": 0.0982,
+            "flip_pct": 7.3,
+            "avg_agreement": 0.5
+          }
+        },
+        "exp5_trajectory": {
+          "flip_trajectory": {
+            "count": 163,
+            "agreement_start_mean": 0.908,
+            "agreement_end_mean": 0.8686,
+            "agreement_min_mean": 0.6176,
+            "agreement_std_mean": 0.1292,
+            "factor_flips_mean": 1.66,
+            "bars_mean": 24.0
+          },
+          "nonflip_trajectory": {
+            "count": 163,
+            "agreement_start_mean": 0.8929,
+            "agreement_end_mean": 0.9223,
+            "agreement_min_mean": 0.7718,
+            "agreement_std_mean": 0.082,
+            "factor_flips_mean": 0.34,
+            "bars_mean": 6.7
+          }
+        },
+        "exp6_consensus_filter": {
+          "baseline": {
+            "trades": 3547,
+            "wr": 77.4,
+            "pnl": 11753.44,
+            "flip_pnl": -4498.14
+          },
+          "filters": {
+            "min_0.5": {
+              "trades": 3547,
+              "trades_pct": 100.0,
+              "wr": 77.4,
+              "pnl": 11753.44,
+              "pnl_delta": 0.0,
+              "flip_count": 163,
+              "flip_pnl": -4498.14
+            },
+            "min_0.6": {
+              "trades": 3287,
+              "trades_pct": 92.7,
+              "wr": 77.5,
+              "pnl": 11727.92,
+              "pnl_delta": -25.52,
+              "flip_count": 144,
+              "flip_pnl": -3968.8
+            },
+            "min_0.7": {
+              "trades": 2855,
+              "trades_pct": 80.5,
+              "wr": 77.0,
+              "pnl": 8593.36,
+              "pnl_delta": -3160.08,
+              "flip_count": 132,
+              "flip_pnl": -3617.56
+            },
+            "min_0.75": {
+              "trades": 2855,
+              "trades_pct": 80.5,
+              "wr": 77.0,
+              "pnl": 8593.36,
+              "pnl_delta": -3160.08,
+              "flip_count": 132,
+              "flip_pnl": -3617.56
+            },
+            "min_0.8": {
+              "trades": 2733,
+              "trades_pct": 77.1,
+              "wr": 76.8,
+              "pnl": 7878.63,
+              "pnl_delta": -3874.81,
+              "flip_count": 126,
+              "flip_pnl": -3430.03
+            },
+            "min_1.0": {
+              "trades": 2715,
+              "trades_pct": 76.5,
+              "wr": 76.6,
+              "pnl": 7771.13,
+              "pnl_delta": -3982.31,
+              "flip_count": 126,
+              "flip_pnl": -3430.03
+            }
+          }
+        },
+        "exp7_first_flipper": {
+          "ob_combined": 80,
+          "tick_liq": 35,
+          "oi_divergence": 25,
+          "liq_cascade": 9,
+          "basis_contrarian": 3
+        }
+      },
+      "insight": "ob_combined เป็นต้นเหตุ SIGNAL_FLIP #1 (flip ก่อนใน 49% ของเคส) เพราะ OB MA สั้น (12 bars) + noise สูง. Factor flips ระหว่างเทรด FLIP = 4.9x ของเทรดปกติ. Consensus filter ที่ entry ไม่ช่วย — ปัญหาอยู่ระหว่างเทรด. v6 (liq-only, ไม่มี OB) อาจหลีกเลี่ยงปัญหานี้ได้",
+      "tags": [
+        "factor_analysis",
+        "signal_flip",
+        "factor_interaction",
+        "consensus",
+        "decomposition"
+      ]
+    },
+    {
+      "mission_id": "mission_024_ob_surgery",
+      "date": "2026-04-01",
+      "type": "factor_surgery",
+      "title": "ob_combined Surgery — ลด/เอา Order Book ออกเพื่อแก้ SIGNAL_FLIP",
+      "description": "ต่อยอด M023: ob_combined flip ก่อน 49% ของ SIGNAL_FLIP. ทดสอบลด weight, เอาออก, wider threshold, smooth MA",
+      "difficulty": "hard",
+      "xp_reward": 100,
+      "status": "completed",
+      "target": "ob_combined_weight",
+      "started_at": "2026-04-01T19:13:09.127751",
+      "finished_at": "2026-04-01T19:13:09.127751",
+      "result": {
+        "success": true,
+        "baseline_pnl": 11753.0,
+        "best_scenario": "EXP6_ob2.0_smooth_MA24",
+        "best_pnl": 11790.0,
+        "best_delta": 37.0,
+        "baseline_flip_pct": 4.6,
+        "least_flip_pct": 1.6,
+        "least_flip_scenario": "EXP4_ob0.0_removed",
+        "experiments_count": 6
+      },
+      "insight": "ob_combined weight surgery: baseline ob=2.0 PnL=$11753.0, best=EXP6_ob2.0_smooth_MA24 PnL=$11790.0 (Δ$+37). FLIP% baseline=4.6%, least=1.6% (EXP4_ob0.0_removed). ob_combined เป็น noise factor ที่ทำให้ score สั่น — ลด weight ช่วยได้",
+      "tags": [
+        "factor_surgery",
+        "ob_combined",
+        "signal_flip",
+        "weight_optimization",
+        "M023_followup"
+      ]
+    },
+    {
+      "mission_id": "mission_025_trade_duration",
+      "date": "2026-04-03",
+      "type": "exit_mechanism",
+      "title": "Trade Duration & Time Stop Analysis",
+      "description": "วิเคราะห์ว่าเทรดที่ถือนานเกินไปมีพฤติกรรมยังไง ควรมี time stop ไหม",
+      "difficulty": "hard",
+      "xp_reward": 100,
+      "status": "completed",
+      "target": "trade_duration",
+      "started_at": "2026-04-02T19:15:51.965752",
+      "finished_at": "2026-04-02T19:15:51.965752",
+      "result": {
+        "success": false,
+        "verdict": "important_fail",
+        "baseline_pnl": 13142,
+        "baseline_trades": 6776,
+        "trail_median_bars": 1,
+        "trail_pct": 86.4,
+        "flip_pct": 12.9,
+        "best_time_stop_delta": 0,
+        "best_cond_stop_delta": -1061,
+        "recovery_rate_8bars": 47.3,
+        "recovery_rate_24bars": 37.0,
+        "key_finding": "Speed is the Edge - 70% of trades resolve in 1-4 bars. Time stops and conditional exits all reduce PnL because underwater recovery rate is ~47%."
+      },
+      "insight": "Time stop ทุกรูปแบบทำลาย PnL เพราะ underwater trades ยัง recover ได้ ~47%. Speed is the Edge: 70% เทรดจบใน 1 ชม. FLIP สัมพันธ์กับ duration (6%@1-4bars → 73%@49-72bars) แต่ตัดเร็วเสีย winners",
+      "tags": [
+        "exit_mechanism",
+        "duration",
+        "time_stop",
+        "signal_flip",
+        "recovery_rate"
+      ]
+    },
+    {
+      "mission_id": "mission_027_momentum_burst",
+      "date": "2026-04-05",
+      "type": "trade_analysis",
+      "title": "Momentum Burst Anatomy -- 1-Bar Winner Fingerprint",
+      "description": "M025 found TRAIL winners close in 1 bar. This mission identifies the fingerprint: high vol (91.7%% WR), EU/US overlap (94.2%% WR), OI divergence active (+11.5pp), and tests confidence sizing (+12.5%% PnL)",
+      "difficulty": "hard",
+      "xp_reward": 100,
+      "status": "completed",
+      "target": "momentum_burst",
+      "started_at": "2026-04-05T02:18:00",
+      "finished_at": "2026-04-05T02:30:00",
+      "result": {
+        "success": true,
+        "verdict": "significant_discovery",
+        "total_trades": 3856,
+        "pct_1bar": 47.0,
+        "one_bar_wr": 85.9,
+        "one_bar_pnl": 12433,
+        "high_vol_1bar_wr": 91.7,
+        "low_vol_1bar_wr": 78.8,
+        "best_hour_14utc_wr": 94.2,
+        "oi_active_winners": 26.0,
+        "oi_active_losers": 14.5,
+        "burst_pct": 77.9,
+        "confidence_sizing_delta_pct": 12.5
+      },
+      "insight": "1-bar trades = 47%% of all trades but 129%% of profit. Fingerprint: high vol (WR 91.7%%), EU/US 12-15 UTC (WR 94.2%%), OI divergence active (+11.5pp). Confidence sizing +12.5%% PnL.",
+      "tags": [
+        "trade_analysis",
+        "momentum_burst",
+        "position_sizing",
+        "volatility",
+        "time_of_day",
+        "oi_divergence"
+      ]
+    },
+    {
+      "mission_id": "mission_028_compound_confidence",
+      "date": "2026-04-06",
+      "type": "meta_analysis",
+      "title": "Compound Confidence Score -- Multi-Signal Sizing Framework",
+      "description": "M014+M016+M027 findings combined: 8 confidence signals -> compound score -> tiered sizing. WR range 39%-85%, best sizing +75.3% PnL, 3/3 quarters stable.",
+      "difficulty": "hard",
+      "xp_reward": 100,
+      "status": "completed",
+      "target": "compound_confidence_sizing",
+      "started_at": "2026-04-06T10:00:00",
+      "finished_at": "2026-04-05T19:18:59.906578",
+      "result": {
+        "success": true,
+        "verdict": "significant_discovery",
+        "total_trades": 7114,
+        "baseline_pnl": 10727,
+        "score_range": "-2 to 10",
+        "wr_low_score": 39.0,
+        "wr_high_score": 84.9,
+        "wr_spread_pp": 45.9,
+        "best_sizing_strategy": "top_vs_bottom",
+        "best_sizing_delta_pnl": 8076,
+        "best_sizing_delta_pct": 75.3,
+        "conservative_delta_pct": 29.3,
+        "walkforward_positive_quarters": "3/3",
+        "top3_signals": [
+          "sweet_hour (+9.7pp)",
+          "displacement_high (+9.4pp)",
+          "displacement_extreme (+9.1pp)"
+        ],
+        "unhelpful_signals": [
+          "oi_active (-0.2pp)",
+          "fr_extreme_neg (-1.6pp)"
+        ],
+        "long_high_conf_wr": 78.2,
+        "short_high_conf_wr": 77.8
+      },
+      "insight": "Compound confidence score (8 signals) WR 39%-85% (spread 46pp). Tiered sizing +29% to +75% PnL. Walk-forward 3/3 quarters stable. Top signals: sweet_hour, displacement. OI/FR ไม่ช่วยใน v3 (ถูก absorbed แล้ว). LONG high-conf WR 78.2% = viable อีกครั้ง",
+      "tags": [
+        "meta_analysis",
+        "position_sizing",
+        "compound_score",
+        "confidence",
+        "tiered_sizing",
+        "walk_forward",
+        "M014_followup",
+        "M016_followup",
+        "M027_followup"
+      ]
+    },
+    {
+      "mission_id": "mission_029_coin_triage",
+      "date": "2026-04-07",
+      "type": "portfolio_analysis",
+      "title": "Coin Performance Triage -- 21-Day Paper Trading Per-Coin Deep Dive",
+      "description": "วิเคราะห์ 46 เหรียญ 2,067 trades แบ่ง KEEP/WATCH/DROP ตาม PnL, WR, FLIP ratio, consistency, direction bias",
+      "difficulty": "hard",
+      "xp_reward": 100,
+      "status": "completed",
+      "target": "coin_selection",
+      "started_at": "2026-04-06T19:13:14.569234",
+      "finished_at": "2026-04-06T19:13:14.569234",
+      "result": {
+        "success": true,
+        "verdict": "significant",
+        "total_coins": 46,
+        "keep_coins": 13,
+        "watch_coins": 23,
+        "drop_coins": 10,
+        "drop_list": [
+          "TAO",
+          "HYPE",
+          "GALA",
+          "BARD",
+          "NEAR",
+          "ZRO",
+          "LTC",
+          "SAHARA",
+          "CRV",
+          "OGN"
+        ],
+        "keep_pnl": 1120.89,
+        "drop_pnl": -519.85,
+        "pnl_improvement": 519.85,
+        "long_is_dead": true,
+        "short_wr": 48.9,
+        "long_wr": 31.0
+      },
+      "insight": "46 เหรียญ 21 วัน: 13 KEEP (+$1,121), 23 WATCH (-$264), 10 DROP (-$520) ถอด 10 ตัวจะเพิ่ม PnL $520. SHORT WR=48.9% vs LONG WR=31.0% ยืนยัน LONG ตายจริง. Bottom 5 (OGN,SAHARA,CRV,JCT,LTC) WR<25% ทุกสัปดาห์ขาดทุน. ARIA outlier +$688 (71.9% SHORT WR)",
+      "tags": [
+        "portfolio",
+        "coin_selection",
+        "paper_trading",
+        "triage",
+        "direction_analysis"
+      ]
+    },
+    {
+      "mission_id": "mission_030_post_surgery_health",
+      "date": "2026-04-08",
+      "type": "system_audit",
+      "title": "Post-Surgery Health Check -- 4 Days After Major System Overhaul",
+      "description": "ระบบผ่าตัดใหญ่ 04-04: ถอด v6, ปิด LONG, ตัดจาก 46->13 เหรียญ. 4 วันหลัง: เทรดลด 80%, PnL/day ดิ่ง $53.2->$0.8. Alt filter block 78% เป็นตัวการหลัก. ARIA collapsed จาก +$722 เป็น -$32.6.",
+      "difficulty": "hard",
+      "xp_reward": 100,
+      "status": "completed",
+      "target": "post_surgery_audit",
+      "started_at": "2026-04-08T02:10:00",
+      "finished_at": "2026-04-07T19:14:47.972014",
+      "result": {
+        "success": true,
+        "verdict": "critical_warning",
+        "experiments_run": 6,
+        "pre_pnl_per_day": 53.2,
+        "post_pnl_per_day": 0.8,
+        "pre_trades_total": 1995,
+        "post_trades_total": 97,
+        "alt_filter_block_rate_pct": 77.8,
+        "alt_filter_total_blocks": 611,
+        "long_disabled_blocks": 258,
+        "long_disabled_savings": 20,
+        "post_profitable_coins": 7,
+        "post_unprofitable_coins": 6,
+        "aria_post_pnl": -32.6,
+        "aria_pre_pnl": 722.3,
+        "trail_wr_post_pct": 42.6,
+        "trail_wr_pre_pct": 55.2,
+        "signal_flip_pct_post": 30.9,
+        "signal_flip_pct_pre": 46.0,
+        "post_win_days": 2,
+        "post_lose_days": 2
+      },
+      "insight": "ผ่าตัดหยุดเลือดได้ (ไม่มี -$200+ days) แต่หยุดหายใจด้วย (PnL $53/day->$0.8/day). Alt filter block 78% เป็นตัวการหลัก ต้อง review. ARIA collapsed จาก +$722 เป็น -$33. ระบบอยู่ ICU mode.",
+      "tags": [
+        "system_audit",
+        "post_surgery",
+        "alt_filter",
+        "performance_monitoring",
+        "critical_finding",
+        "actionable"
+      ]
+    },
+    {
+      "mission_id": "mission_031_score_velocity",
+      "date": "2026-04-09",
+      "type": "factor_research",
+      "title": "BTC Score Velocity & Flip Prediction",
+      "description": "ทดสอบว่า velocity (rate of change) ของ BTC composite score ทำนาย SIGNAL_FLIP ได้หรือไม่ -- 6 experiments: distribution, correlation, quartile, acceleration, filter, combined",
+      "difficulty": "hard",
+      "xp_reward": 100,
+      "status": "completed",
+      "target": "score_velocity",
+      "started_at": "2026-04-09T02:13:00",
+      "finished_at": "2026-04-08T19:16:06.730355",
+      "result": {
+        "success": false,
+        "verdict": "hypothesis_failed",
+        "vel4_flip_corr": -0.032,
+        "vel4_win_corr": -0.011,
+        "q4_high_vel_wr": 77.3,
+        "q4_high_vel_flip_pct": 2.0,
+        "q1_low_vel_wr": 75.4,
+        "q1_low_vel_flip_pct": 3.2,
+        "best_filter_delta_pnl": -4073,
+        "favorable_accel_wr_delta_pp": -0.8,
+        "score_zero_pct": 54.9,
+        "score_positive_pct": 20.3,
+        "score_negative_pct": 24.8,
+        "backtest_flip_pct": 3.4
+      },
+      "insight": "Score velocity ไม่ทำนาย SIGNAL_FLIP (corr=-0.032) High velocity = high conviction ไม่ใช่ noise Q4 WR 77.3% ดีกว่า Q1 75.4% ห้าม filter velocity ออก Score=0 ถึง 55% ของเวลา FLIP ใน backtest 3.4% vs paper 45% gap มาจาก implementation",
+      "tags": [
+        "factor_research",
+        "velocity",
+        "signal_quality",
+        "flip_prediction",
+        "negative_result"
+      ]
+    },
+    {
+      "mission_id": "mission_032_cross_coin_correlation",
+      "date": "2026-04-10",
+      "type": "portfolio_analysis",
+      "title": "Cross-Coin Correlation & Diversification Analysis",
+      "description": "6 เหรียญใช้ BTC signal เดียวกัน → วัด effective diversification ด้วย eigenvalue decomposition พบว่ามีแค่ 1.59 independent bets จาก 6 เหรียญ",
+      "difficulty": "hard",
+      "xp_reward": 100,
+      "status": "completed",
+      "target": "cross_coin_correlation",
+      "started_at": "2026-04-10T02:13:28",
+      "finished_at": "2026-04-10T02:15:48",
+      "result": {
+        "success": true,
+        "verdict": "critical_finding",
+        "effective_n": 1.59,
+        "diversification_ratio": 0.266,
+        "avg_pairwise_corr": 0.741,
+        "pc1_variance_pct": 78.5,
+        "peak_sharpe_coins": 1,
+        "peak_sharpe": 7.56,
+        "optimal_subset": [
+          "ADA",
+          "SUI",
+          "BTC"
+        ],
+        "optimal_sharpe": 7.2,
+        "multi_entry_pct": 66.6,
+        "all_same_outcome_pct": 52.3,
+        "max_drawdown": -780.7
+      },
+      "insight": "6 เหรียญ = 1.59 independent bets เท่านั้น (PC1=78.5%). Avg corr 0.741. Peak Sharpe=ADA alone. Optimal subset: ADA+SUI+BTC (3 เหรียญ). การเพิ่มเหรียญ = เพิ่ม exposure ไม่ใช่ diversification",
+      "tags": [
+        "portfolio_analysis",
+        "diversification",
+        "correlation",
+        "eigenvalue",
+        "coin_selection",
+        "risk_management"
+      ]
+    },
+    {
+      "mission_id": "mission_033_news_volume_spike",
+      "date": "2026-04-11",
+      "type": "factor_test",
+      "title": "News Volume Spike as Volatility / Trade Quality Signal",
+      "description": "ทดสอบว่าจำนวนข่าว (volume) ทำนาย volatility หรือ trade quality ได้หรือไม่ -- 6 experiments: distribution, vol correlation, trade WR, entry filter, sentiment clustering, adaptive SL/TP",
+      "difficulty": "hard",
+      "xp_reward": 100,
+      "status": "completed",
+      "target": "news_volume",
+      "started_at": "2026-04-11T02:12:00",
+      "finished_at": "2026-04-10T19:14:39.150253",
+      "result": {
+        "success": false,
+        "verdict": "mostly_failed_with_discovery",
+        "news_per_15m_mean": 1.02,
+        "news_per_15m_max": 2,
+        "corr_news1h_vol": -0.0538,
+        "corr_news4h_vol": -0.0692,
+        "corr_news1h_fwd_vol": -0.0552,
+        "corr_news_win": "near_zero",
+        "filter_max_delta_pnl": -95,
+        "corr_sentiment_btc_high_vol": 0.0312,
+        "short_busy_wr": 75.9,
+        "long_busy_wr": 66.5,
+        "short_quiet_wr": 71.7,
+        "long_quiet_wr": 68.9,
+        "short_long_gap_quiet_pp": 2.8,
+        "short_long_gap_busy_pp": 9.4,
+        "gap_amplification": 3.4
+      },
+      "insight": "News volume ไม่ทำนาย volatility (corr -0.05) และไม่ช่วย filter entry (99% trades ในช่วง quiet). แต่พบว่าช่วงข่าวเยอะ SHORT>LONG gap ขยาย 3.4x (9.4pp vs 2.8pp) -- LONG อ่อนลงในช่วง attention สูง",
+      "tags": [
+        "factor_test",
+        "news_volume",
+        "sentiment",
+        "volatility",
+        "negative_result",
+        "short_edge_amplification"
+      ]
+    },
+    {
+      "mission_id": "mission_034_factor_weight_sensitivity",
+      "date": "2026-04-12",
+      "type": "factor_research",
+      "title": "Factor Weight Robustness & Sensitivity Analysis",
+      "description": "ทดสอบ sensitivity ของ 8 production factor weights ด้วย 7 multipliers (56 backtests) เพื่อวัดว่า weights robust หรือ fragile",
+      "difficulty": "hard",
+      "xp_reward": 100,
+      "status": "completed",
+      "target": "factor_weights",
+      "started_at": "2026-04-12T02:13:44",
+      "finished_at": "2026-04-12T02:14:10",
+      "result": {
+        "success": true,
+        "verdict": "ROBUST",
+        "avg_removal_impact_pct": 7.7,
+        "factors_at_optimum": "4/8",
+        "key_finding": "liquidation under-weighted: +$2,464 (+23%) at 2x weight",
+        "liquidation_best_mult": 2.0,
+        "liquidation_delta_at_1_5x": 1688,
+        "oi_divergence_removal_impact": 306,
+        "whale_alerts_removal_impact": 84,
+        "proposed_v31_boost": "+$1,800 estimated"
+      },
+      "insight": "Liquidation คือ King Factor — ยิ่งเพิ่ม weight ยิ่งดี (monotonic). OI divergence + whale alerts แทบไม่มีค่า. 4/8 factors อยู่ที่ optimum. Model robust ไม่ fragile (avg removal 7.7%)",
+      "tags": [
+        "factor_research",
+        "weight_sensitivity",
+        "robustness",
+        "liquidation",
+        "optimization"
+      ]
+    },
+    {
+      "mission_id": "mission_035_factor_interaction",
+      "date": "2026-04-13",
+      "type": "factor_research",
+      "title": "Factor Interaction Effects -- Synergy & Conflict Between Factor Pairs",
+      "description": "Test if factor pairs have synergistic or conflicting effects. Analyze 15 pairs from top 6 factors + confluence filter.",
+      "difficulty": "hard",
+      "xp_reward": 100,
+      "status": "completed",
+      "target": "factor_interaction",
+      "started_at": "2026-04-13T02:12:06",
+      "finished_at": "2026-04-12T19:13:49.559791",
+      "result": {
+        "success": true,
+        "verdict": "actionable",
+        "baseline_trades": 3856,
+        "baseline_pnl": 9625,
+        "baseline_wr": 74.7,
+        "top_synergy_pair": "ob_combined_x_funding_rate",
+        "top_synergy_wr": 93.3,
+        "top_synergy_n": 30,
+        "top_conflict_pair": "ob_combined_x_etf_flows",
+        "top_conflict_wr": 68.4,
+        "top_conflict_n": 272,
+        "confluence_4plus_wr": 91.2,
+        "confluence_4plus_n": 34,
+        "pairs_analyzed": 15
+      },
+      "insight": "Confluence 4+ factors agree -> WR 91.2% (super signal). ETF disagree = WR drop 5-6%. Basis contrarian = universal synergy partner. Liq strong alone but no synergy with tick/ob.",
+      "tags": [
+        "factor_research",
+        "interaction",
+        "confluence",
+        "synergy",
+        "conflict",
+        "etf_flows",
+        "position_sizing"
+      ]
+    },
+    {
+      "mission_id": "mission_036_liq_asymmetry",
+      "date": "2026-04-14",
+      "type": "factor_research",
+      "title": "Liquidation Asymmetry -- Long vs Short Liquidation Predictive Power",
+      "description": "Long liquidation vs Short liquidation cascade analysis: raw contrarian WR symmetric (~54%) but v3 trade impact highly asymmetric. Long cascade entries WR 74% (+12.8pp). SHORT during short cascade = coin flip 50%.",
+      "difficulty": "hard",
+      "xp_reward": 100,
+      "status": "completed",
+      "target": "liquidation_asymmetry",
+      "started_at": "2026-04-14T10:00:00",
+      "finished_at": "2026-04-13T19:15:04.564206",
+      "result": {
+        "success": true,
+        "verdict": "asymmetric_impact",
+        "btc_liq_events": 98016,
+        "long_cascade_v3_wr": 74.0,
+        "short_cascade_v3_wr": 58.1,
+        "baseline_v3_wr": 61.2,
+        "long_cascade_delta_pp": 12.8,
+        "short_during_short_cascade_wr": 50.0,
+        "short_during_long_cascade_wr": 70.4,
+        "raw_contrarian_symmetric": true,
+        "contrarian_wr_diff_4h": -0.6
+      },
+      "insight": "Raw contrarian WR symmetric (53.6% vs 54.3%) แต่ impact ต่อ v3 trades ต่างมาก: Long cascade = WR 74% (+12.8pp), SHORT ตอน short cascade = coin flip 50%. Actionable: block SHORT ตอน short cascade, boost size ตอน long cascade.",
+      "tags": [
+        "factor_research",
+        "liquidation",
+        "asymmetry",
+        "cascade",
+        "short_filter",
+        "position_sizing"
+      ]
+    },
+    {
+      "mission_id": "mission_037_premium_index",
+      "date": "2026-04-15",
+      "type": "factor_research",
+      "title": "Premium Index as Real-Time Positioning Signal",
+      "description": "premium_index (mark-index spread) 58K records 5min resolution -- test as contrarian factor in v3. Premium fires 72x more than FR 8h but does it help?",
+      "difficulty": "hard",
+      "xp_reward": 100,
+      "status": "completed",
+      "target": "premium_index",
+      "started_at": "2026-04-15T02:13:49",
+      "finished_at": "2026-04-15T02:14:03",
+      "result": {
+        "success": false,
+        "verdict": "negative_all_configs",
+        "best_delta_pnl": -624,
+        "worst_delta_pnl": -3018,
+        "best_config": "w=0.5, th=2.0",
+        "baseline_pnl": 10727,
+        "premium_active_pct": 10.9,
+        "fr_active_pct": 0.2,
+        "fwd_return_z_neg3_4h_bps": 94.7,
+        "fwd_return_z_pos3_4h_bps": -19.4,
+        "contrarian_wr_z3": 55.8,
+        "fr_premium_agreement": "100%",
+        "key_lesson": "signal rarity is the edge -- FR works BECAUSE it fires 0.2% not despite it"
+      },
+      "insight": "Premium index มี contrarian edge เดี่ยว (z<-3: +95bps at 4h) แต่ทำลาย v3 ทุก config (-24 ถึง -,018) เพราะ fire บ่อยเกินไป (10.9% vs FR 0.2%) บทเรียน: ความหายากของ signal คือสิ่งที่สร้าง edge",
+      "tags": [
+        "factor_research",
+        "premium_index",
+        "derivatives",
+        "funding_rate",
+        "contrarian",
+        "fail",
+        "signal_frequency"
+      ]
+    },
+    {
+      "mission_id": "mission_038_signal_age",
+      "date": "2026-04-16",
+      "type": "signal_quality",
+      "title": "Signal Age at Entry -- Does Fresh Signal Beat Stale Signal?",
+      "description": "วิเคราะห์ว่า signal age (จำนวน bars ที่สัญญาณ active ก่อนเข้าเทรด) มีผลต่อ trade quality หรือไม่ ผลพบว่าสัญญาณเก่า (age>8) WR 73.1% ดีกว่าสัญญาณสด (age=1) WR 47.9% อย่างมาก",
+      "difficulty": "hard",
+      "xp_reward": 100,
+      "status": "completed",
+      "target": "signal_age",
+      "started_at": "2026-04-16T02:12:00",
+      "finished_at": "2026-04-15T19:15:19.999479",
+      "result": {
+        "success": true,
+        "verdict": "hypothesis_failed_but_actionable",
+        "total_trades": 7409,
+        "baseline_wr": 68.7,
+        "baseline_pnl": 7666,
+        "fresh_age1_wr": 47.9,
+        "fresh_age1_pnl": -279,
+        "stale_age8plus_wr": 73.1,
+        "stale_age8plus_pnl": 3508,
+        "wr_delta_fresh_vs_stale": 25.2,
+        "age1_signal_flip_pct": 47.5,
+        "short_age33plus_wr": 81.0,
+        "regime_mean_duration": 5.7,
+        "corr_age_pnl": 0.034
+      },
+      "insight": "สมมติฐาน \"สดกว่าดีกว่า\" ผิด! age=1 WR 47.9% (FLIP 47.5%) vs age>8 WR 73.1%. Regime ที่อยู่นาน = มั่นคง ไม่ใช่เก่า. เสนอ: skip entry ที่ age=1 ตัดขาดทุน 79",
+      "tags": [
+        "signal_quality",
+        "entry_timing",
+        "regime_stability",
+        "signal_flip",
+        "actionable"
+      ]
+    },
+    {
+      "mission_id": "mission_039_regime_birth_survival",
+      "date": "2026-04-17",
+      "type": "signal_quality",
+      "title": "Regime Birth Survival Predictor — ทำนายการอยู่รอดของสัญญาณตอนเกิด",
+      "description": "Mission 038 พบว่า age=1 trades ขาดทุน. ทดสอบว่าที่ birth ของ regime มี factor/condition ทำนาย survival ≥8 bars ได้ไหม -> ถ้าใช่ อาจกู้ age=1 ให้ทำกำไรได้",
+      "difficulty": "hard",
+      "xp_reward": 100,
+      "status": "completed",
+      "target": "regime_birth_prediction",
+      "started_at": "2026-04-16T19:16:29.049034",
+      "finished_at": "2026-04-16T19:16:29.049034",
+      "result": {
+        "success": true,
+        "verdict": "hypothesis_failed",
+        "total_births": 1897,
+        "survivors": 454,
+        "survivor_rate_pct": 23.9,
+        "best_cohen_d": 0.22,
+        "baseline_pnl": 7665.69,
+        "mission_038_rule_pnl": 7944.43,
+        "best_strategy_pnl": 7962.61,
+        "best_strategy_lift_vs_m038": 18.18,
+        "hindsight_oracle_pnl": 7886.31,
+        "fresh_in_survivor_wr_pct": 35.0,
+        "fresh_in_short_lived_wr_pct": 49.2,
+        "short_age1_score4_n": 53,
+        "short_age1_score4_pnl": 18.18,
+        "short_age1_score4_wr_pct": 60.4
+      },
+      "insight": "ไม่มี birth condition ทำนาย survival ได้ (best d=0.22). Oracle ceiling (+$221) แย่กว่า Mission 038 rule (+$279). ค้นพบสำคัญ: trades age=1 ใน survivor regime กลับ WR 35% (แย่กว่า short-lived 49.2%) -> regime survival ≠ trade profitability. Mission 038 skip age=1 ยังเป็น optimal.",
+      "tags": [
+        "signal_quality",
+        "regime_analysis",
+        "birth_profile",
+        "negative_result",
+        "follow_up_038"
+      ]
+    },
+    {
+      "mission_id": "mission_040_regime_death_predictor",
+      "date": "2026-04-18",
+      "type": "signal_quality / exit_timing / regime_analysis",
+      "title": "Regime Death Predictor -- ทำนาย imminent death ของ regime ได้ไหม?",
+      "description": "Mirror ของ Mission 039: แทนที่ predict จาก birth มาใช้ decay_ratio + slope + margin ที่ mature regime (age>=3) ทำนาย death ภายใน 2 bars เป้าหมาย: early exit ก่อน SIGNAL_FLIP",
+      "difficulty": "hard",
+      "xp_reward": 100,
+      "status": "completed",
+      "target": "BTC regime 15m | 1,897 regimes | 7,750 mature bars | 7,409 trades OOS",
+      "started_at": "2026-04-17T19:17:29.501142",
+      "finished_at": "2026-04-17T19:17:29.501142",
+      "result": {
+        "hypothesis_result": "FAILED",
+        "bar_level_discrimination": "STRONG (Cohen d=0.73 margin/score_abs)",
+        "trade_level_discrimination": "FAILED (entry features ไม่แยก FLIP vs non-FLIP)",
+        "best_realistic_filter_pnl_delta": -287,
+        "hindsight_ceiling_pnl_delta": -680,
+        "flip_trades_pnl": -9339,
+        "nonflip_trades_pnl": 17005,
+        "imminent_trades_n": 3250,
+        "imminent_trades_pnl": 961,
+        "imminent_trades_wr": 64.6,
+        "key_insight": "FLIP trades เข้าใน regime ที่ดูปกติ ณ entry -- features ที่รู้ไม่แยกออกจาก non-FLIP ได้",
+        "meta_learning": "regime timing (birth/death/age) ไม่ใช่ edge -- หยุดค้นทิศนี้ หันไปหา alt-level features"
+      },
+      "insight": "Bar-level discrimination แข็งแรง (Cohen d=0.73) แต่ไม่ transfer ไป trade-level. FLIP trades เข้าในระหว่าง regime ที่ดูปกติ ไม่มีสัญญาณก่อนตาย. Realistic filter ทุกตัวลด PnL (-$287 ถึง -$2,076). Hindsight ceiling -$680. → ต้องหา edge จาก alt-level แทน BTC regime timing",
+      "tags": [
+        "regime",
+        "death",
+        "signal_flip",
+        "exit",
+        "hypothesis_failed",
+        "meta_learning",
+        "entry_filter"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,457 @@
+{
+  "experiment_id": "realistic_portfolio_20260310_225226",
+  "description": "Realistic portfolio backtest: shared equity, compound sizing, funding, higher fees",
+  "params": {
+    "init_equity": 10000.0,
+    "leverage": 2.0,
+    "max_concurrent": 3,
+    "budget_per_trade": 1000.0,
+    "fee_bps": 4.0,
+    "slip_btc_bps": 2.0,
+    "slip_alt_bps": 4.0,
+    "funding_rate_8h": 0.0001
+  },
+  "results": {
+    "v3_baseline_BULL": {
+      "total": 1107,
+      "pnl": 7245.49,
+      "return_pct": 72.5,
+      "final_equity": 17245.36,
+      "max_dd_pct": -6.0,
+      "win_rate": 53.6,
+      "total_fees": 1769.73,
+      "total_funding": 56.0,
+      "avg_pnl": 6.55,
+      "n_long": 478,
+      "n_short": 629,
+      "pnl_long": 2065.95,
+      "pnl_short": 5179.54,
+      "wr_long": 51.7,
+      "wr_short": 55.0,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1117.85,
+          "trades": 280,
+          "wr": 55.4
+        },
+        "XRP": {
+          "pnl": 758.35,
+          "trades": 154,
+          "wr": 51.3
+        },
+        "ADA": {
+          "pnl": 1026.38,
+          "trades": 131,
+          "wr": 54.2
+        },
+        "DOT": {
+          "pnl": 1320.8,
+          "trades": 202,
+          "wr": 52.5
+        },
+        "SUI": {
+          "pnl": 2496.75,
+          "trades": 202,
+          "wr": 56.9
+        },
+        "FIL": {
+          "pnl": 525.36,
+          "trades": 138,
+          "wr": 48.6
+        }
+      }
+    },
+    "v3_baseline_BEAR": {
+      "total": 573,
+      "pnl": 7250.07,
+      "return_pct": 72.5,
+      "final_equity": 17249.94,
+      "max_dd_pct": -3.2,
+      "win_rate": 59.7,
+      "total_fees": 915.77,
+      "total_funding": 36.0,
+      "avg_pnl": 12.65,
+      "n_long": 273,
+      "n_short": 300,
+      "pnl_long": 2299.1,
+      "pnl_short": 4950.97,
+      "wr_long": 53.5,
+      "wr_short": 65.3,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1050.31,
+          "trades": 152,
+          "wr": 59.2
+        },
+        "XRP": {
+          "pnl": 958.7,
+          "trades": 81,
+          "wr": 64.2
+        },
+        "ADA": {
+          "pnl": 1117.37,
+          "trades": 72,
+          "wr": 61.1
+        },
+        "DOT": {
+          "pnl": 1995.19,
+          "trades": 103,
+          "wr": 65.0
+        },
+        "SUI": {
+          "pnl": 1319.51,
+          "trades": 96,
+          "wr": 56.2
+        },
+        "FIL": {
+          "pnl": 808.99,
+          "trades": 69,
+          "wr": 50.7
+        }
+      }
+    },
+    "v3_baseline_FULL": {
+      "total": 1694,
+      "pnl": 14544.64,
+      "return_pct": 145.4,
+      "final_equity": 24544.43,
+      "max_dd_pct": -6.0,
+      "win_rate": 55.4,
+      "total_fees": 2707.93,
+      "total_funding": 93.2,
+      "avg_pnl": 8.59,
+      "n_long": 755,
+      "n_short": 939,
+      "pnl_long": 4414.98,
+      "pnl_short": 10129.66,
+      "wr_long": 52.2,
+      "wr_short": 58.0,
+      "per_coin": {
+        "BTC": {
+          "pnl": 2176.0,
+          "trades": 435,
+          "wr": 56.6
+        },
+        "XRP": {
+          "pnl": 1692.53,
+          "trades": 237,
+          "wr": 55.3
+        },
+        "ADA": {
+          "pnl": 2132.94,
+          "trades": 205,
+          "wr": 56.1
+        },
+        "DOT": {
+          "pnl": 3232.79,
+          "trades": 307,
+          "wr": 56.0
+        },
+        "SUI": {
+          "pnl": 3844.5,
+          "trades": 301,
+          "wr": 56.8
+        },
+        "FIL": {
+          "pnl": 1465.88,
+          "trades": 209,
+          "wr": 49.8
+        }
+      }
+    },
+    "v3_short_bias_05_BULL": {
+      "total": 1207,
+      "pnl": 7336.63,
+      "return_pct": 73.4,
+      "final_equity": 17336.47,
+      "max_dd_pct": -7.4,
+      "win_rate": 52.8,
+      "total_fees": 1929.5,
+      "total_funding": 63.8,
+      "avg_pnl": 6.08,
+      "n_long": 475,
+      "n_short": 732,
+      "pnl_long": 2023.63,
+      "pnl_short": 5313.0,
+      "wr_long": 52.0,
+      "wr_short": 53.3,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1262.03,
+          "trades": 357,
+          "wr": 52.7
+        },
+        "XRP": {
+          "pnl": 1337.46,
+          "trades": 193,
+          "wr": 55.4
+        },
+        "ADA": {
+          "pnl": 1809.84,
+          "trades": 172,
+          "wr": 55.8
+        },
+        "DOT": {
+          "pnl": 286.21,
+          "trades": 191,
+          "wr": 46.1
+        },
+        "SUI": {
+          "pnl": 1541.45,
+          "trades": 173,
+          "wr": 53.2
+        },
+        "FIL": {
+          "pnl": 1099.64,
+          "trades": 121,
+          "wr": 54.5
+        }
+      }
+    },
+    "v3_short_bias_05_BEAR": {
+      "total": 643,
+      "pnl": 7143.86,
+      "return_pct": 71.4,
+      "final_equity": 17143.73,
+      "max_dd_pct": -3.9,
+      "win_rate": 58.3,
+      "total_fees": 1027.36,
+      "total_funding": 39.0,
+      "avg_pnl": 11.11,
+      "n_long": 266,
+      "n_short": 377,
+      "pnl_long": 1838.73,
+      "pnl_short": 5305.13,
+      "wr_long": 53.8,
+      "wr_short": 61.5,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1078.47,
+          "trades": 174,
+          "wr": 59.8
+        },
+        "XRP": {
+          "pnl": 1752.65,
+          "trades": 111,
+          "wr": 64.9
+        },
+        "ADA": {
+          "pnl": 1402.21,
+          "trades": 95,
+          "wr": 61.1
+        },
+        "DOT": {
+          "pnl": 1579.51,
+          "trades": 101,
+          "wr": 60.4
+        },
+        "SUI": {
+          "pnl": 649.23,
+          "trades": 93,
+          "wr": 49.5
+        },
+        "FIL": {
+          "pnl": 681.79,
+          "trades": 69,
+          "wr": 49.3
+        }
+      }
+    },
+    "v3_short_bias_05_FULL": {
+      "total": 1863,
+      "pnl": 14466.89,
+      "return_pct": 144.7,
+      "final_equity": 24466.6,
+      "max_dd_pct": -7.4,
+      "win_rate": 54.6,
+      "total_fees": 2977.66,
+      "total_funding": 104.2,
+      "avg_pnl": 7.77,
+      "n_long": 744,
+      "n_short": 1119,
+      "pnl_long": 3850.11,
+      "pnl_short": 10616.78,
+      "wr_long": 52.4,
+      "wr_short": 56.0,
+      "per_coin": {
+        "BTC": {
+          "pnl": 2358.94,
+          "trades": 533,
+          "wr": 55.2
+        },
+        "XRP": {
+          "pnl": 3116.57,
+          "trades": 307,
+          "wr": 59.0
+        },
+        "ADA": {
+          "pnl": 3152.91,
+          "trades": 270,
+          "wr": 57.0
+        },
+        "DOT": {
+          "pnl": 1811.98,
+          "trades": 293,
+          "wr": 50.5
+        },
+        "SUI": {
+          "pnl": 2172.78,
+          "trades": 267,
+          "wr": 51.7
+        },
+        "FIL": {
+          "pnl": 1853.71,
+          "trades": 193,
+          "wr": 52.8
+        }
+      }
+    },
+    "v3_short_bias_10_BULL": {
+      "total": 1433,
+      "pnl": 10077.24,
+      "return_pct": 100.8,
+      "final_equity": 20076.97,
+      "max_dd_pct": -3.8,
+      "win_rate": 53.8,
+      "total_fees": 2289.8,
+      "total_funding": 68.6,
+      "avg_pnl": 7.03,
+      "n_long": 481,
+      "n_short": 952,
+      "pnl_long": 2175.44,
+      "pnl_short": 7901.8,
+      "wr_long": 52.2,
+      "wr_short": 54.6,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1108.63,
+          "trades": 373,
+          "wr": 51.5
+        },
+        "XRP": {
+          "pnl": 1143.34,
+          "trades": 188,
+          "wr": 55.9
+        },
+        "ADA": {
+          "pnl": 1718.06,
+          "trades": 167,
+          "wr": 56.3
+        },
+        "DOT": {
+          "pnl": 2027.31,
+          "trades": 258,
+          "wr": 54.7
+        },
+        "SUI": {
+          "pnl": 2282.03,
+          "trades": 260,
+          "wr": 52.3
+        },
+        "FIL": {
+          "pnl": 1797.87,
+          "trades": 187,
+          "wr": 55.1
+        }
+      }
+    },
+    "v3_short_bias_10_BEAR": {
+      "total": 739,
+      "pnl": 6810.86,
+      "return_pct": 68.1,
+      "final_equity": 16810.77,
+      "max_dd_pct": -4.3,
+      "win_rate": 57.0,
+      "total_fees": 1181.38,
+      "total_funding": 39.6,
+      "avg_pnl": 9.22,
+      "n_long": 275,
+      "n_short": 464,
+      "pnl_long": 2279.48,
+      "pnl_short": 4531.38,
+      "wr_long": 56.7,
+      "wr_short": 57.1,
+      "per_coin": {
+        "BTC": {
+          "pnl": 1023.23,
+          "trades": 185,
+          "wr": 55.7
+        },
+        "XRP": {
+          "pnl": 1117.86,
+          "trades": 96,
+          "wr": 64.6
+        },
+        "ADA": {
+          "pnl": 1471.22,
+          "trades": 86,
+          "wr": 62.8
+        },
+        "DOT": {
+          "pnl": 1796.9,
+          "trades": 131,
+          "wr": 60.3
+        },
+        "SUI": {
+          "pnl": 1043.62,
+          "trades": 137,
+          "wr": 54.7
+        },
+        "FIL": {
+          "pnl": 358.03,
+          "trades": 104,
+          "wr": 46.2
+        }
+      }
+    },
+    "v3_short_bias_10_FULL": {
+      "total": 2182,
+      "pnl": 16934.31,
+      "return_pct": 169.3,
+      "final_equity": 26933.95,
+      "max_dd_pct": -3.8,
+      "win_rate": 54.8,
+      "total_fees": 3487.16,
+      "total_funding": 109.8,
+      "avg_pnl": 7.76,
+      "n_long": 759,
+      "n_short": 1423,
+      "pnl_long": 4453.9,
+      "pnl_short": 12480.41,
+      "wr_long": 53.8,
+      "wr_short": 55.4,
+      "per_coin": {
+        "BTC": {
+          "pnl": 2147.88,
+          "trades": 560,
+          "wr": 53.0
+        },
+        "XRP": {
+          "pnl": 2274.63,
+          "trades": 286,
+          "wr": 58.7
+        },
+        "ADA": {
+          "pnl": 3130.25,
+          "trades": 256,
+          "wr": 57.8
+        },
+        "DOT": {
+          "pnl": 3833.87,
+          "trades": 391,
+          "wr": 56.3
+        },
+        "SUI": {
+          "pnl": 3360.02,
+          "trades": 398,
+          "wr": 53.3
+        },
+        "FIL": {
+          "pnl": 2187.66,
+          "trades": 291,
+          "wr": 51.9
+        }
+      }
+    }
+  }
+}

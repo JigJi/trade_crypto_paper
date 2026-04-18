@@ -1,0 +1,874 @@
+{
+  "mission_id": "mission_035_factor_interaction",
+  "date": "2026-04-12",
+  "baseline": {
+    "n_trades": 3856,
+    "pnl": 9625.07,
+    "wr": 74.7,
+    "avg_pnl": 2.4961
+  },
+  "activation_rates": {
+    "oi_divergence": {
+      "active_bars": 3538,
+      "pct": 8.3
+    },
+    "funding_rate": {
+      "active_bars": 161,
+      "pct": 0.4
+    },
+    "whale_alerts": {
+      "active_bars": 410,
+      "pct": 1.0
+    },
+    "liquidation": {
+      "active_bars": 2520,
+      "pct": 5.9
+    },
+    "etf_flows": {
+      "active_bars": 9409,
+      "pct": 22.1
+    },
+    "basis_contrarian": {
+      "active_bars": 1970,
+      "pct": 4.6
+    },
+    "tick_liq": {
+      "active_bars": 3386,
+      "pct": 7.9
+    },
+    "ob_combined": {
+      "active_bars": 9091,
+      "pct": 21.3
+    }
+  },
+  "pair_interactions": {
+    "liquidation_x_tick_liq": {
+      "factor_a": "liquidation",
+      "factor_b": "tick_liq",
+      "quadrants": {
+        "both_bull": {
+          "n_trades": 61,
+          "pnl": 230.97,
+          "wr": 80.3,
+          "avg_pnl": 3.7864
+        },
+        "both_bear": {
+          "n_trades": 140,
+          "pnl": 253.01,
+          "wr": 69.3,
+          "avg_pnl": 1.8072
+        },
+        "A_bull_B_bear": {
+          "n_trades": 0,
+          "pnl": 0,
+          "wr": 0,
+          "avg_pnl": 0
+        },
+        "A_bear_B_bull": {
+          "n_trades": 0,
+          "pnl": 0,
+          "wr": 0,
+          "avg_pnl": 0
+        },
+        "both_neutral_or_mixed": {
+          "n_trades": 3655,
+          "pnl": 9141.08,
+          "wr": 74.8,
+          "avg_pnl": 2.501
+        }
+      },
+      "agree": {
+        "n_trades": 201,
+        "pnl": 483.98,
+        "wr": 72.6,
+        "avg_pnl": 2.4079
+      },
+      "disagree": {
+        "n_trades": 0,
+        "pnl": 0,
+        "wr": 0,
+        "avg_pnl": 0
+      },
+      "synergy_wr_delta": -2.1,
+      "conflict_wr_delta": null
+    },
+    "liquidation_x_ob_combined": {
+      "factor_a": "liquidation",
+      "factor_b": "ob_combined",
+      "quadrants": {
+        "both_bull": {
+          "n_trades": 208,
+          "pnl": 978.39,
+          "wr": 77.9,
+          "avg_pnl": 4.7038
+        },
+        "both_bear": {
+          "n_trades": 277,
+          "pnl": 740.23,
+          "wr": 71.1,
+          "avg_pnl": 2.6723
+        },
+        "A_bull_B_bear": {
+          "n_trades": 11,
+          "pnl": 3.76,
+          "wr": 81.8,
+          "avg_pnl": 0.342
+        },
+        "A_bear_B_bull": {
+          "n_trades": 1,
+          "pnl": 3.06,
+          "wr": 100.0,
+          "avg_pnl": 3.0558
+        },
+        "both_neutral_or_mixed": {
+          "n_trades": 3359,
+          "pnl": 7899.63,
+          "wr": 74.8,
+          "avg_pnl": 2.3518
+        }
+      },
+      "agree": {
+        "n_trades": 485,
+        "pnl": 1718.62,
+        "wr": 74.0,
+        "avg_pnl": 3.5435
+      },
+      "disagree": {
+        "n_trades": 12,
+        "pnl": 6.82,
+        "wr": 83.3,
+        "avg_pnl": 0.5682
+      },
+      "synergy_wr_delta": -0.7,
+      "conflict_wr_delta": null
+    },
+    "liquidation_x_etf_flows": {
+      "factor_a": "liquidation",
+      "factor_b": "etf_flows",
+      "quadrants": {
+        "both_bull": {
+          "n_trades": 97,
+          "pnl": 223.31,
+          "wr": 73.2,
+          "avg_pnl": 2.3022
+        },
+        "both_bear": {
+          "n_trades": 183,
+          "pnl": 635.41,
+          "wr": 71.0,
+          "avg_pnl": 3.4722
+        },
+        "A_bull_B_bear": {
+          "n_trades": 53,
+          "pnl": 370.21,
+          "wr": 71.7,
+          "avg_pnl": 6.985
+        },
+        "A_bear_B_bull": {
+          "n_trades": 69,
+          "pnl": 486.94,
+          "wr": 68.1,
+          "avg_pnl": 7.0572
+        },
+        "both_neutral_or_mixed": {
+          "n_trades": 3454,
+          "pnl": 7909.2,
+          "wr": 75.1,
+          "avg_pnl": 2.2899
+        }
+      },
+      "agree": {
+        "n_trades": 280,
+        "pnl": 858.72,
+        "wr": 71.8,
+        "avg_pnl": 3.0668
+      },
+      "disagree": {
+        "n_trades": 122,
+        "pnl": 857.15,
+        "wr": 69.7,
+        "avg_pnl": 7.0258
+      },
+      "synergy_wr_delta": -2.9,
+      "conflict_wr_delta": -5.0
+    },
+    "liquidation_x_basis_contrarian": {
+      "factor_a": "liquidation",
+      "factor_b": "basis_contrarian",
+      "quadrants": {
+        "both_bull": {
+          "n_trades": 43,
+          "pnl": 248.17,
+          "wr": 76.7,
+          "avg_pnl": 5.7715
+        },
+        "both_bear": {
+          "n_trades": 61,
+          "pnl": -26.45,
+          "wr": 75.4,
+          "avg_pnl": -0.4336
+        },
+        "A_bull_B_bear": {
+          "n_trades": 42,
+          "pnl": -22.28,
+          "wr": 64.3,
+          "avg_pnl": -0.5304
+        },
+        "A_bear_B_bull": {
+          "n_trades": 39,
+          "pnl": 104.55,
+          "wr": 76.9,
+          "avg_pnl": 2.6808
+        },
+        "both_neutral_or_mixed": {
+          "n_trades": 3671,
+          "pnl": 9321.07,
+          "wr": 74.8,
+          "avg_pnl": 2.5391
+        }
+      },
+      "agree": {
+        "n_trades": 104,
+        "pnl": 221.72,
+        "wr": 76.0,
+        "avg_pnl": 2.1319
+      },
+      "disagree": {
+        "n_trades": 81,
+        "pnl": 82.27,
+        "wr": 70.4,
+        "avg_pnl": 1.0157
+      },
+      "synergy_wr_delta": 1.3,
+      "conflict_wr_delta": -4.3
+    },
+    "liquidation_x_funding_rate": {
+      "factor_a": "liquidation",
+      "factor_b": "funding_rate",
+      "quadrants": {
+        "both_bull": {
+          "n_trades": 11,
+          "pnl": 58.62,
+          "wr": 100.0,
+          "avg_pnl": 5.3292
+        },
+        "both_bear": {
+          "n_trades": 0,
+          "pnl": 0,
+          "wr": 0,
+          "avg_pnl": 0
+        },
+        "A_bull_B_bear": {
+          "n_trades": 0,
+          "pnl": 0,
+          "wr": 0,
+          "avg_pnl": 0
+        },
+        "A_bear_B_bull": {
+          "n_trades": 0,
+          "pnl": 0,
+          "wr": 0,
+          "avg_pnl": 0
+        },
+        "both_neutral_or_mixed": {
+          "n_trades": 3845,
+          "pnl": 9566.44,
+          "wr": 74.6,
+          "avg_pnl": 2.488
+        }
+      },
+      "agree": {
+        "n_trades": 11,
+        "pnl": 58.62,
+        "wr": 100.0,
+        "avg_pnl": 5.3292
+      },
+      "disagree": {
+        "n_trades": 0,
+        "pnl": 0,
+        "wr": 0,
+        "avg_pnl": 0
+      },
+      "synergy_wr_delta": null,
+      "conflict_wr_delta": null
+    },
+    "tick_liq_x_ob_combined": {
+      "factor_a": "tick_liq",
+      "factor_b": "ob_combined",
+      "quadrants": {
+        "both_bull": {
+          "n_trades": 259,
+          "pnl": 908.2,
+          "wr": 80.3,
+          "avg_pnl": 3.5066
+        },
+        "both_bear": {
+          "n_trades": 442,
+          "pnl": 967.82,
+          "wr": 71.7,
+          "avg_pnl": 2.1896
+        },
+        "A_bull_B_bear": {
+          "n_trades": 6,
+          "pnl": 31.77,
+          "wr": 66.7,
+          "avg_pnl": 5.2954
+        },
+        "A_bear_B_bull": {
+          "n_trades": 22,
+          "pnl": 305.76,
+          "wr": 95.5,
+          "avg_pnl": 13.8982
+        },
+        "both_neutral_or_mixed": {
+          "n_trades": 3127,
+          "pnl": 7411.51,
+          "wr": 74.5,
+          "avg_pnl": 2.3702
+        }
+      },
+      "agree": {
+        "n_trades": 701,
+        "pnl": 1876.03,
+        "wr": 74.9,
+        "avg_pnl": 2.6762
+      },
+      "disagree": {
+        "n_trades": 28,
+        "pnl": 337.53,
+        "wr": 89.3,
+        "avg_pnl": 12.0547
+      },
+      "synergy_wr_delta": 0.2,
+      "conflict_wr_delta": 14.6
+    },
+    "tick_liq_x_etf_flows": {
+      "factor_a": "tick_liq",
+      "factor_b": "etf_flows",
+      "quadrants": {
+        "both_bull": {
+          "n_trades": 72,
+          "pnl": 315.54,
+          "wr": 80.6,
+          "avg_pnl": 4.3825
+        },
+        "both_bear": {
+          "n_trades": 81,
+          "pnl": 396.03,
+          "wr": 70.4,
+          "avg_pnl": 4.8892
+        },
+        "A_bull_B_bear": {
+          "n_trades": 23,
+          "pnl": 50.31,
+          "wr": 87.0,
+          "avg_pnl": 2.1875
+        },
+        "A_bear_B_bull": {
+          "n_trades": 90,
+          "pnl": 241.2,
+          "wr": 65.6,
+          "avg_pnl": 2.6801
+        },
+        "both_neutral_or_mixed": {
+          "n_trades": 3590,
+          "pnl": 8621.99,
+          "wr": 74.8,
+          "avg_pnl": 2.4017
+        }
+      },
+      "agree": {
+        "n_trades": 153,
+        "pnl": 711.56,
+        "wr": 75.2,
+        "avg_pnl": 4.6507
+      },
+      "disagree": {
+        "n_trades": 113,
+        "pnl": 291.52,
+        "wr": 69.9,
+        "avg_pnl": 2.5798
+      },
+      "synergy_wr_delta": 0.5,
+      "conflict_wr_delta": -4.8
+    },
+    "tick_liq_x_basis_contrarian": {
+      "factor_a": "tick_liq",
+      "factor_b": "basis_contrarian",
+      "quadrants": {
+        "both_bull": {
+          "n_trades": 23,
+          "pnl": 109.55,
+          "wr": 82.6,
+          "avg_pnl": 4.7632
+        },
+        "both_bear": {
+          "n_trades": 52,
+          "pnl": 108.21,
+          "wr": 76.9,
+          "avg_pnl": 2.0809
+        },
+        "A_bull_B_bear": {
+          "n_trades": 19,
+          "pnl": 91.11,
+          "wr": 78.9,
+          "avg_pnl": 4.7951
+        },
+        "A_bear_B_bull": {
+          "n_trades": 56,
+          "pnl": -1.2,
+          "wr": 73.2,
+          "avg_pnl": -0.0215
+        },
+        "both_neutral_or_mixed": {
+          "n_trades": 3706,
+          "pnl": 9317.4,
+          "wr": 74.6,
+          "avg_pnl": 2.5141
+        }
+      },
+      "agree": {
+        "n_trades": 75,
+        "pnl": 217.76,
+        "wr": 78.7,
+        "avg_pnl": 2.9035
+      },
+      "disagree": {
+        "n_trades": 75,
+        "pnl": 89.9,
+        "wr": 74.7,
+        "avg_pnl": 1.1987
+      },
+      "synergy_wr_delta": 4.0,
+      "conflict_wr_delta": 0.0
+    },
+    "tick_liq_x_funding_rate": {
+      "factor_a": "tick_liq",
+      "factor_b": "funding_rate",
+      "quadrants": {
+        "both_bull": {
+          "n_trades": 33,
+          "pnl": 216.39,
+          "wr": 75.8,
+          "avg_pnl": 6.5574
+        },
+        "both_bear": {
+          "n_trades": 0,
+          "pnl": 0,
+          "wr": 0,
+          "avg_pnl": 0
+        },
+        "A_bull_B_bear": {
+          "n_trades": 0,
+          "pnl": 0,
+          "wr": 0,
+          "avg_pnl": 0
+        },
+        "A_bear_B_bull": {
+          "n_trades": 0,
+          "pnl": 0,
+          "wr": 0,
+          "avg_pnl": 0
+        },
+        "both_neutral_or_mixed": {
+          "n_trades": 3823,
+          "pnl": 9408.67,
+          "wr": 74.7,
+          "avg_pnl": 2.4611
+        }
+      },
+      "agree": {
+        "n_trades": 33,
+        "pnl": 216.39,
+        "wr": 75.8,
+        "avg_pnl": 6.5574
+      },
+      "disagree": {
+        "n_trades": 0,
+        "pnl": 0,
+        "wr": 0,
+        "avg_pnl": 0
+      },
+      "synergy_wr_delta": 1.1,
+      "conflict_wr_delta": null
+    },
+    "ob_combined_x_etf_flows": {
+      "factor_a": "ob_combined",
+      "factor_b": "etf_flows",
+      "quadrants": {
+        "both_bull": {
+          "n_trades": 216,
+          "pnl": 57.29,
+          "wr": 72.7,
+          "avg_pnl": 0.2652
+        },
+        "both_bear": {
+          "n_trades": 348,
+          "pnl": 1535.87,
+          "wr": 80.7,
+          "avg_pnl": 4.4134
+        },
+        "A_bull_B_bear": {
+          "n_trades": 132,
+          "pnl": 895.96,
+          "wr": 73.5,
+          "avg_pnl": 6.7876
+        },
+        "A_bear_B_bull": {
+          "n_trades": 140,
+          "pnl": 297.37,
+          "wr": 63.6,
+          "avg_pnl": 2.1241
+        },
+        "both_neutral_or_mixed": {
+          "n_trades": 3020,
+          "pnl": 6838.58,
+          "wr": 74.7,
+          "avg_pnl": 2.2644
+        }
+      },
+      "agree": {
+        "n_trades": 564,
+        "pnl": 1593.16,
+        "wr": 77.7,
+        "avg_pnl": 2.8247
+      },
+      "disagree": {
+        "n_trades": 272,
+        "pnl": 1193.33,
+        "wr": 68.4,
+        "avg_pnl": 4.3872
+      },
+      "synergy_wr_delta": 3.0,
+      "conflict_wr_delta": -6.3
+    },
+    "ob_combined_x_basis_contrarian": {
+      "factor_a": "ob_combined",
+      "factor_b": "basis_contrarian",
+      "quadrants": {
+        "both_bull": {
+          "n_trades": 88,
+          "pnl": 196.36,
+          "wr": 71.6,
+          "avg_pnl": 2.2314
+        },
+        "both_bear": {
+          "n_trades": 123,
+          "pnl": 247.09,
+          "wr": 78.9,
+          "avg_pnl": 2.0088
+        },
+        "A_bull_B_bear": {
+          "n_trades": 95,
+          "pnl": 22.23,
+          "wr": 75.8,
+          "avg_pnl": 0.234
+        },
+        "A_bear_B_bull": {
+          "n_trades": 112,
+          "pnl": -37.52,
+          "wr": 74.1,
+          "avg_pnl": -0.335
+        },
+        "both_neutral_or_mixed": {
+          "n_trades": 3438,
+          "pnl": 9196.91,
+          "wr": 74.6,
+          "avg_pnl": 2.6751
+        }
+      },
+      "agree": {
+        "n_trades": 211,
+        "pnl": 443.45,
+        "wr": 75.8,
+        "avg_pnl": 2.1017
+      },
+      "disagree": {
+        "n_trades": 207,
+        "pnl": -15.3,
+        "wr": 74.9,
+        "avg_pnl": -0.0739
+      },
+      "synergy_wr_delta": 1.1,
+      "conflict_wr_delta": 0.2
+    },
+    "ob_combined_x_funding_rate": {
+      "factor_a": "ob_combined",
+      "factor_b": "funding_rate",
+      "quadrants": {
+        "both_bull": {
+          "n_trades": 30,
+          "pnl": 132.11,
+          "wr": 93.3,
+          "avg_pnl": 4.4038
+        },
+        "both_bear": {
+          "n_trades": 0,
+          "pnl": 0,
+          "wr": 0,
+          "avg_pnl": 0
+        },
+        "A_bull_B_bear": {
+          "n_trades": 0,
+          "pnl": 0,
+          "wr": 0,
+          "avg_pnl": 0
+        },
+        "A_bear_B_bull": {
+          "n_trades": 0,
+          "pnl": 0,
+          "wr": 0,
+          "avg_pnl": 0
+        },
+        "both_neutral_or_mixed": {
+          "n_trades": 3826,
+          "pnl": 9492.95,
+          "wr": 74.6,
+          "avg_pnl": 2.4812
+        }
+      },
+      "agree": {
+        "n_trades": 30,
+        "pnl": 132.11,
+        "wr": 93.3,
+        "avg_pnl": 4.4038
+      },
+      "disagree": {
+        "n_trades": 0,
+        "pnl": 0,
+        "wr": 0,
+        "avg_pnl": 0
+      },
+      "synergy_wr_delta": 18.6,
+      "conflict_wr_delta": null
+    },
+    "etf_flows_x_basis_contrarian": {
+      "factor_a": "etf_flows",
+      "factor_b": "basis_contrarian",
+      "quadrants": {
+        "both_bull": {
+          "n_trades": 30,
+          "pnl": 98.93,
+          "wr": 80.0,
+          "avg_pnl": 3.2978
+        },
+        "both_bear": {
+          "n_trades": 59,
+          "pnl": 268.24,
+          "wr": 81.4,
+          "avg_pnl": 4.5464
+        },
+        "A_bull_B_bear": {
+          "n_trades": 33,
+          "pnl": 149.66,
+          "wr": 84.8,
+          "avg_pnl": 4.5352
+        },
+        "A_bear_B_bull": {
+          "n_trades": 59,
+          "pnl": 262.34,
+          "wr": 81.4,
+          "avg_pnl": 4.4464
+        },
+        "both_neutral_or_mixed": {
+          "n_trades": 3675,
+          "pnl": 8845.9,
+          "wr": 74.4,
+          "avg_pnl": 2.407
+        }
+      },
+      "agree": {
+        "n_trades": 89,
+        "pnl": 367.17,
+        "wr": 80.9,
+        "avg_pnl": 4.1255
+      },
+      "disagree": {
+        "n_trades": 92,
+        "pnl": 412.0,
+        "wr": 82.6,
+        "avg_pnl": 4.4782
+      },
+      "synergy_wr_delta": 6.2,
+      "conflict_wr_delta": 7.9
+    },
+    "etf_flows_x_funding_rate": {
+      "factor_a": "etf_flows",
+      "factor_b": "funding_rate",
+      "quadrants": {
+        "both_bull": {
+          "n_trades": 0,
+          "pnl": 0,
+          "wr": 0,
+          "avg_pnl": 0
+        },
+        "both_bear": {
+          "n_trades": 0,
+          "pnl": 0,
+          "wr": 0,
+          "avg_pnl": 0
+        },
+        "A_bull_B_bear": {
+          "n_trades": 0,
+          "pnl": 0,
+          "wr": 0,
+          "avg_pnl": 0
+        },
+        "A_bear_B_bull": {
+          "n_trades": 14,
+          "pnl": 103.26,
+          "wr": 92.9,
+          "avg_pnl": 7.376
+        },
+        "both_neutral_or_mixed": {
+          "n_trades": 3842,
+          "pnl": 9521.8,
+          "wr": 74.6,
+          "avg_pnl": 2.4783
+        }
+      },
+      "agree": {
+        "n_trades": 0,
+        "pnl": 0,
+        "wr": 0,
+        "avg_pnl": 0
+      },
+      "disagree": {
+        "n_trades": 14,
+        "pnl": 103.26,
+        "wr": 92.9,
+        "avg_pnl": 7.376
+      },
+      "synergy_wr_delta": null,
+      "conflict_wr_delta": null
+    },
+    "basis_contrarian_x_funding_rate": {
+      "factor_a": "basis_contrarian",
+      "factor_b": "funding_rate",
+      "quadrants": {
+        "both_bull": {
+          "n_trades": 6,
+          "pnl": 38.15,
+          "wr": 100.0,
+          "avg_pnl": 6.3591
+        },
+        "both_bear": {
+          "n_trades": 0,
+          "pnl": 0,
+          "wr": 0,
+          "avg_pnl": 0
+        },
+        "A_bull_B_bear": {
+          "n_trades": 0,
+          "pnl": 0,
+          "wr": 0,
+          "avg_pnl": 0
+        },
+        "A_bear_B_bull": {
+          "n_trades": 0,
+          "pnl": 0,
+          "wr": 0,
+          "avg_pnl": 0
+        },
+        "both_neutral_or_mixed": {
+          "n_trades": 3850,
+          "pnl": 9586.91,
+          "wr": 74.7,
+          "avg_pnl": 2.4901
+        }
+      },
+      "agree": {
+        "n_trades": 6,
+        "pnl": 38.15,
+        "wr": 100.0,
+        "avg_pnl": 6.3591
+      },
+      "disagree": {
+        "n_trades": 0,
+        "pnl": 0,
+        "wr": 0,
+        "avg_pnl": 0
+      },
+      "synergy_wr_delta": null,
+      "conflict_wr_delta": null
+    }
+  },
+  "confluence_filter": {
+    "min_1_agree": {
+      "n_trades": 3723,
+      "pnl": 9433.34,
+      "wr": 74.9,
+      "avg_pnl": 2.5338
+    },
+    "min_2_agree": {
+      "n_trades": 2151,
+      "pnl": 6386.11,
+      "wr": 74.5,
+      "avg_pnl": 2.9689
+    },
+    "min_3_agree": {
+      "n_trades": 329,
+      "pnl": 886.34,
+      "wr": 76.0,
+      "avg_pnl": 2.6941
+    },
+    "min_4_agree": {
+      "n_trades": 34,
+      "pnl": 207.36,
+      "wr": 91.2,
+      "avg_pnl": 6.0989
+    },
+    "min_5_agree": {
+      "n_trades": 5,
+      "pnl": 36.03,
+      "wr": 100.0,
+      "avg_pnl": 7.2062
+    },
+    "min_6_agree": {
+      "n_trades": 0,
+      "pnl": 0,
+      "wr": 0,
+      "avg_pnl": 0
+    }
+  },
+  "direction_aligned": {
+    "aligned_1": {
+      "n_trades": 3688,
+      "pnl": 9449.0,
+      "wr": 75.0,
+      "avg_pnl": 2.5621
+    },
+    "aligned_2": {
+      "n_trades": 2140,
+      "pnl": 6317.27,
+      "wr": 74.6,
+      "avg_pnl": 2.952
+    },
+    "aligned_3": {
+      "n_trades": 329,
+      "pnl": 886.34,
+      "wr": 76.0,
+      "avg_pnl": 2.6941
+    },
+    "aligned_4": {
+      "n_trades": 34,
+      "pnl": 207.36,
+      "wr": 91.2,
+      "avg_pnl": 6.0989
+    },
+    "aligned_5": {
+      "n_trades": 5,
+      "pnl": 36.03,
+      "wr": 100.0,
+      "avg_pnl": 7.2062
+    }
+  },
+  "top_factors_used": [
+    "liquidation",
+    "tick_liq",
+    "ob_combined",
+    "etf_flows",
+    "basis_contrarian",
+    "funding_rate"
+  ]
+}

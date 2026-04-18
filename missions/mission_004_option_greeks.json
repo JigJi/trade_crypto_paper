@@ -1,0 +1,224 @@
+{
+  "mission_id": "mission_004_option_greeks",
+  "started_at": "2026-03-14T19:22:23.413663",
+  "phases": {
+    "exploration": {
+      "greeks_count": [
+        [
+          26066
+        ]
+      ],
+      "greeks_range": [
+        [
+          "2025-09-14 11:14:51.484764+00:00",
+          "2026-03-14 17:00:00.218540+00:00"
+        ]
+      ],
+      "instruments_count": [
+        [
+          900
+        ]
+      ],
+      "quotes_count": [
+        [
+          26066
+        ]
+      ],
+      "quotes_range": [
+        [
+          "2025-09-14 11:14:51.484764+00:00",
+          "2026-03-14 17:00:00.218540+00:00"
+        ]
+      ],
+      "options_data_count": [
+        [
+          516
+        ]
+      ],
+      "options_data_range": [
+        [
+          "2026-03-09 10:15:00+00:00",
+          "2026-03-14 19:15:00+00:00"
+        ]
+      ],
+      "days_covered": 177,
+      "avg_rows_per_day": 147.26553672316385
+    },
+    "aggregation": {
+      "n_timestamps": 405,
+      "date_range": [
+        "2025-09-14 04:14:51.484764",
+        "2026-03-14 10:00:00.218540"
+      ],
+      "oi_available": "False",
+      "metrics": {
+        "atm_iv": {
+          "valid_count": 405,
+          "mean": 0.41572849999999995,
+          "std": 0.08742414227133552,
+          "min": 0.207158,
+          "max": 0.9778089999999999
+        },
+        "skew_25d": {
+          "valid_count": 405,
+          "mean": 0.030003123456790126,
+          "std": 0.05763193967881991,
+          "min": -0.23196700000000003,
+          "max": 0.560959
+        },
+        "pc_ratio": {
+          "valid_count": 0,
+          "mean": null,
+          "std": null,
+          "min": null,
+          "max": null
+        },
+        "gex_net": {
+          "valid_count": 0,
+          "mean": null,
+          "std": null,
+          "min": null,
+          "max": null
+        }
+      }
+    },
+    "scoring": {
+      "score_columns": [
+        "score_atm_iv",
+        "score_skew",
+        "score_pc_ratio",
+        "score_gex"
+      ],
+      "signal_density": {
+        "score_atm_iv": 0.35802469135802467,
+        "score_skew": 0.2765432098765432,
+        "score_pc_ratio": 0.0,
+        "score_gex": 0.0
+      }
+    },
+    "backtest": {
+      "atm_iv": {
+        "best_weight": 0.5,
+        "best_delta": -548.9171914379391,
+        "results": [
+          {
+            "weight": 0.5,
+            "pnl": 631.0586160606834,
+            "delta": -548.9171914379391,
+            "baseline": 1179.9758074986225,
+            "trades": 1118,
+            "wr": 72.80858676207514
+          },
+          {
+            "weight": 1.0,
+            "pnl": 106.6208950477895,
+            "delta": -1073.3549124508331,
+            "baseline": 1179.9758074986225,
+            "trades": 1182,
+            "wr": 72.08121827411168
+          },
+          {
+            "weight": 1.5,
+            "pnl": -454.2162522870278,
+            "delta": -1634.1920597856504,
+            "baseline": 1179.9758074986225,
+            "trades": 1219,
+            "wr": 70.95980311730928
+          },
+          {
+            "weight": 2.0,
+            "pnl": -466.14127390817896,
+            "delta": -1646.1170814068014,
+            "baseline": 1179.9758074986225,
+            "trades": 1346,
+            "wr": 70.43090638930164
+          }
+        ],
+        "verdict": "negative"
+      },
+      "skew": {
+        "best_weight": 0.5,
+        "best_delta": -373.16444563612424,
+        "results": [
+          {
+            "weight": 0.5,
+            "pnl": 806.8113618624983,
+            "delta": -373.16444563612424,
+            "baseline": 1179.9758074986225,
+            "trades": 1131,
+            "wr": 73.03271441202476
+          },
+          {
+            "weight": 1.0,
+            "pnl": 658.3068204069172,
+            "delta": -521.6689870917054,
+            "baseline": 1179.9758074986225,
+            "trades": 1184,
+            "wr": 73.05743243243244
+          },
+          {
+            "weight": 1.5,
+            "pnl": 157.38028777489404,
+            "delta": -1022.5955197237286,
+            "baseline": 1179.9758074986225,
+            "trades": 1182,
+            "wr": 72.41962774957699
+          },
+          {
+            "weight": 2.0,
+            "pnl": -188.8255883796538,
+            "delta": -1368.8013958782763,
+            "baseline": 1179.9758074986225,
+            "trades": 1216,
+            "wr": 70.9703947368421
+          }
+        ],
+        "verdict": "negative"
+      },
+      "pc_ratio": {
+        "skipped": true,
+        "reason": "only 0 signals"
+      },
+      "gex": {
+        "skipped": true,
+        "reason": "only 0 signals"
+      }
+    },
+    "deribit": {
+      "rows": 516,
+      "date_range": [
+        "2026-03-09 03:15:00",
+        "2026-03-14 12:15:00"
+      ],
+      "columns": [
+        "ts",
+        "dvol",
+        "skew_25d",
+        "put_call_ratio",
+        "max_pain",
+        "gex_net",
+        "spot_price",
+        "total_oi_calls",
+        "total_oi_puts"
+      ],
+      "skew_25d_stats": {
+        "mean": 4.122015503875969,
+        "std": 2.652623652261259
+      },
+      "note": "Too short for backtest but validates signal structure"
+    }
+  },
+  "finished_at": "2026-03-14T19:22:41.122350",
+  "summary": {
+    "positive_factors": [],
+    "negative_factors": [
+      "atm_iv",
+      "skew"
+    ],
+    "skipped_factors": [
+      "pc_ratio",
+      "gex"
+    ],
+    "overall_verdict": "negative"
+  }
+}

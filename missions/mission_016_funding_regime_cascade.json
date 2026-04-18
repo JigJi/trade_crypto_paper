@@ -1,0 +1,195 @@
+{
+  "mission_id": "mission_016_funding_regime_cascade",
+  "date": "2026-03-25",
+  "baseline": {
+    "trades": 5293,
+    "wr": 75.5,
+    "pnl": 22882.0,
+    "avg_pnl": 4.32
+  },
+  "exp1_winner_vs_loser": {
+    "fr_raw": {
+      "win_mean": 3.827e-05,
+      "win_std": 4.51e-05,
+      "lose_mean": 4.139e-05,
+      "lose_std": 4.534e-05,
+      "t_stat": -2.157,
+      "p_value": 0.0311,
+      "significant": true
+    },
+    "fr_zscore": {
+      "win_mean": 0.00233468,
+      "win_std": 1.12366692,
+      "lose_mean": 0.15643465,
+      "lose_std": 1.26814855,
+      "t_stat": -3.907,
+      "p_value": 0.0001,
+      "significant": true
+    },
+    "fr_change": {
+      "win_mean": -6.2e-07,
+      "win_std": 3.646e-05,
+      "lose_mean": 8.9e-07,
+      "lose_std": 3.582e-05,
+      "t_stat": -1.311,
+      "p_value": 0.19,
+      "significant": false
+    }
+  },
+  "exp2_regime_buckets": {
+    "extreme_neg": {
+      "trades": 396,
+      "wr": 79.5,
+      "pnl": 2239.0,
+      "avg_pnl": 5.65,
+      "n_short": 213,
+      "n_long": 183,
+      "short_wr": 80.3,
+      "long_wr": 78.7
+    },
+    "neg": {
+      "trades": 1162,
+      "wr": 75.0,
+      "pnl": 4580.0,
+      "avg_pnl": 3.94,
+      "n_short": 684,
+      "n_long": 478,
+      "short_wr": 76.0,
+      "long_wr": 73.4
+    },
+    "neutral": {
+      "trades": 1829,
+      "wr": 76.9,
+      "pnl": 8822.0,
+      "avg_pnl": 4.82,
+      "n_short": 1059,
+      "n_long": 770,
+      "short_wr": 79.3,
+      "long_wr": 73.6
+    },
+    "pos": {
+      "trades": 1606,
+      "wr": 74.0,
+      "pnl": 6079.0,
+      "avg_pnl": 3.79,
+      "n_short": 892,
+      "n_long": 714,
+      "short_wr": 75.3,
+      "long_wr": 72.3
+    },
+    "extreme_pos": {
+      "trades": 300,
+      "wr": 71.7,
+      "pnl": 1162.0,
+      "avg_pnl": 3.87,
+      "n_short": 122,
+      "n_long": 178,
+      "short_wr": 56.6,
+      "long_wr": 82.0
+    }
+  },
+  "exp3_alignment": {
+    "aligned": {
+      "trades": 2947,
+      "wr": 75.9,
+      "pnl": 12967.0,
+      "avg_pnl": 4.4
+    },
+    "unaligned": {
+      "trades": 2346,
+      "wr": 75.0,
+      "pnl": 9915.0,
+      "avg_pnl": 4.23
+    },
+    "t_stat": 0.466,
+    "p_value": 0.6414,
+    "strong_aligned": {
+      "trades": 1461,
+      "wr": 74.8,
+      "pnl": 4913.0,
+      "avg_pnl": 3.36
+    }
+  },
+  "exp4_filters": {
+    "extreme_z0.5": {
+      "trades": 3464,
+      "wr": 74.7,
+      "pnl": 14060.0,
+      "avg_pnl": 4.06,
+      "pnl_vs_baseline": -8822.0
+    },
+    "extreme_z1.0": {
+      "trades": 1746,
+      "wr": 73.6,
+      "pnl": 7008.0,
+      "avg_pnl": 4.01,
+      "pnl_vs_baseline": -15874.0
+    },
+    "extreme_z1.5": {
+      "trades": 696,
+      "wr": 76.1,
+      "pnl": 3401.0,
+      "avg_pnl": 4.89,
+      "pnl_vs_baseline": -19481.0
+    },
+    "extreme_z2.0": {
+      "trades": 261,
+      "wr": 73.6,
+      "pnl": 1399.0,
+      "avg_pnl": 5.36,
+      "pnl_vs_baseline": -21483.0
+    },
+    "aligned_extreme_z0.5": {
+      "trades": 1815,
+      "wr": 74.7,
+      "pnl": 7446.0,
+      "avg_pnl": 4.1
+    },
+    "aligned_extreme_z1.0": {
+      "trades": 867,
+      "wr": 72.1,
+      "pnl": 3027.0,
+      "avg_pnl": 3.49
+    },
+    "exclude_neutral": {
+      "trades": 3464,
+      "wr": 74.7,
+      "pnl": 14060.0,
+      "avg_pnl": 4.06
+    }
+  },
+  "exp5_momentum": {
+    "fr_rising": {
+      "trades": 2290,
+      "wr": 74.7,
+      "pnl": 10777.0,
+      "avg_pnl": 4.71
+    },
+    "fr_falling": {
+      "trades": 3003,
+      "wr": 76.1,
+      "pnl": 12105.0,
+      "avg_pnl": 4.03
+    },
+    "momentum_aligned": {
+      "trades": 2331,
+      "wr": 75.1,
+      "pnl": 10422.0,
+      "avg_pnl": 4.47
+    },
+    "momentum_unaligned": {
+      "trades": 2962,
+      "wr": 75.8,
+      "pnl": 12460.0,
+      "avg_pnl": 4.21
+    },
+    "double_aligned": {
+      "trades": 1493,
+      "wr": 76.0,
+      "pnl": 7397.0,
+      "avg_pnl": 4.95
+    }
+  },
+  "best_filter": "extreme_z2.0",
+  "verdict": "significant"
+}

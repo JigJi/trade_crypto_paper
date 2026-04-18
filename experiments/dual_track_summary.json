@@ -1,0 +1,122 @@
+{
+  "timestamp": "2026-03-15",
+  "experiment": "Dual-Track Model Improvement",
+  "scoring": "v3 (aligned backtest engine with paper trading)",
+
+  "track1_sltp_optimization": {
+    "step_1_1_alignment": {
+      "status": "DONE",
+      "changes": [
+        "Removed taker_ratio, ls_ratio, fear_greed from backtest engine",
+        "Added basis_contrarian(1.5), tick_liq(2.0), ob_combined(2.0)",
+        "Updated OI weight from 0.5 to 0.25 per sub-weight",
+        "Updated ETF weight from 1.5 to 1.0",
+        "Added COMPOSITE_WEIGHTS and V3_EXTRA_WEIGHTS constants",
+        "Updated audit_backtest_quality.py to use v3 weights"
+      ]
+    },
+    "step_1_2_audit": {
+      "status": "DONE",
+      "result": {
+        "total_trades": 828,
+        "win_rate": 63.9,
+        "pnl": 14121,
+        "long_wr": 59.6,
+        "short_wr": 67.2,
+        "sl_trades": 227,
+        "sl_loss": -7239,
+        "tp_trades": 404,
+        "tp_gain": 19324,
+        "regime_bull": {"trades": 182, "wr": 63.2, "pnl": 2120, "long_wr": 47, "short_wr": 71},
+        "regime_bear": {"trades": 406, "wr": 64.5, "pnl": 8310, "long_wr": 58, "short_wr": 70},
+        "regime_flat": {"trades": 240, "wr": 63.3, "pnl": 3691, "long_wr": 69, "short_wr": 58}
+      },
+      "insight": "LONG WR varies wildly by regime (47% BULL vs 69% FLAT). SHORT WR stable 58-71%."
+    },
+    "step_1_3_direction": {
+      "status": "DONE",
+      "result": {
+        "baseline": {"trades": 828, "wr": 63.9, "pnl": 14121, "sharpe": 12.34},
+        "short_only": {"trades": 482, "wr": 62.4, "pnl": 9447, "sharpe": 9.58},
+        "asymmetric_1.0": {"trades": 675, "wr": 65.0, "pnl": 12808, "sharpe": 11.79},
+        "asymmetric_1.5": {"trades": 627, "wr": 65.7, "pnl": 12305, "sharpe": 11.71},
+        "asymmetric_2.0": {"trades": 574, "wr": 66.2, "pnl": 11762, "sharpe": 11.57}
+      },
+      "insight": "Both directions have edge. Asymmetric +2.0 boosts LONG WR to 72% but loses $2K total PnL."
+    },
+    "step_1_4_breakeven": {
+      "status": "DONE",
+      "result": "All breakeven configs reduce PnL vs baseline. BE converts SL losses to small losses but also kills winning trades early. Best: BE_12bars_1.0pct = $12,022 (still -$2,099 vs baseline).",
+      "conclusion": "REJECTED - breakeven stop hurts performance"
+    },
+    "step_1_5_sltp_grid": {
+      "status": "DONE",
+      "result": {
+        "top3": [
+          {"sl": 3.5, "tp": 6.0, "pnl": 15519, "sharpe": 11.80, "wr": 66.1},
+          {"sl": 3.0, "tp": 6.0, "pnl": 15416, "sharpe": 11.83, "wr": 64.1},
+          {"sl": 3.0, "tp": 5.0, "pnl": 15300, "sharpe": 12.42, "wr": 65.3}
+        ],
+        "current": {"sl": 2.5, "tp": 4.0, "pnl": 14121, "sharpe": 12.34, "wr": 63.9}
+      },
+      "conclusion": "Wider SL/TP improves PnL by $1.4K. Best balance: SL 3.0 / TP 5.0 ($15,300, Sharpe 12.42)."
+    }
+  },
+
+  "track2_leading_indicators": {
+    "step_2_1_percoin_collection": {
+      "status": "DONE",
+      "changes": [
+        "Added ALT_SYMBOLS (34 coins) to data_collector/config.py",
+        "Added collect_funding_rate_alt() - hourly, all 34 coins",
+        "Added collect_open_interest_alt() - 5min, all 34 coins",
+        "Created DB tables: market_data.funding_rate_alt, market_data.open_interest_alt",
+        "Registered jobs in daemon.py",
+        "Tested: 34/34 coins collected successfully"
+      ]
+    },
+    "step_2_2_cvd": {
+      "status": "BLOCKED",
+      "result": "Zero impact - CVD data only covers Mar 9-15 (6 days), not enough to overlap with Jan-Mar OOS",
+      "action": "Wait for more data collection (need 2-4 weeks)"
+    },
+    "step_2_3_dvol": {
+      "status": "BLOCKED",
+      "result": "Zero impact - DVOL data only covers Mar 9-15 (6 days), same issue",
+      "action": "Wait for more data collection"
+    },
+    "step_2_4_macro": {
+      "status": "BLOCKED",
+      "result": "Zero impact - Macro data only 6 rows (Mar 6-13), same issue",
+      "action": "Wait for more data collection"
+    },
+    "step_2_5_confidence": {
+      "status": "DONE",
+      "result": {
+        "baseline": {"trades": 828, "wr": 63.9, "pnl": 14121},
+        "rsi_filter": {"trades": 769, "wr": 65.1, "pnl": 13578, "delta": -543},
+        "pos_filter": {"trades": 731, "wr": 66.5, "pnl": 13257, "delta": -864},
+        "vol_filter": {"trades": 712, "wr": 63.9, "pnl": 11173, "delta": -2948},
+        "rsi_pos": {"trades": 719, "wr": 67.0, "pnl": 13215, "delta": -906},
+        "all_3": {"trades": 585, "wr": 69.9, "pnl": 11312, "delta": -2809}
+      },
+      "insight": "Filters improve WR (64%->70%) but reduce PnL. Best tradeoff: RSI+Pos filter (WR 67%, PnL -$906)."
+    }
+  },
+
+  "recommendations": {
+    "immediate_deploy": [
+      "Update SL from 2.5 to 3.0, TP from 4.0 to 5.0 (expected +$1.2K, Sharpe 12.42)",
+      "Consider RSI+Pos filter for paper trading (WR boost, small PnL cost)"
+    ],
+    "wait_for_data": [
+      "CVD, DVOL, Macro factors need 2-4 weeks more data before retesting",
+      "Per-coin funding/OI now collecting - build per-coin factor in ~2 weeks"
+    ],
+    "do_not_deploy": [
+      "Breakeven stop - REJECTED (hurts performance)",
+      "SHORT-only mode - REJECTED (loses LONG profits)",
+      "Volume filter alone - REJECTED (too aggressive, kills $3K PnL)"
+    ]
+  }
+}

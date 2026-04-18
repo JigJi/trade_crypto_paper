@@ -1,0 +1,341 @@
+{
+  "mission_id": "mission_001_hour_of_day",
+  "date": "2026-03-14",
+  "title": "Hour-of-Day Session Performance Analysis",
+  "hypothesis": "v3 model performance varies significantly by trading session",
+  "oos_period": "2025-01-01 to 2026-03-31",
+  "passed": "True",
+  "baseline": {
+    "total_trades": 2201,
+    "total_pnl": 2289.03,
+    "win_rate": 69.9
+  },
+  "session_analysis": [
+    {
+      "session": "Asian",
+      "hours": "00-07",
+      "trades": 256,
+      "wins": 175,
+      "win_rate": 68.4,
+      "total_pnl": 137.25,
+      "avg_pnl": 0.54,
+      "long_trades": 191,
+      "long_wr": 67.5,
+      "short_trades": 65,
+      "short_wr": 70.8
+    },
+    {
+      "session": "European",
+      "hours": "08-13",
+      "trades": 834,
+      "wins": 568,
+      "win_rate": 68.1,
+      "total_pnl": 689.57,
+      "avg_pnl": 0.83,
+      "long_trades": 564,
+      "long_wr": 69.1,
+      "short_trades": 270,
+      "short_wr": 65.9
+    },
+    {
+      "session": "US",
+      "hours": "14-20",
+      "trades": 857,
+      "wins": 618,
+      "win_rate": 72.1,
+      "total_pnl": 1106.46,
+      "avg_pnl": 1.29,
+      "long_trades": 589,
+      "long_wr": 70.5,
+      "short_trades": 268,
+      "short_wr": 75.7
+    },
+    {
+      "session": "Late",
+      "hours": "21-23",
+      "trades": 254,
+      "wins": 178,
+      "win_rate": 70.1,
+      "total_pnl": 355.75,
+      "avg_pnl": 1.4,
+      "long_trades": 174,
+      "long_wr": 69.5,
+      "short_trades": 80,
+      "short_wr": 71.2
+    }
+  ],
+  "hour_analysis": [
+    {
+      "hour": 6,
+      "session": "Asian",
+      "trades": 148,
+      "wins": 94,
+      "win_rate": 63.5,
+      "total_pnl": -71.92,
+      "avg_pnl": -0.49,
+      "max_win": 47.96,
+      "max_loss": -48.42
+    },
+    {
+      "hour": 7,
+      "session": "Asian",
+      "trades": 108,
+      "wins": 81,
+      "win_rate": 75.0,
+      "total_pnl": 209.16,
+      "avg_pnl": 1.94,
+      "max_win": 23.28,
+      "max_loss": -34.44
+    },
+    {
+      "hour": 8,
+      "session": "European",
+      "trades": 103,
+      "wins": 76,
+      "win_rate": 73.8,
+      "total_pnl": 398.94,
+      "avg_pnl": 3.87,
+      "max_win": 43.85,
+      "max_loss": -30.03
+    },
+    {
+      "hour": 9,
+      "session": "European",
+      "trades": 164,
+      "wins": 116,
+      "win_rate": 70.7,
+      "total_pnl": -139.03,
+      "avg_pnl": -0.85,
+      "max_win": 38.0,
+      "max_loss": -56.62
+    },
+    {
+      "hour": 10,
+      "session": "European",
+      "trades": 170,
+      "wins": 111,
+      "win_rate": 65.3,
+      "total_pnl": -38.9,
+      "avg_pnl": -0.23,
+      "max_win": 34.55,
+      "max_loss": -54.34
+    },
+    {
+      "hour": 11,
+      "session": "European",
+      "trades": 158,
+      "wins": 108,
+      "win_rate": 68.4,
+      "total_pnl": 282.24,
+      "avg_pnl": 1.79,
+      "max_win": 81.35,
+      "max_loss": -55.29
+    },
+    {
+      "hour": 12,
+      "session": "European",
+      "trades": 128,
+      "wins": 91,
+      "win_rate": 71.1,
+      "total_pnl": 531.43,
+      "avg_pnl": 4.15,
+      "max_win": 72.06,
+      "max_loss": -41.13
+    },
+    {
+      "hour": 13,
+      "session": "European",
+      "trades": 111,
+      "wins": 66,
+      "win_rate": 59.5,
+      "total_pnl": -345.11,
+      "avg_pnl": -3.11,
+      "max_win": 36.56,
+      "max_loss": -43.32
+    },
+    {
+      "hour": 14,
+      "session": "US",
+      "trades": 118,
+      "wins": 89,
+      "win_rate": 75.4,
+      "total_pnl": 448.36,
+      "avg_pnl": 3.8,
+      "max_win": 72.38,
+      "max_loss": -41.25
+    },
+    {
+      "hour": 15,
+      "session": "US",
+      "trades": 118,
+      "wins": 86,
+      "win_rate": 72.9,
+      "total_pnl": 355.91,
+      "avg_pnl": 3.02,
+      "max_win": 77.7,
+      "max_loss": -88.35
+    },
+    {
+      "hour": 16,
+      "session": "US",
+      "trades": 114,
+      "wins": 77,
+      "win_rate": 67.5,
+      "total_pnl": -475.36,
+      "avg_pnl": -4.17,
+      "max_win": 20.87,
+      "max_loss": -64.58
+    },
+    {
+      "hour": 17,
+      "session": "US",
+      "trades": 158,
+      "wins": 123,
+      "win_rate": 77.8,
+      "total_pnl": 620.29,
+      "avg_pnl": 3.93,
+      "max_win": 32.97,
+      "max_loss": -57.85
+    },
+    {
+      "hour": 18,
+      "session": "US",
+      "trades": 91,
+      "wins": 67,
+      "win_rate": 73.6,
+      "total_pnl": 17.38,
+      "avg_pnl": 0.19,
+      "max_win": 43.68,
+      "max_loss": -57.54
+    },
+    {
+      "hour": 19,
+      "session": "US",
+      "trades": 152,
+      "wins": 100,
+      "win_rate": 65.8,
+      "total_pnl": -179.82,
+      "avg_pnl": -1.18,
+      "max_win": 79.32,
+      "max_loss": -62.63
+    },
+    {
+      "hour": 20,
+      "session": "US",
+      "trades": 106,
+      "wins": 76,
+      "win_rate": 71.7,
+      "total_pnl": 319.7,
+      "avg_pnl": 3.02,
+      "max_win": 87.39,
+      "max_loss": -55.6
+    },
+    {
+      "hour": 21,
+      "session": "Late",
+      "trades": 128,
+      "wins": 92,
+      "win_rate": 71.9,
+      "total_pnl": 285.59,
+      "avg_pnl": 2.23,
+      "max_win": 44.74,
+      "max_loss": -35.7
+    },
+    {
+      "hour": 22,
+      "session": "Late",
+      "trades": 110,
+      "wins": 75,
+      "win_rate": 68.2,
+      "total_pnl": 55.72,
+      "avg_pnl": 0.51,
+      "max_win": 37.14,
+      "max_loss": -38.34
+    },
+    {
+      "hour": 23,
+      "session": "Late",
+      "trades": 16,
+      "wins": 11,
+      "win_rate": 68.8,
+      "total_pnl": 14.44,
+      "avg_pnl": 0.9,
+      "max_win": 8.51,
+      "max_loss": -21.83
+    }
+  ],
+  "dow_analysis": [
+    {
+      "day": "Monday",
+      "trades": 321,
+      "win_rate": 66.4,
+      "total_pnl": -475.22,
+      "avg_pnl": -1.48
+    },
+    {
+      "day": "Tuesday",
+      "trades": 277,
+      "win_rate": 72.9,
+      "total_pnl": 285.99,
+      "avg_pnl": 1.03
+    },
+    {
+      "day": "Wednesday",
+      "trades": 272,
+      "win_rate": 73.2,
+      "total_pnl": 588.74,
+      "avg_pnl": 2.16
+    },
+    {
+      "day": "Thursday",
+      "trades": 330,
+      "win_rate": 73.6,
+      "total_pnl": 918.5,
+      "avg_pnl": 2.78
+    },
+    {
+      "day": "Friday",
+      "trades": 282,
+      "win_rate": 70.6,
+      "total_pnl": 184.04,
+      "avg_pnl": 0.65
+    },
+    {
+      "day": "Saturday",
+      "trades": 285,
+      "win_rate": 71.2,
+      "total_pnl": 620.83,
+      "avg_pnl": 2.18
+    },
+    {
+      "day": "Sunday",
+      "trades": 434,
+      "win_rate": 64.5,
+      "total_pnl": 166.16,
+      "avg_pnl": 0.38
+    }
+  ],
+  "worst_session": "Asian",
+  "best_session": "Late",
+  "wr_spread": 1.7,
+  "filter_test": {
+    "skip_worst_session": "Asian",
+    "filtered_pnl": 2151.78,
+    "filtered_wr": 70.1,
+    "improvement": -137.25,
+    "improvement_pct": -6.0
+  },
+  "bad_hours_filter": {
+    "bad_hours": [
+      6,
+      9,
+      10,
+      13,
+      16,
+      19
+    ],
+    "filtered_pnl": 3539.16,
+    "filtered_wr": 72.7,
+    "improvement": 1250.14
+  }
+}

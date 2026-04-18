@@ -1,0 +1,919 @@
+{
+  "mission_id": "mission_008_trade_analysis_7d_review",
+  "date": "2026-03-18",
+  "type": "trade_analysis",
+  "category": "analysis",
+  "title": "Trade Analysis: 7-Day Review",
+  "description": "วิเคราะห์เทรดล่าสุด 7 วัน: WR ตาม direction/score/hour/coin, หาแพทเทิร์นแพ้-ชนะ",
+  "difficulty": "medium",
+  "xp_reward": 65,
+  "status": "completed",
+  "target": "7d-review",
+  "started_at": "2026-03-18T16:13:06.328411",
+  "finished_at": "2026-03-18T16:13:06.343204",
+  "result": {
+    "success": true,
+    "verdict": "actionable",
+    "period_days": 7,
+    "total_trades": 72,
+    "overall_wr": 58.3,
+    "total_pnl": 271.31,
+    "exp1_baseline": {
+      "total_trades": 72,
+      "wins": 42,
+      "losses": 30,
+      "wr": 58.3,
+      "total_pnl": 271.31,
+      "avg_win": 9.49,
+      "avg_loss": -4.24,
+      "profit_factor": 3.13,
+      "init_equity": 4997.25,
+      "final_equity": 5222.6,
+      "by_direction": {
+        "LONG": {
+          "trades": 42,
+          "wr": 33.3,
+          "pnl": -26.36,
+          "avg_pnl": -0.63
+        },
+        "SHORT": {
+          "trades": 30,
+          "wr": 93.3,
+          "pnl": 297.67,
+          "avg_pnl": 9.92
+        }
+      },
+      "by_score": {
+        "0-2": {
+          "trades": 39,
+          "wr": 71.8,
+          "pnl": 279.6
+        },
+        "2-4": {
+          "trades": 30,
+          "wr": 46.7,
+          "pnl": 1.67
+        },
+        "4-6": {
+          "trades": 3,
+          "wr": 0.0,
+          "pnl": -9.97
+        }
+      }
+    },
+    "exp2_direction": {
+      "analysis": {
+        "LONG": {
+          "avg_entry_score": 1.59,
+          "avg_bars_held": 42.3,
+          "exit_breakdown": {
+            "TP": {
+              "count": 7,
+              "pnl": 72.66
+            },
+            "SIGNAL_FLIP": {
+              "count": 34,
+              "pnl": -99.02
+            },
+            "SL": {
+              "count": 1,
+              "pnl": -0.0
+            }
+          },
+          "best_coins": [
+            [
+              "BEAT",
+              {
+                "trades": 1,
+                "pnl": 23.34
+              }
+            ],
+            [
+              "JCT",
+              {
+                "trades": 1,
+                "pnl": 13.79
+              }
+            ],
+            [
+              "NAORIS",
+              {
+                "trades": 2,
+                "pnl": 10.43
+              }
+            ]
+          ],
+          "worst_coins": [
+            [
+              "PIPPIN",
+              {
+                "trades": 1,
+                "pnl": -38.83
+              }
+            ],
+            [
+              "PIXEL",
+              {
+                "trades": 1,
+                "pnl": -19.75
+              }
+            ],
+            [
+              "DEGO",
+              {
+                "trades": 1,
+                "pnl": -12.81
+              }
+            ]
+          ]
+        },
+        "SHORT": {
+          "avg_entry_score": -3.62,
+          "avg_bars_held": 15.0,
+          "exit_breakdown": {
+            "SL": {
+              "count": 1,
+              "pnl": -0.0
+            },
+            "SL/TP": {
+              "count": 5,
+              "pnl": 130.87
+            },
+            "TP": {
+              "count": 24,
+              "pnl": 166.8
+            }
+          },
+          "best_coins": [
+            [
+              "ARIA",
+              {
+                "trades": 4,
+                "pnl": 132.23
+              }
+            ],
+            [
+              "DEGO",
+              {
+                "trades": 1,
+                "pnl": 17.14
+              }
+            ],
+            [
+              "BANANAS31",
+              {
+                "trades": 1,
+                "pnl": 13.02
+              }
+            ]
+          ],
+          "worst_coins": [
+            [
+              "BTC",
+              {
+                "trades": 1,
+                "pnl": -1.36
+              }
+            ],
+            [
+              "RENDER",
+              {
+                "trades": 1,
+                "pnl": 0.91
+              }
+            ],
+            [
+              "SOL",
+              {
+                "trades": 1,
+                "pnl": 3.72
+              }
+            ]
+          ]
+        }
+      }
+    },
+    "exp3_exits": {
+      "by_reason": {
+        "TP": {
+          "trades": 31,
+          "wins": 31,
+          "pnl": 239.46,
+          "bars_sum": 627,
+          "wr": 100.0,
+          "avg_bars": 20.2,
+          "pct": 43.1
+        },
+        "SL": {
+          "trades": 2,
+          "wins": 0,
+          "pnl": -0.01,
+          "bars_sum": 46,
+          "wr": 0.0,
+          "avg_bars": 23.0,
+          "pct": 2.8
+        },
+        "SIGNAL_FLIP": {
+          "trades": 34,
+          "wins": 7,
+          "pnl": -99.02,
+          "bars_sum": 1531,
+          "wr": 20.6,
+          "avg_bars": 45.0,
+          "pct": 47.2
+        },
+        "SL/TP": {
+          "trades": 5,
+          "wins": 4,
+          "pnl": 130.87,
+          "bars_sum": 23,
+          "wr": 80.0,
+          "avg_bars": 4.6,
+          "pct": 6.9
+        }
+      }
+    },
+    "exp4_worst": {
+      "worst_trades": [
+        {
+          "coin": "PIPPIN",
+          "direction": "LONG",
+          "pnl": -38.83,
+          "entry_time": "2026-03-17T16:47",
+          "exit_time": "2026-03-18T08:02",
+          "exit_reason": "SIGNAL_FLIP",
+          "bars_held": 61,
+          "btc_score": 3.0
+        },
+        {
+          "coin": "PIXEL",
+          "direction": "LONG",
+          "pnl": -19.75,
+          "entry_time": "2026-03-17T16:46",
+          "exit_time": "2026-03-18T08:01",
+          "exit_reason": "SIGNAL_FLIP",
+          "bars_held": 61,
+          "btc_score": 3.0
+        },
+        {
+          "coin": "DEGO",
+          "direction": "LONG",
+          "pnl": -12.81,
+          "entry_time": "2026-03-17T16:47",
+          "exit_time": "2026-03-18T08:03",
+          "exit_reason": "SIGNAL_FLIP",
+          "bars_held": 61,
+          "btc_score": 3.0
+        },
+        {
+          "coin": "ARIA",
+          "direction": "LONG",
+          "pnl": -9.0,
+          "entry_time": "2026-03-17T16:47",
+          "exit_time": "2026-03-18T08:02",
+          "exit_reason": "SIGNAL_FLIP",
+          "bars_held": 61,
+          "btc_score": 3.0
+        },
+        {
+          "coin": "SUI",
+          "direction": "LONG",
+          "pnl": -7.05,
+          "entry_time": "2026-03-18T12:16",
+          "exit_time": "2026-03-18T14:46",
+          "exit_reason": "SIGNAL_FLIP",
+          "bars_held": 11,
+          "btc_score": -3.8
+        }
+      ],
+      "common_direction": "LONG",
+      "common_reason": "SIGNAL_FLIP",
+      "common_coin": "PIPPIN"
+    },
+    "exp5_signals": {
+      "signal_stats": {
+        "total_signals": 3162,
+        "entries": 62,
+        "skips": 110,
+        "holds": 0,
+        "entry_rate": 2.0,
+        "avg_entry_score": -0.28,
+        "avg_skip_score": -2.86,
+        "model_distribution": {
+          "v3": 1938,
+          "v4": 1224
+        }
+      }
+    },
+    "exp6_hours": {
+      "2": {
+        "trades": 1,
+        "wins": 0,
+        "pnl": -4.58,
+        "wr": 0.0
+      },
+      "8": {
+        "trades": 26,
+        "wins": 24,
+        "pnl": 172.69,
+        "wr": 92.3
+      },
+      "9": {
+        "trades": 1,
+        "wins": 1,
+        "pnl": 21.1,
+        "wr": 100.0
+      },
+      "11": {
+        "trades": 1,
+        "wins": 1,
+        "pnl": 39.39,
+        "wr": 100.0
+      },
+      "12": {
+        "trades": 6,
+        "wins": 1,
+        "pnl": 51.54,
+        "wr": 16.7
+      },
+      "13": {
+        "trades": 2,
+        "wins": 1,
+        "pnl": 3.85,
+        "wr": 50.0
+      },
+      "14": {
+        "trades": 1,
+        "wins": 0,
+        "pnl": -3.81,
+        "wr": 0.0
+      },
+      "15": {
+        "trades": 1,
+        "wins": 0,
+        "pnl": -0.58,
+        "wr": 0.0
+      },
+      "16": {
+        "trades": 29,
+        "wins": 14,
+        "pnl": 4.17,
+        "wr": 48.3
+      },
+      "17": {
+        "trades": 2,
+        "wins": 0,
+        "pnl": -3.82,
+        "wr": 0.0
+      },
+      "19": {
+        "trades": 1,
+        "wins": 0,
+        "pnl": -6.15,
+        "wr": 0.0
+      },
+      "22": {
+        "trades": 1,
+        "wins": 0,
+        "pnl": -2.5,
+        "wr": 0.0
+      }
+    },
+    "exp7_coins": {
+      "NAORIS": {
+        "trades": 2,
+        "wins": 1,
+        "pnl": 10.43,
+        "wr": 50.0
+      },
+      "ZRO": {
+        "trades": 3,
+        "wins": 2,
+        "pnl": 14.35,
+        "wr": 66.7
+      },
+      "1000BONK": {
+        "trades": 3,
+        "wins": 1,
+        "pnl": 7.01,
+        "wr": 33.3
+      },
+      "DOT": {
+        "trades": 2,
+        "wins": 2,
+        "pnl": 9.66,
+        "wr": 100.0
+      },
+      "HYPE": {
+        "trades": 2,
+        "wins": 2,
+        "pnl": 12.83,
+        "wr": 100.0
+      },
+      "PENGU": {
+        "trades": 2,
+        "wins": 2,
+        "pnl": 21.2,
+        "wr": 100.0
+      },
+      "1000PEPE": {
+        "trades": 2,
+        "wins": 2,
+        "pnl": 11.99,
+        "wr": 100.0
+      },
+      "BEAT": {
+        "trades": 1,
+        "wins": 1,
+        "pnl": 23.34,
+        "wr": 100.0
+      },
+      "BTC": {
+        "trades": 2,
+        "wins": 0,
+        "pnl": -1.91,
+        "wr": 0.0
+      },
+      "XRP": {
+        "trades": 4,
+        "wins": 1,
+        "pnl": 3.53,
+        "wr": 25.0
+      },
+      "ADA": {
+        "trades": 3,
+        "wins": 1,
+        "pnl": 6.12,
+        "wr": 33.3
+      },
+      "SUI": {
+        "trades": 3,
+        "wins": 1,
+        "pnl": -2.41,
+        "wr": 33.3
+      },
+      "FIL": {
+        "trades": 3,
+        "wins": 3,
+        "pnl": 13.08,
+        "wr": 100.0
+      },
+      "RENDER": {
+        "trades": 3,
+        "wins": 2,
+        "pnl": -2.44,
+        "wr": 66.7
+      },
+      "PIXEL": {
+        "trades": 2,
+        "wins": 1,
+        "pnl": -12.31,
+        "wr": 50.0
+      },
+      "NEAR": {
+        "trades": 2,
+        "wins": 1,
+        "pnl": 0.61,
+        "wr": 50.0
+      },
+      "AXS": {
+        "trades": 3,
+        "wins": 1,
+        "pnl": 1.75,
+        "wr": 33.3
+      },
+      "SOL": {
+        "trades": 3,
+        "wins": 1,
+        "pnl": 1.66,
+        "wr": 33.3
+      },
+      "ETH": {
+        "trades": 3,
+        "wins": 1,
+        "pnl": 3.16,
+        "wr": 33.3
+      },
+      "ARB": {
+        "trades": 2,
+        "wins": 1,
+        "pnl": 5.24,
+        "wr": 50.0
+      },
+      "ARIA": {
+        "trades": 5,
+        "wins": 4,
+        "pnl": 123.23,
+        "wr": 80.0
+      },
+      "BARD": {
+        "trades": 2,
+        "wins": 1,
+        "pnl": 3.21,
+        "wr": 50.0
+      },
+      "BANANAS31": {
+        "trades": 2,
+        "wins": 2,
+        "pnl": 17.89,
+        "wr": 100.0
+      },
+      "PIPPIN": {
+        "trades": 1,
+        "wins": 0,
+        "pnl": -38.83,
+        "wr": 0.0
+      },
+      "OGN": {
+        "trades": 2,
+        "wins": 2,
+        "pnl": 10.68,
+        "wr": 100.0
+      },
+      "SAHARA": {
+        "trades": 1,
+        "wins": 1,
+        "pnl": 1.26,
+        "wr": 100.0
+      },
+      "ASTER": {
+        "trades": 2,
+        "wins": 1,
+        "pnl": 1.75,
+        "wr": 50.0
+      },
+      "LTC": {
+        "trades": 2,
+        "wins": 1,
+        "pnl": 2.73,
+        "wr": 50.0
+      },
+      "JCT": {
+        "trades": 1,
+        "wins": 1,
+        "pnl": 13.79,
+        "wr": 100.0
+      },
+      "DEGO": {
+        "trades": 2,
+        "wins": 1,
+        "pnl": 4.33,
+        "wr": 50.0
+      },
+      "LINK": {
+        "trades": 2,
+        "wins": 1,
+        "pnl": 4.39,
+        "wr": 50.0
+      }
+    },
+    "exp8_equity": {
+      "trend": "improving",
+      "first_half_avg": 0.54,
+      "second_half_avg": 7.0,
+      "period_max_dd": 85.93,
+      "total_equity": 5222.6
+    },
+    "exp9_progress": {},
+    "recommendations": [
+      "LONG WR ต่ำมาก (33.3%) เทียบกับ SHORT (93.3%). พิจารณา: เพิ่ม score threshold สำหรับ LONG หรือ ข้าม LONG ในช่วง BEAR",
+      "SIGNAL_FLIP มี WR แค่ 20.6% (34 เทรด, PnL $-99.02). Signal flip ขาดทุนมาก พิจารณาเพิ่ม hysteresis band",
+      "PIPPIN มี PnL ต่ำสุด ($-38.83, WR 0.0%). พิจารณาถอดออกจากระบบหรือปรับ threshold เฉพาะเหรียญ"
+    ],
+    "strengths": [
+      "FIL: WR 100.0% (3 trades, $13)",
+      "ARIA: WR 80.0% (5 trades, $123)",
+      "SHORT: WR 93.3% (30 trades)"
+    ],
+    "by_direction": {
+      "LONG": {
+        "trades": 42,
+        "wr": 33.3,
+        "pnl": -26.36,
+        "avg_pnl": -0.63
+      },
+      "SHORT": {
+        "trades": 30,
+        "wr": 93.3,
+        "pnl": 297.67,
+        "avg_pnl": 9.92
+      }
+    },
+    "by_score": {
+      "0-2": {
+        "trades": 39,
+        "wr": 71.8,
+        "pnl": 279.6
+      },
+      "2-4": {
+        "trades": 30,
+        "wr": 46.7,
+        "pnl": 1.67
+      },
+      "4-6": {
+        "trades": 3,
+        "wr": 0.0,
+        "pnl": -9.97
+      }
+    },
+    "by_hour": {
+      "2": {
+        "trades": 1,
+        "wins": 0,
+        "pnl": -4.58,
+        "wr": 0.0
+      },
+      "8": {
+        "trades": 26,
+        "wins": 24,
+        "pnl": 172.69,
+        "wr": 92.3
+      },
+      "9": {
+        "trades": 1,
+        "wins": 1,
+        "pnl": 21.1,
+        "wr": 100.0
+      },
+      "11": {
+        "trades": 1,
+        "wins": 1,
+        "pnl": 39.39,
+        "wr": 100.0
+      },
+      "12": {
+        "trades": 6,
+        "wins": 1,
+        "pnl": 51.54,
+        "wr": 16.7
+      },
+      "13": {
+        "trades": 2,
+        "wins": 1,
+        "pnl": 3.85,
+        "wr": 50.0
+      },
+      "14": {
+        "trades": 1,
+        "wins": 0,
+        "pnl": -3.81,
+        "wr": 0.0
+      },
+      "15": {
+        "trades": 1,
+        "wins": 0,
+        "pnl": -0.58,
+        "wr": 0.0
+      },
+      "16": {
+        "trades": 29,
+        "wins": 14,
+        "pnl": 4.17,
+        "wr": 48.3
+      },
+      "17": {
+        "trades": 2,
+        "wins": 0,
+        "pnl": -3.82,
+        "wr": 0.0
+      },
+      "19": {
+        "trades": 1,
+        "wins": 0,
+        "pnl": -6.15,
+        "wr": 0.0
+      },
+      "22": {
+        "trades": 1,
+        "wins": 0,
+        "pnl": -2.5,
+        "wr": 0.0
+      }
+    },
+    "by_coin": {
+      "NAORIS": {
+        "trades": 2,
+        "wins": 1,
+        "pnl": 10.43,
+        "wr": 50.0
+      },
+      "ZRO": {
+        "trades": 3,
+        "wins": 2,
+        "pnl": 14.35,
+        "wr": 66.7
+      },
+      "1000BONK": {
+        "trades": 3,
+        "wins": 1,
+        "pnl": 7.01,
+        "wr": 33.3
+      },
+      "DOT": {
+        "trades": 2,
+        "wins": 2,
+        "pnl": 9.66,
+        "wr": 100.0
+      },
+      "HYPE": {
+        "trades": 2,
+        "wins": 2,
+        "pnl": 12.83,
+        "wr": 100.0
+      },
+      "PENGU": {
+        "trades": 2,
+        "wins": 2,
+        "pnl": 21.2,
+        "wr": 100.0
+      },
+      "1000PEPE": {
+        "trades": 2,
+        "wins": 2,
+        "pnl": 11.99,
+        "wr": 100.0
+      },
+      "BEAT": {
+        "trades": 1,
+        "wins": 1,
+        "pnl": 23.34,
+        "wr": 100.0
+      },
+      "BTC": {
+        "trades": 2,
+        "wins": 0,
+        "pnl": -1.91,
+        "wr": 0.0
+      },
+      "XRP": {
+        "trades": 4,
+        "wins": 1,
+        "pnl": 3.53,
+        "wr": 25.0
+      },
+      "ADA": {
+        "trades": 3,
+        "wins": 1,
+        "pnl": 6.12,
+        "wr": 33.3
+      },
+      "SUI": {
+        "trades": 3,
+        "wins": 1,
+        "pnl": -2.41,
+        "wr": 33.3
+      },
+      "FIL": {
+        "trades": 3,
+        "wins": 3,
+        "pnl": 13.08,
+        "wr": 100.0
+      },
+      "RENDER": {
+        "trades": 3,
+        "wins": 2,
+        "pnl": -2.44,
+        "wr": 66.7
+      },
+      "PIXEL": {
+        "trades": 2,
+        "wins": 1,
+        "pnl": -12.31,
+        "wr": 50.0
+      },
+      "NEAR": {
+        "trades": 2,
+        "wins": 1,
+        "pnl": 0.61,
+        "wr": 50.0
+      },
+      "AXS": {
+        "trades": 3,
+        "wins": 1,
+        "pnl": 1.75,
+        "wr": 33.3
+      },
+      "SOL": {
+        "trades": 3,
+        "wins": 1,
+        "pnl": 1.66,
+        "wr": 33.3
+      },
+      "ETH": {
+        "trades": 3,
+        "wins": 1,
+        "pnl": 3.16,
+        "wr": 33.3
+      },
+      "ARB": {
+        "trades": 2,
+        "wins": 1,
+        "pnl": 5.24,
+        "wr": 50.0
+      },
+      "ARIA": {
+        "trades": 5,
+        "wins": 4,
+        "pnl": 123.23,
+        "wr": 80.0
+      },
+      "BARD": {
+        "trades": 2,
+        "wins": 1,
+        "pnl": 3.21,
+        "wr": 50.0
+      },
+      "BANANAS31": {
+        "trades": 2,
+        "wins": 2,
+        "pnl": 17.89,
+        "wr": 100.0
+      },
+      "PIPPIN": {
+        "trades": 1,
+        "wins": 0,
+        "pnl": -38.83,
+        "wr": 0.0
+      },
+      "OGN": {
+        "trades": 2,
+        "wins": 2,
+        "pnl": 10.68,
+        "wr": 100.0
+      },
+      "SAHARA": {
+        "trades": 1,
+        "wins": 1,
+        "pnl": 1.26,
+        "wr": 100.0
+      },
+      "ASTER": {
+        "trades": 2,
+        "wins": 1,
+        "pnl": 1.75,
+        "wr": 50.0
+      },
+      "LTC": {
+        "trades": 2,
+        "wins": 1,
+        "pnl": 2.73,
+        "wr": 50.0
+      },
+      "JCT": {
+        "trades": 1,
+        "wins": 1,
+        "pnl": 13.79,
+        "wr": 100.0
+      },
+      "DEGO": {
+        "trades": 2,
+        "wins": 1,
+        "pnl": 4.33,
+        "wr": 50.0
+      },
+      "LINK": {
+        "trades": 2,
+        "wins": 1,
+        "pnl": 4.39,
+        "wr": 50.0
+      }
+    },
+    "by_exit_reason": {
+      "TP": {
+        "trades": 31,
+        "wr": 100.0,
+        "pnl": 239.46
+      },
+      "SL": {
+        "trades": 2,
+        "wr": 0.0,
+        "pnl": -0.01
+      },
+      "SIGNAL_FLIP": {
+        "trades": 34,
+        "wr": 20.6,
+        "pnl": -99.02
+      },
+      "SL/TP": {
+        "trades": 5,
+        "wr": 80.0,
+        "pnl": 130.87
+      }
+    },
+    "losing_patterns": [
+      "LONG WR ต่ำมาก (33",
+      "SIGNAL_FLIP มี WR แค่ 20",
+      "PIPPIN มี PnL ต่ำสุด ($-38"
+    ],
+    "winning_patterns": [
+      "FIL: WR 100.0% (3 trades, $13)",
+      "ARIA: WR 80.0% (5 trades, $123)",
+      "SHORT: WR 93.3% (30 trades)"
+    ]
+  },
+  "insight": "7 วันล่าสุด: 72 เทรด WR 58.3% PnL $271. ปัญหา: LONG WR ต่ำมาก (33. แนะนำ: LONG WR ต่ำมาก (33.3%) เทียบกับ SHORT (93.3%). พิจารณา: เพิ่ม score threshold สำหรับ LONG หรือ ข้าม LONG ในช่วง BEAR",
+  "tags": [
+    "trade_analysis",
+    "analysis"
+  ]
+}

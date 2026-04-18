@@ -1,0 +1,510 @@
+{
+  "timestamp": "2026-03-17T09:52:04.863412",
+  "test": "hysteresis_anti_whipsaw",
+  "test_period": "2026-01-01 00:00:00 to present (OOS)",
+  "scoring": "v3 (aligned with paper trading)",
+  "coins": [
+    "BTC",
+    "XRP",
+    "ADA",
+    "DOT",
+    "SUI",
+    "FIL"
+  ],
+  "per_coin_thresholds": {
+    "BTC": 2.5,
+    "XRP": 3.5,
+    "ADA": 3.5,
+    "DOT": 3.0,
+    "SUI": 3.0,
+    "FIL": 3.0
+  },
+  "experiments": {
+    "1_baseline": {
+      "description": "Baseline (no hysteresis, exit_thr = entry_thr)",
+      "regime_metrics": {
+        "BULL": {
+          "n": 182,
+          "wr": 63.2,
+          "pnl": 2120.0,
+          "sharpe": 4.65,
+          "max_dd": -0.9,
+          "long_wr": 46.7,
+          "short_wr": 71.3,
+          "n_long": 60,
+          "n_short": 122
+        },
+        "BEAR": {
+          "n": 406,
+          "wr": 64.5,
+          "pnl": 8310.0,
+          "sharpe": 9.51,
+          "max_dd": -1.3,
+          "long_wr": 57.6,
+          "short_wr": 69.9,
+          "n_long": 177,
+          "n_short": 229
+        },
+        "FLAT": {
+          "n": 240,
+          "wr": 63.3,
+          "pnl": 3691.0,
+          "sharpe": 6.43,
+          "max_dd": -1.6,
+          "long_wr": 68.5,
+          "short_wr": 57.5,
+          "n_long": 127,
+          "n_short": 113
+        },
+        "ALL": {
+          "n": 828,
+          "wr": 63.9,
+          "pnl": 14121.0,
+          "sharpe": 12.34,
+          "max_dd": -1.1,
+          "long_wr": 59.6,
+          "short_wr": 67.2,
+          "n_long": 364,
+          "n_short": 464
+        }
+      },
+      "whipsaw_metrics": {
+        "whipsaw_count": 36,
+        "avg_hold_bars": 23.2,
+        "avg_hold_min": 348.0,
+        "exit_breakdown": {
+          "SL": {
+            "count": 227,
+            "pnl": -7239.45,
+            "wr": 0.0
+          },
+          "TP": {
+            "count": 404,
+            "pnl": 19323.5,
+            "wr": 100.0
+          },
+          "TRAIL": {
+            "count": 0,
+            "pnl": 0,
+            "wr": 0
+          },
+          "SIGNAL_FLIP": {
+            "count": 185,
+            "pnl": 1827.96,
+            "wr": 62.7
+          },
+          "TIMEOUT": {
+            "count": 12,
+            "pnl": 208.9,
+            "wr": 75.0
+          }
+        }
+      }
+    },
+    "2_hyst_1.0": {
+      "description": "Hysteresis -1.0 (exit_thr = T - 1.0)",
+      "regime_metrics": {
+        "BULL": {
+          "n": 181,
+          "wr": 63.5,
+          "pnl": 2086.0,
+          "sharpe": 4.58,
+          "max_dd": -0.9,
+          "long_wr": 47.5,
+          "short_wr": 71.3,
+          "n_long": 59,
+          "n_short": 122
+        },
+        "BEAR": {
+          "n": 419,
+          "wr": 65.4,
+          "pnl": 8741.0,
+          "sharpe": 9.8,
+          "max_dd": -1.3,
+          "long_wr": 58.3,
+          "short_wr": 70.7,
+          "n_long": 180,
+          "n_short": 239
+        },
+        "FLAT": {
+          "n": 259,
+          "wr": 62.2,
+          "pnl": 3814.0,
+          "sharpe": 6.19,
+          "max_dd": -1.5,
+          "long_wr": 66.2,
+          "short_wr": 57.0,
+          "n_long": 145,
+          "n_short": 114
+        },
+        "ALL": {
+          "n": 859,
+          "wr": 64.0,
+          "pnl": 14640.0,
+          "sharpe": 12.41,
+          "max_dd": -1.1,
+          "long_wr": 59.6,
+          "short_wr": 67.6,
+          "n_long": 384,
+          "n_short": 475
+        }
+      },
+      "whipsaw_metrics": {
+        "whipsaw_count": 44,
+        "avg_hold_bars": 23.0,
+        "avg_hold_min": 345.0,
+        "exit_breakdown": {
+          "SL": {
+            "count": 236,
+            "pnl": -7627.48,
+            "wr": 0.0
+          },
+          "TP": {
+            "count": 417,
+            "pnl": 20182.5,
+            "wr": 100.0
+          },
+          "TRAIL": {
+            "count": 0,
+            "pnl": 0,
+            "wr": 0
+          },
+          "SIGNAL_FLIP": {
+            "count": 194,
+            "pnl": 1875.99,
+            "wr": 63.9
+          },
+          "TIMEOUT": {
+            "count": 12,
+            "pnl": 208.9,
+            "wr": 75.0
+          }
+        }
+      }
+    },
+    "3_hyst_1.5": {
+      "description": "Hysteresis -1.5 (exit_thr = T - 1.5)",
+      "regime_metrics": {
+        "BULL": {
+          "n": 187,
+          "wr": 64.2,
+          "pnl": 2256.0,
+          "sharpe": 4.91,
+          "max_dd": -0.9,
+          "long_wr": 47.6,
+          "short_wr": 72.6,
+          "n_long": 63,
+          "n_short": 124
+        },
+        "BEAR": {
+          "n": 433,
+          "wr": 64.7,
+          "pnl": 8776.0,
+          "sharpe": 9.67,
+          "max_dd": -1.3,
+          "long_wr": 57.4,
+          "short_wr": 70.2,
+          "n_long": 188,
+          "n_short": 245
+        },
+        "FLAT": {
+          "n": 265,
+          "wr": 62.3,
+          "pnl": 3944.0,
+          "sharpe": 6.35,
+          "max_dd": -1.5,
+          "long_wr": 66.2,
+          "short_wr": 57.0,
+          "n_long": 151,
+          "n_short": 114
+        },
+        "ALL": {
+          "n": 885,
+          "wr": 63.8,
+          "pnl": 14976.0,
+          "sharpe": 12.53,
+          "max_dd": -1.1,
+          "long_wr": 59.2,
+          "short_wr": 67.7,
+          "n_long": 402,
+          "n_short": 483
+        }
+      },
+      "whipsaw_metrics": {
+        "whipsaw_count": 49,
+        "avg_hold_bars": 22.6,
+        "avg_hold_min": 339.0,
+        "exit_breakdown": {
+          "SL": {
+            "count": 242,
+            "pnl": -7839.19,
+            "wr": 0.0
+          },
+          "TP": {
+            "count": 428,
+            "pnl": 20730.3,
+            "wr": 100.0
+          },
+          "TRAIL": {
+            "count": 0,
+            "pnl": 0,
+            "wr": 0
+          },
+          "SIGNAL_FLIP": {
+            "count": 203,
+            "pnl": 1875.73,
+            "wr": 63.1
+          },
+          "TIMEOUT": {
+            "count": 12,
+            "pnl": 208.9,
+            "wr": 75.0
+          }
+        }
+      }
+    },
+    "4_hyst_2.0": {
+      "description": "Hysteresis -2.0 (exit_thr = T - 2.0)",
+      "regime_metrics": {
+        "BULL": {
+          "n": 195,
+          "wr": 63.6,
+          "pnl": 2404.0,
+          "sharpe": 5.1,
+          "max_dd": -0.9,
+          "long_wr": 46.3,
+          "short_wr": 72.7,
+          "n_long": 67,
+          "n_short": 128
+        },
+        "BEAR": {
+          "n": 448,
+          "wr": 62.3,
+          "pnl": 7901.0,
+          "sharpe": 8.38,
+          "max_dd": -1.3,
+          "long_wr": 54.9,
+          "short_wr": 68.0,
+          "n_long": 195,
+          "n_short": 253
+        },
+        "FLAT": {
+          "n": 265,
+          "wr": 62.3,
+          "pnl": 3944.0,
+          "sharpe": 6.35,
+          "max_dd": -1.5,
+          "long_wr": 66.2,
+          "short_wr": 57.0,
+          "n_long": 151,
+          "n_short": 114
+        },
+        "ALL": {
+          "n": 908,
+          "wr": 62.6,
+          "pnl": 14249.0,
+          "sharpe": 11.64,
+          "max_dd": -1.1,
+          "long_wr": 57.6,
+          "short_wr": 66.7,
+          "n_long": 413,
+          "n_short": 495
+        }
+      },
+      "whipsaw_metrics": {
+        "whipsaw_count": 51,
+        "avg_hold_bars": 22.5,
+        "avg_hold_min": 337.0,
+        "exit_breakdown": {
+          "SL": {
+            "count": 260,
+            "pnl": -8590.55,
+            "wr": 0.0
+          },
+          "TP": {
+            "count": 427,
+            "pnl": 20627.22,
+            "wr": 100.0
+          },
+          "TRAIL": {
+            "count": 0,
+            "pnl": 0,
+            "wr": 0
+          },
+          "SIGNAL_FLIP": {
+            "count": 208,
+            "pnl": 1825.33,
+            "wr": 62.0
+          },
+          "TIMEOUT": {
+            "count": 13,
+            "pnl": 387.05,
+            "wr": 92.3
+          }
+        }
+      }
+    },
+    "5_exit_at_zero": {
+      "description": "Exit at zero (exit_thr = 0.0, only exit when score crosses zero)",
+      "regime_metrics": {
+        "BULL": {
+          "n": 206,
+          "wr": 62.6,
+          "pnl": 2450.0,
+          "sharpe": 4.91,
+          "max_dd": -1.0,
+          "long_wr": 45.1,
+          "short_wr": 71.9,
+          "n_long": 71,
+          "n_short": 135
+        },
+        "BEAR": {
+          "n": 504,
+          "wr": 59.3,
+          "pnl": 8001.0,
+          "sharpe": 7.88,
+          "max_dd": -1.3,
+          "long_wr": 51.8,
+          "short_wr": 65.0,
+          "n_long": 218,
+          "n_short": 286
+        },
+        "FLAT": {
+          "n": 316,
+          "wr": 65.2,
+          "pnl": 5345.0,
+          "sharpe": 7.71,
+          "max_dd": -1.4,
+          "long_wr": 67.6,
+          "short_wr": 61.7,
+          "n_long": 188,
+          "n_short": 128
+        },
+        "ALL": {
+          "n": 1026,
+          "wr": 61.8,
+          "pnl": 15795.0,
+          "sharpe": 11.9,
+          "max_dd": -1.2,
+          "long_wr": 57.0,
+          "short_wr": 65.9,
+          "n_long": 477,
+          "n_short": 549
+        }
+      },
+      "whipsaw_metrics": {
+        "whipsaw_count": 62,
+        "avg_hold_bars": 22.8,
+        "avg_hold_min": 342.0,
+        "exit_breakdown": {
+          "SL": {
+            "count": 291,
+            "pnl": -9698.28,
+            "wr": 0.0
+          },
+          "TP": {
+            "count": 474,
+            "pnl": 23503.09,
+            "wr": 100.0
+          },
+          "TRAIL": {
+            "count": 0,
+            "pnl": 0,
+            "wr": 0
+          },
+          "SIGNAL_FLIP": {
+            "count": 248,
+            "pnl": 1625.88,
+            "wr": 59.7
+          },
+          "TIMEOUT": {
+            "count": 13,
+            "pnl": 364.22,
+            "wr": 92.3
+          }
+        }
+      }
+    },
+    "6_hyst_50pct": {
+      "description": "Hysteresis 50% (exit_thr = T * 0.5)",
+      "regime_metrics": {
+        "BULL": {
+          "n": 188,
+          "wr": 63.3,
+          "pnl": 2245.0,
+          "sharpe": 4.84,
+          "max_dd": -0.9,
+          "long_wr": 46.8,
+          "short_wr": 71.4,
+          "n_long": 62,
+          "n_short": 126
+        },
+        "BEAR": {
+          "n": 439,
+          "wr": 64.5,
+          "pnl": 8761.0,
+          "sharpe": 9.57,
+          "max_dd": -1.3,
+          "long_wr": 56.3,
+          "short_wr": 70.7,
+          "n_long": 190,
+          "n_short": 249
+        },
+        "FLAT": {
+          "n": 265,
+          "wr": 62.3,
+          "pnl": 3944.0,
+          "sharpe": 6.35,
+          "max_dd": -1.5,
+          "long_wr": 66.2,
+          "short_wr": 57.0,
+          "n_long": 151,
+          "n_short": 114
+        },
+        "ALL": {
+          "n": 892,
+          "wr": 63.6,
+          "pnl": 14950.0,
+          "sharpe": 12.43,
+          "max_dd": -1.1,
+          "long_wr": 58.6,
+          "short_wr": 67.7,
+          "n_long": 403,
+          "n_short": 489
+        }
+      },
+      "whipsaw_metrics": {
+        "whipsaw_count": 47,
+        "avg_hold_bars": 22.5,
+        "avg_hold_min": 338.0,
+        "exit_breakdown": {
+          "SL": {
+            "count": 246,
+            "pnl": -8006.57,
+            "wr": 0.0
+          },
+          "TP": {
+            "count": 430,
+            "pnl": 20840.97,
+            "wr": 100.0
+          },
+          "TRAIL": {
+            "count": 0,
+            "pnl": 0,
+            "wr": 0
+          },
+          "SIGNAL_FLIP": {
+            "count": 204,
+            "pnl": 1906.23,
+            "wr": 62.7
+          },
+          "TIMEOUT": {
+            "count": 12,
+            "pnl": 208.9,
+            "wr": 75.0
+          }
+        }
+      }
+    }
+  }
+}

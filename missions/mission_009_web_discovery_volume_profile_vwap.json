@@ -1,0 +1,82 @@
+{
+  "mission_id": "mission_009_web_discovery_volume_profile_vwap",
+  "date": "2026-03-18",
+  "type": "web_discovery",
+  "category": "discovery",
+  "title": "Discovery: volume_profile_vwap",
+  "description": "ค้นหาไอเดียเทรดใหม่จากอินเทอร์เน็ต: volume_profile_vwap",
+  "difficulty": "hard",
+  "xp_reward": 70,
+  "status": "completed",
+  "target": "volume_profile_vwap",
+  "started_at": "2026-03-18T16:13:06.343204",
+  "finished_at": "2026-03-18T16:13:08.529294",
+  "result": {
+    "success": true,
+    "verdict": "not_significant",
+    "topic": "volume_profile_vwap",
+    "search_query": "VWAP deviation crypto futures alpha strategy 2026",
+    "hypothesis": "Price deviation from VWAP predicts mean reversion on 15m timeframe",
+    "search_results": [
+      {
+        "title": "Best Alpha Futures Strategy to Actually Get Consistent Payouts (2026)",
+        "snippet": "The strategy I use to pass Alpha Futures evaluations and pull consistent payouts — VWAP setups, session timing, and position sizing tailored to Alpha.",
+        "url": "https://www.proptradingvibes.com/blog/best-alpha-futures-strategy"
+      },
+      {
+        "title": "VWAP Scalping Strategy for High Volatility Crypto Markets 2026",
+        "snippet": "Meta Description: Master VWAP scalping in crypto&#x27;s volatile markets. Learn institutional-grade execution, optimal entry/exit rules, and risk management for consistent 1-3% daily gains. Target Keywords: VWAP scalping crypto, volume weighted average price strategy, crypto scalping 2026",
+        "url": "https://www.livevolatile.com/blog/vwap-scalping-strategy-crypto-2026"
+      },
+      {
+        "title": "VWAP Trading Strategy That Actually Works in 2026 | FibAlgo",
+        "snippet": "VWAP Trading Strategy That Actually Works in 2026 Master VWAP trading with 3 high-probability setups, sector-specific adjustments, and the institutional benchmark framework professional traders use daily.",
+        "url": "https://fibalgo.com/education/vwap-trading-strategy-institutional-benchmark"
+      },
+      {
+        "title": "What you need to know about crypto vwap orders in 2026",
+        "snippet": "Conclusion A VWAP order is an execution strategy that aims to match the market&#x27;s volume‑weighted average price by slicing a large order into smaller trades across time. In crypto, it helps traders and institutions move size through fragmented markets with more predictable impact and a clear ben",
+        "url": "https://cow.fi/learn/what-you-need-to-know-about-crypto-vwap-orders-in-2026"
+      },
+      {
+        "title": "Mastering VWAP in Crypto Trading - hyrotrader.com",
+        "snippet": "Seasoned crypto traders incorporate VWAP into their strategies to fine-tune trade entries, exits, and overall market bias. Because VWAP represents an average price weighted by volume, it acts as an &quot;equilibrium&quot; level for the day. Many intraday crypto strategies evolve around the VWAP line",
+        "url": "https://www.hyrotrader.com/blog/vwap-trading-strategy/"
+      }
+    ],
+    "proxy_test": {
+      "tested": true,
+      "method": "Computed rolling 96-bar (24h) VWAP, measured deviation vs next-bar return (mean reversion hypothesis)",
+      "data_source": "BTC 15m OHLCV (2250 candles, 30 days)",
+      "n_signals": 2153,
+      "correlation": 0.0031,
+      "hit_rate": 51.4,
+      "bull_signals": 775,
+      "bull_hit_rate": 52.0,
+      "bull_avg_return_bps": 0.16,
+      "bear_signals": 803,
+      "bear_hit_rate": 50.7,
+      "bear_avg_return_bps": -0.56,
+      "conclusion": "VWAP deviation correlation = 0.0031. Buy-below-VWAP: HR 52.0% (775 signals, avg 0.16 bps). Sell-above-VWAP: HR 50.7% (803 signals, avg -0.56 bps). สัญญาณอ่อน ยังไม่พร้อมเป็น factor"
+    },
+    "data_availability": {
+      "needed": "BTC 15m OHLCV",
+      "source": "market_data.index_price_klines / Binance API",
+      "available": true
+    },
+    "next_steps": [
+      "ผลเบื้องต้นยังไม่ชัด (hit rate 51.4%)",
+      "ปรับ parameter (threshold, lookback window) แล้วทดสอบใหม่",
+      "เก็บข้อมูลเพิ่ม 2 สัปดาห์แล้ว retest",
+      "ทดสอบบน alt coins ด้วย (ไม่ใช่แค่ BTC)"
+    ],
+    "n_results": 5,
+    "summary": "ค้นพบ 5 แหล่ง. Proxy test: ผ่าน. Verdict: not_significant",
+    "proposed_test": "1. ผลเบื้องต้นยังไม่ชัด (hit rate 51.4%)\n2. ปรับ parameter (threshold, lookback window) แล้วทดสอบใหม่\n3. เก็บข้อมูลเพิ่ม 2 สัปดาห์แล้ว retest\n4. ทดสอบบน alt coins ด้วย (ไม่ใช่แค่ BTC)"
+  },
+  "insight": "ไอเดียจาก volume_profile_vwap: พบ 5 แหล่ง. Price deviation from VWAP predicts mean reversion on 15m timeframe",
+  "tags": [
+    "web_discovery",
+    "discovery"
+  ]
+}

@@ -1,0 +1,1316 @@
+{
+  "experiment_id": "mega_discovery_20260309_0952",
+  "date": "2026-03-09 09:52",
+  "description": "Mega factor discovery: ablation + stepwise + from-scratch + 5m test",
+  "runtime_seconds": 211,
+  "test_period": "2026-01-01 to 2026-03-08",
+  "leverage": 2.0,
+  "phase1_ablation": {
+    "baseline_pnl": 7485.57,
+    "results": {
+      "oi_divergence": {
+        "pnl_without": 7498.91,
+        "delta": 13.34,
+        "trades": 693
+      },
+      "taker_ratio": {
+        "pnl_without": 6688.67,
+        "delta": -796.9,
+        "trades": 337
+      },
+      "ls_ratio": {
+        "pnl_without": 5824.45,
+        "delta": -1661.12,
+        "trades": 661
+      },
+      "funding_rate": {
+        "pnl_without": 6108.58,
+        "delta": -1376.99,
+        "trades": 712
+      },
+      "fear_greed": {
+        "pnl_without": 8697.1,
+        "delta": 1211.53,
+        "trades": 607
+      },
+      "whale_alerts": {
+        "pnl_without": 7360.55,
+        "delta": -125.02,
+        "trades": 716
+      },
+      "liquidation": {
+        "pnl_without": 4393.75,
+        "delta": -3091.82,
+        "trades": 585
+      },
+      "etf_flows": {
+        "pnl_without": 5004.04,
+        "delta": -2481.53,
+        "trades": 648
+      }
+    },
+    "factors_dropped": [
+      "fear_greed"
+    ],
+    "improved_core": [
+      "oi_divergence",
+      "taker_ratio",
+      "ls_ratio",
+      "funding_rate",
+      "whale_alerts",
+      "liquidation",
+      "etf_flows"
+    ],
+    "improved_pnl": 8697.1
+  },
+  "phase2_stepwise": {
+    "starting_pnl": 8697.1,
+    "final_pnl": 13256.43,
+    "selected_extras": [
+      {
+        "name": "ob_combined",
+        "weight": 2.0,
+        "improvement": 3490.62
+      },
+      {
+        "name": "ob_vol_contrarian",
+        "weight": 0.5,
+        "improvement": 695.2
+      },
+      {
+        "name": "ob_contrarian",
+        "weight": 0.5,
+        "improvement": 373.51
+      }
+    ],
+    "step_log": [
+      {
+        "step": 1,
+        "results": [
+          [
+            "ob_combined",
+            2.0,
+            12187.72,
+            3490.62
+          ],
+          [
+            "ob_vol_contrarian",
+            2.0,
+            11433.69,
+            2736.59
+          ],
+          [
+            "tick_liq",
+            2.0,
+            9952.1,
+            1255.0
+          ],
+          [
+            "ob_contrarian",
+            1.5,
+            9658.14,
+            961.04
+          ],
+          [
+            "news_contrarian",
+            1.5,
+            8911.11,
+            214.01
+          ],
+          [
+            "displacement",
+            0.5,
+            8846.11,
+            149.01
+          ],
+          [
+            "basis_contrarian",
+            1.0,
+            8839.23,
+            142.13
+          ],
+          [
+            "news_directional",
+            0.5,
+            8632.33,
+            -64.77
+          ],
+          [
+            "fvg",
+            0.5,
+            8254.93,
+            -442.17
+          ],
+          [
+            "sweep",
+            0.5,
+            7501.35,
+            -1195.75
+          ],
+          [
+            "basis_momentum",
+            0.5,
+            7464.28,
+            -1232.82
+          ]
+        ],
+        "selected": "ob_combined",
+        "selected_weight": 2.0
+      },
+      {
+        "step": 2,
+        "results": [
+          [
+            "ob_vol_contrarian",
+            0.5,
+            12882.92,
+            695.2
+          ],
+          [
+            "tick_liq",
+            1.5,
+            12804.59,
+            616.87
+          ],
+          [
+            "basis_contrarian",
+            0.5,
+            12404.24,
+            216.52
+          ],
+          [
+            "basis_momentum",
+            0.5,
+            12389.36,
+            201.64
+          ],
+          [
+            "news_contrarian",
+            0.5,
+            12187.72,
+            0.0
+          ],
+          [
+            "news_directional",
+            1.5,
+            12169.05,
+            -18.67
+          ],
+          [
+            "sweep",
+            0.5,
+            12092.56,
+            -95.16
+          ],
+          [
+            "ob_contrarian",
+            1.0,
+            12000.88,
+            -186.84
+          ],
+          [
+            "displacement",
+            0.5,
+            11485.48,
+            -702.24
+          ],
+          [
+            "fvg",
+            0.5,
+            11311.85,
+            -875.87
+          ]
+        ],
+        "selected": "ob_vol_contrarian",
+        "selected_weight": 0.5
+      },
+      {
+        "step": 3,
+        "results": [
+          [
+            "ob_contrarian",
+            0.5,
+            13256.43,
+            373.51
+          ],
+          [
+            "basis_contrarian",
+            0.5,
+            13171.79,
+            288.87
+          ],
+          [
+            "tick_liq",
+            2.0,
+            12997.27,
+            114.35
+          ],
+          [
+            "news_contrarian",
+            0.5,
+            12882.92,
+            0.0
+          ],
+          [
+            "news_directional",
+            1.5,
+            12873.34,
+            -9.58
+          ],
+          [
+            "sweep",
+            1.0,
+            12705.9,
+            -177.02
+          ],
+          [
+            "fvg",
+            0.5,
+            12477.15,
+            -405.77
+          ],
+          [
+            "displacement",
+            0.5,
+            11731.45,
+            -1151.47
+          ],
+          [
+            "basis_momentum",
+            0.5,
+            11296.41,
+            -1586.51
+          ]
+        ],
+        "selected": "ob_contrarian",
+        "selected_weight": 0.5
+      },
+      {
+        "step": 4,
+        "results": [
+          [
+            "news_contrarian",
+            0.5,
+            13256.43,
+            0.0
+          ],
+          [
+            "basis_contrarian",
+            1.0,
+            13243.19,
+            -13.24
+          ],
+          [
+            "sweep",
+            1.0,
+            13237.58,
+            -18.85
+          ],
+          [
+            "tick_liq",
+            2.0,
+            13222.71,
+            -33.72
+          ],
+          [
+            "news_directional",
+            1.5,
+            13035.21,
+            -221.22
+          ],
+          [
+            "displacement",
+            0.5,
+            12118.39,
+            -1138.04
+          ],
+          [
+            "fvg",
+            0.5,
+            11876.95,
+            -1379.48
+          ],
+          [
+            "basis_momentum",
+            0.5,
+            11450.35,
+            -1806.08
+          ]
+        ],
+        "selected": null,
+        "selected_weight": null
+      }
+    ]
+  },
+  "phase3_scratch": {
+    "final_pnl": 18055.84,
+    "selected_factors": [
+      {
+        "name": "liquidation",
+        "weight": 2.0,
+        "improvement": 10836.9
+      },
+      {
+        "name": "funding_rate",
+        "weight": 2.0,
+        "improvement": 1217.62
+      },
+      {
+        "name": "ob_combined",
+        "weight": 2.0,
+        "improvement": 1274.05
+      },
+      {
+        "name": "etf_flows",
+        "weight": 1.0,
+        "improvement": 1653.63
+      },
+      {
+        "name": "basis_contrarian",
+        "weight": 1.5,
+        "improvement": 1708.6
+      },
+      {
+        "name": "tick_liq",
+        "weight": 2.0,
+        "improvement": 657.41
+      },
+      {
+        "name": "oi_divergence",
+        "weight": 0.5,
+        "improvement": 493.42
+      },
+      {
+        "name": "whale_alerts",
+        "weight": 1.5,
+        "improvement": 214.21
+      }
+    ],
+    "step_log": [
+      {
+        "step": 1,
+        "results": [
+          [
+            "liquidation",
+            2.0,
+            10836.9,
+            10836.9
+          ],
+          [
+            "ob_combined",
+            2.0,
+            6613.82,
+            6613.82
+          ],
+          [
+            "ob_vol_contrarian",
+            2.0,
+            4140.52,
+            4140.52
+          ],
+          [
+            "etf_flows",
+            2.0,
+            3378.76,
+            3378.76
+          ],
+          [
+            "ls_ratio",
+            2.0,
+            2353.45,
+            2353.45
+          ],
+          [
+            "basis_momentum",
+            2.0,
+            2109.03,
+            2109.03
+          ],
+          [
+            "basis_contrarian",
+            2.0,
+            1397.72,
+            1397.72
+          ],
+          [
+            "funding_rate",
+            2.0,
+            1158.86,
+            1158.86
+          ],
+          [
+            "fvg",
+            2.0,
+            628.5,
+            628.5
+          ],
+          [
+            "ob_contrarian",
+            2.0,
+            403.54,
+            403.54
+          ],
+          [
+            "tick_liq",
+            2.0,
+            380.61,
+            380.61
+          ],
+          [
+            "whale_alerts",
+            2.0,
+            196.22,
+            196.22
+          ],
+          [
+            "taker_ratio",
+            1.5,
+            52.65,
+            52.65
+          ],
+          [
+            "oi_divergence",
+            0.5,
+            0,
+            0
+          ],
+          [
+            "fear_greed",
+            0.5,
+            0,
+            0
+          ],
+          [
+            "news_directional",
+            0.5,
+            0,
+            0
+          ],
+          [
+            "news_contrarian",
+            0.5,
+            0,
+            0
+          ],
+          [
+            "displacement",
+            0.5,
+            0,
+            0
+          ],
+          [
+            "sweep",
+            0.5,
+            0,
+            0
+          ]
+        ],
+        "selected": "liquidation",
+        "selected_weight": 2.0
+      },
+      {
+        "step": 2,
+        "results": [
+          [
+            "funding_rate",
+            2.0,
+            12054.52,
+            1217.62
+          ],
+          [
+            "ob_combined",
+            2.0,
+            11910.82,
+            1073.92
+          ],
+          [
+            "taker_ratio",
+            1.0,
+            11014.73,
+            177.83
+          ],
+          [
+            "tick_liq",
+            2.0,
+            10961.71,
+            124.81
+          ],
+          [
+            "ls_ratio",
+            1.0,
+            10945.66,
+            108.76
+          ],
+          [
+            "ob_contrarian",
+            1.0,
+            10886.39,
+            49.49
+          ],
+          [
+            "whale_alerts",
+            1.5,
+            10860.76,
+            23.86
+          ],
+          [
+            "oi_divergence",
+            0.5,
+            10836.9,
+            0.0
+          ],
+          [
+            "fear_greed",
+            0.5,
+            10836.9,
+            0.0
+          ],
+          [
+            "basis_contrarian",
+            0.5,
+            10836.9,
+            0.0
+          ],
+          [
+            "news_directional",
+            0.5,
+            10836.9,
+            0.0
+          ],
+          [
+            "news_contrarian",
+            0.5,
+            10836.9,
+            0.0
+          ],
+          [
+            "displacement",
+            0.5,
+            10836.9,
+            0.0
+          ],
+          [
+            "fvg",
+            0.5,
+            10836.9,
+            0.0
+          ],
+          [
+            "sweep",
+            0.5,
+            10836.9,
+            0.0
+          ],
+          [
+            "ob_vol_contrarian",
+            0.5,
+            10820.49,
+            -16.41
+          ],
+          [
+            "etf_flows",
+            0.5,
+            10746.47,
+            -90.43
+          ],
+          [
+            "basis_momentum",
+            0.5,
+            10265.0,
+            -571.9
+          ]
+        ],
+        "selected": "funding_rate",
+        "selected_weight": 2.0
+      },
+      {
+        "step": 3,
+        "results": [
+          [
+            "ob_combined",
+            2.0,
+            13328.57,
+            1274.05
+          ],
+          [
+            "taker_ratio",
+            1.0,
+            12232.78,
+            178.26
+          ],
+          [
+            "tick_liq",
+            2.0,
+            12179.33,
+            124.81
+          ],
+          [
+            "ls_ratio",
+            1.0,
+            12155.86,
+            101.34
+          ],
+          [
+            "ob_contrarian",
+            1.0,
+            12104.02,
+            49.5
+          ],
+          [
+            "whale_alerts",
+            1.5,
+            12078.38,
+            23.86
+          ],
+          [
+            "oi_divergence",
+            0.5,
+            12054.52,
+            0.0
+          ],
+          [
+            "fear_greed",
+            0.5,
+            12054.52,
+            0.0
+          ],
+          [
+            "basis_contrarian",
+            0.5,
+            12054.52,
+            0.0
+          ],
+          [
+            "news_directional",
+            0.5,
+            12054.52,
+            0.0
+          ],
+          [
+            "news_contrarian",
+            0.5,
+            12054.52,
+            0.0
+          ],
+          [
+            "displacement",
+            0.5,
+            12054.52,
+            0.0
+          ],
+          [
+            "fvg",
+            0.5,
+            12054.52,
+            0.0
+          ],
+          [
+            "sweep",
+            0.5,
+            12054.52,
+            0.0
+          ],
+          [
+            "ob_vol_contrarian",
+            0.5,
+            12038.12,
+            -16.4
+          ],
+          [
+            "basis_momentum",
+            0.5,
+            11398.02,
+            -656.5
+          ],
+          [
+            "etf_flows",
+            0.5,
+            11322.9,
+            -731.62
+          ]
+        ],
+        "selected": "ob_combined",
+        "selected_weight": 2.0
+      },
+      {
+        "step": 4,
+        "results": [
+          [
+            "etf_flows",
+            1.0,
+            14982.2,
+            1653.63
+          ],
+          [
+            "basis_contrarian",
+            2.0,
+            14930.58,
+            1602.01
+          ],
+          [
+            "tick_liq",
+            1.5,
+            14422.61,
+            1094.04
+          ],
+          [
+            "ls_ratio",
+            1.0,
+            14240.11,
+            911.54
+          ],
+          [
+            "oi_divergence",
+            2.0,
+            14096.04,
+            767.47
+          ],
+          [
+            "ob_vol_contrarian",
+            0.5,
+            14001.77,
+            673.2
+          ],
+          [
+            "basis_momentum",
+            1.0,
+            13686.98,
+            358.41
+          ],
+          [
+            "whale_alerts",
+            2.0,
+            13398.61,
+            70.04
+          ],
+          [
+            "news_contrarian",
+            1.0,
+            13343.8,
+            15.23
+          ],
+          [
+            "sweep",
+            0.5,
+            13251.88,
+            -76.69
+          ],
+          [
+            "news_directional",
+            0.5,
+            13221.88,
+            -106.69
+          ],
+          [
+            "displacement",
+            1.0,
+            13147.15,
+            -181.42
+          ],
+          [
+            "taker_ratio",
+            0.5,
+            12907.23,
+            -421.34
+          ],
+          [
+            "fvg",
+            1.0,
+            12748.37,
+            -580.2
+          ],
+          [
+            "ob_contrarian",
+            0.5,
+            12340.41,
+            -988.16
+          ],
+          [
+            "fear_greed",
+            0.5,
+            10377.66,
+            -2950.91
+          ]
+        ],
+        "selected": "etf_flows",
+        "selected_weight": 1.0
+      },
+      {
+        "step": 5,
+        "results": [
+          [
+            "basis_contrarian",
+            1.5,
+            16690.8,
+            1708.6
+          ],
+          [
+            "tick_liq",
+            1.5,
+            15857.09,
+            874.89
+          ],
+          [
+            "oi_divergence",
+            1.0,
+            15562.52,
+            580.32
+          ],
+          [
+            "ob_vol_contrarian",
+            0.5,
+            15429.39,
+            447.19
+          ],
+          [
+            "news_contrarian",
+            1.0,
+            14997.43,
+            15.23
+          ],
+          [
+            "whale_alerts",
+            1.5,
+            14976.38,
+            -5.82
+          ],
+          [
+            "news_directional",
+            0.5,
+            14863.2,
+            -119.0
+          ],
+          [
+            "sweep",
+            0.5,
+            14739.62,
+            -242.58
+          ],
+          [
+            "displacement",
+            1.0,
+            14576.97,
+            -405.23
+          ],
+          [
+            "ob_contrarian",
+            0.5,
+            14536.49,
+            -445.71
+          ],
+          [
+            "ls_ratio",
+            0.5,
+            14526.92,
+            -455.28
+          ],
+          [
+            "taker_ratio",
+            0.5,
+            14484.74,
+            -497.46
+          ],
+          [
+            "basis_momentum",
+            0.5,
+            14057.73,
+            -924.47
+          ],
+          [
+            "fear_greed",
+            0.5,
+            13643.58,
+            -1338.62
+          ],
+          [
+            "fvg",
+            0.5,
+            13427.11,
+            -1555.09
+          ]
+        ],
+        "selected": "basis_contrarian",
+        "selected_weight": 1.5
+      },
+      {
+        "step": 6,
+        "results": [
+          [
+            "tick_liq",
+            2.0,
+            17348.21,
+            657.41
+          ],
+          [
+            "oi_divergence",
+            0.5,
+            16942.69,
+            251.89
+          ],
+          [
+            "whale_alerts",
+            2.0,
+            16930.66,
+            239.86
+          ],
+          [
+            "news_contrarian",
+            1.0,
+            16717.43,
+            26.63
+          ],
+          [
+            "taker_ratio",
+            0.5,
+            16557.14,
+            -133.66
+          ],
+          [
+            "news_directional",
+            0.5,
+            16553.03,
+            -137.77
+          ],
+          [
+            "ob_vol_contrarian",
+            0.5,
+            16234.79,
+            -456.01
+          ],
+          [
+            "sweep",
+            0.5,
+            16233.26,
+            -457.54
+          ],
+          [
+            "ob_contrarian",
+            0.5,
+            16229.24,
+            -461.56
+          ],
+          [
+            "ls_ratio",
+            0.5,
+            15987.91,
+            -702.89
+          ],
+          [
+            "displacement",
+            0.5,
+            15621.7,
+            -1069.1
+          ],
+          [
+            "basis_momentum",
+            0.5,
+            15282.85,
+            -1407.95
+          ],
+          [
+            "fvg",
+            0.5,
+            15122.1,
+            -1568.7
+          ],
+          [
+            "fear_greed",
+            0.5,
+            15103.73,
+            -1587.07
+          ]
+        ],
+        "selected": "tick_liq",
+        "selected_weight": 2.0
+      },
+      {
+        "step": 7,
+        "results": [
+          [
+            "oi_divergence",
+            0.5,
+            17841.63,
+            493.42
+          ],
+          [
+            "whale_alerts",
+            2.0,
+            17588.06,
+            239.85
+          ],
+          [
+            "news_contrarian",
+            0.5,
+            17348.21,
+            0.0
+          ],
+          [
+            "news_directional",
+            0.5,
+            17228.96,
+            -119.25
+          ],
+          [
+            "taker_ratio",
+            0.5,
+            17187.58,
+            -160.63
+          ],
+          [
+            "sweep",
+            0.5,
+            17098.32,
+            -249.89
+          ],
+          [
+            "ob_vol_contrarian",
+            0.5,
+            17011.29,
+            -336.92
+          ],
+          [
+            "ob_contrarian",
+            0.5,
+            16955.47,
+            -392.74
+          ],
+          [
+            "basis_momentum",
+            0.5,
+            16670.61,
+            -677.6
+          ],
+          [
+            "ls_ratio",
+            0.5,
+            16637.71,
+            -710.5
+          ],
+          [
+            "displacement",
+            0.5,
+            16589.78,
+            -758.43
+          ],
+          [
+            "fear_greed",
+            0.5,
+            16301.71,
+            -1046.5
+          ],
+          [
+            "fvg",
+            0.5,
+            16292.03,
+            -1056.18
+          ]
+        ],
+        "selected": "oi_divergence",
+        "selected_weight": 0.5
+      },
+      {
+        "step": 8,
+        "results": [
+          [
+            "whale_alerts",
+            1.5,
+            18055.84,
+            214.21
+          ],
+          [
+            "news_contrarian",
+            0.5,
+            17841.63,
+            0.0
+          ],
+          [
+            "news_directional",
+            0.5,
+            17725.26,
+            -116.37
+          ],
+          [
+            "sweep",
+            0.5,
+            17352.55,
+            -489.08
+          ],
+          [
+            "ob_vol_contrarian",
+            0.5,
+            17275.94,
+            -565.69
+          ],
+          [
+            "ob_contrarian",
+            0.5,
+            17133.33,
+            -708.3
+          ],
+          [
+            "displacement",
+            0.5,
+            17048.16,
+            -793.47
+          ],
+          [
+            "basis_momentum",
+            0.5,
+            16786.99,
+            -1054.64
+          ],
+          [
+            "ls_ratio",
+            0.5,
+            16650.45,
+            -1191.18
+          ],
+          [
+            "fvg",
+            0.5,
+            16514.06,
+            -1327.57
+          ],
+          [
+            "fear_greed",
+            0.5,
+            16445.07,
+            -1396.56
+          ],
+          [
+            "taker_ratio",
+            0.5,
+            15822.81,
+            -2018.82
+          ]
+        ],
+        "selected": "whale_alerts",
+        "selected_weight": 1.5
+      },
+      {
+        "step": 9,
+        "results": [
+          [
+            "news_contrarian",
+            0.5,
+            18055.84,
+            0.0
+          ],
+          [
+            "news_directional",
+            0.5,
+            17939.45,
+            -116.39
+          ],
+          [
+            "ob_vol_contrarian",
+            0.5,
+            17578.31,
+            -477.53
+          ],
+          [
+            "sweep",
+            0.5,
+            17566.74,
+            -489.1
+          ],
+          [
+            "ob_contrarian",
+            0.5,
+            17282.7,
+            -773.14
+          ],
+          [
+            "displacement",
+            0.5,
+            17252.74,
+            -803.1
+          ],
+          [
+            "basis_momentum",
+            0.5,
+            16975.95,
+            -1079.89
+          ],
+          [
+            "fear_greed",
+            0.5,
+            16885.53,
+            -1170.31
+          ],
+          [
+            "ls_ratio",
+            0.5,
+            16800.14,
+            -1255.7
+          ],
+          [
+            "fvg",
+            0.5,
+            16728.25,
+            -1327.59
+          ],
+          [
+            "taker_ratio",
+            0.5,
+            15881.39,
+            -2174.45
+          ]
+        ],
+        "selected": null,
+        "selected_weight": null
+      }
+    ]
+  },
+  "phase4_5m": {
+    "baseline_5m_pnl": 6981.91,
+    "phase2_5m_pnl": 11262.53,
+    "phase3_5m_pnl": 10647.98
+  },
+  "recommendation": {
+    "model": "B",
+    "factors": [
+      {
+        "name": "liquidation",
+        "weight": 2.0,
+        "improvement": 10836.9
+      },
+      {
+        "name": "funding_rate",
+        "weight": 2.0,
+        "improvement": 1217.62
+      },
+      {
+        "name": "ob_combined",
+        "weight": 2.0,
+        "improvement": 1274.05
+      },
+      {
+        "name": "etf_flows",
+        "weight": 1.0,
+        "improvement": 1653.63
+      },
+      {
+        "name": "basis_contrarian",
+        "weight": 1.5,
+        "improvement": 1708.6
+      },
+      {
+        "name": "tick_liq",
+        "weight": 2.0,
+        "improvement": 657.41
+      },
+      {
+        "name": "oi_divergence",
+        "weight": 0.5,
+        "improvement": 493.42
+      },
+      {
+        "name": "whale_alerts",
+        "weight": 1.5,
+        "improvement": 214.21
+      }
+    ],
+    "pnl": 18055.84
+  }
+}

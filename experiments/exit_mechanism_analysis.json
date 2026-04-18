@@ -1,0 +1,861 @@
+{
+  "exp1_baseline": {
+    "config": "SL3.0/TP5.0/MAX96",
+    "metrics": {
+      "total_trades": 2548,
+      "win_rate": 70.8,
+      "total_pnl": 5054.83,
+      "avg_bars_held": 4.3
+    },
+    "exit_breakdown": {
+      "TRAIL": {
+        "count": 2130,
+        "win_rate": 84.2,
+        "total_pnl": 15596.8,
+        "avg_pnl": 7.32,
+        "avg_bars_held": 3.2
+      },
+      "SL": {
+        "count": 214,
+        "win_rate": 0.0,
+        "total_pnl": -8239.16,
+        "avg_pnl": -38.5,
+        "avg_bars_held": 9.6
+      },
+      "SIGNAL_FLIP": {
+        "count": 203,
+        "win_rate": 5.4,
+        "total_pnl": -2286.13,
+        "avg_pnl": -11.26,
+        "avg_bars_held": 10.0
+      },
+      "TIMEOUT": {
+        "count": 1,
+        "win_rate": 0.0,
+        "total_pnl": -16.68,
+        "avg_pnl": -16.68,
+        "avg_bars_held": 96.0
+      }
+    },
+    "holding_period_bins": {
+      "1-4bars": {
+        "count": 1937,
+        "win_rate": 78.8,
+        "total_pnl": 9686.32,
+        "avg_pnl": 5.0
+      },
+      "5-12bars": {
+        "count": 423,
+        "win_rate": 47.3,
+        "total_pnl": -2335.55,
+        "avg_pnl": -5.52
+      },
+      "13-24bars": {
+        "count": 123,
+        "win_rate": 48.0,
+        "total_pnl": -987.13,
+        "avg_pnl": -8.03
+      },
+      "25-48bars": {
+        "count": 55,
+        "win_rate": 36.4,
+        "total_pnl": -1092.19,
+        "avg_pnl": -19.86
+      },
+      "49-96bars": {
+        "count": 10,
+        "win_rate": 0.0,
+        "total_pnl": -216.62,
+        "avg_pnl": -21.66
+      }
+    }
+  },
+  "exp2_time_stops": {
+    "max8": {
+      "max_hold_bars": 8,
+      "trades": 2707,
+      "win_rate": 64.4,
+      "total_pnl": 3567.95,
+      "delta_vs_baseline": -1486.88,
+      "exit_breakdown": {
+        "TRAIL": {
+          "count": 2055,
+          "win_rate": 83.8,
+          "total_pnl": 15158.56,
+          "avg_pnl": 7.38,
+          "avg_bars_held": 2.0
+        },
+        "TIMEOUT": {
+          "count": 367,
+          "win_rate": 3.5,
+          "total_pnl": -5135.32,
+          "avg_pnl": -13.99,
+          "avg_bars_held": 8.0
+        },
+        "SL": {
+          "count": 153,
+          "win_rate": 0.0,
+          "total_pnl": -5341.38,
+          "avg_pnl": -34.91,
+          "avg_bars_held": 4.1
+        },
+        "SIGNAL_FLIP": {
+          "count": 132,
+          "win_rate": 6.8,
+          "total_pnl": -1113.9,
+          "avg_pnl": -8.44,
+          "avg_bars_held": 3.2
+        }
+      }
+    },
+    "max16": {
+      "max_hold_bars": 16,
+      "trades": 2608,
+      "win_rate": 68.3,
+      "total_pnl": 4473.42,
+      "delta_vs_baseline": -581.41,
+      "exit_breakdown": {
+        "TRAIL": {
+          "count": 2103,
+          "win_rate": 84.0,
+          "total_pnl": 15426.11,
+          "avg_pnl": 7.34,
+          "avg_bars_held": 2.5
+        },
+        "SL": {
+          "count": 186,
+          "win_rate": 0.0,
+          "total_pnl": -6671.12,
+          "avg_pnl": -35.87,
+          "avg_bars_held": 5.7
+        },
+        "SIGNAL_FLIP": {
+          "count": 182,
+          "win_rate": 6.0,
+          "total_pnl": -1886.63,
+          "avg_pnl": -10.37,
+          "avg_bars_held": 5.2
+        },
+        "TIMEOUT": {
+          "count": 137,
+          "win_rate": 2.2,
+          "total_pnl": -2394.93,
+          "avg_pnl": -17.48,
+          "avg_bars_held": 16.0
+        }
+      }
+    },
+    "max24": {
+      "max_hold_bars": 24,
+      "trades": 2594,
+      "win_rate": 69.6,
+      "total_pnl": 5153.47,
+      "delta_vs_baseline": 98.64,
+      "exit_breakdown": {
+        "TRAIL": {
+          "count": 2139,
+          "win_rate": 83.8,
+          "total_pnl": 15598.48,
+          "avg_pnl": 7.29,
+          "avg_bars_held": 2.8
+        },
+        "SL": {
+          "count": 201,
+          "win_rate": 0.0,
+          "total_pnl": -7265.03,
+          "avg_pnl": -36.14,
+          "avg_bars_held": 7.0
+        },
+        "SIGNAL_FLIP": {
+          "count": 186,
+          "win_rate": 5.9,
+          "total_pnl": -2014.85,
+          "avg_pnl": -10.83,
+          "avg_bars_held": 5.5
+        },
+        "TIMEOUT": {
+          "count": 68,
+          "win_rate": 1.5,
+          "total_pnl": -1165.13,
+          "avg_pnl": -17.13,
+          "avg_bars_held": 24.0
+        }
+      }
+    },
+    "max32": {
+      "max_hold_bars": 32,
+      "trades": 2587,
+      "win_rate": 70.4,
+      "total_pnl": 5205.01,
+      "delta_vs_baseline": 150.18,
+      "exit_breakdown": {
+        "TRAIL": {
+          "count": 2153,
+          "win_rate": 84.0,
+          "total_pnl": 15654.37,
+          "avg_pnl": 7.27,
+          "avg_bars_held": 3.0
+        },
+        "SL": {
+          "count": 208,
+          "win_rate": 0.0,
+          "total_pnl": -7710.02,
+          "avg_pnl": -37.07,
+          "avg_bars_held": 8.0
+        },
+        "SIGNAL_FLIP": {
+          "count": 191,
+          "win_rate": 5.8,
+          "total_pnl": -2059.03,
+          "avg_pnl": -10.78,
+          "avg_bars_held": 5.9
+        },
+        "TIMEOUT": {
+          "count": 35,
+          "win_rate": 2.9,
+          "total_pnl": -680.31,
+          "avg_pnl": -19.44,
+          "avg_bars_held": 32.0
+        }
+      }
+    },
+    "max48": {
+      "max_hold_bars": 48,
+      "trades": 2562,
+      "win_rate": 70.6,
+      "total_pnl": 5085.87,
+      "delta_vs_baseline": 31.04,
+      "exit_breakdown": {
+        "TRAIL": {
+          "count": 2142,
+          "win_rate": 84.0,
+          "total_pnl": 15597.37,
+          "avg_pnl": 7.28,
+          "avg_bars_held": 3.2
+        },
+        "SL": {
+          "count": 212,
+          "win_rate": 0.0,
+          "total_pnl": -8116.26,
+          "avg_pnl": -38.28,
+          "avg_bars_held": 9.1
+        },
+        "SIGNAL_FLIP": {
+          "count": 194,
+          "win_rate": 5.7,
+          "total_pnl": -2150.41,
+          "avg_pnl": -11.08,
+          "avg_bars_held": 7.0
+        },
+        "TIMEOUT": {
+          "count": 14,
+          "win_rate": 0.0,
+          "total_pnl": -244.84,
+          "avg_pnl": -17.49,
+          "avg_bars_held": 48.0
+        }
+      }
+    }
+  },
+  "exp3_no_sl": {
+    "noSL_max24": {
+      "max_hold_bars": 24,
+      "trades": 2450,
+      "win_rate": 71.2,
+      "total_pnl": 7830.16,
+      "delta_vs_baseline": 2775.33,
+      "exit_breakdown": {
+        "TRAIL": {
+          "count": 2083,
+          "win_rate": 83.1,
+          "total_pnl": 15095.79,
+          "avg_pnl": 7.25,
+          "avg_bars_held": 3.1
+        },
+        "SIGNAL_FLIP": {
+          "count": 231,
+          "win_rate": 4.3,
+          "total_pnl": -3689.45,
+          "avg_pnl": -15.97,
+          "avg_bars_held": 6.5
+        },
+        "TIMEOUT": {
+          "count": 136,
+          "win_rate": 2.2,
+          "total_pnl": -3576.18,
+          "avg_pnl": -26.3,
+          "avg_bars_held": 24.0
+        }
+      }
+    },
+    "noSL_max32": {
+      "max_hold_bars": 32,
+      "trades": 2428,
+      "win_rate": 72.4,
+      "total_pnl": 8282.27,
+      "delta_vs_baseline": 3227.44,
+      "exit_breakdown": {
+        "TRAIL": {
+          "count": 2090,
+          "win_rate": 83.5,
+          "total_pnl": 15025.71,
+          "avg_pnl": 7.19,
+          "avg_bars_held": 3.4
+        },
+        "SIGNAL_FLIP": {
+          "count": 239,
+          "win_rate": 4.2,
+          "total_pnl": -3746.35,
+          "avg_pnl": -15.68,
+          "avg_bars_held": 7.0
+        },
+        "TIMEOUT": {
+          "count": 99,
+          "win_rate": 2.0,
+          "total_pnl": -2997.09,
+          "avg_pnl": -30.27,
+          "avg_bars_held": 32.0
+        }
+      }
+    },
+    "noSL_max48": {
+      "max_hold_bars": 48,
+      "trades": 2390,
+      "win_rate": 72.8,
+      "total_pnl": 8372.56,
+      "delta_vs_baseline": 3317.73,
+      "exit_breakdown": {
+        "TRAIL": {
+          "count": 2073,
+          "win_rate": 83.4,
+          "total_pnl": 14964.07,
+          "avg_pnl": 7.22,
+          "avg_bars_held": 3.7
+        },
+        "SIGNAL_FLIP": {
+          "count": 260,
+          "win_rate": 4.2,
+          "total_pnl": -4365.61,
+          "avg_pnl": -16.79,
+          "avg_bars_held": 9.9
+        },
+        "TIMEOUT": {
+          "count": 57,
+          "win_rate": 0.0,
+          "total_pnl": -2225.9,
+          "avg_pnl": -39.05,
+          "avg_bars_held": 48.0
+        }
+      }
+    },
+    "noSL_max96": {
+      "max_hold_bars": 96,
+      "trades": 2336,
+      "win_rate": 73.5,
+      "total_pnl": 8802.25,
+      "delta_vs_baseline": 3747.42,
+      "exit_breakdown": {
+        "TRAIL": {
+          "count": 2046,
+          "win_rate": 83.4,
+          "total_pnl": 14823.17,
+          "avg_pnl": 7.24,
+          "avg_bars_held": 3.9
+        },
+        "SIGNAL_FLIP": {
+          "count": 288,
+          "win_rate": 3.5,
+          "total_pnl": -5936.51,
+          "avg_pnl": -20.61,
+          "avg_bars_held": 18.0
+        },
+        "TIMEOUT": {
+          "count": 2,
+          "win_rate": 0.0,
+          "total_pnl": -84.41,
+          "avg_pnl": -42.2,
+          "avg_bars_held": 96.0
+        }
+      }
+    }
+  },
+  "exp4_wide_sl": {
+    "SL5.0": {
+      "sl_mult": 5.0,
+      "trades": 2403,
+      "win_rate": 72.8,
+      "total_pnl": 7002.11,
+      "delta_vs_baseline": 1947.28,
+      "exit_breakdown": {
+        "TRAIL": {
+          "count": 2080,
+          "win_rate": 83.7,
+          "total_pnl": 15130.54,
+          "avg_pnl": 7.27,
+          "avg_bars_held": 3.7
+        },
+        "SL": {
+          "count": 61,
+          "win_rate": 0.0,
+          "total_pnl": -3546.75,
+          "avg_pnl": -58.14,
+          "avg_bars_held": 14.9
+        },
+        "SIGNAL_FLIP": {
+          "count": 261,
+          "win_rate": 3.8,
+          "total_pnl": -4565.0,
+          "avg_pnl": -17.49,
+          "avg_bars_held": 15.1
+        },
+        "TIMEOUT": {
+          "count": 1,
+          "win_rate": 0.0,
+          "total_pnl": -16.68,
+          "avg_pnl": -16.68,
+          "avg_bars_held": 96.0
+        }
+      }
+    },
+    "SL6.0": {
+      "sl_mult": 6.0,
+      "trades": 2383,
+      "win_rate": 73.0,
+      "total_pnl": 7609.01,
+      "delta_vs_baseline": 2554.18,
+      "exit_breakdown": {
+        "TRAIL": {
+          "count": 2069,
+          "win_rate": 83.6,
+          "total_pnl": 15106.81,
+          "avg_pnl": 7.3,
+          "avg_bars_held": 3.7
+        },
+        "SL": {
+          "count": 34,
+          "win_rate": 0.0,
+          "total_pnl": -2256.72,
+          "avg_pnl": -66.37,
+          "avg_bars_held": 15.8
+        },
+        "SIGNAL_FLIP": {
+          "count": 279,
+          "win_rate": 3.6,
+          "total_pnl": -5224.4,
+          "avg_pnl": -18.73,
+          "avg_bars_held": 16.2
+        },
+        "TIMEOUT": {
+          "count": 1,
+          "win_rate": 0.0,
+          "total_pnl": -16.68,
+          "avg_pnl": -16.68,
+          "avg_bars_held": 96.0
+        }
+      }
+    },
+    "SL8.0": {
+      "sl_mult": 8.0,
+      "trades": 2348,
+      "win_rate": 73.4,
+      "total_pnl": 8536.51,
+      "delta_vs_baseline": 3481.68,
+      "exit_breakdown": {
+        "TRAIL": {
+          "count": 2051,
+          "win_rate": 83.5,
+          "total_pnl": 14898.94,
+          "avg_pnl": 7.26,
+          "avg_bars_held": 3.8
+        },
+        "SIGNAL_FLIP": {
+          "count": 288,
+          "win_rate": 3.5,
+          "total_pnl": -5843.1,
+          "avg_pnl": -20.29,
+          "avg_bars_held": 17.9
+        },
+        "SL": {
+          "count": 7,
+          "win_rate": 0.0,
+          "total_pnl": -434.92,
+          "avg_pnl": -62.13,
+          "avg_bars_held": 16.0
+        },
+        "TIMEOUT": {
+          "count": 2,
+          "win_rate": 0.0,
+          "total_pnl": -84.41,
+          "avg_pnl": -42.2,
+          "avg_bars_held": 96.0
+        }
+      }
+    },
+    "SL10.0": {
+      "sl_mult": 10.0,
+      "trades": 2341,
+      "win_rate": 73.4,
+      "total_pnl": 8671.17,
+      "delta_vs_baseline": 3616.34,
+      "exit_breakdown": {
+        "TRAIL": {
+          "count": 2048,
+          "win_rate": 83.4,
+          "total_pnl": 14826.23,
+          "avg_pnl": 7.24,
+          "avg_bars_held": 3.9
+        },
+        "SIGNAL_FLIP": {
+          "count": 289,
+          "win_rate": 3.5,
+          "total_pnl": -5916.01,
+          "avg_pnl": -20.47,
+          "avg_bars_held": 17.9
+        },
+        "SL": {
+          "count": 2,
+          "win_rate": 0.0,
+          "total_pnl": -154.65,
+          "avg_pnl": -77.32,
+          "avg_bars_held": 2.5
+        },
+        "TIMEOUT": {
+          "count": 2,
+          "win_rate": 0.0,
+          "total_pnl": -84.41,
+          "avg_pnl": -42.2,
+          "avg_bars_held": 96.0
+        }
+      }
+    }
+  },
+  "exp5_tp_variation": {
+    "TP3.0": {
+      "tp_mult": 3.0,
+      "trades": 2348,
+      "win_rate": 73.4,
+      "total_pnl": 8536.51,
+      "delta_vs_baseline": 3481.68
+    },
+    "TP4.0": {
+      "tp_mult": 4.0,
+      "trades": 2348,
+      "win_rate": 73.4,
+      "total_pnl": 8536.51,
+      "delta_vs_baseline": 3481.68
+    },
+    "TP5.0": {
+      "tp_mult": 5.0,
+      "trades": 2348,
+      "win_rate": 73.4,
+      "total_pnl": 8536.51,
+      "delta_vs_baseline": 3481.68
+    },
+    "TP6.0": {
+      "tp_mult": 6.0,
+      "trades": 2348,
+      "win_rate": 73.4,
+      "total_pnl": 8536.51,
+      "delta_vs_baseline": 3481.68
+    },
+    "TP8.0": {
+      "tp_mult": 8.0,
+      "trades": 2348,
+      "win_rate": 73.4,
+      "total_pnl": 8536.51,
+      "delta_vs_baseline": 3481.68
+    },
+    "TP10.0": {
+      "tp_mult": 10.0,
+      "trades": 2348,
+      "win_rate": 73.4,
+      "total_pnl": 8536.51,
+      "delta_vs_baseline": 3481.68
+    }
+  },
+  "exp6_pnl_trajectory": {
+    "win_peak_bar": 92,
+    "win_peak_pct": 1.2574,
+    "loss_worst_bar": 10,
+    "loss_worst_pct": -0.5293,
+    "all_peak_bar": 92,
+    "all_peak_pct": 0.831,
+    "n_wins": 1805,
+    "n_losses": 743,
+    "win_traj_sampled": [
+      0.2105,
+      0.4238,
+      0.4981,
+      0.6638,
+      0.7966,
+      0.9905,
+      1.0956,
+      1.0553,
+      1.1027,
+      1.1092,
+      1.1194,
+      1.1036,
+      1.1426,
+      1.1498,
+      1.1075,
+      1.1226,
+      1.1265,
+      1.1386,
+      1.1618,
+      1.1391,
+      1.1378,
+      1.2029,
+      1.2033,
+      1.22
+    ],
+    "loss_traj_sampled": [
+      -0.3536,
+      -0.4734,
+      -0.4583,
+      -0.4612,
+      -0.3536,
+      -0.2703,
+      -0.2273,
+      -0.3435,
+      -0.2586,
+      -0.2951,
+      -0.2336,
+      -0.212,
+      -0.1637,
+      -0.1816,
+      -0.1752,
+      -0.1739,
+      -0.1629,
+      -0.2291,
+      -0.2773,
+      -0.3043,
+      -0.2398,
+      -0.2726,
+      -0.2423,
+      -0.1924
+    ],
+    "all_traj_sampled": [
+      0.046,
+      0.1621,
+      0.2192,
+      0.3357,
+      0.4612,
+      0.6228,
+      0.7098,
+      0.6475,
+      0.7058,
+      0.6997,
+      0.7251,
+      0.7199,
+      0.7616,
+      0.7614,
+      0.734,
+      0.7453,
+      0.7518,
+      0.7412,
+      0.7435,
+      0.72,
+      0.7374,
+      0.7736,
+      0.7821,
+      0.8092
+    ]
+  },
+  "exp7_direction_split": {
+    "LONG": {
+      "trades": 1178,
+      "win_rate": 70.1,
+      "total_pnl": 2548.42,
+      "avg_bars_held": 4.2,
+      "exit_breakdown": {
+        "TRAIL": {
+          "count": 973,
+          "win_rate": 84.6,
+          "total_pnl": 7658.52,
+          "avg_pnl": 7.87,
+          "avg_bars_held": 3.2
+        },
+        "SIGNAL_FLIP": {
+          "count": 94,
+          "win_rate": 3.2,
+          "total_pnl": -942.8,
+          "avg_pnl": -10.03,
+          "avg_bars_held": 8.3
+        },
+        "SL": {
+          "count": 111,
+          "win_rate": 0.0,
+          "total_pnl": -4167.3,
+          "avg_pnl": -37.54,
+          "avg_bars_held": 9.5
+        }
+      },
+      "holding_bins": {
+        "1-4bars": {
+          "count": 899,
+          "win_rate": 78.2,
+          "total_pnl": 4699.58,
+          "avg_pnl": 5.23
+        },
+        "5-12bars": {
+          "count": 204,
+          "win_rate": 47.1,
+          "total_pnl": -1090.92,
+          "avg_pnl": -5.35
+        },
+        "13-24bars": {
+          "count": 44,
+          "win_rate": 47.7,
+          "total_pnl": -266.69,
+          "avg_pnl": -6.06
+        },
+        "25-48bars": {
+          "count": 31,
+          "win_rate": 19.4,
+          "total_pnl": -793.55,
+          "avg_pnl": -25.6
+        }
+      }
+    },
+    "SHORT": {
+      "trades": 1370,
+      "win_rate": 71.5,
+      "total_pnl": 2506.41,
+      "avg_bars_held": 4.4,
+      "exit_breakdown": {
+        "SL": {
+          "count": 103,
+          "win_rate": 0.0,
+          "total_pnl": -4071.86,
+          "avg_pnl": -39.53,
+          "avg_bars_held": 9.7
+        },
+        "TRAIL": {
+          "count": 1157,
+          "win_rate": 83.9,
+          "total_pnl": 7938.28,
+          "avg_pnl": 6.86,
+          "avg_bars_held": 3.2
+        },
+        "SIGNAL_FLIP": {
+          "count": 109,
+          "win_rate": 7.3,
+          "total_pnl": -1343.32,
+          "avg_pnl": -12.32,
+          "avg_bars_held": 11.4
+        },
+        "TIMEOUT": {
+          "count": 1,
+          "win_rate": 0.0,
+          "total_pnl": -16.68,
+          "avg_pnl": -16.68,
+          "avg_bars_held": 96.0
+        }
+      },
+      "holding_bins": {
+        "1-4bars": {
+          "count": 1038,
+          "win_rate": 79.3,
+          "total_pnl": 4986.73,
+          "avg_pnl": 4.8
+        },
+        "5-12bars": {
+          "count": 219,
+          "win_rate": 47.5,
+          "total_pnl": -1244.63,
+          "avg_pnl": -5.68
+        },
+        "13-24bars": {
+          "count": 79,
+          "win_rate": 48.1,
+          "total_pnl": -720.43,
+          "avg_pnl": -9.12
+        },
+        "25-48bars": {
+          "count": 24,
+          "win_rate": 58.3,
+          "total_pnl": -298.64,
+          "avg_pnl": -12.44
+        },
+        "49-96bars": {
+          "count": 10,
+          "win_rate": 0.0,
+          "total_pnl": -216.62,
+          "avg_pnl": -21.66
+        }
+      }
+    }
+  },
+  "summary": {
+    "mission_id": "mission_005_exit_mechanism",
+    "date": "2026-03-15",
+    "best_config": {
+      "name": "No-SL noSL_max96",
+      "pnl": 8802.25,
+      "wr": 73.5
+    },
+    "worst_config": {
+      "name": "Time stop max8",
+      "pnl": 3567.95,
+      "wr": 64.4
+    },
+    "baseline_pnl": 5054.83,
+    "all_configs_ranked": [
+      {
+        "name": "No-SL noSL_max96",
+        "pnl": 8802.25,
+        "wr": 73.5
+      },
+      {
+        "name": "Wide SL10.0",
+        "pnl": 8671.17,
+        "wr": 73.4
+      },
+      {
+        "name": "Wide SL8.0",
+        "pnl": 8536.51,
+        "wr": 73.4
+      },
+      {
+        "name": "No-SL noSL_max48",
+        "pnl": 8372.56,
+        "wr": 72.8
+      },
+      {
+        "name": "No-SL noSL_max32",
+        "pnl": 8282.27,
+        "wr": 72.4
+      },
+      {
+        "name": "No-SL noSL_max24",
+        "pnl": 7830.16,
+        "wr": 71.2
+      },
+      {
+        "name": "Wide SL6.0",
+        "pnl": 7609.01,
+        "wr": 73.0
+      },
+      {
+        "name": "Wide SL5.0",
+        "pnl": 7002.11,
+        "wr": 72.8
+      },
+      {
+        "name": "Time stop max32",
+        "pnl": 5205.01,
+        "wr": 70.4
+      },
+      {
+        "name": "Time stop max24",
+        "pnl": 5153.47,
+        "wr": 69.6
+      }
+    ],
+    "trajectory_insight": {
+      "win_peak_bar": 92,
+      "loss_worst_bar": 10,
+      "all_peak_bar": 92
+    }
+  }
+}

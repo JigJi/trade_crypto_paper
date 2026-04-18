@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-03-15T18:43:36.496933",
+  "test_period": "2026-01-01 to present (OOS)",
+  "scoring": "v3 (aligned with paper trading)",
+  "baseline_pnl": 14121.0,
+  "cvd_data_rows": 598,
+  "dvol_data_rows": 581,
+  "macro_data_rows": 6,
+  "note": "CVD/DVOL only have 6 days of data (Mar 9-15). Macro only 8 days. Results are indicative only."
+}

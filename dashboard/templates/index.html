@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Arena</title>
+    <link rel="stylesheet" href="/static/css/style.css?v=9">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.socket.io/4.7.4/socket.io.min.js"></script>
+</head>
+<body>
+
+<!-- ══════════════ HEADER ══════════════ -->
+<header class="header">
+    <div class="header-inner">
+        <div class="header-left">
+            <div class="header-title">CRYPTO ARENA</div>
+            <nav class="tab-nav">
+                <button class="tab-btn active" data-tab="paper">PAPER</button>
+                <button class="tab-btn" data-tab="lab">LAB</button>
+                <button class="tab-btn" data-tab="real">REAL</button>
+            </nav>
+        </div>
+        <div class="header-stats">
+            <div class="header-stat">
+                <div class="header-stat-label">Equity</div>
+                <div class="header-stat-value" id="hdr-equity">$--</div>
+            </div>
+            <div class="header-stat model-stat-box v3">
+                <div class="header-stat-label">v3 <span id="hdr-v3-detail"></span></div>
+                <div class="header-stat-value" id="hdr-v3-pnl">--</div>
+            </div>
+            <div class="header-stat model-stat-box v5">
+                <div class="header-stat-label">v5 <span id="hdr-v5-detail"></span></div>
+                <div class="header-stat-value" id="hdr-v5-pnl">--</div>
+            </div>
+            <div class="header-stat model-stat-box old">
+                <div class="header-stat-label">old <span id="hdr-old-detail"></span></div>
+                <div class="header-stat-value" id="hdr-old-pnl">--</div>
+            </div>
+            <div class="header-stat" style="min-width:auto">
+                <span class="status-dot" id="hdr-status-dot"></span>
+                <span class="header-stat-label" id="hdr-status-text">--</span>
+            </div>
+            <button class="refresh-btn-icon" id="btn-refresh" onclick="refreshAll()">&#x21BB;</button>
+        </div>
+    </div>
+</header>
+
+<!-- ══════════════ TAB: PAPER ══════════════ -->
+<main class="tab-content active" id="tab-paper">
+    <div class="tab-layout">
+
+        <!-- COL 1 ROW 1: Live Positions -->
+        <div class="section trading" style="grid-column:1;grid-row:1">
+            <div class="section-header">
+                <span class="section-title">LIVE POSITIONS</span>
+                <span class="section-badge" id="open-count" style="color:var(--green)">0 open</span>
+            </div>
+            <div class="section-body">
+                <div class="market-mood">
+                    <div class="mood-icon" id="mood-icon">&#x1F43B;</div>
+                    <div class="mood-score" id="gauge-value">0.0</div>
+                    <div class="mood-bar-wrapper">
+                        <div class="gauge-bar">
+                            <div class="gauge-fill" id="gauge-fill"></div>
+                            <div class="gauge-needle" id="gauge-needle" style="left:50%"></div>
+                        </div>
+                        <div class="gauge-labels">
+                            <span>-10</span><span>-5</span><span>0</span><span>+5</span><span>+10</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="active-battles">
+                    <div class="empty-state">No open positions</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- COL 1 ROW 2: Coin Warriors -->
+        <div class="section trading" style="grid-column:1;grid-row:2">
+            <div class="section-header">
+                <span class="section-title">COIN WARRIORS</span>
+                <span class="section-subtitle" id="warrior-summary"></span>
+            </div>
+            <div class="section-body">
+                <ul class="warrior-list" id="coin-warriors">
+                    <li class="empty-state">Loading...</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- COL 2 ROW 1-2: Battle Log (spans both rows) -->
+        <div class="section trading" style="grid-column:2;grid-row:1/3">
+            <div class="section-header">
+                <span class="section-title">BATTLE LOG</span>
+                <span class="section-badge" id="trade-count" style="color:var(--green)">0 trades</span>
+            </div>
+            <div class="section-body">
+                <div class="chart-container">
+                    <canvas id="equity-chart"></canvas>
+                </div>
+                <ul class="battle-list" id="battle-log">
+                    <li class="empty-state">Loading...</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FULL WIDTH ROW 3: Signal Log -->
+        <div class="section trading" style="grid-column:1/3;grid-row:3">
+            <div class="section-header">
+                <span class="section-title">SIGNAL LOG</span>
+                <span class="section-badge" id="signal-count" style="color:var(--cyan)">--</span>
+            </div>
+            <div class="section-body">
+                <div class="signal-list" id="signal-log">
+                    <div class="empty-state">Loading...</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<!-- ══════════════ TAB: LAB ══════════════ -->
+<main class="tab-content" id="tab-lab">
+    <div class="lab-layout">
+
+        <!-- COL 1: Factor Inventory + Model HQ -->
+        <div class="lab-col1">
+            <div class="section research">
+                <div class="section-header">
+                    <span class="section-title">FACTOR INVENTORY</span>
+                    <span class="section-badge" id="factor-count" style="color:var(--blue)">--</span>
+                </div>
+                <div class="section-body">
+                    <div id="factor-inventory">
+                        <div class="empty-state">Loading...</div>
+                    </div>
+                </div>
+            </div>
+            <div class="section research">
+                <div class="section-header">
+                    <span class="section-title">MODEL HQ</span>
+                    <span class="section-badge" id="model-badge" style="color:var(--yellow)">--</span>
+                </div>
+                <div class="section-body">
+                    <div id="model-hq">
+                        <div class="empty-state">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- COL 2: Daily Missions -->
+        <div class="section mission-section">
+            <div class="section-header">
+                <span class="section-title">DAILY MISSIONS</span>
+                <span class="section-badge" id="mission-badge" style="color:var(--purple)">--</span>
+            </div>
+            <div class="section-body">
+                <div id="mission-panel">
+                    <div class="empty-state">Loading...</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<!-- ══════════════ TAB: REAL ══════════════ -->
+<main class="tab-content" id="tab-real">
+    <div class="tab-layout-full" style="display:flex;align-items:center;justify-content:center;min-height:60vh">
+        <div style="text-align:center">
+            <div style="font-size:48px;margin-bottom:16px">&#x1F680;</div>
+            <div style="font-family:'Press Start 2P',cursive;font-size:16px;color:var(--cyan);margin-bottom:12px">COMING SOON</div>
+            <div style="color:var(--text-dim);font-size:13px">Real trading will be enabled after paper trading validation</div>
+        </div>
+    </div>
+</main>
+
+<script src="/static/js/app.js?v=10"></script>
+
+</body>
+</html>

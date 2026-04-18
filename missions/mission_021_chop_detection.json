@@ -1,0 +1,292 @@
+{
+  "exp1_baseline": {
+    "total_trades": 6473,
+    "flip_count": 843,
+    "flip_pct": 13.0,
+    "flip_wr": 4.6,
+    "flip_pnl": -19833.12,
+    "flip_avg_pnl": -23.53,
+    "flip_avg_bars": 16.0,
+    "nonflip_wr": 81.7,
+    "nonflip_pnl": 32178.27,
+    "nonflip_avg_pnl": 5.72,
+    "total_pnl": 12345.15,
+    "flip_LONG_count": 423,
+    "flip_LONG_wr": 3.8,
+    "flip_LONG_pnl": -9991.11,
+    "flip_SHORT_count": 420,
+    "flip_SHORT_wr": 5.5,
+    "flip_SHORT_pnl": -9842.01,
+    "bars_held_buckets": [
+      {
+        "bucket": "1-4",
+        "count": 261,
+        "wr": 11.1,
+        "avg_pnl": -10.17,
+        "total_pnl": -2655.34
+      },
+      {
+        "bucket": "5-8",
+        "count": 151,
+        "wr": 2.6,
+        "avg_pnl": -18.17,
+        "total_pnl": -2744.22
+      },
+      {
+        "bucket": "9-16",
+        "count": 200,
+        "wr": 1.0,
+        "avg_pnl": -27.86,
+        "total_pnl": -5571.25
+      },
+      {
+        "bucket": "17-32",
+        "count": 93,
+        "wr": 2.2,
+        "avg_pnl": -35.05,
+        "total_pnl": -3259.68
+      },
+      {
+        "bucket": "33-96",
+        "count": 138,
+        "wr": 1.4,
+        "avg_pnl": -40.6,
+        "total_pnl": -5602.62
+      }
+    ]
+  },
+  "exp2_score_trajectory": {
+    "flip_score_std_mean": 2.779,
+    "flip_score_std_median": 2.722,
+    "flip_score_range_mean": 8.951,
+    "flip_score_crossings_mean": 3.8,
+    "other_score_std_mean": 1.145,
+    "other_score_std_median": 1.0,
+    "other_score_range_mean": 2.931,
+    "other_score_crossings_mean": 0.59
+  },
+  "exp3_chop_index": {
+    "windows_tested": [
+      4,
+      8,
+      12,
+      16,
+      24
+    ],
+    "chop_stats": {
+      "chop_4": {
+        "mean": 0.599,
+        "median": 0.0,
+        "p25": 0.0,
+        "p75": 1.021,
+        "p90": 2.24
+      },
+      "chop_8": {
+        "mean": 0.818,
+        "median": 0.0,
+        "p25": 0.0,
+        "p75": 1.708,
+        "p90": 2.55
+      },
+      "chop_12": {
+        "mean": 0.967,
+        "median": 0.0,
+        "p25": 0.0,
+        "p75": 1.934,
+        "p90": 2.823
+      },
+      "chop_16": {
+        "mean": 1.083,
+        "median": 0.0,
+        "p25": 0.0,
+        "p75": 2.069,
+        "p90": 3.073
+      },
+      "chop_24": {
+        "mean": 1.248,
+        "median": 0.408,
+        "p25": 0.0,
+        "p75": 2.4,
+        "p90": 3.472
+      }
+    }
+  },
+  "exp4_flip_by_chop": {
+    "chop_column": "chop_8",
+    "quartiles": [
+      {
+        "quartile": "Q1_low",
+        "trades": 1620,
+        "flip_count": 184,
+        "flip_rate": 11.4,
+        "flip_wr": 3.8,
+        "total_wr": 72.6,
+        "total_pnl": 2576.71,
+        "avg_pnl": 1.591,
+        "chop_range": "0.000-1.411"
+      },
+      {
+        "quartile": "Q2",
+        "trades": 1618,
+        "flip_count": 237,
+        "flip_rate": 14.6,
+        "flip_wr": 3.0,
+        "total_wr": 70.5,
+        "total_pnl": 3899.09,
+        "avg_pnl": 2.41,
+        "chop_range": "1.414-1.932"
+      },
+      {
+        "quartile": "Q3",
+        "trades": 1621,
+        "flip_count": 220,
+        "flip_rate": 13.6,
+        "flip_wr": 6.4,
+        "total_wr": 70.9,
+        "total_pnl": 3041.05,
+        "avg_pnl": 1.876,
+        "chop_range": "1.935-2.659"
+      },
+      {
+        "quartile": "Q4_high",
+        "trades": 1614,
+        "flip_count": 202,
+        "flip_rate": 12.5,
+        "flip_wr": 5.4,
+        "total_wr": 72.8,
+        "total_pnl": 2828.3,
+        "avg_pnl": 1.752,
+        "chop_range": "2.662-7.793"
+      }
+    ],
+    "by_window": {
+      "chop_4": {
+        "q4_flip_rate": 15.9,
+        "q1_flip_rate": 10.2,
+        "q4_wr": 70.8,
+        "q1_wr": 74.1,
+        "q4_pnl": 3723.47,
+        "q1_pnl": 4013.52
+      },
+      "chop_8": {
+        "q4_flip_rate": 12.5,
+        "q1_flip_rate": 11.4,
+        "q4_wr": 72.8,
+        "q1_wr": 72.6,
+        "q4_pnl": 2828.3,
+        "q1_pnl": 2576.71
+      },
+      "chop_12": {
+        "q4_flip_rate": 12.6,
+        "q1_flip_rate": 14.1,
+        "q4_wr": 71.3,
+        "q1_wr": 70.8,
+        "q4_pnl": 2226.91,
+        "q1_pnl": 3082.68
+      },
+      "chop_16": {
+        "q4_flip_rate": 11.8,
+        "q1_flip_rate": 14.2,
+        "q4_wr": 70.5,
+        "q1_wr": 69.9,
+        "q4_pnl": 1427.9,
+        "q1_pnl": 3233.68
+      },
+      "chop_24": {
+        "q4_flip_rate": 12.7,
+        "q1_flip_rate": 13.3,
+        "q4_wr": 71.8,
+        "q1_wr": 69.8,
+        "q4_pnl": 1739.54,
+        "q1_pnl": 2554.92
+      }
+    }
+  },
+  "exp5_velocity": {
+    "flip_velocity_mean": 0.0744,
+    "flip_velocity_abs_mean": 2.785,
+    "nonflip_velocity_mean": 0.0499,
+    "nonflip_velocity_abs_mean": 2.7,
+    "flip_accel_abs_mean": 4.0845,
+    "nonflip_accel_abs_mean": 4.1155,
+    "aligned_trades": 3153,
+    "aligned_wr": 72.9,
+    "aligned_flip_rate": 11.3,
+    "misaligned_trades": 3320,
+    "misaligned_wr": 70.5,
+    "misaligned_flip_rate": 14.6
+  },
+  "exp6_filters": {
+    "baseline": {
+      "trades": 6473,
+      "total_pnl": 12345.15,
+      "wr": 71.7,
+      "flip_count": 843,
+      "flip_pct": 13.0,
+      "flip_pnl": -19833.12,
+      "avg_pnl": 1.907
+    },
+    "skip_chop_p75": {
+      "trades": 3749,
+      "total_pnl": 8524.84,
+      "wr": 76.9,
+      "flip_count": 214,
+      "flip_pct": 5.7,
+      "flip_pnl": -8153.74,
+      "avg_pnl": 2.274
+    },
+    "skip_chop_p90": {
+      "trades": 5339,
+      "total_pnl": 9849.49,
+      "wr": 73.5,
+      "flip_count": 544,
+      "flip_pct": 10.2,
+      "flip_pnl": -15814.77,
+      "avg_pnl": 1.845
+    },
+    "halfsize_chop_p75": {
+      "trades": 6473,
+      "total_pnl": 8776.48,
+      "wr": 71.7,
+      "flip_count": 843,
+      "flip_pct": 13.0,
+      "flip_pnl": -13538.25,
+      "avg_pnl": 1.356
+    },
+    "skip_low_velocity": {
+      "trades": 6473,
+      "total_pnl": 12345.15,
+      "wr": 71.7,
+      "flip_count": 843,
+      "flip_pct": 13.0,
+      "flip_pnl": -19833.12,
+      "avg_pnl": 1.907
+    }
+  },
+  "exp6_thresholds": {
+    "chop_p75": 1.7084,
+    "chop_p90": 2.5495,
+    "chop_median": 0.0,
+    "vel_p25": 0.0
+  },
+  "exp7_walkforward": {
+    "verdict": "no_filter_improved"
+  },
+  "best_filter": "baseline",
+  "best_delta": 0,
+  "meta": {
+    "mission": "021_chop_detection",
+    "started": "2026-03-29T19:14:17.607912",
+    "finished": "2026-03-29T19:14:34.103912",
+    "duration_sec": 16.5,
+    "coins": [
+      "BTC",
+      "XRP",
+      "ADA",
+      "DOT",
+      "SUI",
+      "FIL"
+    ],
+    "oos": "2025-01-01 to 2026-03-31"
+  }
+}
