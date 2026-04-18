@@ -40,11 +40,6 @@ DEFAULT_EXTRA_WEIGHTS = {
     "tick_liq": 2.0,
 }
 
-DEFAULT_V6_CASCADE_MULT = 1.1
-DEFAULT_V6_LIQ_WEIGHT = 8.0
-DEFAULT_V6_TICK_WEIGHT = 8.0
-DEFAULT_V6_TICK_NET_THRESHOLD = 3
-
 DEFAULT_SPIKE_CONFIG = {
     "range_z_thr": 1.5,
     "vol_ratio_thr": 2.0,
@@ -314,47 +309,6 @@ def compute_btc_composite_score(df, params=None, extra=None):
     score += score_basis_contrarian(df, weight=extra.get("basis_contrarian", 1.5))
     score += score_tick_liq(df, weight=extra.get("tick_liq", 2.0))
     score += score_ob_combined(df, weight=extra.get("ob_combined", 2.0))
-
-    return score
-
-
-def compute_btc_composite_score_v6(df, cascade_mult=DEFAULT_V6_CASCADE_MULT,
-                                    liq_w=DEFAULT_V6_LIQ_WEIGHT,
-                                    tick_w=DEFAULT_V6_TICK_WEIGHT,
-                                    tick_net_thr=DEFAULT_V6_TICK_NET_THRESHOLD,
-                                    velocity_w=0.0, velocity_lb=4):
-    """
-    V6 Liq-Only composite score: cascade + tick + optional velocity.
-    Tournament R2 champion: $69,701 conservative, $71,802 aggressive.
-    """
-    score = pd.Series(0.0, index=df.index)
-
-    # Liquidation cascade (1.1x MA threshold)
-    if "liq_net" in df.columns and "liq_total" in df.columns:
-        lt = df["liq_total"].fillna(0)
-        ln = df["liq_net"].fillna(0)
-        lt_ma = df.get("liq_total_ma", lt.rolling(24).mean()).fillna(1)
-        c = lt > (lt_ma * cascade_mult)
-        score += np.where(c & (ln > 0), liq_w, 0)
-        score += np.where(c & (ln < 0), -liq_w, 0)
-
-    # Tick liquidation (net > threshold)
-    if "liq_net_ma" in df.columns:
-        ln_tick = df["liq_net_ma"].fillna(0)
-        score += np.where(ln_tick > tick_net_thr, tick_w, 0)
-        score += np.where(ln_tick < -tick_net_thr, -tick_w, 0)
-
-    # Optional: velocity (acceleration of liq volume)
-    if velocity_w > 0 and "liq_total" in df.columns:
-        lt = df["liq_total"].fillna(0)
-        vel = lt.pct_change(velocity_lb).fillna(0)
-        ln = df["liq_net"].fillna(0)
-        acc = vel > 1.0
-        score += np.where(acc & (ln > 0), velocity_w, 0)
-        score += np.where(acc & (ln < 0), -velocity_w, 0)
-        dec = vel < -0.5
-        score += np.where(dec & (ln > 0), velocity_w * 0.3, 0)
-        score += np.where(dec & (ln < 0), -velocity_w * 0.3, 0)
 
     return score
 

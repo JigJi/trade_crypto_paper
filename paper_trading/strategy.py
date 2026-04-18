@@ -19,7 +19,6 @@ from signal_core import (
     score_tick_liq,
     score_ob_combined,
     compute_btc_composite_score,
-    compute_btc_composite_score_v6,
     compute_raw_signal,
     is_dead_zone,
     check_pa_alignment,

@@ -8,7 +8,7 @@ const INIT_EQUITY = 5000;
 let equityChart = null;
 let socket = null;
 let activeTab = 'paper';
-let _coinList = { v3: [], v5: [], v6: [] };
+let _coinList = { v3: [] };
 let _modelStats = {};
 let _perCoin = [];
 let _lastEquityData = [];  // cached equity curve for chart updates
@@ -144,9 +144,8 @@ function renderHeader(data) {
     eqEl.innerHTML = '$' + fmtNum(equity) + ` <span class="header-stat-pct" style="color:${profitPct >= 0 ? 'var(--green)' : 'var(--red)'}">${(profitPct >= 0 ? '+' : '') + profitPct.toFixed(1)}%</span>`;
     eqEl.style.color = equity >= INIT_EQUITY ? 'var(--green)' : 'var(--red)';
 
-    // v3/v5/v6/old model stats
+    // v3 + old (v5/v6 amputated)
     _renderModelStat('v3', ms.v3 || {});
-    _renderModelStat('v5', ms.v5 || {});
     _renderModelStat('old', ms.old || {});
 
     document.getElementById('trade-count').textContent = (s.total_trades || 0) + ' trades';
@@ -216,9 +215,7 @@ function renderActiveBattles(positions, coinList) {
         });
     }
     const v3 = (coinList && coinList.v3) || [];
-    const v5 = (coinList && coinList.v5) || [];
-    const v6 = (coinList && coinList.v6) || [];
-    const allCoinsSet = new Set([...v3, ...v5, ...v6]);
+    const allCoinsSet = new Set(v3);
     const totalCoins = allCoinsSet.size;
     const openCount = Object.keys(posMap).filter(c => allCoinsSet.has(c)).length;
 
@@ -239,7 +236,7 @@ function renderActiveBattles(positions, coinList) {
     }).join('');
 
     el.innerHTML = '<div class="active-chips">' +
-        chipHtml(v3, 'v3') + chipHtml(v5, 'v5') + chipHtml(v6, 'v6') +
+        chipHtml(v3, 'v3') +
         (extraHtml ? ' ' + extraHtml : '') +
     '</div>';
 }
@@ -810,13 +807,9 @@ function renderFactorInventory(data) {
     html += `<div class="equip-section">
         <div class="equip-label">EQUIPPED</div>
         <div class="equip-grid">`;
-    // v6 uses only these 2 factors
-    const V6_FACTORS = ['liquidation', 'tick_liq'];
     equipped.forEach(f => {
         const { icon, delta, rarity } = _buildItemData(f);
-        const inV6 = V6_FACTORS.includes(f.name);
-        const tags = `<span class="equip-tag v3">v3</span><span class="equip-tag v5">v5</span>` +
-            (inV6 ? `<span class="equip-tag v6">v6</span>` : '');
+        const tags = `<span class="equip-tag v3">v3</span>`;
         html += `<div class="equip-slot ${rarity}" data-factor="${f.name}" onclick="_showFactorDetail('${f.name}')">
             <div class="equip-icon">${icon}</div>
             <div class="equip-info">
@@ -865,6 +858,7 @@ function renderFactorInventory(data) {
 }
 
 // ── MODEL HQ: Static config for each version ──
+// v5 + v6 amputated 2026-04-18 (dead since 04-10 / 04-04)
 const MODEL_CONFIGS = {
     v3: {
         status: 'production',
@@ -873,20 +867,6 @@ const MODEL_CONFIGS = {
         weights: { liq: 2.0, fr: 2.0, ob: 2.0, tick: 2.0, basis: 1.5, whale: 1.5, etf: 1.0, oi: 0.5 },
         backtest: { pnl: 14121, sharpe: '4.97-6.83', wr: 66.6, trades: 946 },
     },
-    v5: {
-        status: 'production',
-        desc: 'Tournament R1 champion: liq 2\u21925, tick 2\u21923, SL 10\u219215, TP 5\u219212. Deployed 03-19.',
-        sl: 15, tp: 12, threshold: '3.0', cooldown: '4',
-        weights: { liq: 5.0, fr: 2.0, ob: 2.0, tick: 3.0, basis: 1.5, whale: 1.5, etf: 1.0, oi: 0.5 },
-        backtest: { pnl: 49052, sharpe: '8.2-10.1', wr: 68, trades: 'avg ~160/coin' },
-    },
-    v6: {
-        status: 'testing',
-        desc: 'Liq-only architecture: cascade(1.1x MA) + tick. +35% vs v5 per-coin. Deployed 03-23.',
-        sl: 25, tp: 20, threshold: '3.0', cooldown: '4',
-        weights: { liq: 8.0, tick: 8.0 },
-        backtest: { pnl: 69701, sharpe: '25.63', wr: 69.8, trades: 2038 },
-    },
 };
 
 let _activeModelTab = 'v3';
@@ -894,10 +874,10 @@ let _activeModelTab = 'v3';
 function renderModelHQ(champ, models) {
     const el = document.getElementById('model-hq');
     const badge = document.getElementById('model-badge');
-    if (badge) badge.textContent = '3 versions';
+    if (badge) badge.textContent = '1 version';
 
     let html = '<div class="mhq-tabs">';
-    for (const ver of ['v3', 'v5', 'v6']) {
+    for (const ver of ['v3']) {
         const cfg = MODEL_CONFIGS[ver];
         const ms = _modelStats[ver] || {};
         const coins = _coinList[ver] || [];
@@ -1369,7 +1349,6 @@ function applySnapshot(snap) {
     if (snap.model_stats) {
         _modelStats = snap.model_stats;
         _renderModelStat('v3', snap.model_stats.v3 || {});
-        _renderModelStat('v5', snap.model_stats.v5 || {});
         _renderModelStat('old', snap.model_stats.old || {});
     }
     if (snap.positions) renderActiveBattles(snap.positions, snap.coin_list || _coinList);

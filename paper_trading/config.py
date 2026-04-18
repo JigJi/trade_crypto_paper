@@ -3,9 +3,7 @@ Paper Trading Configuration
 ============================
 Constants, coin configs (best params from grid search), composite weights.
 
-v3 = cleaned coins (proven/promising in paper trading)
-v4 = new coins from 100-coin screening (to validate in paper trading)
-v3 and v4 coin sets do NOT overlap.
+v3 = only active model. v5 + v6 amputated 2026-04-18 (dead since 04-10 / 04-04).
 """
 
 import os
@@ -31,7 +29,6 @@ BINANCE_TESTNET_SECRET = os.getenv("BINANCE_TESTNET_SECRET", "")
 INIT_EQUITY = 5_000.0  # Testnet wallet balance
 # Epoch after which trades count (reset on DB wipe to ignore old Binance history)
 PAPER_TRADING_START_MS = 1773760000000  # 2026-03-17 15:06 UTC (reset #2)
-V6_DEPLOY_MS = 1774245600000  # 2026-03-23 06:00 UTC (v6 liq-only deployment + coin reshuffles)
 LEVERAGE = 2.0  # v3: 2x leverage (matching backtest)
 BUDGET_PER_COIN = 100.0  # $100 per coin -> $200 notional w/ 2x lev
 FEE_BPS = 2.0
@@ -43,27 +40,20 @@ SLIP = SLIP_BPS / 10_000
 WARMUP_BARS = 100
 EVAL_DELAY_SEC = 60  # wait 60s after candle close before evaluating
 MAX_HOLD_BARS = 96   # same as backtest default
-HYSTERESIS_BAND = 1.5  # default for v3/v5 (continuous score, original setting)
-MIN_BARS_BEFORE_FLIP = 4  # default for v3/v5 (original setting)
-FLIP_MODE = "reverse"     # default for v3/v5 (original behavior)
-FLIP_COOLDOWN_EXTRA = 0   # default for v3/v5
+HYSTERESIS_BAND = 1.5      # continuous score hysteresis band
+MIN_BARS_BEFORE_FLIP = 4
+FLIP_MODE = "reverse"
+FLIP_COOLDOWN_EXTRA = 0
 
 # ---- LONG disabled (2026-04-04) ----
 # LONG WR 31.7% over 18 days, -$21 PnL. Strong bull BTC score → worst WR (29.4%).
 # Signal is structurally broken for LONG. SHORT-only until LONG signal is redesigned.
 LONG_ENABLED = False
 
-# Per-model flip config (Tournament R3 validated: v6 only benefits from champion settings)
-# v3: FLIP barely profitable (54% WR), champion makes FLIP PnL negative → keep original
-# v5: champion neutral (-0.5%), hyst_2.0 best but marginal → keep original
-# v6: champion +12.1%, hyst=3.0 critical for binary score → use champion
-# SURGERY 2026-04-10: reverse → exit_only
-# SIGNAL_FLIP "reverse" lost -$1,429 over 730 trades (WR 23.6%)
-# "exit_only" still cuts losses but stops bleeding by NOT opening opposite
-# cd_extra=4 prevents re-entry for 4 bars (1h) after flip exit
+# SURGERY 2026-04-10: SIGNAL_FLIP reverse → exit_only (was -$1,429 / WR 23.6%)
+# exit_only cuts losses without opening opposite; cd_extra=4 bars = 1h re-entry block
 FLIP_CONFIG = {
     "v3": {"hysteresis_band": 1.5, "flip_mode": "exit_only", "min_bars": 4, "cd_extra": 4},
-    "v5": {"hysteresis_band": 1.5, "flip_mode": "exit_only", "min_bars": 4, "cd_extra": 4},
 }
 
 # ---- Funding rate cost (Binance perps, ~0.01% per 8h) ----
@@ -98,36 +88,20 @@ COINS_V3 = [
 # RENDER +$2.40, SUI +$2.07, ETH +$2.99, SOL -$2.86, BTC -$3.66,
 # AAVE -$4.00, 1000BONK -$4.02, AXS -$9.17
 
-# ══════════════════════════════════════════════════════════════
-# v5 COINS -- SURGERY 2026-04-10: emptied
-# ARIA moved to v3 (custom config) — v5 SL=15 ATR caused -$42 single losses
-# AAVE moved to v3 — barely profitable on v5 (+$2.49 in 24 days)
-# ══════════════════════════════════════════════════════════════
-COINS_V5 = []  # disabled — ARIA + AAVE moved to v3
-
-# ══════════════════════════════════════════════════════════════
-# v6 REMOVED entirely (2026-04-04) -- Liq-only model failed in paper
-# 13/15 coins negative, -$389 in 8 days, systematic failure in sideways market
-# v4 coins also absorbed here were all negative
-# ══════════════════════════════════════════════════════════════
-COINS_V4 = []  # DISABLED — kept for backward compat with imports
-COINS_V6 = []  # DISABLED — kept for backward compat with imports
-
-# All coins that were ever traded (for dashboard to fetch historical trades/income)
+# All coins ever traded (for dashboard historical lookups)
 COINS_REMOVED = [
     # ex-v3 (negative PnL, removed 2026-04-04)
     "DOT", "FIL", "NEAR", "ARB",
     # ex-v3 (marginal/negative, removed 2026-04-15 in shrink)
     "BTC", "SUI", "RENDER", "AXS", "SOL", "ETH", "1000BONK", "AAVE",
-    # ex-v5 (negative PnL)
+    # ex-v5 (amputated 2026-04-18)
     "FARTCOIN", "GALA", "AVAX", "UNI", "SEI", "DOGE", "ONDO",
     "1000SHIB", "BNB", "WIF", "CRV", "TAO", "ACX",
-    # ex-v6 (all removed)
+    # ex-v6 (amputated 2026-04-18)
     "OGN", "SAHARA", "ASTER", "LTC", "ZRO", "NAORIS", "1000PEPE",
     "JCT", "DEGO", "HYPE", "PENGU", "LINK", "BARD", "BANANAS31", "PIPPIN",
 ]
-# All coins = v3 + v5 (13 total, down from 46)
-COINS = COINS_V3 + COINS_V5
+COINS = COINS_V3
 COINS_ALL_EVER = COINS + COINS_REMOVED  # for historical lookups
 
 # Default params for v3 coins
@@ -138,28 +112,6 @@ _DEFAULT_CONFIG = {
     "tp_atr_mult": 5.0,
     "trail_atr_mult": 1.5,         # trailing stop: 1.5 ATR from peak/trough (was 0.5, too tight in live)
     "trail_activate_atr": 1.0,     # activate after 1.0 ATR profit (was 0.5)
-    "cooldown_bars": 4,
-    "threshold": 3.0,
-}
-
-# Default params for v5 coins (tournament champion config)
-_V5_DEFAULT_CONFIG = {
-    "use_alt_pa_filter": False,
-    "sl_atr_mult": 15.0,
-    "tp_atr_mult": 12.0,
-    "trail_atr_mult": 1.5,         # trailing stop: 1.5 ATR from peak/trough (was 0.5, too tight in live)
-    "trail_activate_atr": 1.0,     # activate after 1.0 ATR profit (was 0.5)
-    "cooldown_bars": 4,
-    "threshold": 3.0,
-}
-
-# v6 config kept for backward compat (research scripts import it)
-_V6_DEFAULT_CONFIG = {
-    "use_alt_pa_filter": False,
-    "sl_atr_mult": 25.0,
-    "tp_atr_mult": 20.0,
-    "trail_atr_mult": 1.5,
-    "trail_activate_atr": 1.0,
     "cooldown_bars": 4,
     "threshold": 3.0,
 }
@@ -214,14 +166,6 @@ for _coin in COINS_V3:
             **_DEFAULT_CONFIG,
         }
 
-# === Generate configs for v5 coins ===
-for _coin in COINS_V5:
-    COIN_CONFIGS[_coin] = {
-        "symbol": f"{_coin}USDT",
-        "model": "v5",
-        **_V5_DEFAULT_CONFIG,
-    }
-
 # ---- BTC composite score weights ----
 # v3 optimal weights (mega discovery 2026-03-09)
 # Removed: taker_ratio, ls_ratio, fear_greed (hurt or redundant)
@@ -245,42 +189,6 @@ V3_EXTRA_WEIGHTS = {
     "basis_contrarian": 1.5,
     "tick_liq": 2.0,
 }
-
-# ---- v5 BTC composite score weights (Tournament Round 1 champion) ----
-# Key changes: liq 2.0→5.0, tick_liq 2.0→3.0, ob kept at 2.0
-V5_COMPOSITE_WEIGHTS = {
-    "w_oi_bull": 0.25, "w_oi_capit": 0.25, "w_oi_weak": 0.25, "w_oi_bear": 0.25,
-    "w_fr_neg": 2.0, "w_fr_pos": 2.0,
-    "w_whale_bull": 1.5, "w_whale_bear": 1.5,
-    "w_liq_bull": 5.0, "w_liq_bear": 5.0,   # was 2.0 → KEY CHANGE
-    "w_etf_bull": 1.0, "w_etf_bear": 1.0,
-}
-
-V5_EXTRA_WEIGHTS = {
-    "ob_combined": 2.0,        # kept at 2.0 (lower = less noise)
-    "basis_contrarian": 1.5,   # unchanged
-    "tick_liq": 3.0,           # was 2.0 → +1.0
-}
-
-# ---- v6 Liq-Only Architecture (Tournament Round 2, 2026-03-22) ----
-# Key change: DROP all non-liquidation factors, cascade threshold 3.0x → 1.1x
-# Per-coin backtest: $69,701 (+35% vs v5) | Realistic portfolio: $30,941 (+29% vs v5)
-# Validated: all periods positive, 33/33 coins v6>v5, walk-forward stable
-V6_CASCADE_MULT = 1.1          # was 3.0 → KEY CHANGE (+$14K PnL alone)
-V6_LIQ_WEIGHT = 8.0            # saturates at 8.0 (binary signal)
-V6_TICK_WEIGHT = 8.0            # net > 3 threshold
-V6_TICK_NET_THRESHOLD = 3       # higher = fewer but better quality signals
-V6_SL = 25.0                    # wider SL for full mean-reversion
-V6_TP = 20.0                    # wider TP
-# Note: v6 does NOT need extreme_conf3 filter (self-cleaning architecture)
-
-# V6 Cascade Quality Sizing (Mission 014)
-# Higher displacement / cascade magnitude → larger position size
-V6_SIZE_MULT_DEFAULT = 1.0     # base multiplier
-V6_SIZE_MULT_DISP_01 = 1.2    # displacement >= 0.1%
-V6_SIZE_MULT_DISP_03 = 1.5    # displacement >= 0.3%
-V6_SIZE_MULT_CASCADE_5X = 0.3  # bonus for cascade >= 5x MA
-V6_SIZE_MULT_MAX = 2.0         # cap
 
 # ---- Extreme Confluence Filter (Mission 013, validated 2026-03-22) ----
 # Skip NEW entries when vol regime = Extreme AND active_factors < 3

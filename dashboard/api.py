@@ -21,8 +21,8 @@ from research.leaderboard import build_leaderboard
 from research.missions import MissionEngine
 from paper_trading.exchange import TestnetExchange
 from paper_trading.config import (
-    BINANCE_TESTNET_KEY, BINANCE_TESTNET_SECRET, COIN_CONFIGS, COINS_V3, COINS_V5, COINS_V6,
-    PAPER_TRADING_START_MS, V6_DEPLOY_MS, LEVERAGE,
+    BINANCE_TESTNET_KEY, BINANCE_TESTNET_SECRET, COIN_CONFIGS, COINS_V3,
+    PAPER_TRADING_START_MS, LEVERAGE,
     COINS_ALL_EVER, COINS_REMOVED,
 )
 
@@ -180,9 +180,7 @@ def _fetch_binance_trades():
 
             coin_name = first["symbol"].replace("USDT", "")
             # Model will be enriched from signal_log later; use current config as fallback
-            coin_model = COIN_CONFIGS.get(coin_name, {}).get("model", "")
-            if not coin_model:
-                coin_model = "v6" if coin_name in COINS_V6 else "v5" if coin_name in COINS_V5 else "v3"
+            coin_model = COIN_CONFIGS.get(coin_name, {}).get("model", "v3")
             trades.append({
                 "coin": coin_name,
                 "symbol": first["symbol"],
@@ -328,11 +326,8 @@ def trading_equity():
 
 
 def _current_model(coin):
-    """Get current model assignment for a coin."""
-    m = COIN_CONFIGS.get(coin, {}).get("model", "?")
-    if not m or m == "?":
-        m = "v6" if coin in COINS_V6 else "v5" if coin in COINS_V5 else "v3"
-    return m
+    """Get current model assignment for a coin. (v3 is the only live model as of 2026-04-18.)"""
+    return COIN_CONFIGS.get(coin, {}).get("model", "v3")
 
 
 def _get_sqlite_trades():
@@ -403,7 +398,7 @@ def trading_stats():
 
     # ALL income from Binance (REALIZED_PNL + COMMISSION + FUNDING_FEE)
     ex2 = _ex()
-    _active_coins = set(COINS_V3 + COINS_V5)
+    _active_coins = set(COINS_V3)
     _removed_set = set(COINS_REMOVED)
     model_income = defaultdict(float)  # keyed by: v3, v5, old
     coin_income = defaultdict(float)   # keyed by coin (active coins only)
@@ -460,7 +455,7 @@ def trading_stats():
         })
     per_coin.sort(key=lambda x: x["total_pnl"], reverse=True)
 
-    # Model stats — v3, v5, old (no v6/removed)
+    # Model stats — v3 + old (v5/v6 amputated 2026-04-18)
     model_trades_agg = defaultdict(lambda: {"trades": 0, "wins": 0})
     for coin in _active_coins:
         cur_m = _current_model(coin)
@@ -480,7 +475,6 @@ def trading_stats():
     _zt = {"trades": 0, "wins": 0}
     model_stats = {
         "v3": _fmt_agg(model_income.get("v3", 0), model_trades_agg.get("v3", _zt)),
-        "v5": _fmt_agg(model_income.get("v5", 0), model_trades_agg.get("v5", _zt)),
         "old": _fmt_agg(model_income.get("old", 0), _old_td),
     }
 
@@ -510,7 +504,7 @@ def trading_stats():
             "model": (_mr().get_champion() or {}).get("version", "?"),
         },
         "model_stats": model_stats,
-        "coin_list": {"v3": COINS_V3, "v5": COINS_V5},
+        "coin_list": {"v3": COINS_V3},
         "per_coin": per_coin,
         "latest": latest,
         "meta": meta,
@@ -730,7 +724,7 @@ def _get_snapshot():
     snap_model_income = defaultdict(float)
     snap_coin_income = defaultdict(float)
     snap_ex2 = _ex()
-    _snap_active = set(COINS_V3 + COINS_V5)
+    _snap_active = set(COINS_V3)
     _snap_removed = set(COINS_REMOVED)
     if snap_ex2:
         try:
@@ -794,7 +788,6 @@ def _get_snapshot():
     _zt = {"trades": 0, "wins": 0}
     snapshot["model_stats"] = {
         "v3": _snap_fmt(snap_model_income.get("v3", 0), model_trades_agg.get("v3", _zt)),
-        "v5": _snap_fmt(snap_model_income.get("v5", 0), model_trades_agg.get("v5", _zt)),
         "old": _snap_fmt(snap_model_income.get("old", 0), _old_td),
     }
 
@@ -810,7 +803,7 @@ def _get_snapshot():
             conn.close()
 
     # Coin list
-    snapshot["coin_list"] = {"v3": COINS_V3, "v5": COINS_V5}
+    snapshot["coin_list"] = {"v3": COINS_V3}
 
     # Research data
     snapshot["champion"] = _mr().get_champion()

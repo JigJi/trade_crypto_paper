@@ -21,13 +21,10 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from paper_trading.config import (
     COINS, COIN_CONFIGS, COMPOSITE_WEIGHTS, V3_EXTRA_WEIGHTS,
-    V5_COMPOSITE_WEIGHTS, V5_EXTRA_WEIGHTS,
     INIT_EQUITY, LOG_DIR, STATE_DIR, WARMUP_BARS, BUDGET_PER_COIN,
     BINANCE_TESTNET_KEY, BINANCE_TESTNET_SECRET,
     EXTREME_CONF3_ENABLED, EXTREME_CONF3_MIN_FACTORS,
     HEALTH_ENABLED, HEALTH_BLOCK_ENABLED,
-    V6_SIZE_MULT_DISP_01, V6_SIZE_MULT_DISP_03,
-    V6_SIZE_MULT_CASCADE_5X, V6_SIZE_MULT_MAX,
     MIN_BARS_BEFORE_FLIP, LONG_ENABLED,
 )
 from paper_trading import state_db as db
@@ -39,7 +36,6 @@ from paper_trading.data_feed import (
 )
 from paper_trading.strategy import (
     build_btc_features, compute_btc_composite_score,
-    compute_btc_composite_score_v6,
     build_alt_technicals, evaluate_signal,
     count_active_factors, compute_vol_regime,
 )
@@ -196,20 +192,12 @@ def run_cycle():
         btc_db = {}
         suppress_signals = True
 
-    # ---- Step 3: Build BTC features + composite scores (v3 + v5) ----
+    # ---- Step 3: Build BTC features + composite score (v3) ----
     try:
         btc_df = build_btc_features(btc_ohlcv, btc_db)
-        # v3/v4 score (liq=2.0, tick=2.0)
         btc_score_v3 = compute_btc_composite_score(btc_df, COMPOSITE_WEIGHTS, V3_EXTRA_WEIGHTS)
-        # v5 score (liq=5.0, tick=3.0)
-        btc_score_v5 = compute_btc_composite_score(btc_df, V5_COMPOSITE_WEIGHTS, V5_EXTRA_WEIGHTS)
-        # v6 score (liq-only: cascade 1.1x + tick net>3)
-        btc_score_v6 = compute_btc_composite_score_v6(btc_df)
-        latest_v3 = float(btc_score_v3.iloc[-1])
-        latest_v5 = float(btc_score_v5.iloc[-1])
-        latest_v6 = float(btc_score_v6.iloc[-1])
-        latest_btc_score = latest_v3  # primary score for logging/equity snapshot
-        logger.info(f"BTC Score v3: {latest_v3:.2f} | v5: {latest_v5:.2f} | v6: {latest_v6:.2f}")
+        latest_btc_score = float(btc_score_v3.iloc[-1])
+        logger.info(f"BTC Score v3: {latest_btc_score:.2f}")
     except Exception as e:
         logger.error(f"Failed to compute BTC score: {e}")
         return
@@ -329,23 +317,14 @@ def run_cycle():
             # Build alt technicals
             alt_df = build_alt_technicals(alt_ohlcv)
 
-            # Select BTC score based on model version
-            model_ver = config.get("model", "v3")
-            if model_ver == "v6":
-                btc_score = btc_score_v6
-            elif model_ver == "v5":
-                btc_score = btc_score_v5
-            else:
-                btc_score = btc_score_v3
-
             # Evaluate signal (with hysteresis: pass previous signal state)
             prev_signal = int(db.get_meta(f"signal_state_{coin}", "0"))
             sig_result = evaluate_signal(
-                btc_df, btc_score, alt_df, coin,
+                btc_df, btc_score_v3, alt_df, coin,
                 threshold=config["threshold"],
                 use_alt_pa_filter=config["use_alt_pa_filter"],
                 prev_signal=prev_signal,
-                model=config.get("model", "v3"),
+                model="v3",
             )
 
             signal = sig_result["signal"]
@@ -368,33 +347,6 @@ def run_cycle():
                     f"budget=${budget:.0f} (base=${BUDGET_PER_COIN:.0f})"
                 )
 
-            # V6: cascade quality position sizing (Mission 014) -- layered on top
-            size_mult = 1.0
-            if model_ver == "v6" and signal != 0:
-                # displacement = |price change| of latest BTC bar
-                displacement = abs(
-                    btc_df["close"].iloc[-1] / btc_df["close"].iloc[-2] - 1
-                )
-                # cascade magnitude = liq_total / liq_total_ma
-                lt = btc_df["liq_total"].iloc[-1] if "liq_total" in btc_df.columns else 0
-                lt_ma = btc_df["liq_total_ma"].iloc[-1] if "liq_total_ma" in btc_df.columns else 1
-                cascade_mag = lt / lt_ma if lt_ma > 0 else 0
-
-                if displacement >= 0.003:
-                    size_mult = V6_SIZE_MULT_DISP_03       # 1.5
-                elif displacement >= 0.001:
-                    size_mult = V6_SIZE_MULT_DISP_01       # 1.2
-                if cascade_mag >= 5.0:
-                    size_mult += V6_SIZE_MULT_CASCADE_5X   # +0.3
-                size_mult = min(size_mult, V6_SIZE_MULT_MAX)  # cap 2.0
-                budget = budget * size_mult  # layer v6 cascade mult on dynamic sizing
-
-                logger.debug(
-                    f"[{coin}] v6 sizing: disp={displacement:.4f} "
-                    f"cascade={cascade_mag:.1f}x size_mult={size_mult:.1f} "
-                    f"budget=${budget:.0f}"
-                )
-
             pm = PositionManager(coin, config, exchange, budget)
             cooldown_ok = pm._cooldown_ok()
 
@@ -406,14 +358,13 @@ def run_cycle():
                 health_paused = not health_paused_ok
 
             # Determine action
-            model_tag = config.get("model", "v3")
             if has_position:
                 action = "MANAGE_POSITION"
             elif suppress_signals:
                 action = "SKIP_DATA_STALE"
-            elif extreme_conf3_block and signal != 0 and model_tag != "v6":
+            elif extreme_conf3_block and signal != 0:
                 action = "SKIP_EXTREME_CONF3"
-                signal = 0  # suppress entry (v6 is self-cleaning, doesn't need this)
+                signal = 0
             elif health_paused and signal != 0:
                 action = "SKIP_HEALTH_PAUSED"
                 # Don't zero signal -- shadow log keeps original signal
@@ -448,7 +399,7 @@ def run_cycle():
                 "has_position": int(has_position),
                 "cooldown_ok": int(cooldown_ok),
                 "action": action,
-                "model": model_tag,
+                "model": "v3",
             })
 
             # Build candle dict for position manager

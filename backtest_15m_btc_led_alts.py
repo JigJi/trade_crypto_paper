@@ -69,7 +69,7 @@ ALT_COINS = ["BTC", "XRP", "ADA", "DOT", "SUI", "FIL"]
 from signal_core import (
     resample_to_15m, build_btc_features, build_alt_technicals,
     score_basis_contrarian, score_tick_liq, score_ob_combined,
-    compute_btc_composite_score, compute_btc_composite_score_v6,
+    compute_btc_composite_score,
     compute_raw_signal, is_dead_zone, check_pa_alignment,
     detect_spike, classify_spike_mode,
     DEFAULT_COMPOSITE_WEIGHTS, DEFAULT_EXTRA_WEIGHTS, DEFAULT_SPIKE_CONFIG,

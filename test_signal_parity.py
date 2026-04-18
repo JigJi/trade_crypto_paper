@@ -100,8 +100,6 @@ def test_default_constants():
     """Default constants in signal_core match backtest/config values."""
     from signal_core import (
         DEFAULT_COMPOSITE_WEIGHTS, DEFAULT_EXTRA_WEIGHTS, DEFAULT_SPIKE_CONFIG,
-        DEFAULT_V6_CASCADE_MULT, DEFAULT_V6_LIQ_WEIGHT, DEFAULT_V6_TICK_WEIGHT,
-        DEFAULT_V6_TICK_NET_THRESHOLD,
     )
     from backtest_15m_btc_led_alts import COMPOSITE_WEIGHTS, V3_EXTRA_WEIGHTS, SPIKE_CONFIG
 
@@ -118,22 +116,6 @@ def test_default_constants():
 
     if DEFAULT_SPIKE_CONFIG != SPIKE_CONFIG:
         print(f"  FAIL: DEFAULT_SPIKE_CONFIG != backtest SPIKE_CONFIG")
-        errors += 1
-
-    if DEFAULT_V6_CASCADE_MULT != 1.1:
-        print(f"  FAIL: DEFAULT_V6_CASCADE_MULT = {DEFAULT_V6_CASCADE_MULT}, expected 1.1")
-        errors += 1
-
-    if DEFAULT_V6_LIQ_WEIGHT != 8.0:
-        print(f"  FAIL: DEFAULT_V6_LIQ_WEIGHT = {DEFAULT_V6_LIQ_WEIGHT}, expected 8.0")
-        errors += 1
-
-    if DEFAULT_V6_TICK_WEIGHT != 8.0:
-        print(f"  FAIL: DEFAULT_V6_TICK_WEIGHT = {DEFAULT_V6_TICK_WEIGHT}, expected 8.0")
-        errors += 1
-
-    if DEFAULT_V6_TICK_NET_THRESHOLD != 3:
-        print(f"  FAIL: DEFAULT_V6_TICK_NET_THRESHOLD = {DEFAULT_V6_TICK_NET_THRESHOLD}, expected 3")
         errors += 1
 
     if errors == 0:
@@ -204,7 +186,7 @@ def test_score_functions_synthetic():
 def test_composite_score_synthetic():
     """compute_btc_composite_score produces same result with/without extra param."""
     from signal_core import (
-        compute_btc_composite_score, compute_btc_composite_score_v6,
+        compute_btc_composite_score,
         DEFAULT_COMPOSITE_WEIGHTS, DEFAULT_EXTRA_WEIGHTS,
     )
 
@@ -244,11 +226,6 @@ def test_composite_score_synthetic():
     if (score_default == 0).all():
         print(f"  FAIL: v3 score is all zeros on synthetic data (unlikely)")
         errors += 1
-
-    # v6 score
-    score_v6 = compute_btc_composite_score_v6(df)
-    if (score_v6 == 0).all():
-        print(f"  WARN: v6 score all zeros (may be OK with random data)")
 
     if errors == 0:
         print("  PASS: Composite score functions work correctly")
