@@ -53,45 +53,70 @@ BKK_OFFSET = pd.Timedelta("7h")
 PID_FILE = STATE_DIR / "paper_trader.pid"
 
 
-def _acquire_pid_lock():
-    """Acquire PID lock. Raises RuntimeError if another instance is running."""
-    if PID_FILE.exists():
-        try:
-            old_pid = int(PID_FILE.read_text().strip())
-            # Check if process is still alive (Windows-compatible)
-            import psutil
-            if psutil.pid_exists(old_pid):
-                proc = psutil.Process(old_pid)
-                if proc.is_running() and "python" in proc.name().lower():
-                    raise RuntimeError(
-                        f"Another paper_trader is already running (PID {old_pid}). "
-                        f"Kill it first or delete {PID_FILE}"
-                    )
-        except ImportError:
-            # psutil not available, try OS-level check
-            try:
-                os.kill(old_pid, 0)  # signal 0 = check if alive
-                raise RuntimeError(
-                    f"Another paper_trader may be running (PID {old_pid}). "
-                    f"Kill it first or delete {PID_FILE}"
-                )
-            except OSError:
-                pass  # Process dead, stale PID file
-        except (ValueError, OSError):
-            pass  # Stale PID file, safe to overwrite
+# Bug #8 fix 2026-04-18: OS-level file lock for single-instance guarantee.
+# Previous PID-check approach had race conditions + failed when process name
+# check returned false positives. msvcrt.locking (Windows) is OS-enforced —
+# the lock is automatically released when the process exits, even on crash.
+_LOCK_FD = None  # kept open for lifetime of process
 
-    PID_FILE.write_text(str(os.getpid()))
+
+def _acquire_pid_lock():
+    """Acquire an OS-enforced exclusive file lock on PID_FILE.
+
+    Raises RuntimeError if another instance holds the lock.
+    Lock auto-releases on process exit (no cleanup needed even on SIGKILL).
+    """
+    global _LOCK_FD
+    import sys as _sys
+
+    # Open (create if missing) in read/write mode, keep FD alive
+    _LOCK_FD = os.open(str(PID_FILE), os.O_RDWR | os.O_CREAT)
+
+    try:
+        if _sys.platform == "win32":
+            import msvcrt
+            # LK_NBLCK = non-blocking exclusive lock on 1 byte
+            msvcrt.locking(_LOCK_FD, msvcrt.LK_NBLCK, 1)
+        else:
+            import fcntl
+            fcntl.flock(_LOCK_FD, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except (OSError, IOError) as e:
+        os.close(_LOCK_FD)
+        _LOCK_FD = None
+        # Read existing PID for error message
+        try:
+            with open(PID_FILE, "r") as f:
+                old_pid = f.read().strip()
+        except Exception:
+            old_pid = "?"
+        raise RuntimeError(
+            f"Another paper_trader is already running (PID {old_pid}). "
+            f"Kill it first (taskkill /F /PID {old_pid}) or reboot."
+        ) from e
+
+    # Write our PID into the locked file for diagnostics
+    os.ftruncate(_LOCK_FD, 0) if hasattr(os, "ftruncate") else None
+    os.lseek(_LOCK_FD, 0, 0)
+    os.write(_LOCK_FD, str(os.getpid()).encode())
     atexit.register(_release_pid_lock)
     logger.info(f"PID lock acquired: {os.getpid()}")
 
 
 def _release_pid_lock():
-    """Release PID lock on exit."""
+    """Release OS lock on exit (also auto-released by kernel on crash)."""
+    global _LOCK_FD
+    if _LOCK_FD is None:
+        return
     try:
+        import sys as _sys
+        if _sys.platform == "win32":
+            import msvcrt
+            os.lseek(_LOCK_FD, 0, 0)
+            msvcrt.locking(_LOCK_FD, msvcrt.LK_UNLCK, 1)
+        os.close(_LOCK_FD)
+        _LOCK_FD = None
         if PID_FILE.exists():
-            stored_pid = int(PID_FILE.read_text().strip())
-            if stored_pid == os.getpid():
-                PID_FILE.unlink()
+            PID_FILE.unlink()
     except Exception:
         pass
 
